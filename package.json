@@ -21,7 +21,7 @@
     "ahi:test": "start-server-and-test develop:eric http://localhost:8000 cy:open",
     "ahi:dev": "yarn workspace affordablehomeimprovementz develop",
     "ahi:build": "yarn workspace affordablehomeimprovementz build",
-    "ahi:serve": "yarn workspace affordablehomeimprovementz serve",
+    "ahi:serve": "yarngit remote remove origin workspace affordablehomeimprovementz serve",
     "ahi:clean": "yarn workspace affordablehomeimprovementz clean",
     "g:test": "start-server-and-test develop:eric http://localhost:8000 cy:open",
     "g:dev": "yarn workspace gizmosmn develop",
