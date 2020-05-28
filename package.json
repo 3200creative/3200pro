@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "workspaces": [
+    "sites/*",
+    "themes/*"
+  ],
+  "name": "c32-gatsby",
+  "devDependencies": {
+    "@testing-library/cypress": "^5.3.0",
+    "cypress": "^4.0.2",
+    "gatsby-cypress": "^0.2.22",
+    "start-server-and-test": "^1.10.8"
+  },
+  "scripts": {
+    "develop:base": "yarn workspace c32-gatsby-site-base develop",
+    "clean:base": "yarn workspace c32-gatsby-site-base clean",
+    "test:base": "start-server-and-test develop:base http://localhost:8000 cy:open",
+    "cy:open": "cypress open",
+    "eric:develop": "yarn workspace ericashish develop",
+    "eric:clean": "yarn workspace ericashish clean",
+    "ahi:test": "start-server-and-test develop:eric http://localhost:8000 cy:open",
+    "ahi:dev": "yarn workspace affordablehomeimprovementz develop",
+    "ahi:build": "yarn workspace affordablehomeimprovementz build",
+    "ahi:serve": "yarn workspace affordablehomeimprovementz serve",
+    "ahi:clean": "yarn workspace affordablehomeimprovementz clean",
+    "g:test": "start-server-and-test develop:eric http://localhost:8000 cy:open",
+    "g:dev": "yarn workspace gizmosmn develop",
+    "g:build": "yarn workspace gizmosmn build",
+    "g:serve": "yarn workspace gizmosmn serve",
+    "g:clean": "yarn workspace gizmosmn clean"
+  }
+}

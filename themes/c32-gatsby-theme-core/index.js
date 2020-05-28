@@ -1,0 +1,6 @@
+export { default as SEO } from "./src/utils/seo"
+export { default as BaseTheme } from "./src/theme"
+export { default as Layout } from "./src/components/layout"
+export { NavContext } from "./src/utils/nav-context"
+export { useC32Config } from "./src/utils/use-c32-config"
+export { useSiteMetadata } from "./src/utils/use-site-metadata"
