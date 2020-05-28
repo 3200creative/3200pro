@@ -19,7 +19,7 @@ module.exports = {
       },
       {
         name: `Galleries`,
-        link: `/home-improvement-galleries`,
+        link: `#`,
         subMenu: [
           {
             name: 'Elevated Tubs',
