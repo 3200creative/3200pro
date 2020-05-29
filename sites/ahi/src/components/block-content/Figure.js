@@ -7,7 +7,6 @@ const sanityConfig = {projectId: 'ws0rvaun', dataset: 'production'}
 function Figure (props) {
   return (
     <figure  sx={{
-      width: 'max-content',
       mx: 'auto',
       my: '80px',
     }}>
