@@ -52,7 +52,7 @@ const SanityHero = ({ titleText, buttonText, buttonLink, bg, overlayRGBA }) => {
           marginBottom: 4,
           }}>{titleText}</Styled.h1>
         <Button as="a" href={buttonLink}>
-          {buttonText}
+          {buttonText} 
         </Button>
       </div>
     </BackgroundImage>
