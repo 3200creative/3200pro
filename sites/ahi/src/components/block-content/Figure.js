@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import { buildImageObj } from '../../lib/helpers'
-import { imageUrlFor } from '../../lib/image-url'
+import { getFluidGatsbyImage } from "gatsby-source-sanity"
+import Img from "gatsby-image"
+const sanityConfig = {projectId: 'ws0rvaun', dataset: 'production'}
 
 function Figure (props) {
   return (
@@ -11,7 +12,7 @@ function Figure (props) {
       my: '80px',
     }}>
       {props.asset && (
-        <img sx={{
+        <Img sx={{
           variant: 'variants.shadow',
           maxWidth: '700px',
           margin: '0 auto',
@@ -19,9 +20,7 @@ function Figure (props) {
           display: 'block',
         }}
         className={props.positioning +' '+ props.sizes}
-        src={imageUrlFor(buildImageObj(props))
-            .width(1200)
-            .url()}
+        fluid={getFluidGatsbyImage(props.asset._ref,{ maxWidth: 800 }, sanityConfig)}
         alt={props.alt}
         />
       )}
