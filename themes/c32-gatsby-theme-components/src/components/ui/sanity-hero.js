@@ -32,7 +32,6 @@ const SanityHero = ({ titleText, buttonText, buttonLink, bg, overlayRGBA }) => {
     > 
       <div
       sx={{
-        textAlign: 'left', 
         px: 4,
         height: "40vh",
         width: "100vw",
