@@ -39,10 +39,6 @@ module.exports = {
         name: 'Contact',
         link: `/contact`,
       },
-      {
-        name: `612-500-8717`,
-        link: `tel:612-500-8717`,
-      },
     ],
   },
   plugins: [

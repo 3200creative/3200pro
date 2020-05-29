@@ -24,7 +24,7 @@ const SanityHero = ({ titleText, buttonText, buttonLink, bg, overlayRGBA }) => {
       fluid={heroBg}
       backgroundColor={`#000`}
       sx={{
-        height: "50vh",
+        height: ['70vh','40vh'],
         width: "100vw",
         position: "relative",
         left: "calc(-50vw + 50%)",
@@ -33,13 +33,13 @@ const SanityHero = ({ titleText, buttonText, buttonLink, bg, overlayRGBA }) => {
       <div
       sx={{
         px: 4,
-        height: "40vh",
+        height: ['70vh','40vh'],
         width: "100vw",
         position: "relative",
         left: "calc(-50vw + 50%)",
         mt: -3,
         mb: 5,
-        py: 5,
+        py: [2,5],
         display: "grid",
         placeItems: "center",
         backgroundColor: rgba,
