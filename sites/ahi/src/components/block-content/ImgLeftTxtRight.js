@@ -20,14 +20,14 @@ function ImgLeftTxtRight (props) {
     <div>
       <Grid
       gap={4}
-      columns= {[2, '1fr 2fr']}
+      columns= {['1fr', '1fr 2fr']}
       sx= {{
         marginBottom: 4,
         alignItems: 'center'
       }}
       >
       <Box><Img fluid= {SanityImage} sx= {{
-        maxWidth: '150px',
+        maxWidth: ['100%','150px'],
         margin: '0 auto'
 
       }} /></Box>

@@ -24,7 +24,7 @@ const SanityHero = ({ titleText, buttonText, buttonLink, bg, overlayRGBA }) => {
       fluid={heroBg}
       backgroundColor={`#000`}
       sx={{
-        height: "40vh",
+        height: "50vh",
         width: "100vw",
         position: "relative",
         left: "calc(-50vw + 50%)",
@@ -44,8 +44,14 @@ const SanityHero = ({ titleText, buttonText, buttonLink, bg, overlayRGBA }) => {
         display: "grid",
         placeItems: "center",
         backgroundColor: rgba,
+        textAlign: 'center'
         }}>
-        <Styled.h1 sx={{ color: "white", fontSize: [5, 50, 80],   variant: 'variants.whiteTextShadow' }}>{titleText}</Styled.h1>
+        <Styled.h1 
+        sx={{
+          color: "white",
+          variant: 'variants.whiteTextShadow',
+          marginBottom: 4,
+          }}>{titleText}</Styled.h1>
         <Button as="a" href={buttonLink}>
           {buttonText}
         </Button>

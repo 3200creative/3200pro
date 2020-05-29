@@ -34,7 +34,11 @@ const Hero = ({ titleText, buttonText, buttonLink }) => {
       }}
     >
       <div>
-        <Styled.h1 sx={{ color: "accent", mb: 4 }}>{titleText}</Styled.h1>
+        <Styled.h1 
+          sx= {{
+            color: "accent",
+            mb: 4,
+          }}>{titleText}</Styled.h1>
         <Button as="a" href={buttonLink}
         sx= {{
           color: 'accent',
