@@ -15,7 +15,7 @@ const sanityConfig = {projectId: 'ws0rvaun', dataset: 'production'}
 //import { imageUrlFor } from '../../lib/image-url'
 
 function ImgLeftTxtRight (props) {
-  const SanityImage = getFluidGatsbyImage(props.blockImage,{ maxWidth: 800 }, sanityConfig)
+  const SanityImage = getFluidGatsbyImage(props.blockImage,{ maxWidth: 400 }, sanityConfig)
   return (
     <div>
       <Grid

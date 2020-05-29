@@ -19,9 +19,9 @@ function Figure (props) {
           float: 'none',
           display: 'block',
         }}
-        className={props.positioning +' '+ props.sizes}
         fluid={getFluidGatsbyImage(props.asset._ref,{ maxWidth: 800 }, sanityConfig)}
         alt={props.alt}
+        loading='lazy'
         />
       )}
       <figcaption>{props.caption}</figcaption>

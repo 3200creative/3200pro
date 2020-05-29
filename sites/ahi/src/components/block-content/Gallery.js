@@ -74,6 +74,7 @@ function Gallery (props) {
             margin: '40px auto 0 auto',
           }}
           fluid={ currentImage }
+          loading='lazy'
           alt='lightbox'
           
           />
@@ -113,6 +114,7 @@ function Gallery (props) {
           className={image.positioning +' '+ image.sizes}
           fluid={getFluidGatsbyImage(image.asset._ref,{ maxWidth: 800 }, sanityConfig)}
           alt={image.alt}
+          loading='lazy'
           />
         )}
         <figcaption>{image.caption}</figcaption>
