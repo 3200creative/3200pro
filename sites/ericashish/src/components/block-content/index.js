@@ -1,13 +1,18 @@
 import BaseBlockContent from '@sanity/block-content-to-react'
 import React from 'react'
+import clientConfig from '../../../client-config'
 import Figure from './Figure'
 import Spacer from './Spacer'
 import Gallery from './Gallery'
 import SanityVideo from './Video'
 import SanitySoundcloud from './Soundcloud'
+import RecentPostFeed from './RecentPostFeed'
+import SingularFeaturedPost from './SingularFeaturedPost'
+import Quote from './Quote'
 
 const serializers = {
   types: {
+    //singularFeaturedPost: SingularFeaturedPost,
     block (props) {
       switch (props.node.style) {
         case 'h1':
@@ -50,10 +55,18 @@ const serializers = {
     spacer (props) {
       return <Spacer {...props.node} />
     },
-    
+    quote (props) {
+      return <Quote {...props.node} />
+    },
+    recentPostFeed (props) {
+      return <RecentPostFeed {...props.node} />
+    },
+    singularFeaturedPost (props) {
+      return <SingularFeaturedPost {...props.node} />
+    },
   }
 }
 
-const BlockContent = ({ blocks }) => <BaseBlockContent blocks={blocks} serializers={serializers} />
+const BlockContent = ({ blocks }) => <BaseBlockContent blocks={blocks} serializers={serializers} {...clientConfig.sanity}  />
 
 export default BlockContent

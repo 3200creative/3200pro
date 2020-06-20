@@ -17,6 +17,7 @@
     "test:base": "start-server-and-test develop:base http://localhost:8000 cy:open",
     "cy:open": "cypress open",
     "eric:develop": "yarn workspace ericashish develop",
+    "eric:dev": "yarn workspace ericashish develop",
     "eric:clean": "yarn workspace ericashish clean",
     "ahi:test": "start-server-and-test develop:eric http://localhost:8000 cy:open",
     "ahi:dev": "yarn workspace affordablehomeimprovementz develop",
@@ -27,6 +28,14 @@
     "g:dev": "yarn workspace gizmosmn develop",
     "g:build": "yarn workspace gizmosmn build",
     "g:serve": "yarn workspace gizmosmn serve",
-    "g:clean": "yarn workspace gizmosmn clean"
+    "g:clean": "yarn workspace gizmosmn clean",
+    "d:dev": "yarn workspace dagaz develop",
+    "d:build": "yarn workspace dagaz build",
+    "d:serve": "yarn workspace dagaz serve",
+    "d:clean": "yarn workspace dagaz clean",
+    "l:dev": "yarn workspace livgard develop",
+    "l:build": "yarn workspace livgard build",
+    "l:serve": "yarn workspace livgard serve",
+    "l:clean": "yarn workspace livgard clean"
   }
 }

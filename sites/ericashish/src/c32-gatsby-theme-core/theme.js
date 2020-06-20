@@ -12,23 +12,26 @@ export default {
     ...tailwind.fonts,
     body:  '-apple-system, system-ui, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif !important',
     siteTitle: "inherit", // Font for main site title
-    navLinks: "inherit", // Font for the nav menu links
+    navLinks: '-apple-system, system-ui, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif !important', // Font for the nav menu links
     alt: "inherit", //An alternate font style if needed.
+    header: '"Merriweather",Georgia,Serif',
   },
   colors: {
     ...tailwind.colors,
     text: baseColors.black,
-    background: baseColors.white, //Try "#954264",
+    background: '#fafafa', //Try "#954264",
     primary: baseColors.blue[7],
     secondary: baseColors.orange[7],
     accent: baseColors.orange[2],
+    grayTxt: '#73737D',
     muted: baseColors.gray[2],
 
     header: {
       background: baseColors.gray[2],
       backgroundOpen: baseColors.blue[2],
       text: baseColors.gray[8],
-      textOpen: baseColors.gray[8],
+      textOpen: 'grayTxt',
+      textClosed: '#73737D',
       icons: baseColors.gray[6],
       iconsHover: baseColors.blue[7],
       iconsOpen: baseColors.gray[8],
@@ -45,6 +48,11 @@ export default {
         text: '#fff',
         background: '#000',
         primary: '#0cf',
+        
+        transition: 'all 0.25s ease-in-out-quad',
+        shadow: {
+          boxShadow: '0 30px 60px -10px rgba(255,255,255,0.3), 0 18px 36px -18px rgba(255,255,255,0.33) !important',
+        },
       }
     },
   },
@@ -75,8 +83,10 @@ export default {
       fontWeight: "body",
       lineHeight: "body",
       fontSize: 2,
+      boxShadow: 'inset 0px -600px 500px -300px rgba(41,44,52,.5)',
+      transition: 'background 0.25s ease-in-out, color 0.25s ease-in-out',
+      
     },
-
     blockquote: {
       bg: "muted",
       p: 3,
@@ -117,6 +127,11 @@ export default {
     },
     h1: {
       fontWeight: 'headingWeight',
+      fontFamily: '"Merriweather",Georgia,Serif',
+      maxWidth: '560px',
+      margin: '0 auto',
+      width: '900px',
+      fontSize: 4,
     },
     h2: {
       fontWeight: 'headingWeight',
@@ -138,6 +153,15 @@ export default {
     },
     siteTitle: {
       fontSize: [4, null, 5, null, null],
+    },
+    innerBoxShadow: {
+      boxShadow: 'inset 0px -200px 300px -200px rgba(221,221,221,1)',
+    },
+    homePreview: {
+      display: 'none',
+      img: {
+        display: 'none',
+      },
     },
   },
 }

@@ -19,6 +19,7 @@ const Nav = () => {
         mt: isNavOpen ? 2 : 0,
         display: [isNavOpen ? "flex" : "none", null, "flex", null, null],
         flexDirection: ["column", null, "row", null, null],
+        variant: "variants.navStyles",
       }}
       role="navigation"
       aria-label="main-navigation"
@@ -75,7 +76,7 @@ const Nav = () => {
               to={link.link}
               activeClassName="active"
               onClick={() => setIsNavOpen(false)}
-              aria-haspopup={link.subMenu.length > 0 ? true : false}
+              aria-haspopup={link.subMenu != null ? true : false}
             >
               {link.name} {link.subMenu && link.subMenu.length > 0 }
             </Link>
@@ -112,6 +113,7 @@ const Nav = () => {
                         py: 1,
                         px: 1,
                         mr: [0, null, 2, null, null],
+                        textTransform: 'uppercase',
                         position: "relative",
                         fontWeight: "bold",
                         letterSpacing: "1px",

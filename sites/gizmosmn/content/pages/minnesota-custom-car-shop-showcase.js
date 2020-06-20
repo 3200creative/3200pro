@@ -24,7 +24,8 @@ export const query = graphql`
             }
         }
     }
-    posts: allSanityGalleryPage {
+    posts: allSanityGalleryPage(
+      filter: { slug: { current: { ne: null } }}) {
         edges {
         node {
             title
@@ -91,7 +92,7 @@ const Showcase = props => {
             margin: '0'
             }}
         >
-        <Img fluid={post.node.featuredImage.asset.fluid} />
+        {post.node.featuredImage && (<Img fluid={post.node.featuredImage.asset.fluid} />) || 'needs featured image'}
         <h1>{post.node.title}</h1>
         </Box>
         </Link>

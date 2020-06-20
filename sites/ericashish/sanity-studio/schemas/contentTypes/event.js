@@ -18,6 +18,18 @@ export default {
             }
         },
         {
+            name: 'publishedAt',
+            title: 'Published at',
+            description: 'You can use this field to schedule post where you show them',
+            type: 'datetime'
+          },
+        {
+            name: 'excerpt',
+            title: 'Excerpt',
+            type: 'text',
+            rows: '3',
+        },
+        {
             title: 'Event Date',
             name: 'eventDate',
             type: 'datetime',
@@ -29,19 +41,14 @@ export default {
             }
         },
         {
-            name: 'sections',
-            type: 'array',
-            title: 'Featured Image/Video',
-            of: [
-                {
-                    title: 'Featured Video',
-                    type: 'video', 
-                },
-                {
-                    title: 'Featured Image',
-                    type: 'featuredImage', 
-                },
-            ]
+            title: 'Featured Video',
+            name: 'featuredVideo',
+            type: 'video', 
+        },
+        {
+            title: 'Featured Image',
+            name: 'featuredImage',
+            type: 'featuredImage', 
         },
         {
             title: 'Optional Onsite Event Info',

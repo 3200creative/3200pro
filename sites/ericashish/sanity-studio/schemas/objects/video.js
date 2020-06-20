@@ -5,9 +5,9 @@ export default {
     description: 'Example: http://fast.wistia.net/embed/iframe/26sk4lmiix',
     fields: [
       {
-        title: 'Video URL',
-        name: 'url',
-        type: 'url',
+        title: 'Video Id',
+        name: 'id',
+        type: 'string',
       },
       {
         title: 'Video Title',

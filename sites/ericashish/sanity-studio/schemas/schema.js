@@ -13,7 +13,6 @@ import meta from './objects/meta'
 import featuredImage from './objects/featuredImage'
 import video from './objects/video'
 import podcast from './objects/podcast'
-import quoteBlock from './objects/quoteBlock'
 import simpleUrl from './objects/url'
 import featuredPodcastImages from './objects/featuredPodcastImages'
 import siteSettings from './contentTypes/siteSettings'
@@ -21,6 +20,10 @@ import menuLink from './objects/menuLink'
 import subMenu from './objects/subMenu'
 import gallery from './objects/gallery'
 import soundcloud from './objects/soundcloud'
+import recentPostFeed from './objects/recentPostFeed'
+import bioPortableText from './objects/bioPortableText'
+import singularFeaturedPost from './objects/singularFeaturedPost'
+import quote from './objects/quote'
 // Content Types:
 import event from './contentTypes/event'
 import business from './contentTypes/business'
@@ -28,6 +31,7 @@ import life from './contentTypes/life'
 import music from './contentTypes/music'
 import tea from './contentTypes/tea'
 import page from './contentTypes/page'
+import author from './contentTypes/author'
 import landingPage from './contentTypes/landingPage'
 
 
@@ -45,15 +49,18 @@ export default createSchema({
     figureWide,
     tags,
     meta,
+    quote,
     featuredImage,
     video,
-    quoteBlock,
     simpleUrl,
     featuredPodcastImages,
     subMenu,
     menuLink,
     gallery,
     soundcloud,
+    recentPostFeed,
+    bioPortableText,
+    singularFeaturedPost,
     // Content Types
     siteSettings,
     event,
@@ -64,5 +71,6 @@ export default createSchema({
     page,
     podcast,
     landingPage,
+    author,
   ])
 })

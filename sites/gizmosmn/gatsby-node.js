@@ -43,7 +43,10 @@ exports.createPages = ({ graphql, actions }) => {
   const galleryPageTemplate = path.resolve(`./src/components/gallery-page-template.js`)
   return graphql(`
     query loadPagesQuery($limit: Int!) {
-      allSanityGalleryPage(limit: $limit) {
+      allSanityGalleryPage(
+        limit: $limit
+        filter: { slug: { current: { ne: null } }}
+        ) {
         edges {
           node {
             id

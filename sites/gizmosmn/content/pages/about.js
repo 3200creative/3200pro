@@ -5,12 +5,20 @@ import { SEO, Layout } from "c32-gatsby-theme-core"
 import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error-lists'
 import Container from 'c32-gatsby-theme-core/src/components/container'
 import BlockContent from '../../src/components/block-content'
+import Hero from 'c32-gatsby-theme-components/src/components/ui/sanity-hero'
 
 export const query = graphql`
   query AboutPageQuery {
     page: sanityAboutPage {
       header
       _rawBlockContent
+      heroImage {
+        asset {
+              fluid(maxWidth: 1200) {
+                ...GatsbySanityImageFluid
+              }
+          }
+    }
     }
   }
 `
@@ -27,6 +35,7 @@ const AboutPage = props => {
   }
 
   const page = data && data.page
+  const bg = page.heroImage.asset.fluid
 
   if (!page) {
     throw new Error(
@@ -38,6 +47,13 @@ const AboutPage = props => {
     <SiteLayout>
       <SEO title={page.header} />
       <Container>
+      <Hero
+          titleText= { page.header }
+          buttonText="Inquire About Your Remodeling Project"
+          buttonLink="/contact"
+          overlayRGBA='rgba(0,0,0,.4)'
+          bg = { bg }
+        />
         <h1>{page.header}</h1>
         <BlockContent blocks={page._rawBlockContent || []} />
       </Container>

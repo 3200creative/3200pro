@@ -18,19 +18,22 @@ export default {
             }
         },
         {
-            name: 'sections',
-            type: 'array',
-            title: 'Featured Image/Video',
-            of: [
-                {
-                    title: 'Featured Video',
-                    type: 'video', 
-                },
-                {
-                    title: 'Featured Image',
-                    type: 'featuredImage', 
-                },
-            ]
+            name: 'publishedAt',
+            title: 'Published at',
+            description: 'You can use this field to schedule post where you show them',
+            type: 'datetime'
+          },
+        {
+            name: 'excerpt',
+            title: 'Excerpt',
+            type: 'text',
+            rows: '3',
+        },
+
+        {
+            title: 'Featured Image',
+            name: 'featuredImage',
+            type: 'featuredImage', 
         },
         {
             name: 'blockContent',

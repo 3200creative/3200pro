@@ -1,0 +1,70 @@
+import React from 'react'
+import { graphql } from 'gatsby'
+import SiteLayout from 'c32-gatsby-theme-core/src/components/layout'
+import { SEO, Layout } from "c32-gatsby-theme-core"
+import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error-lists'
+import Container from 'c32-gatsby-theme-core/src/components/container'
+import { mapEdgesToNodes } from '../../src/lib/helpers'
+import ServicePreviewGrid from '../../src/components/service-preview-grid'
+
+export const query = graphql`
+  query serviceArchiveQuery {
+    services: allSanityServices(
+      filter: { slug: { current: { ne: null } }}){
+      edges {
+        node {
+          title
+          id
+          featuredImage {
+            asset {
+              _id
+            }
+            alt
+          }
+          pattern {
+            asset {
+              _id
+            }
+            alt
+          }
+          _rawExcerpt
+          slug {
+            current
+          }
+        }
+      }
+    }
+  }
+`
+
+const Services = props => {
+  const { data, errors } = props
+
+  if (errors) {
+    return (
+      <Layout>
+        <GraphQLErrorList errors={errors} />
+      </Layout>
+    )
+  }
+
+  const services = data && data.services && mapEdgesToNodes(data.services)
+
+  if (!services) {
+    throw new Error(
+      'missing services archive data.'
+    )
+  }
+
+  return (
+    <SiteLayout>
+      <SEO title='title' />
+      <Container>
+      {services && services.length > 0 && <ServicePreviewGrid nodes={services} />}
+      </Container>
+    </SiteLayout>
+  )
+}
+    
+
+export default Services

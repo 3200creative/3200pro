@@ -23,6 +23,11 @@ export default {
             type: 'tags'
         },
         {
+            name: 'blockContent',
+            title: 'Content',
+            type: 'blockContent'
+        },
+        {
             name: 'seo',
             title: 'SEO Title And Description',
             type: 'meta',            

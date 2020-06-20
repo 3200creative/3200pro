@@ -44,9 +44,9 @@ export default {
             type: 'blockContent',
         },
         {
-            title: 'Quote Block',
-            name: 'quoteBlock',
-            type: 'quoteBlock',
+            title: 'Quote',
+            name: 'quote',
+            type: 'quote',
             row: 3,     
         },
         {

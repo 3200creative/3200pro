@@ -12,7 +12,14 @@ import {
   MdViewModule,
   MdVideocam,
   MdMusicNote,
+  MdChromeReaderMode,
 } from 'react-icons/lib/md'
+
+import {
+  FaThList,
+  FaQuoteLeft,
+} from 'react-icons/lib/fa'
+
 
 export default {
   title: 'Block Content',
@@ -79,10 +86,11 @@ export default {
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
     {
-      type: 'figure',
+      type: 'quote',
+      icon: FaQuoteLeft,
     },
     {
-      type: 'figureWide',
+      type: 'figure',
     },
     {
       type: 'video',
@@ -96,5 +104,14 @@ export default {
       type: 'gallery',
       icon: MdViewModule,
     },
+    {
+      type: 'recentPostFeed',
+      icon: FaThList,
+    },
+    {
+      type: 'singularFeaturedPost',
+      icon: MdChromeReaderMode,
+    },
+    
   ],
 }

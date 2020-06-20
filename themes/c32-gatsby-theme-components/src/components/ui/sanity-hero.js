@@ -3,7 +3,7 @@ import { jsx, Styled, Button } from "theme-ui"
 //import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
-const SanityHero = ({ titleText, buttonText, buttonLink, bg, overlayRGBA }) => {
+const SanityHero = ({ titleText, buttonText, buttonLink, bg, bgc, overlayRGBA }) => {
   // const data = useStaticQuery(
   //   graphql`
   //     query sanityHero {
@@ -17,17 +17,18 @@ const SanityHero = ({ titleText, buttonText, buttonLink, bg, overlayRGBA }) => {
   //     }
   //   `
   // )
-  const heroBg = bg
+  const heroBg = bg ? bg : 'none'
   const rgba = overlayRGBA
   return (
     <BackgroundImage
       fluid={heroBg}
-      backgroundColor={`#000`}
+      backgroundColor= {bgc}
       sx={{
         height: ['70vh','40vh'],
         width: "100vw",
         position: "relative",
         left: "calc(-50vw + 50%)",
+        variant:"variants.hero1",
       }}
     > 
       <div

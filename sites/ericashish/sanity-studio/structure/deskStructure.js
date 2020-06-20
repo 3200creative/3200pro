@@ -11,6 +11,7 @@ import {
   MdLocalCafe,
   MdFormatAlignJustify,
   MdMic,
+  MdHome,
 } from 'react-icons/lib/md'
 
 const hiddenDocTypes = listItem =>
@@ -54,8 +55,16 @@ export default () =>
                 ),
             ])
         ),
-      // Add a visual divider (optional)
-      S.divider(),
+        S.divider(),
+      S.listItem()
+      .title('Homepage')
+      .icon(MdHome)
+      .child(
+        S.document()
+                    .title("Homepage")
+                    .schemaType("page")
+                    .documentId("homepage")
+      ),
       S.listItem()
       .title('Events')
       .icon(MdEventAvailable)

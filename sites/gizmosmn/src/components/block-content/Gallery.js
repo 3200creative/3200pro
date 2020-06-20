@@ -15,7 +15,7 @@ function Gallery (props) {
   
   const [openModal, setOpen] = useState(false)
   const [currentImage, changeImage] = useState('cat')
-
+  const columns = props.column
   return (
     <>
     <Modal
@@ -67,11 +67,8 @@ function Gallery (props) {
     </figure>
     </Modal>
     <Grid
-    width={[ '100%', '40%' ]}
-    gap={2}
-    columns={[ 1, 2 ]}
     sx={{
-    width: '90%'
+    width: '100%'
     }}
     >
   <Masonry
@@ -84,7 +81,8 @@ function Gallery (props) {
 
       <Box key={image.key}
       sx={{
-        width: ['100%','100%', '50%'],
+        width: ['100%','100%', columns],
+        
       }}
       >
       <figure
@@ -97,6 +95,7 @@ function Gallery (props) {
           <Img sx={{
             variant: 'variants.shadow',
             maxWidth: '100%',
+            minHeight: columns === '33%' ? '180px' : '260px'
           }}
           className={image.positioning +' '+ image.sizes}
           fluid={getFluidGatsbyImage(image.asset._ref,{ maxWidth: 800 }, sanityConfig)}

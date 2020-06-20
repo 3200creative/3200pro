@@ -56,7 +56,9 @@ module.exports = {
       options: {
         projectId: 'tjb00633',
         dataset: 'production',
-
+        watchMode: true,
+        overlayDrafts: true,
+        token: 'skXsAKOITVxtKEQySYGz5PcD3ZkFNb6D1H3qpqXaY2bcdht5YHhxo8ygpY4a9sXCURQQASBtEN2Ppokgpc5rMIaz7x8LMPdyCXdDCIpeLQc17lK2rW6kGrNuhhhE3h3n8J5UM4JRyhAFBLqyNw36QnnFaBTcVyKCZP9FllPr5e0iOZCYxwmf',
         // If the Sanity GraphQL API was deployed using `--tag <name>`,
         // use `graphqlTag` to specify the tag name. Defaults to `default`.
         graphqlTag: 'default',

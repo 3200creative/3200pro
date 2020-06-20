@@ -31,6 +31,8 @@ const Hero = ({ titleText, buttonText, buttonLink }) => {
         mb: 5,
         display: "grid",
         placeItems: "center",
+
+        variant:"variants.hero1", 
       }}
     >
       <div>
@@ -38,10 +40,12 @@ const Hero = ({ titleText, buttonText, buttonLink }) => {
           sx= {{
             color: "accent",
             mb: 4,
+            variant:"variants.hero1.h1", 
           }}>{titleText}</Styled.h1>
         <Button as="a" href={buttonLink}
         sx= {{
           color: 'accent',
+          variant:"variants.hero1.h1.a",
         }}
         >
           {buttonText}

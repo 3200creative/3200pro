@@ -8,20 +8,21 @@ const DarkModeIcon = () => {
     ? 'dark'
     : 'light'
   return (
-    <button
+    <div
       sx={{
-        bg: 'black',
-        color: 'white',
-        borderRadius: '50px',
+        background: 'transparent',
         fontsize: 1,
-        width: 20,
+        border: 'none',
+        position: 'absolute',
+        top: '20px',
+        right: '30px'
       }}
       onClick ={e => {
-        setColorMode(newColorMode)
+        setColorMode(newColorMode)        
       }}
     >
-      {colorMode}
-    </button>
+      {colorMode == 'light' && '☾' || '☀' }
+    </div>
   )
 }
 

@@ -18,46 +18,26 @@ export default {
             }
         },
         {
-            title: 'Soundcloud URL',
-            name: 'href',
-            type: 'url',
-            validation: Rule => Rule.uri({scheme: ['http', 'https', 'mailto', 'tel']}),
+            name: 'publishedAt',
+            title: 'Published at',
+            description: 'You can use this field to schedule post where you show them',
+            type: 'datetime'
+          },
+        {
+            name: 'excerpt',
+            title: 'Excerpt',
+            type: 'text',
+            rows: '3',
         },
         {
-            name: 'sections',
-            type: 'array',
-            title: 'Featured Image/Video',
-            of: [
-                {
-                    title: 'Featured Video',
-                    type: 'video', 
-                },
-                {
-                    title: 'Featured Image',
-                    type: 'featuredImage', 
-                },
-            ]
+            title: 'Featured Image',
+            name: 'featuredImage',
+            type: 'featuredImage', 
         },
         {
             name: 'blockContent',
-            title: 'Introduction',
+            title: 'Content',
             type: 'blockContent'
-        },
-        {
-            title: 'Additional Content',
-            name: 'additionalContent',
-            type: 'blockContent',
-        },
-        {
-            name: 'gallery',
-            type: 'array',
-            title: 'Gallery',
-            of: [
-                {
-                    title: 'Image',
-                    type: 'figure', 
-                },
-            ]
         },
         {
             name: 'tags',

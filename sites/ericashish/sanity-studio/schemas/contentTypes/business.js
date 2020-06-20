@@ -18,27 +18,21 @@ export default {
             }
         },
         {
-        title: 'podcast',
-        name: 'podcast',
-        type: 'reference',
-        to: {
-            type: 'podcast',
+            name: 'publishedAt',
+            title: 'Published at',
+            description: 'You can use this field to schedule post where you show them',
+            type: 'datetime'
         },
-        },  
         {
-        name: 'featuredContent',
-        type: 'array',
-        title: 'Featured Image/Video',
-        of: [
-            {
-                title: 'Featured Video',
-                type: 'video', 
-            },
-            {
-                title: 'Featured Image',
-                type: 'featuredImage', 
-            },
-        ]
+            title: 'Featured Image',
+            name: 'featuredImage',
+            type: 'featuredImage', 
+        },
+        {
+            name: 'excerpt',
+            title: 'Excerpt',
+            type: 'text',
+            rows: '3',
         },
         {
             name: 'blockContent',

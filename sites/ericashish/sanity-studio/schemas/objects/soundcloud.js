@@ -4,9 +4,10 @@ export default {
     type: 'object',
     fields: [
       {
-        title: 'SoundCloud Anything URL',
-        name: 'url',
-        type: 'url',
+        title: 'SoundCloud Track Number',
+        name: 'track',
+        description: 'Example: 837724294 (this can be found within the embed code)',
+        type: 'string',
       },
       {
         title: 'SoundCloud Title',

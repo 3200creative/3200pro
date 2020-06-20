@@ -46,8 +46,9 @@ const Nav = (props) => {
               mx: 1,
               fontFamily: "navLinks",
               a: {
-                color: isNavOpen ? "header.textOpen" : "text",
+                color: isNavOpen ? "header.textOpen" : "header.textClosed",
                 textDecoration: "none",
+                fontSize: '16px',
                 py: 1,
                 px: 1,
                 mr: [0, null, 2, null, null],

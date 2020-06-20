@@ -9,7 +9,7 @@ const Figure = (props, {node}) => {
   const fluidProps = getFluidGatsbyImage(props.asset._ref,{ maxWidth: 800 }, sanityConfig)
   return (
     <figure  sx={{
-      width: 'max-content',
+      width: '100%',
       mx: 'auto',
       my: '80px',
     }}>
@@ -21,7 +21,6 @@ const Figure = (props, {node}) => {
           float: 'none',
           display: 'block',
         }}
-        className={props.positioning +' '+ props.sizes}
         fluid={fluidProps}
         alt={props.alt}
         />
