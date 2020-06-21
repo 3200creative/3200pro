@@ -9,7 +9,7 @@ import Blank from '../assets/blank.png'
 
 export const query = graphql`
   query PaymentQuery {
-    page: sanityPage(id: {eq: "c6000bed-04aa-55a7-bd07-a3db9067c7b7"}) {
+    page: sanityPage(id: {eq: "-c6000bed-04aa-55a7-bd07-a3db9067c7b7"}) {
       title
       _rawBlockContent
     }

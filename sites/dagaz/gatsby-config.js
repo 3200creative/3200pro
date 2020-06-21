@@ -4,7 +4,7 @@ module.exports = {
     description: `Placeholder description`,
     keywords: [`gatsby`, `theme`, `react`],
     author: `LocalizedPro`,
-    siteUrl: `https://affordablehomeimprovementz.com/`, //Change to you site address, required for sitemap.xml and robots.txt file among other things
+    siteUrl: `https://dagaztherapy.com/`, //Change to you site address, required for sitemap.xml and robots.txt file among other things
     social: {
       twitter: `@localizedpro`,
     },

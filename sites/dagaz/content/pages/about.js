@@ -8,7 +8,7 @@ import BlockContent from '../../src/components/block-content'
 
 export const query = graphql`
   query AboutPageQuery {
-    page: sanityAboutPage(id: {eq: "ab256ce4-4d4c-55c2-b7b7-91685e1d7a42"}) {
+    page: sanityAboutPage(id: {eq: "-ab256ce4-4d4c-55c2-b7b7-91685e1d7a42"}) {
       header
       _rawBlockContent
     }

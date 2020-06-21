@@ -185,7 +185,7 @@ function RecentPostFeed (props) {
           top: '-50%',
         }}
         >
-          <Img fluid={post.node.featuredImage.asset.fluid} alt="Test"/>
+         <Img fluid={post.node.featuredImage.asset.fluid} alt="Test"/>
         </div>
         </Link>
       </Box>

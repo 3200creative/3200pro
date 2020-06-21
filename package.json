@@ -19,6 +19,8 @@
     "eric:develop": "yarn workspace ericashish develop",
     "eric:dev": "yarn workspace ericashish develop",
     "eric:clean": "yarn workspace ericashish clean",
+    "eric:build": "yarn workspace ericashish build",
+    "eric:serve": "yarn workspace ericashish serve",
     "ahi:test": "start-server-and-test develop:eric http://localhost:8000 cy:open",
     "ahi:dev": "yarn workspace affordablehomeimprovementz develop",
     "ahi:build": "yarn workspace affordablehomeimprovementz build",

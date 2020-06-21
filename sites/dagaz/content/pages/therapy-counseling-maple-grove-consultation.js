@@ -9,7 +9,7 @@ import Blank from '../assets/blank.png'
 
 export const query = graphql`
   query ConsultQuery {
-    page: sanityPage(id: {eq: "86e6c50f-019e-5f31-9a89-ff682dbbf7b8"}) {
+    page: sanityPage(id: {eq: "-86e6c50f-019e-5f31-9a89-ff682dbbf7b8"}) {
       title
       _rawBlockContent
     }

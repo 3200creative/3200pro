@@ -9,7 +9,7 @@ import Typeform from 'c32-gatsby-theme-components/src/components/ui/typeform'
 export const query = graphql`
   query ContactPageQuery {
     
-    page: sanityContactPage(id: {eq: "6311880a-f7cf-5133-b4e6-78a4a5a63244"}) {
+    page: sanityContactPage(header: {eq: "Contact Information"}) {
       header
       _rawBlockContent
     }

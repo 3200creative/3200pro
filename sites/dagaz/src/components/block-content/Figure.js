@@ -2,7 +2,7 @@
 import { jsx } from "theme-ui"
 import { getFluidGatsbyImage } from "gatsby-source-sanity"
 import Img from "gatsby-image"
-const sanityConfig = {projectId: 'ws0rvaun', dataset: 'production'}
+const sanityConfig = {projectId: 'kw4k4btd', dataset: 'production'}
 
 function Figure (props) {
   return (

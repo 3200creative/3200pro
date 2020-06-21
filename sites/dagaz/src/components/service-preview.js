@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 import { getServiceUrl } from '../lib/helpers'
 import BlockText from '../components/block-text'
 import { getFluidGatsbyImage } from "gatsby-source-sanity"
-import clientConfig from '../../client-config'
+const sanityConfig = {projectId: 'kw4k4btd', dataset: 'production'}
 
 function servicePreview (props) {
   const image = props.featuredImage
@@ -22,7 +22,7 @@ function servicePreview (props) {
     }}
     >
     {image && (<Img
-      fluid={getFluidGatsbyImage(image,{ maxWidth: 800 }, {...clientConfig.sanity})} 
+      fluid={getFluidGatsbyImage(image,{ maxWidth: 800 }, sanityConfig)} 
     />)}
     </div>
       <div
