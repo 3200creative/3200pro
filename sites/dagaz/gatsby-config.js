@@ -36,24 +36,20 @@ module.exports = {
             link: '/services/maple-grove-minnesota-individual-therapy-therapist-counseling',
           },
           {
-            name: 'Chemical Health/Rule 25 Assessment',
-            link: '/services/chemical-health-rule-25-assessment-minnesota-maple-grove',
-          },
-          {
-            name: 'Telehealth Counseling',
-            link: '/services/telehealth-counseling-minnesota-therapy-counseling',
-          },
-          {
-            name: 'Parenting Support/Family Therapy',
-            link: '/services/parenting-support-family-therapy-maple-grove-minnesota',
-          },
-          {
             name: 'Chemical Health Counseling',
             link: '/services/chemical-health-counseling-maple-grove-minnesota-therapy',
           },
           {
+            name: 'Chemical Health/Rule 25 Assessment',
+            link: '/services/chemical-health-rule-25-assessment-minnesota-maple-grove',
+          },
+          {
             name: 'Parenting Support/Family Therapy',
             link: '/services/parenting-support-family-therapy-maple-grove-minnesota',
+          },
+          {
+            name: 'Telehealth Counseling',
+            link: '/services/telehealth-counseling-minnesota-therapy-counseling',
           },
         ]
       },

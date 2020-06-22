@@ -12,6 +12,7 @@ export default {
     siteTitle: "'lato', sans-serif", // Font for main site title
     navLinks: "'lato', sans-serif", // Font for the nav menu links
     alt: "'lato', sans-serif", //An alternate font style if needed.
+    body: "'lato', sans-serif",
   },
   colors: {
     ...tailwind.colors,
@@ -165,7 +166,9 @@ export default {
         overflow: 'hidden',
       },
       archiveImages: {
-        marginLeft: '-30vw',
+        marginLeft: '-20vw',
+        maxWidth: '100%',
+        width: '500px',
         overflow: 'hidden',
         opacity: '1',
         variant: 'variants.imageShadow',
@@ -193,6 +196,13 @@ export default {
         fontWeight: 2,
         fontSize: '16px',
         borderBottom: '1px solid primary',
+      },
+    },
+    footer: {
+      color: '#999',
+      fontSize: '14px',
+      a: {
+        color: '#999',
       },
     },
   },

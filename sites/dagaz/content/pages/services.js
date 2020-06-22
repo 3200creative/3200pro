@@ -11,7 +11,9 @@ import Hero from 'c32-gatsby-theme-components/src/components/ui/hero'
 export const query = graphql`
   query serviceArchiveQuery {
     services: allSanityServices(
-      filter: { slug: { current: { ne: null } }}){
+      filter: { slug: { current: { ne: null } }}
+      sort: { fields: [publishedAt], order: DESC }
+      ){
       edges {
         node {
           title
@@ -57,7 +59,7 @@ const Services = props => {
 
   const services = data && data.services && mapEdgesToNodes(data.services)
   const bg = data.heroImage.childImageSharp.fluid
-  
+
   if (!services) {
     throw new Error(
       'missing services archive data.'

@@ -22,8 +22,11 @@ const SiteFooter = () => {
         variant: "variants.footer",
       }}
     >
-      <Styled.p sx={{ m: 0, mx: 'auto' }}>
-        © {new Date().getFullYear()} {title} <br /> <a href='http://localizedpro.com/'> Site Design: Localized Pro</a> 
+      <Styled.p sx={{ 
+        m: 0, 
+        mx: 'auto'
+        }}>
+        © {new Date().getFullYear()} {title} | <a href='http://localizedpro.com/'> Site Design: Localized Pro</a> 
       </Styled.p>
     </footer>
   )

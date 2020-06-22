@@ -25,7 +25,9 @@ export const query = graphql`
     }
     }
     services: allSanityServices(
-      filter: { slug: { current: { ne: null } }}){
+      filter: { slug: { current: { ne: null } }}
+      sort: { fields: [publishedAt], order: DESC }
+      ){
       edges {
         node {
           title
