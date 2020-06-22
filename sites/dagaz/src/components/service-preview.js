@@ -26,14 +26,20 @@ function servicePreview (props) {
     />)}
     </div>
       <div
-    sx={{
-      variant: 'variants.postPreview.overlay',
+        sx={{
+          variant: 'variants.postPreview.overlay'
       }}>
       <h4>{props.title}</h4>
       {props._rawExcerpt && (
+        <div 
+        sx={{
+          variant: 'variants.postPreview.description',
+          }}
+        >
           <BlockText blocks={props._rawExcerpt} />
+        </div>
       )}
-      </div>
+    </div>
     </Link>
     </div>
   )

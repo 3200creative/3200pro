@@ -29,9 +29,12 @@ function BlogPostPreview (props) {
       }}>
       <h4>{props.title}</h4>
       {props._rawExcerpt && (
-        <span>
+        <div
+        sx={{
+          variant: 'variants.postPreview.excerpt',
+          }}>
           <BlockText blocks={props._rawExcerpt} />
-        </span>
+        </div>
       )}
       </div>
     </Link>

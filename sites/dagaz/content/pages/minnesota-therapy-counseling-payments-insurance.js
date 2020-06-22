@@ -6,19 +6,28 @@ import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error
 import Container from 'c32-gatsby-theme-core/src/components/container'
 import BlockContent from '../../src/components/block-content'
 import Blank from '../assets/blank.png'
+import Hero from 'c32-gatsby-theme-components/src/components/ui/hero'
+
 
 export const query = graphql`
   query PaymentQuery {
-    page: sanityPage(id: {eq: "-c6000bed-04aa-55a7-bd07-a3db9067c7b7"}) {
+    page: sanityPage(_id: {eq: "34a3436d-07fc-4a2d-8a3d-02b5684755e0"}) {
       title
       _rawBlockContent
     }
+    heroImage: file(relativePath: { eq: "maple-grove-therapy-mn.jpg" }) {
+          childImageSharp {
+            fluid(quality: 80, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+  }
   }
 `
 
 const Payment = props => {
   const { data, errors } = props
-
+  const bg = data.heroImage.childImageSharp.fluid
   if (errors) {
     return (
       <Layout>
@@ -37,6 +46,15 @@ const Payment = props => {
     <SiteLayout>
       <SEO title={page.header} />
       <Container>
+      <Hero
+          titleText= 'Ready To Get Started?'
+          buttonText="Schedule Appointment"
+          buttonLink="/contact"
+          bg = {bg}
+          ctaHeight = '250px'
+          bgc = '#fff'
+          overlayRGBA = 'rgba(255,255,255,.5)'
+        />
         <h1>{page.title}</h1>
         <BlockContent blocks={page._rawBlockContent || []} />
       </Container>

@@ -6,6 +6,7 @@ import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error
 import Container from 'c32-gatsby-theme-core/src/components/container'
 import { mapEdgesToNodes } from '../../src/lib/helpers'
 import ServicePreviewGrid from '../../src/components/service-preview-grid'
+import Hero from 'c32-gatsby-theme-components/src/components/ui/hero'
 
 export const query = graphql`
   query serviceArchiveQuery {
@@ -34,12 +35,18 @@ export const query = graphql`
         }
       }
     }
+    heroImage: file(relativePath: { eq: "maple-grove-therapy-mn.jpg" }) {
+          childImageSharp {
+            fluid(quality: 80, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
   }
 `
 
 const Services = props => {
   const { data, errors } = props
-
   if (errors) {
     return (
       <Layout>
@@ -49,7 +56,8 @@ const Services = props => {
   }
 
   const services = data && data.services && mapEdgesToNodes(data.services)
-
+  const bg = data.heroImage.childImageSharp.fluid
+  
   if (!services) {
     throw new Error(
       'missing services archive data.'
@@ -60,6 +68,15 @@ const Services = props => {
     <SiteLayout>
       <SEO title='title' />
       <Container>
+      <Hero
+          titleText= 'Degaz Therapy Services'
+          buttonText="Schedule Appointment"
+          buttonLink="/contact"
+          bg = {bg}
+          ctaHeight = '250px'
+          bgc = '#fff'
+          overlayRGBA = 'rgba(255,255,255,.5)'
+        />
       {services && services.length > 0 && <ServicePreviewGrid nodes={services} />}
       </Container>
     </SiteLayout>

@@ -127,20 +127,15 @@ export default {
       },
     },
     postPreview: {
-      marginTop: ['20vh',null,null,'40vh'],
-      width: "90vw",
+      marginTop: ['10vh',null,null, null],
+      width: "500px",
+      maxWidth: '90vw',
+      mx: 'auto',
       backgroundColor: '#d6e3dd',
-      py: '40px',
-      px: '5vw',
-      
-      "&:nth-of-type(even)": {
-        img: {
-          background: '#000000',
-        },
-        archiveImages: {
-          display: 'none',
-          background: '#000',
-        },
+      paddingBottom: 4,
+      paddingTop: 24,
+      ':first-of-type': {
+        marginTop: '80px',
       },
       p: {
         color: 'text',
@@ -157,7 +152,10 @@ export default {
         textAlign: 'left',
         color: 'text',
         lineHeight: 1,
-        m: 0,
+        m: 4,
+      },
+      description: {
+        mx: 4,
       },
       overlay: {
         position: "relative",
@@ -167,12 +165,9 @@ export default {
         overflow: 'hidden',
       },
       archiveImages: {
-        position: 'absolute',
+        marginLeft: '-30vw',
         overflow: 'hidden',
         opacity: '1',
-        left: '20vw',
-        width: ['80vw', null, '40vw', null, null],
-        margin: '-10vw',
         variant: 'variants.imageShadow',
         background: '#ccc',
       },

@@ -5,13 +5,22 @@ import { SEO, Layout } from "c32-gatsby-theme-core"
 import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error-lists'
 import Container from 'c32-gatsby-theme-core/src/components/container'
 import BlockContent from '../../src/components/block-content'
+import Hero from 'c32-gatsby-theme-components/src/components/ui/hero'
+
 
 export const query = graphql`
   query AboutPageQuery {
-    page: sanityAboutPage(id: {eq: "-ab256ce4-4d4c-55c2-b7b7-91685e1d7a42"}) {
+    page: sanityAboutPage {
       header
       _rawBlockContent
     }
+    heroImage: file(relativePath: { eq: "maple-grove-therapy-mn.jpg" }) {
+          childImageSharp {
+            fluid(quality: 80, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+  }
   }
 `
 
@@ -27,6 +36,7 @@ const AboutPage = props => {
   }
 
   const page = data && data.page
+  const bg = data.heroImage.childImageSharp.fluid
 
   if (!page) {
     throw new Error(
@@ -38,6 +48,15 @@ const AboutPage = props => {
     <SiteLayout>
       <SEO title={page.header} />
       <Container>
+      <Hero
+          titleText= 'About Dagaz Therapy'
+          buttonText="Schedule Appointment"
+          buttonLink="/contact"
+          bg = {bg}
+          ctaHeight = '250px'
+          bgc = '#fff'
+          overlayRGBA = 'rgba(255,255,255,.5)'
+        />
         <h1>{page.header}</h1>
         <BlockContent blocks={page._rawBlockContent || []} />
       </Container>
