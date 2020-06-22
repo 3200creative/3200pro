@@ -45,7 +45,7 @@ export const useSiteMetadata = () => {
   )
 
   const logo = Logo
-  const title = 'Affordable Home Improvementz'
+  const title = 'Dagaz Therapy'
   const seoImage = data.seoImage.childImageSharp.resize
   const metaData = data.site.siteMetadata
   const twitterUsername = data.site.siteMetadata.social.twitter
@@ -55,21 +55,18 @@ export const useSiteMetadata = () => {
     // Local Business Data:
     hasLocalBusinessSchema: true,
     businessType: 'LocalBusiness',
-    addressLocality:'St. Anthony',
+    addressLocality:'Maple Grove',
     addressRegion: 'MN',
-    postalCode: '55421',
-    streetAddress: '3901 Foss Rd #1b',
+    postalCode: '55369',
+    streetAddress: '11292 86th Ave N Suite 100',
     image: seoImage,
-    name: 'Affordable Home Improvementz',
-    telephone: '612-500-8717',
+    name: 'Dagaz Therapy',
+    telephone: '612-460-0427',
     priceRange: '$',
     url: data.site.siteMetadata.url,
-    bestRating: '5',
-    ratingCount: '5',
-    ratingValue: '5',
-    latitude: '45.0392447',
-    longitude: '-93.2135254',
-    geoRadius: '300',
+    latitude: '45.111081',
+    longitude: '-93.425827',
+    geoRadius: '60',
   }
   return allData
   
