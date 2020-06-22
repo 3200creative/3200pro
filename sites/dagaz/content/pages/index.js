@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled, Button } from "theme-ui"
-import React from 'react'
+import { jsx } from "theme-ui"
 import { graphql } from 'gatsby'
 import SiteLayout from 'c32-gatsby-theme-core/src/components/layout'
 import { SEO, Layout } from "c32-gatsby-theme-core"
@@ -59,7 +58,7 @@ const Homepage = props => {
   }
 
   const page = data && data.page
-  const bg = page.heroImage && page.heroImage.asset.fluid || Blank
+  const bg = page.heroImage && page.heroImage.asset.fluid
   if (!page) {
     throw new Error(
       'Missing "About" page data. Open the studio at http://localhost:3333 and add "About" page data and restart the development server.'

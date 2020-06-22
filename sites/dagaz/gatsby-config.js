@@ -87,6 +87,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-170287303-1",
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `c32-gatsby-site-base`,
