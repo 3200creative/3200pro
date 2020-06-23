@@ -214,7 +214,11 @@ export default {
       paddingBottom: '40px',
       a: {
         background: '#d6e3dd',
+        display: 'block',
         p: 3,
+        '&:hover': {
+          backgroundColor: 'primary',
+        },
       },
     },
   },

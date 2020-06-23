@@ -40,6 +40,7 @@ const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2
         position: "relative",
         left: "calc(-50vw + 50%)",
         mt: -3,
+        pt: 4,
         mb: 5,
         display: "grid",
         height: '100%',
@@ -55,7 +56,7 @@ const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2
           marginBottom: 4,
           }}>{titleText}</Styled.h1>
         <Grid
-        gap={2}
+        gap={4}
         columns={[ 1, 2, 2]}
         sx={{
           variant: 'variants.ctaButtons'
@@ -63,14 +64,14 @@ const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2
         >
           {buttonLink && (<Box
           sx={{
-            my: 4 
+            my: [0, null, 4] 
           }}
           ><Link to={buttonLink}>
           {buttonText} 
         </Link></Box>)}
         {buttonLink2 && (<Box
         sx={{
-          my: 2 
+          my: [0, null, 4]  
         }}
         ><Link to={buttonLink2}>
           {buttonText2} 

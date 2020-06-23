@@ -28,26 +28,29 @@ const Hero = ({ titleText, buttonText, buttonLink, buttonText2, buttonLink2, bg,
       fluid={bg || heroBg}
       backgroundColor={`#040e18`}
       sx={{
-        height: ctaHeight || "65vh",
+        minHeight: ctaHeight || ['70vh','40vh'],
         width: "100vw",
         position: "relative",
         left: "calc(-50vw + 50%)",
-        mt: -3,
-        mb: 5,
-        display: "grid",
-        placeItems: "center",
         backgroundColor: rgba,
         variant:"variants.hero1", 
       }}
     >
       <div
         sx= {{
-          textAlign: 'center',
-          display: "grid",
+          px: 4,
+        width: "100vw",
+        position: "relative",
+        left: "calc(-50vw + 50%)",
+        mt: -3,
+        mb: 5,
+        pt: 4,
+        display: "grid",
+        height: '100%',
+        minHeight: '250px',
         placeItems: "center",
-          backgroundColor: rgba,
-          width: '100vw',
-          minHeight: '250px',
+        backgroundColor: rgba,
+        textAlign: 'center'
         }}
       >
         <Styled.h1 
@@ -56,7 +59,7 @@ const Hero = ({ titleText, buttonText, buttonLink, buttonText2, buttonLink2, bg,
             variant:"variants.hero1.h1", 
           }}>{titleText}</Styled.h1>
         <Grid
-        gap={2}
+        gap={4}
         columns={[ 1, 2, 2]}
         sx={{
           variant: 'variants.ctaButtons'
@@ -64,13 +67,13 @@ const Hero = ({ titleText, buttonText, buttonLink, buttonText2, buttonLink2, bg,
         >
           {buttonLink && (<Box 
           sx={{
-            my: 4 
+            my: [0, null, 4] 
           }}><Link to={buttonLink}>
           {buttonText} 
         </Link></Box>)}
         {buttonLink2 && (<Box
         sx={{
-          my: 4
+          my: [0, null, 4] 
         }}
         ><Link to={buttonLink2} >
           {buttonText2} 
