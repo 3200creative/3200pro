@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import React from 'react'
 import { graphql } from 'gatsby'
 import SiteLayout from 'c32-gatsby-theme-core/src/components/layout'
@@ -7,6 +9,7 @@ import Container from 'c32-gatsby-theme-core/src/components/container'
 import { mapEdgesToNodes } from '../../src/lib/helpers'
 import ServicePreviewGrid from '../../src/components/service-preview-grid'
 import Hero from 'c32-gatsby-theme-components/src/components/ui/hero'
+import BlockContent from '../../src/components/block-content'
 
 export const query = graphql`
   query serviceArchiveQuery {
@@ -37,6 +40,10 @@ export const query = graphql`
         }
       }
     }
+    page: sanityServicesPage {
+      header
+      _rawBlockContent
+    }
     heroImage: file(relativePath: { eq: "maple-grove-therapy-mn.jpg" }) {
           childImageSharp {
             fluid(quality: 80, maxWidth: 1920) {
@@ -57,6 +64,7 @@ const Services = props => {
     )
   }
 
+  const page = data && data.page
   const services = data && data.services && mapEdgesToNodes(data.services)
   const bg = data.heroImage.childImageSharp.fluid
 
@@ -71,7 +79,7 @@ const Services = props => {
       <SEO title='title' />
       <Container>
       <Hero
-          titleText= 'Degaz Therapy Services'
+          titleText= {page.header}
           buttonText="Schedule Appointment"
           buttonLink="/scheduling"
           buttonText2="Contact Dagaz"
@@ -81,6 +89,7 @@ const Services = props => {
           bgc = '#fff'
           overlayRGBA = 'rgba(255,255,255,.5)'
         />
+        <BlockContent blocks={page._rawBlockContent || []} />
       {services && services.length > 0 && <ServicePreviewGrid nodes={services} />}
       </Container>
     </SiteLayout>
