@@ -43,12 +43,11 @@ const Hero = ({ titleText, buttonText, buttonLink, buttonText2, buttonLink2, bg,
       <div
         sx= {{
           textAlign: 'center',
-          py: 4,
           display: "grid",
         placeItems: "center",
           backgroundColor: rgba,
           width: '100vw',
-          height: '100vh',
+          minHeight: '250px',
         }}
       >
         <Styled.h1 
@@ -58,22 +57,22 @@ const Hero = ({ titleText, buttonText, buttonLink, buttonText2, buttonLink2, bg,
           }}>{titleText}</Styled.h1>
         <Grid
         gap={2}
-        columns={[ 1, null, 2]}
+        columns={[ 1, 2, 2]}
         sx={{
           variant: 'variants.ctaButtons'
         }}
         >
           {buttonLink && (<Box 
           sx={{
-            my: 2 
+            my: 4 
           }}><Link to={buttonLink}>
           {buttonText} 
         </Link></Box>)}
         {buttonLink2 && (<Box
         sx={{
-          my: 2 
+          my: 4
         }}
-        ><Link to={buttonLink2}>
+        ><Link to={buttonLink2} >
           {buttonText2} 
         </Link></Box>)}
         </Grid>

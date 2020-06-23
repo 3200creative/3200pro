@@ -56,7 +56,7 @@ const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2
           }}>{titleText}</Styled.h1>
         <Grid
         gap={2}
-        columns={[ 1, 2]}
+        columns={[ 1, 2, 2]}
         sx={{
           variant: 'variants.ctaButtons'
         }}
