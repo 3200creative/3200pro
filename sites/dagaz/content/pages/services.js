@@ -73,7 +73,9 @@ const Services = props => {
       <Hero
           titleText= 'Degaz Therapy Services'
           buttonText="Schedule Appointment"
-          buttonLink="/contact"
+          buttonLink="/scheduling"
+          buttonText2="Contact Dagaz"
+          buttonLink2="/contact"
           bg = {bg}
           ctaHeight = '250px'
           bgc = '#fff'

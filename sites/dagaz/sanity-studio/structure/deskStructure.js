@@ -16,6 +16,10 @@ import {
 } from 'react-icons/md'
 
 import {
+  BsCalendar
+}from 'react-icons/bs'
+
+import {
   RiArticleLine,
   RiServiceLine,
 }from 'react-icons/ri'
@@ -42,6 +46,8 @@ const hiddenDocTypes = listItem =>
     'services',
     'teamMember',
     'resources',
+    'scheduling',
+    'contact',
   ].includes(listItem.getId())
 
 export default () =>
@@ -103,6 +109,15 @@ export default () =>
                     .documentId("servicesPage")
                 ),
                 S.listItem()
+                .title("Scheduling")
+                .icon(BsCalendar)
+                .child(
+                  S.document()
+                    .title("Scheduling")
+                    .schemaType("schedulingPage")
+                    .documentId("schedulingPage")
+                ),
+                S.listItem()
                 .title("Contact Page")
                 .icon(MdMail)
                 .child(
@@ -110,7 +125,7 @@ export default () =>
                     .title("Contact")
                     .schemaType("contactPage")
                     .documentId("contactPage")
-                ),
+                )
             ]),
       ),
       S.listItem()

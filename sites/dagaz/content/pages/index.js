@@ -76,9 +76,12 @@ const Homepage = props => {
         <Hero
           titleText= { page.header }
           buttonText="Schedule Appointment"
-          buttonLink="/contact"
+          buttonLink="/scheduling"
+          buttonText2="Contact Dagaz"
+          buttonLink2="/contact"
           bg = { bg }
           bgc = '#fff'
+          ctaHeight = '250px'
           overlayRGBA = 'rgba(255,255,255,.7)'
         />
         <BlockContent blocks={page._rawBlockContent || []} />

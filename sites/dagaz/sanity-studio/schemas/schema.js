@@ -33,6 +33,7 @@ import services from './contentTypes/services'
 import resources from './contentTypes/resources'
 import contactPage from './contentTypes/contactPage'
 import teamMember from './contentTypes/teamMember'
+import scheduling from './contentTypes/scheduling'
 
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -72,5 +73,6 @@ export default createSchema({
     author,
     category,
     teamMember,
+    scheduling,
   ])
 })

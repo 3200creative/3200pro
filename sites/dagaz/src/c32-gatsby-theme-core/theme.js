@@ -31,6 +31,7 @@ export default {
       icons: baseColors.gray[6],
       iconsHover: baseColors.blue[7],
       iconsOpen: baseColors.gray[8],
+      primary: '#eeab9e',
     },
 
     footer: {
@@ -63,6 +64,9 @@ export default {
       fontWeight: "body",
       lineHeight: "body",
       fontSize: 2,
+      a: {
+        color: 'text',
+      },
     },
     blockquote: {
       bg: "muted",
@@ -187,6 +191,7 @@ export default {
       a: {
         textTransform: 'uppercase',
         fontWeight: 2,
+        fontSize: 1,
         color: 'text',
       },
     },
@@ -203,6 +208,13 @@ export default {
       fontSize: '14px',
       a: {
         color: '#999',
+      },
+    },
+    ctaButtons: {
+      paddingBottom: '40px',
+      a: {
+        background: '#d6e3dd',
+        p: 3,
       },
     },
   },

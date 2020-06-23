@@ -29,7 +29,7 @@ const Nav = () => {
           display: "flex",
           flexDirection: ["column", null, "row", null, null],
           flexWrap: "wrap",
-          textAlign: ["center", null, "left", null, null],
+          textAlign: ["left", null, "left", null, null],
           listStyle: "none",
           m: 0,
           p: 0,
@@ -107,7 +107,7 @@ const Nav = () => {
                       mx: 1,
                       fontFamily: "navLinks",
                       a: {
-                        color: isNavOpen ? "header.textOpen" : "header.text",
+                        color: isNavOpen ? "header.primary" : "header.text",
                         textDecoration: "none",
                         fontSize: [1, null, "inherit", null, null],
                         py: 1,

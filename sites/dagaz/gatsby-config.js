@@ -54,6 +54,10 @@ module.exports = {
         ]
       },
       {
+        name: 'Schedule Appointment',
+        link: `/scheduling`,
+      },
+      {
         name: 'Contact',
         link: `/contact`,
       },

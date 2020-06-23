@@ -1,10 +1,12 @@
 /** @jsx jsx */
 import { jsx, Styled, Button } from "theme-ui"
 import React from 'react'
+import { Link } from 'gatsby'
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
+import { Grid, Box } from 'theme-ui'
 
-const Hero = ({ titleText, buttonText, buttonLink, bg, ctaHeight, overlayRGBA }) => {
+const Hero = ({ titleText, buttonText, buttonLink, buttonText2, buttonLink2, bg, ctaHeight, overlayRGBA }) => {
   const data = useStaticQuery(
     graphql`
       query Hero {
@@ -54,14 +56,20 @@ const Hero = ({ titleText, buttonText, buttonLink, bg, ctaHeight, overlayRGBA })
             color: "accent",
             variant:"variants.hero1.h1", 
           }}>{titleText}</Styled.h1>
-        <Button as="a" href={buttonLink}
-        sx= {{
-          color: 'accent',
-          variant:"variants.hero1.h1.a",
+        <Grid
+        gap={2}
+        columns={[ 1, null, 2]}
+        sx={{
+          variant: 'variants.ctaButtons'
         }}
         >
-          {buttonText}
-        </Button>
+          {buttonLink && (<Box><Link to={buttonLink}>
+          {buttonText} 
+        </Link></Box>)}
+        {buttonLink2 && (<Box><Link to={buttonLink2}>
+          {buttonText2} 
+        </Link></Box>)}
+        </Grid>
       </div>
     </BackgroundImage>
     </>
