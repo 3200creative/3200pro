@@ -26,7 +26,7 @@ const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2
       fluid={heroBg}
       backgroundColor= {bgc}
       sx={{
-        height: ctaHeight || ['70vh','40vh'],
+        minHeight: ctaHeight || ['70vh','40vh'],
         width: "100vw",
         position: "relative",
         left: "calc(-50vw + 50%)",
@@ -43,6 +43,7 @@ const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2
         mb: 5,
         display: "grid",
         height: '100%',
+        minHeight: '250px',
         placeItems: "center",
         backgroundColor: rgba,
         textAlign: 'center'
@@ -60,10 +61,18 @@ const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2
           variant: 'variants.ctaButtons'
         }}
         >
-          {buttonLink && (<Box><Link to={buttonLink}>
+          {buttonLink && (<Box
+          sx={{
+            my: 4 
+          }}
+          ><Link to={buttonLink}>
           {buttonText} 
         </Link></Box>)}
-        {buttonLink2 && (<Box><Link to={buttonLink2}>
+        {buttonLink2 && (<Box
+        sx={{
+          my: 2 
+        }}
+        ><Link to={buttonLink2}>
           {buttonText2} 
         </Link></Box>)}
         </Grid>

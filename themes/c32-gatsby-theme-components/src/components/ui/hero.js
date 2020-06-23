@@ -48,7 +48,7 @@ const Hero = ({ titleText, buttonText, buttonLink, buttonText2, buttonLink2, bg,
         placeItems: "center",
           backgroundColor: rgba,
           width: '100vw',
-          height: '100%',
+          height: '100vh',
         }}
       >
         <Styled.h1 
@@ -63,10 +63,17 @@ const Hero = ({ titleText, buttonText, buttonLink, buttonText2, buttonLink2, bg,
           variant: 'variants.ctaButtons'
         }}
         >
-          {buttonLink && (<Box><Link to={buttonLink}>
+          {buttonLink && (<Box 
+          sx={{
+            my: 2 
+          }}><Link to={buttonLink}>
           {buttonText} 
         </Link></Box>)}
-        {buttonLink2 && (<Box><Link to={buttonLink2}>
+        {buttonLink2 && (<Box
+        sx={{
+          my: 2 
+        }}
+        ><Link to={buttonLink2}>
           {buttonText2} 
         </Link></Box>)}
         </Grid>
