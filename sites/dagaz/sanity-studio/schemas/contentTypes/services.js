@@ -39,9 +39,17 @@ export default {
     {
       name: 'excerpt',
       type: 'excerptPortableText',
-      title: 'Excerpt',
+      title: 'Service Page Excerpt',
       description:
         'This ends up on summary pages, on Google, when people share your post in social media.'
+    },
+
+    {
+      name: 'homepageExcerpt',
+      type: 'excerptPortableText',
+      title: 'Homepage Excerpt',
+      description:
+        'While this can be similar to the Service Page Excerpt, it should be different. This will allow more unique content on your website.'
     },
     {
       name: 'authors',

@@ -126,6 +126,7 @@ export default {
     hero1: {
       h1: {
         color: '#4a494e',
+        textShadow: 'none',
         a: {
           color: '#4a494e',
         },
