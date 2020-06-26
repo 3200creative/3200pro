@@ -111,8 +111,15 @@ export default {
       padding: 0,
       backgroundColor: 'background',
       color: '#999',
+      fontSize: '16px',
       a: {
         color: '#999',
+      },
+    },
+    header: {
+      height: '90px',
+      img: {
+        height: '50px',
       },
     },
     ctaButtons: {

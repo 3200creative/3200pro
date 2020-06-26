@@ -40,10 +40,10 @@ const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2
         position: "relative",
         left: "calc(-50vw + 50%)",
         mt: -3,
-        pt: 4,
+        py: 4,
         mb: 5,
         display: "grid",
-        minHeight: '250px',
+        minHeight: 'inherit',
         placeItems: "center",
         backgroundColor: rgba,
         textAlign: 'center'
