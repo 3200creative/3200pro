@@ -67,7 +67,7 @@ exports.createPages = ({ graphql, actions }) => {
     result.data.allSanityGalleryPage.edges.forEach(edge => {
       const id = edge.node.id
       const slug = edge.node.slug.current
-      const path = `${slug}/`
+      const path = `minnesota-custom-car-shop-showcase/${slug}/`
       createPage({
         // Path for this page — required
         path,

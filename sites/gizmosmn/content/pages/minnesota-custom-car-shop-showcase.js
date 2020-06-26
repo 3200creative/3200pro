@@ -82,7 +82,8 @@ const Showcase = props => {
             width={[ '100%', '40%' ]}
             gap={6}
             sx={{
-            width: '90%'
+            width: '90%',
+            variant: 'variants.showcaseFeed'
         }}
         >
         {posts.map(post => (
@@ -93,7 +94,7 @@ const Showcase = props => {
             }}
         >
         {post.node.featuredImage && (<Img fluid={post.node.featuredImage.asset.fluid} />) || 'needs featured image'}
-        <h1>{post.node.title}</h1>
+        <h2>{post.node.title}</h2>
         </Box>
         </Link>
         ))}

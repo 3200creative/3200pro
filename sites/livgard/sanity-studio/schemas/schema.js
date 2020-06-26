@@ -28,6 +28,7 @@ import teamMember from './contentTypes/teamMember'
 import practiceArea from './contentTypes/legalService'
 import testimonial from './contentTypes/testimonial'
 import landingPage from './contentTypes/landingPage'
+import faq from './contentTypes/faq'
 
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -61,6 +62,7 @@ export default createSchema({
     practiceArea,
     testimonial,
     landingPage,
+    faq
   ])
 })
 

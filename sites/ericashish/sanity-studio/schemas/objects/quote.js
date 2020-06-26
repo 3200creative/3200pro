@@ -17,7 +17,7 @@ export default {
         {
             title: 'Optional Author URL',
             name: 'authorURL',
-            type: 'simpleUrl',
+            type: 'url',
             validation: Rule => Rule.uri({scheme: ['http', 'https', 'mailto', 'tel']}),
         },
     ]

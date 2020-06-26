@@ -107,6 +107,33 @@ export default {
     whiteTextShadow: {
       textShadow: '1px 1px 6px rgba(0, 0, 0, 0.32)',
     },
+    footer: {
+      padding: 0,
+      backgroundColor: 'background',
+      color: '#999',
+      a: {
+        color: '#999',
+      },
+    },
+    ctaButtons: {
+      backgroundColor: 'primary',
+      textAlign: 'center',
+      borderRadius: '4px',
+      a: {
+        color: 'white',
+        textAlign: 'center',
+        padding: 4,
+        textTransform: 'uppercase',
+      },
+    },
+    showcaseFeed: {
+      marginTop: 5,
+      a: {
+        color: 'black',
+        fontSize: 1,
+        textAlign: 'center',
+      },
+    },
     siteTitle: {
       fontSize: [4, null, 5, null, null],
     },
