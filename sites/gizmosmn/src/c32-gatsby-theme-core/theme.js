@@ -107,6 +107,11 @@ export default {
     whiteTextShadow: {
       textShadow: '1px 1px 6px rgba(0, 0, 0, 0.32)',
     },
+    hero1: {
+      h1: {
+        fontSize: [30, 60, 80],
+      },
+    },
     footer: {
       padding: 0,
       backgroundColor: 'background',
