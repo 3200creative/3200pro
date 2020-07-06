@@ -5,6 +5,11 @@ import { SEO, Layout } from "c32-gatsby-theme-core"
 import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error-lists'
 import Container from 'c32-gatsby-theme-core/src/components/container'
 import BlockContent from './block-content'
+import FeaturedImage from './FeaturedImage'
+import PostContent from './singlePostContainer'
+import { format, distanceInWords, differenceInDays } from 'date-fns'
+
+
 const TeaPageTemplate = props => {
     const { data, errors } = props
     const page = data && data.page
@@ -20,8 +25,26 @@ const TeaPageTemplate = props => {
                 <GraphQLErrorList errors={errors} />
             )}
         </Container>
-            {page && <Styled.h1>{page.title}</Styled.h1>}
+        <PostContent>
+        <header
+          sx = {{
+            variant: 'variants.postContainer.header'
+          }}
+        >
+          {page && <Styled.h1>{page.title}</Styled.h1>}
+          <div
+          >
+          {differenceInDays(new Date(page.publishedAt), new Date()) > 3
+            ? distanceInWords(new Date(page.publishedAt), new Date())
+            : format(new Date(page.publishedAt), 'MMMM Do YYYY')}
+          </div>
+         </header>
+            <FeaturedImage
+            showFeaturedImage={data.sanityGlobalOptions.teaFeaturedImageHero}
+            featuredImage={page.featuredImage}
+            />
         {page._rawBlockContent && <BlockContent blocks={page._rawBlockContent} />}
+        </PostContent>
         </Layout>
   )
 }
@@ -36,7 +59,20 @@ export const query = graphql`
         slug {
             current
         }
+        publishedAt
+        featuredImage {
+            asset {
+              _id
+            }
+            alt
+        }
         _rawBlockContent(resolveReferences: {maxDepth: 20})
+  }
+  sanityGlobalOptions{
+      musicFeaturedImageHero
+      lifeFeaturedImageHero
+      businessFeaturedImageHero
+      teaFeaturedImageHero
   }
   }
 `

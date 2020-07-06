@@ -67,7 +67,7 @@ const Blog = props => {
       <SEO title='title' />
       <Container>
       <Hero
-          titleText= 'Degaz Therapy Services'
+          titleText= 'Dagaz Therapy Services'
           buttonText="Schedule Appointment"
           buttonLink="/scheduling"
           buttonText2="Contact Dagaz"

@@ -1,5 +1,6 @@
+/* eslint no-unused-vars:0 */
 /** @jsx jsx */
-import { jsx, Styled, Button } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
 import React from 'react'
 import { Link } from 'gatsby'
 import { useStaticQuery, graphql } from "gatsby"

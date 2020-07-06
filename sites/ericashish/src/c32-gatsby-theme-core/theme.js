@@ -24,6 +24,7 @@ export default {
     secondary: baseColors.orange[7],
     accent: baseColors.orange[2],
     grayTxt: '#73737D',
+    lightTxt: '#73737D',
     muted: baseColors.gray[2],
 
     header: {
@@ -48,7 +49,6 @@ export default {
         text: '#fff',
         background: '#000',
         primary: '#0cf',
-        
         transition: 'all 0.25s ease-in-out-quad',
         shadow: {
           boxShadow: '0 30px 60px -10px rgba(255,255,255,0.3), 0 18px 36px -18px rgba(255,255,255,0.33) !important',
@@ -73,6 +73,9 @@ export default {
   weights: {
     headingWeight: "600",
     navigation: "300",
+  },
+  borderRads: {
+    generalImagesBorderRadius: 6,
   },
   styles: {
     ...tailwind.styles,
@@ -128,10 +131,15 @@ export default {
     h1: {
       fontWeight: 'headingWeight',
       fontFamily: '"Merriweather",Georgia,Serif',
-      maxWidth: '560px',
+      maxWidth: '750px',
       margin: '0 auto',
       width: '900px',
-      fontSize: 4,
+      wordBreak: 'keep-all',
+      color: 'text',
+      fontSize: '48px',
+      marginBottom: '25px',
+      fontWeight: 'bold',
+      lineHeight: '1.32',
     },
     h2: {
       fontWeight: 'headingWeight',
@@ -162,6 +170,56 @@ export default {
       img: {
         display: 'none',
       },
+    },
+    postContainer: {
+      width: '750px',
+      header: {
+        my: 4,
+      },
+      img: {
+        boxShadow: 'none',
+        borderRadius: 'generalImagesBorderRadius',
+      },
+      video: {
+        borderRadius: 6,
+        overflow: 'hidden',
+      },
+      iframe: {
+        boxShadow: 'none',
+        borderRadius: 'generalImagesBorderRadius',
+      },
+    },
+    postDate: {
+      color: 'lightTxt',
+      fontSize: 1,
+      opacity: '.33',
+      mb: 4
+    },
+    archiveLayout: {
+      outline: 'none',
+      background: 'transparent',
+      borderRadius: '100px',
+      padding: '10px',
+      transition: 'all 0.5s ease-in-out-quad',
+      '&:hover': {
+        background: '#f5f5f5',
+        borderRadius: '100px',
+        padding: '10px',
+        transition: 'all 0.5s ease-in-out-quad'
+      },
+      '&:active': {
+        outline: 'none'
+      },
+    },
+    footer: {
+      textAlign: 'left',
+      width: 'maxContentWidth',
+      margin: '0 auto',
+      color: 'lightTxt',
+      fontSize: 1,
+      a: {
+        color: 'lightTxt'
+      }
     },
   },
 }

@@ -33,6 +33,7 @@ import tea from './contentTypes/tea'
 import page from './contentTypes/page'
 import author from './contentTypes/author'
 import landingPage from './contentTypes/landingPage'
+import globalOptions from './contentTypes/globalOptions'
 
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -72,5 +73,6 @@ export default createSchema({
     podcast,
     landingPage,
     author,
+    globalOptions,
   ])
 })

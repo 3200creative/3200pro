@@ -15,7 +15,7 @@ const Nav = () => {
         gridRow: ["2 / 3", null, "1 / 2", null, null],
         justifySelf: ["center", null, "end", null, null],
         alignSelf: ["start", null, "center", null, null],
-        alignItems: "center",
+        alignItems: "c enter",
         mt: isNavOpen ? 2 : 0,
         display: [isNavOpen ? "flex" : "none", null, "flex", null, null],
         flexDirection: ["column", null, "row", null, null],
@@ -97,6 +97,8 @@ const Nav = () => {
                     opacity: "1",
                     display: "block",
                   },
+                  variant: 'variants.navSubMenu'
+                  ,
                 }}
                 aria-label="dropdown"
               >

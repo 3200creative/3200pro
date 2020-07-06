@@ -31,11 +31,6 @@ export default {
             rows: '3',
         },
         {
-            title: 'Featured Video',
-            name: 'featuredVideo',
-            type: 'video', 
-        },
-        {
             title: 'Featured Image',
             name: 'featuredImage',
             type: 'featuredImage', 

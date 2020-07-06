@@ -6,9 +6,9 @@
   ],
   "name": "c32-gatsby",
   "devDependencies": {
-    "@testing-library/cypress": "^5.3.0",
+    "@testing-library/cypress": "^6.0.0",
     "cypress": "^4.0.2",
-    "gatsby-cypress": "^0.2.22",
+    "gatsby-cypress": "^0.4.6",
     "start-server-and-test": "^1.10.8"
   },
   "scripts": {
@@ -38,6 +38,17 @@
     "l:dev": "yarn workspace livgard develop",
     "l:build": "yarn workspace livgard build",
     "l:serve": "yarn workspace livgard serve",
-    "l:clean": "yarn workspace livgard clean"
+    "l:clean": "yarn workspace livgard clean",
+    "livgard:dev": "yarn workspace livgard develop",
+    "livgard:build": "yarn workspace livgard build",
+    "livgard:serve": "yarn workspace livgard serve",
+    "livgard:clean": "yarn workspace livgard clean",
+    "32:dev": "yarn workspace 3200pro develop",
+    "32:build": "yarn workspace 3200pro build",
+    "32:serve": "yarn workspace 3200pro serve",
+    "32:clean": "yarn workspace 3200pro clean"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5"
   }
 }

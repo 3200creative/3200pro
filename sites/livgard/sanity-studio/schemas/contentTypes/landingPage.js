@@ -33,6 +33,11 @@ export default {
             to: [{type: 'menu'}]
         },
         {
+            title: 'Hero Image',
+            name: 'heroImage',
+            type: 'featuredImage', 
+        },
+        {
             name: 'blockContent',
             type: 'blockContent',
             title: 'Body'

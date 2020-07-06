@@ -6,6 +6,11 @@ import { SEO, Layout } from "c32-gatsby-theme-core"
 import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error-lists'
 import Container from 'c32-gatsby-theme-core/src/components/container'
 import BlockContent from './block-content'
+import FeaturedImage from './FeaturedImage'
+import PostContent from './singlePostContainer'
+import { format, distanceInWords, differenceInDays } from 'date-fns'
+
+
 const BusinessPageTemplate = props => {
     const { data, errors } = props
     const page = data && data.page
@@ -19,18 +24,26 @@ const BusinessPageTemplate = props => {
                 <GraphQLErrorList errors={errors} />
             )}
         </Container>
-            {page && <Styled.h1>{page.title}</Styled.h1>}
-            <p>{page.publishedAt}</p>
-            <Img fluid={page.featuredImage.asset.fluid} alt="Test"
-                sx= {{
-                  variant: 'variants.shadow',
-                  maxWidth: '80%',
-                  width: '560px',
-                  mx: 'auto',
-
-                }}
+        <PostContent>
+        <header
+          sx = {{
+            variant: 'variants.postContainer.header'
+          }}
+        >
+          {page && <Styled.h1>{page.title}</Styled.h1>}
+          <div
+          >
+          {differenceInDays(new Date(page.publishedAt), new Date()) > 3
+            ? distanceInWords(new Date(page.publishedAt), new Date())
+            : format(new Date(page.publishedAt), 'MMMM Do YYYY')}
+          </div>
+         </header>
+            <FeaturedImage
+              showFeaturedImage={data.sanityGlobalOptions.musicFeaturedImageHero}
+              featuredImage={page.featuredImage}
             />
         {page._rawBlockContent && <BlockContent blocks={page._rawBlockContent} />}
+        </PostContent>
         </Layout>
   )
 }
@@ -48,14 +61,18 @@ export const query = graphql`
         excerpt
         publishedAt
         featuredImage {
-                asset {
-                  fluid(maxWidth: 600) {
-                    ...GatsbySanityImageFluid
-                  }
-                }
-                alt
+            asset {
+              _id
+            }
+            alt
         }
         _rawBlockContent(resolveReferences: {maxDepth: 20})
+  }
+  sanityGlobalOptions{
+      musicFeaturedImageHero
+      lifeFeaturedImageHero
+      businessFeaturedImageHero
+      teaFeaturedImageHero
   }
   }
 `

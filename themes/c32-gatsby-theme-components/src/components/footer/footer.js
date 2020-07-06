@@ -4,6 +4,8 @@ import { useSiteMetadata } from "c32-gatsby-theme-core"
 
 const SiteFooter = () => {
   const { title } = useSiteMetadata()
+  const { developer } = useSiteMetadata()
+  const { developerLink } = useSiteMetadata()
 
   return (
     <footer
@@ -26,7 +28,7 @@ const SiteFooter = () => {
         m: 0, 
         mx: 'auto'
         }}>
-        © {new Date().getFullYear()} {title} | <a href='http://localizedpro.com/'> Site Design: Localized Pro</a> 
+        © {new Date().getFullYear()} {title} | Site Design: <a href={developerLink}> {developer ? developer : 'Localized Pro'}</a> 
       </Styled.p>
     </footer>
   )

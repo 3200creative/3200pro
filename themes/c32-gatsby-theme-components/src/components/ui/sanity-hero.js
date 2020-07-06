@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled, Button } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
 import { Link } from 'gatsby'
 //import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
@@ -56,21 +56,21 @@ const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2
           }}>{titleText}</Styled.h1>
         <Grid
         gap={4}
-        columns={[ 1, buttonLink2 && 2 || 1, buttonLink2 && 2 || 1]}
+        columns={[ 1, (buttonLink2 && 2) || 1, (buttonLink2 && 2) || 1]}
         sx={{
           variant: 'variants.ctaButtons'
         }}
         >
           {buttonLink && (<Box
           sx={{
-            my: [0, null, 4] 
+            my: [0, null, 2] 
           }}
           ><Link to={buttonLink}>
           {buttonText} 
         </Link></Box>)}
         {buttonLink2 && (<Box
         sx={{
-          my: [0, null, 4]  
+          my: [0, null, 2]  
         }}
         ><Link to={buttonLink2}>
           {buttonText2} 

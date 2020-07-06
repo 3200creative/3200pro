@@ -5,8 +5,10 @@ import Branding from "./branding/branding"
 import Nav from "./navbar/nav"
 import HamburgerButton from "./navbar/hamburger-button"
 import { NavContext } from "c32-gatsby-theme-core"
+import DarkModeIcon from "c32-gatsby-theme-core/src/components/darkmode"
+import { useDarkMode } from "c32-gatsby-theme-core/src/utils/use-site-metadata"
 
-const SiteHeader = () => {
+const SiteHeader = ({useDarkMode}) => {
   const [isNavOpen] = useContext(NavContext)
   return (
     <header
@@ -42,6 +44,7 @@ const SiteHeader = () => {
         <Branding />
         <Nav />
         <HamburgerButton />
+        {useDarkMode = true ? <DarkModeIcon /> : null}
       </div>
     </header>
   )

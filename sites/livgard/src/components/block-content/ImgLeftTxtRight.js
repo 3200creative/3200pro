@@ -4,10 +4,7 @@ import { Grid } from 'theme-ui'
 import { Box } from 'theme-ui'
 import Img from 'gatsby-image'
 import { getFluidGatsbyImage } from "gatsby-source-sanity"
-import { Link } from "gatsby"
-import { Button } from 'theme-ui'
-import BlockContent from '../block-content'
-const sanityConfig = {projectId: 'ws0rvaun', dataset: 'production'}
+const sanityConfig = {projectId: 't6k5yf8j', dataset: 'production'}
 
 
 

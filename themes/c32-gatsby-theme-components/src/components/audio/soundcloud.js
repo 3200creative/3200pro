@@ -4,7 +4,6 @@ import { jsx } from "theme-ui"
 const Soundcloud = ({ soundcloudSrcURL, soundcloudTitle, height, ...props }) => (
     <iframe
     sx={{
-      variant: 'variants.shadow',
       my: 30,
     }}
       width= '100%'

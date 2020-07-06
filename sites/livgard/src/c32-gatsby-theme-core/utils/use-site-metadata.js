@@ -1,5 +1,5 @@
 import { useStaticQuery, graphql } from "gatsby"
-import Logo from '../../../content/assets/maple-grove-therapy.svg'
+import Logo from '../../../content/assets/minnesota-law-firm-livgard.svg'
 export const useSiteMetadata = () => {
   const data = useStaticQuery(
     graphql`
@@ -45,7 +45,7 @@ export const useSiteMetadata = () => {
   )
 
   const logo = Logo
-  const title = 'Affordable Home Improvementz'
+  const title = 'Livgard & Lloyd'
   const seoImage = data.seoImage.childImageSharp.resize
   const metaData = data.site.siteMetadata
   const twitterUsername = data.site.siteMetadata.social.twitter
@@ -55,20 +55,20 @@ export const useSiteMetadata = () => {
     // Local Business Data:
     hasLocalBusinessSchema: true,
     businessType: 'LocalBusiness',
-    addressLocality:'St. Anthony',
+    addressLocality:'Minneapolis',
     addressRegion: 'MN',
     postalCode: '55421',
     streetAddress: '3901 Foss Rd #1b',
     image: seoImage,
-    name: 'Affordable Home Improvementz',
-    telephone: '612-500-8717',
+    name: 'Livgard & Lloyd PLLP.',
+    telephone: '612-825-7777',
     priceRange: '$',
     url: data.site.siteMetadata.url,
     bestRating: '5',
     ratingCount: '5',
     ratingValue: '5',
-    latitude: '45.0392447',
-    longitude: '-93.2135254',
+    latitude: '44.972870',
+    longitude: '93.220468',
     geoRadius: '300',
   }
   return allData

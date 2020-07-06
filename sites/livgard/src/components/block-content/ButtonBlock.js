@@ -1,7 +1,5 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import { Grid } from 'theme-ui'
-import { Box } from 'theme-ui'
 import { Link } from "gatsby"
 import { Button } from 'theme-ui'
 

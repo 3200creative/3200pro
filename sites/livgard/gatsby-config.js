@@ -76,11 +76,11 @@ module.exports = {
     {
       resolve: 'gatsby-source-sanity',
       options: {
-        projectId: 'kw4k4btd',
+        projectId: 't6k5yf8j',
         dataset: 'production',
-        watchMode: true,
-        overlayDrafts: true,
-        token: 'skLfgMO7jqisPXF329znNpxLrAcF5tFOo7w2RGWT0QAglPTtexq0pohDqjhnc1sNDZVpZGIwMur1793h46r4h4IRWiMiRhjmtJu5NJKtLE5OyLT4MNLCq6CmNcA5QN18Zv6pa5QytkuVisl2FXWttDTttHADe7SP6mqOHiTqTX3cAEOpisD3',
+        watchMode: false,
+        overlayDrafts: false,
+        token: 'skJICpjfpYz6eWa4CpU6buKbKAr1K0q3ZMGzY1DBaKhgzLxEopuLPBANrJawxmko6ECgLt4NInrBSIXaWkoHl0ysUyJjUCnuUl3xc1IGKK223L4yZRDa7UgylezEQzPFS9OanJzvF1ga3hrGAXSCoO6JYmBIRG9DRpgouG3t9ItvzVeNoLTu',
         // If the Sanity GraphQLs API was deployed using `--tag <name>`,
         // use `graphqlTag` to specify the tag name. Defaults to `default`.
         graphqlTag: 'default',

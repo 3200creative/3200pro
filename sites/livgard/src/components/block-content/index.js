@@ -2,7 +2,6 @@ import BaseBlockContent from '@sanity/block-content-to-react'
 import React from 'react'
 import Figure from './Figure'
 import Spacer from './Spacer'
-import Gallery from './Gallery'
 import ButtonBlock from './ButtonBlock'
 import ImgLeftTxtRight from './ImgLeftTxtRight'
 const serializers = {
@@ -30,9 +29,6 @@ const serializers = {
     },
     figure (props) {
       return <Figure {...props.node} />
-    },
-    gallery (props) {
-      return <Gallery {...props.node} />
     },
     clear (props) {
       return <Spacer {...props.node} />

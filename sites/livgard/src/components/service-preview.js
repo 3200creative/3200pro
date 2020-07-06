@@ -1,5 +1,6 @@
+/* eslint no-unused-vars:0 */
 /** @jsx jsx */
-import { jsx, Styled, Button } from "theme-ui"
+import { jsx } from "theme-ui"
 import { Link } from 'gatsby'
 import React from 'react'
 import Img from "gatsby-image"

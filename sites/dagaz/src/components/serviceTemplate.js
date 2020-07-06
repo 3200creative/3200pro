@@ -19,7 +19,7 @@ const ServiceTemplate = props => {
         {service && <SEO title={service.title} />}
         <Container>
         <Hero
-          titleText= 'Degaz Therapy Services'
+          titleText= 'Dagaz Therapy Services'
           buttonText="Schedule Appointment"
           buttonLink="/scheduling"
           buttonText2="Contact Dagaz"

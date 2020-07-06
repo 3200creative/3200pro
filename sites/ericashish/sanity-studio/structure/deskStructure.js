@@ -12,7 +12,9 @@ import {
   MdFormatAlignJustify,
   MdMic,
   MdHome,
+  MdLanguage,
 } from 'react-icons/lib/md'
+
 
 const hiddenDocTypes = listItem =>
   ![
@@ -53,6 +55,15 @@ export default () =>
                 .child(
                   S.documentTypeList("menuLink").title("Navigation Links")
                 ),
+              S.listItem()
+              .title("Global Options")
+              .icon(MdLanguage)
+              .child(
+                S.document()
+                  .title("Metadata")
+                  .schemaType("globalOptions")
+                  .documentId("globalOptions")
+              ),
             ])
         ),
         S.divider(),

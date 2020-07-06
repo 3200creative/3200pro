@@ -31,6 +31,7 @@ import {
   FaMoneyBillAlt,
   FaBriefcaseMedical,
   FaBuilding,
+  FaQuestion
 } from 'react-icons/fa'
 
 import {
@@ -49,7 +50,8 @@ const hiddenDocTypes = listItem =>
     'page',
     'practiceArea',
     'testimonial',
-    'teamMember'
+    'teamMember',
+    'faq'
   ].includes(listItem.getId())
 
 export default () =>
@@ -432,6 +434,12 @@ S.list()
     .icon(MdThumbUp)
     .child(
       S.documentTypeList('testimonial')
+    ),
+    S.listItem()
+    .title('FAQ')
+    .icon(FaQuestion)
+    .child(
+      S.documentTypeList('faq')
     ),
     ...S.documentTypeListItems().filter(hiddenDocTypes),
   ])

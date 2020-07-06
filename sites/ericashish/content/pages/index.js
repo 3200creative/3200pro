@@ -10,7 +10,7 @@ import Hero from 'c32-gatsby-theme-components/src/components/ui/sanity-hero'
 
 export const query = graphql`
   query HomePageQuery {
-    page: sanityPage(id: {eq: "e07ca5b6-bcc6-5d90-8489-39702cd11394"}) {
+    page: sanityPage(_id: {eq: "homepage"}) {
       title
       _rawBlockContent(resolveReferences: {maxDepth: 20}) 
     }

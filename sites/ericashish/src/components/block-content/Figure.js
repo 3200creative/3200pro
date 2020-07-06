@@ -12,7 +12,6 @@ function Figure (props) {
     }}>
       {props.asset && (
         <img sx={{
-          variant: 'variants.shadow',
           maxWidth: '700px',
           margin: '0 auto',
           float: 'none',

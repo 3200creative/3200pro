@@ -6,14 +6,14 @@ import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error
 import Container from 'c32-gatsby-theme-core/src/components/container'
 import BlockContent from './block-content'
 const PageTemplate = props => {
-    const { data, errors } = props
-    const page = data && data.page
-    console.log('data:');
-    console.log(data);
+    // const { data, errors } = props
+    // const page = data && data.page
+    // console.log('data:');
+    // console.log(data);
     
     return (
       <Layout>
-        {errors && <SEO title='GraphQL Error' />}
+        {/* {errors && <SEO title='GraphQL Error' />}
         {page && <SEO title={page.title} />}
         <Container>
             {errors && (
@@ -21,22 +21,22 @@ const PageTemplate = props => {
             )}
         </Container>
             {page && <Styled.h1>{page.title}</Styled.h1>}
-        {page._rawBlockContent && <BlockContent blocks={page._rawBlockContent} />}
+        {page._rawBlockContent && <BlockContent blocks={page._rawBlockContent} />} */}
         </Layout>
   )
 }
 
 export default PageTemplate
 
-export const query = graphql`
-  query postQuery($id: String!) {    
-    page: sanityPost(id: { eq: $id }) {
-        id
-        title
-        slug {
-            current
-        }
-        _rawBlockContent
-  }
-  }
-`
+// export const query = graphql`
+//   query postQuery($id: String!) {    
+//     page: sanityPost(id: { eq: $id }) {
+//         id
+//         title
+//         slug {
+//             current
+//         }
+//         _rawBlockContent
+//   }
+//   }
+// `

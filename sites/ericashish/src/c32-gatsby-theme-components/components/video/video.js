@@ -8,7 +8,6 @@ const Video = ({ videoSrcURL, videoTitle, ...props }) => (
       mx: 'auto',
       my: [40, 40, 100],
       display: 'block',
-      variant: 'variants.shadow',
       width: ['640px'],
       height: ['360px'],
     }}
