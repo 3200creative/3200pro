@@ -10,7 +10,6 @@ import BlockContent from '../../src/components/block-content'
 import Hero from 'c32-gatsby-theme-components/src/components/ui/sanity-hero'
 import Blank from '../assets/blank.png'
 import { mapEdgesToNodes } from '../../src/lib/helpers'
-import ServicePreviewGrid from '../../src/components/service-preview-grid'
 import { motion, useViewportScroll,  useTransform, useMotionValue, useRef} from "framer-motion"
 import Typeform from 'c32-gatsby-theme-components/src/components/ui/typeform'
 

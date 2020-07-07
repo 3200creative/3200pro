@@ -1,12 +1,18 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import { Link } from 'gatsby'
 import React from 'react'
-import ServicePreview from './service-preview'
+import TestimonialPreview from './testimonial-preview'
 
-function ServicePreviewGrid (props) {
+function TestimonialPreviewGrid (props) {
   return (
     <div>
       {props.title && (
-        <h2>
+        <h2
+        sx={{
+          fontSize: [4,null,null,10]
+        }}
+        >
           {props.browseMoreHref ? (
             <Link to={props.browseMoreHref}>{props.title}</Link>
           ) : (
@@ -17,7 +23,7 @@ function ServicePreviewGrid (props) {
       <section>
         {props.nodes &&
           props.nodes.map(node => (
-            <ServicePreview {...node} key={node.id}/>
+            <TestimonialPreview {...node} key={node.id}/>
           ))}
       </section>
       {props.browseMoreHref && (
@@ -29,10 +35,10 @@ function ServicePreviewGrid (props) {
   )
 }
 
-ServicePreviewGrid.defaultProps = {
+TestimonialPreviewGrid.defaultProps = {
   title: '',
   nodes: [],
   browseMoreHref: ''
 }
 
-export default ServicePreviewGrid
+export default TestimonialPreviewGrid

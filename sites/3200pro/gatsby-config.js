@@ -18,6 +18,10 @@ module.exports = {
         link: `/freelance-gatsby-developer`,
       },
       {
+        name: 'Reviews',
+        link: '/gatsby-developer-reviews'
+      },
+      {
         name: 'Contact',
         link: `/minneapolis-website-developer-contact`,
       },
