@@ -17,6 +17,7 @@ export default {
   colors: {
     ...tailwind.colors,
     text: '#4a494e',
+    headline: '#000',
     background: baseColors.white, //Try "#954264",
     primary: '#FF00FF',
     light: '#999',
@@ -26,9 +27,9 @@ export default {
 
     header: {
       background: 'transparent',
-      backgroundOpen: baseColors.white,
-      text: baseColors.gray[8],
-      textOpen: baseColors.gray[8],
+      backgroundOpen: 'white',
+      text: 'text',
+      textOpen: 'text',
       icons: baseColors.gray[6],
       iconsHover: baseColors.blue[7],
       iconsOpen: baseColors.gray[8],
@@ -43,12 +44,19 @@ export default {
     modes: {
       dark: {
         text: '#fff',
+        headline: '#fff',
         background: '#000',
         primary: '#0cf',
         transition: 'all 0.25s ease-in-out-quad',
         shadow: {
           boxShadow: '0 30px 60px -10px rgba(255,255,255,0.3), 0 18px 36px -18px rgba(255,255,255,0.33) !important',
         },
+        h1: {
+          color: 'white'
+        },
+        header: {
+          backgroundOpen: 'black',
+        }
       }
     },
   },
@@ -115,14 +123,23 @@ export default {
       verticalAlign: "top",
       padding: 2,
     },
+    h1: {
+      color: 'headline',
+      lineHeight: '1'
+    },
+    h2: {
+      color: 'headline',
+      lineHeight: '1'
+    },
+    h3: {
+      color: 'headline',
+      lineHeight: '1'
+    },
   },
   variants: {
     siteLogo: {
       width: '100px',
       height: 'auto',
-    },
-    caption: {
-      fontSize: '12px'
     },
     navLinkStyles: {
       fontWeight: '400',
@@ -133,8 +150,10 @@ export default {
       }
     },
     darkmodeicon: {
-      top: '13px',
-      right: '40px'
+      top: [null, null,'10px'],
+      right: ['20px', '40px'],
+      bottom: ['10px', 'none'],
+      position: ['fixed', null, 'relative']
     },
     navStyles: {
       marginRight: '60px'
@@ -158,16 +177,44 @@ export default {
       h1: {
         textAlign: 'left',
         width:  ['90%', null, '500px'],
-        my: 4
-      }
+        my: 4,
+        color: 'headline',
+        lineHeight: '1'
+      },
+      h2: {
+        color: 'headline',
+        lineHeight: '1'
+      },
+      h3: {
+        color: 'headline',
+        lineHeight: '1'
+      },
+      h4: {
+        color: 'headline',
+        lineHeight: '1'
+      },
     },
     standardPage: {
       marginTop: '10vw',
       h1: {
         textAlign: 'left',
         width:  ['90%', null, '900px'],
-        my: 4
-      }
+        my: 4,
+        color: 'headline',
+        lineHeight: '1'
+      },
+      h2: {
+        color: 'headline',
+        lineHeight: '1'
+      },
+      h3: {
+        color: 'headline',
+        lineHeight: '1'
+      },
+      h4: {
+        color: 'headline',
+        lineHeight: '1'
+      },
     },
   },
 }
