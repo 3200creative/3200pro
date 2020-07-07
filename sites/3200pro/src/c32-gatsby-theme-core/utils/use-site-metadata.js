@@ -8,13 +8,6 @@ export const useSiteMetadata = () => {
   const data = useStaticQuery(
     graphql`
       query SiteData{
-        # logo: file(name: { eq: "minnesota-affordable-home-improvement-company.svg" }) {
-        #   childImageSharp {
-        #     fluid(maxHeight: 512) {
-        #       ...GatsbyImageSharpFluid_withWebp_tracedSVG
-        #     }
-        #   }
-        # }
         seoImage: file(name: { eq: "c32-site-social" }) {
           childImageSharp {
             resize(width: 1024) {

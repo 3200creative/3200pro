@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `C32 Base`,
+    title: `3200.pro`,
     description: `Placeholder description`,
     keywords: [`gatsby`, `theme`, `react`],
-    author: `LocalizedPro`,
-    siteUrl: `https://affordablehomeimprovementz.com/`, //Change to you site address, required for sitemap.xml and robots.txt file among other things
+    author: `3200.Pro`,
+    siteUrl: `https://3200.pro/`, //Change to you site address, required for sitemap.xml and robots.txt file among other things
     social: {
-      twitter: `@localizedpro`,
+      twitter: `@3200pro`,
     },
     menuLinks: [
       {
