@@ -20,6 +20,10 @@ export const query = graphql`
     page: sanityPage(_id: {eq: "contactPage"}) {
       displayedTitle
       _rawBlockContent
+      seo {
+          metaDesc
+          metaTitle
+        }
     }
   }
 `
@@ -47,7 +51,10 @@ const ContactPage = props => {
 
   return (
     <SiteLayout>
-       <SEO title={page.header} />
+       <SEO 
+       title={page.seo.metaTitle} 
+       description={page.seo.metaDesc} 
+       />
       <Container
       >
         <div

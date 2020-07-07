@@ -86,7 +86,7 @@ const SEO = ({
         lang,
       }}
       title={seoTitle}
-      titleTemplate={`%s | ${title}`}
+      titleTemplate={`%s`}
       meta={[
         {
           name: `description`,

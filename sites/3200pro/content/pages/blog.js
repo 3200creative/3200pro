@@ -56,7 +56,10 @@ const Posts = props => {
 
   return (
     <SiteLayout>
-      <SEO title='title' />
+      <SEO 
+       title='Custom Gatsby Website Development' 
+       description='Minneapolis Based Gatsby Website Development' 
+       />
       <Container>
         {/* <BlockContent blocks={posts._rawBlockContent || []} /> */}
       {posts && posts.length > 0 && <BlogPostPreviewGrid nodes={posts} />}

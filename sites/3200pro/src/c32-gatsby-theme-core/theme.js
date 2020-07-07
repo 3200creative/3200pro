@@ -56,6 +56,7 @@ export default {
         },
         header: {
           backgroundOpen: 'black',
+          textOpen: 'white',
         }
       }
     },

@@ -19,6 +19,10 @@ export const query = graphql`
       displayedTitle
       _rawHeroText
       _rawBlockContent
+      seo {
+          metaDesc
+          metaTitle
+        }
     }
   }
 `
@@ -46,7 +50,10 @@ const Homepage = props => {
 
   return (
     <SiteLayout>
-       <SEO title={page.displayedTitle} />
+       <SEO 
+       title={page.seo.metaTitle} 
+       description={page.seo.metaDesc} 
+       />
       <Container>
         <div
         sx= {{
