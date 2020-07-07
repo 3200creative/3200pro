@@ -154,7 +154,7 @@ export default {
       top: [null, null,'10px'],
       right: ['20px', '40px'],
       bottom: ['10px', 'none'],
-      position: ['fixed', null, 'relative']
+      position: ['fixed', null, 'absolute']
     },
     navStyles: {
       marginRight: '60px'
