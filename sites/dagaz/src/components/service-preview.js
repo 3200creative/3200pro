@@ -13,17 +13,17 @@ function servicePreview (props) {
   
   return (
     <div sx={{variant: 'variants.postPreview'}}>
-    
-    <Link to={getServiceUrl(props.publishedAt, props.slug.current)}>
     <div
     sx= {{
        variant: 'variants.postPreview.archiveImages'
 
     }}
     >
+    <Link to={getServiceUrl(props.publishedAt, props.slug.current)}>
     {image && (<Img
       fluid={getFluidGatsbyImage(image,{ maxWidth: 800 }, sanityConfig)} 
     />)}
+    </Link>
     </div>
       <div
         sx={{
@@ -39,8 +39,16 @@ function servicePreview (props) {
           <BlockText blocks={props._rawExcerpt} />
         </div>
       )}
+
+      <div
+      sx = {{
+      
+        variant: 'variants.generalButton',
+        marginTop: '40px'
+      }}
+      >
+      <Link to={getServiceUrl(props.publishedAt, props.slug.current)}>{props.title} Information ></Link></div>
     </div>
-    </Link>
     </div>
   )
 }

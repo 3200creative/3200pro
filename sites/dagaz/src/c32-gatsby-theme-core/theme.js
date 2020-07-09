@@ -40,6 +40,26 @@ export default {
       links: baseColors.gray[8],
       icons: baseColors.gray[8],
     },
+    modes: {
+      dark: {
+        text: '#fff',
+        headline: '#fff',
+        background: '#000',
+        primary: '#0cf',
+        transition: 'all 0.25s ease-in-out-quad',
+        shadow: {
+          boxShadow: '0 30px 60px -10px rgba(255,255,255,0.3), 0 18px 36px -18px rgba(255,255,255,0.33) !important',
+        },
+        h1: {
+          color: 'white'
+        },
+        header: {
+          backgroundOpen: 'black',
+          background: 'black',
+          textOpen: 'white',
+        }
+      }
+    },
   },
   sizes: {
     ...tailwind.sizes,
@@ -134,7 +154,7 @@ export default {
     },
     postPreview: {
       marginTop: ['10vh',null,null, null],
-      width: "500px",
+      width: "700px",
       maxWidth: '90vw',
       mx: 'auto',
       backgroundColor: '#d6e3dd',
@@ -149,8 +169,19 @@ export default {
         m: 0,
       },
       img: {
-        filter: 'grayscale(100%)',
+        filter: 'grayscale(100%)', 
         'mix-blend-mode': 'overlay',
+      },
+      a: {
+          img: {
+            filter: 'grayscale(0%)', 
+            'mix-blend-mode': 'overlay',
+            '&:hover': {
+            filter: 'grayscale(0%)', 
+            'mix-blend-mode': 'overlay',
+            transition: '-webkit-filter ease-in-out 1s, filter ease-in-out 1s',
+            },
+          }, 
       },
       h4: {
         fontSize: [4, null, 6, null, null],
@@ -171,13 +202,14 @@ export default {
         overflow: 'hidden',
       },
       archiveImages: {
-        marginLeft: '-20vw',
+        marginLeft: '-10vw',
         maxWidth: '100%',
         width: '500px',
         overflow: 'hidden',
         opacity: '1',
         variant: 'variants.imageShadow',
         background: '#ccc',
+        
       },
     },
     standardWidth: {
@@ -210,6 +242,21 @@ export default {
       a: {
         color: '#999',
       },
+    },
+    generalButton: {
+      paddingBottom: '40px',
+        background: 'white',
+        display: 'block',
+        width: 'max-content',
+        float: 'right',
+        textAlign: 'right',
+        margin: '0 auto',
+        transition: 'background 0.25s ease-in-out, color 0.25s ease-in-out',
+        p: 3,
+        '&:hover': {
+          backgroundColor: 'primary',   
+          transition: 'background 0.25s ease-in-out, color 0.25s ease-in-out',   
+        },
     },
     ctaButtons: {
       paddingBottom: '40px',

@@ -45,7 +45,10 @@ const Services = props => {
 
   return (
     <SiteLayout>
-      <SEO title='title' />
+      <SEO 
+      title='Minnesota Jamstack Gatsby Developer Reviews' 
+      description='Minnesota Freelance Website Design and Development Reviews - 3200.Pro Gatsby Developers'
+      />
       <Container>
       <div
         sx= {{
