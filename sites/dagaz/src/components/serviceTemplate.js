@@ -17,7 +17,10 @@ const ServiceTemplate = props => {
     return (
       <Layout>
         {errors && <SEO title='GraphQL Error' />}
-        {service && <SEO title={service.title} />}
+        {service && <SEO 
+      title={service.seo.metaTitle}
+      description={service.seo.metaDesc}
+      />}
         <Container>
         <Hero
           titleText= {service.title}
@@ -80,6 +83,10 @@ export const query = graphql`
             current
         }
         _rawBlockContent
+        seo {
+              metaDesc
+              metaTitle
+        }
   }
   heroImage: file(relativePath: { eq: "maple-grove-therapy-mn.jpg" }) {
           childImageSharp {
