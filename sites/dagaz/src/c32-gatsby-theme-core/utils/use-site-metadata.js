@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx, useColorMode } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby"
 import Logo from '../../../content/assets/maple-grove-therapy.svg'
 export const useSiteMetadata = () => {
@@ -45,8 +43,6 @@ export const useSiteMetadata = () => {
       }
     `
   )
-  const [colorMode, setColorMode] = useColorMode()  
-  const logo = (colorMode == 'light') ? Logo : LogoDark
 
   const logo = Logo
   const useDarkMode = false
