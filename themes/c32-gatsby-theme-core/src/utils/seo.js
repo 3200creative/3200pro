@@ -41,7 +41,7 @@ const SEO = ({
   const seoTitle = propTitle || title
   const seoDescription = propDescription || description
   const seoKeywords = propKeywords || keywords
-  const seoImg = propImage || seoImage
+  const seoImg =  seoImage
   const seoImgSrc = `${siteUrl}${seoImg.src}`
   const checkBusinessSchema = hasLocalBusinessSchema
 

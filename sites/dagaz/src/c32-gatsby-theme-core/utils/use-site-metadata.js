@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby"
 import Logo from '../../../content/assets/maple-grove-therapy.svg'
-import seoImage from '../../../content/assets/dagaz-seo-site-icon.jpg'
+import RawSeoImage from '../../../content/assets/dagaz-seo-site-icon.jpg'
 export const useSiteMetadata = () => {
   const data = useStaticQuery(
     graphql`
@@ -12,7 +12,7 @@ export const useSiteMetadata = () => {
         #     }
         #   }
         # }
-        seoImage: file(name: { eq: "dagaz-seo-site-icon" }) {
+        seoImageOg: file(name: { eq: "dagaz-seo-site-icon" }) {
           childImageSharp {
             resize(width: 1024) {
               src
@@ -48,11 +48,11 @@ export const useSiteMetadata = () => {
   const logo = Logo
   const useDarkMode = false
   const title = 'Dagaz Therapy'
-  //const seoImage = data.seoImage.childImageSharp.resize
+  const seoImage = RawSeoImage
   const metaData = data.site.siteMetadata
   const twitterUsername = data.site.siteMetadata.social.twitter
   // Local Business Schema
-  const allData = { ...metaData, title, useDarkMode, logo, seoImage, twitterUsername,
+  const allData = { ...metaData, title, useDarkMode, logo, twitterUsername,
     
     // Local Business Data:
     hasLocalBusinessSchema: true,
