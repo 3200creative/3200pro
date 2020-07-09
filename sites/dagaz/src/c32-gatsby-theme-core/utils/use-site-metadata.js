@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby"
 import Logo from '../../../content/assets/maple-grove-therapy.svg'
-import RawSeoImage from '../../../content/assets/dagaz-seo-site-icon.jpg'
+//import RawSeoImage from '/static/27a5946526a6604edbd17e3469a6d51d/16310/dagaz-seo-site-icon.jpg'
 export const useSiteMetadata = () => {
   const data = useStaticQuery(
     graphql`
@@ -48,7 +48,7 @@ export const useSiteMetadata = () => {
   const logo = Logo
   const useDarkMode = false
   const title = 'Dagaz Therapy'
-  const seoImage = RawSeoImage
+  //const seoImage = RawSeoImage
   const metaData = data.site.siteMetadata
   const twitterUsername = data.site.siteMetadata.social.twitter
   // Local Business Schema
@@ -61,8 +61,8 @@ export const useSiteMetadata = () => {
     addressRegion: 'MN',
     postalCode: '55369',
     streetAddress: '11292 86th Ave N Suite 100',
-    seoImage: seoImage,
-    image: seoImage,
+    seoImage: '/static/27a5946526a6604edbd17e3469a6d51d/16310/dagaz-seo-site-icon.jpg',
+    image: '/static/27a5946526a6604edbd17e3469a6d51d/16310/dagaz-seo-site-icon.jpg',
     name: 'Dagaz Therapy',
     telephone: '612-460-0427',
     priceRange: '$',

@@ -55,7 +55,7 @@ const SEO = ({
       postalCode: postalCode,
       streetAddress: streetAddress,
     },
-    image: image,
+    image: seoImage,
     name: name,
     telephone: telephone,
     priceRange: priceRange,
