@@ -11,7 +11,7 @@ export const useSiteMetadata = () => {
         #     }
         #   }
         # }
-        seoImage: file(name: { eq: "dagaz-site-icon" }) {
+        seoImage: file(name: { eq: "dagaz-site-icon.jpg" }) {
           childImageSharp {
             resize(width: 1024) {
               src
