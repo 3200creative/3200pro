@@ -37,16 +37,16 @@ export const query = graphql`
           slug {
             current
           }
-          seo {
-              metaDesc
-              metaTitle
-        }
         }
       }
     }
     page: sanityServicesPage {
       header
       _rawBlockContent
+      seo {
+              metaDesc
+              metaTitle
+        }
     }
     heroImage: file(relativePath: { eq: "maple-grove-therapy-mn.jpg" }) {
           childImageSharp {
