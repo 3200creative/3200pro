@@ -40,26 +40,6 @@ export default {
       links: baseColors.gray[8],
       icons: baseColors.gray[8],
     },
-    modes: {
-      dark: {
-        text: '#fff',
-        headline: '#fff',
-        background: '#000',
-        primary: '#0cf',
-        transition: 'all 0.25s ease-in-out-quad',
-        shadow: {
-          boxShadow: '0 30px 60px -10px rgba(255,255,255,0.3), 0 18px 36px -18px rgba(255,255,255,0.33) !important',
-        },
-        h1: {
-          color: 'white'
-        },
-        header: {
-          backgroundOpen: 'black',
-          background: 'black',
-          textOpen: 'white',
-        }
-      }
-    },
   },
   sizes: {
     ...tailwind.sizes,

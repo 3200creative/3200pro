@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx, useColorMode } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby"
 import Logo from '../../../content/assets/maple-grove-therapy.svg'
 export const useSiteMetadata = () => {
@@ -11,7 +13,7 @@ export const useSiteMetadata = () => {
         #     }
         #   }
         # }
-        seoImage: file(name: { eq: "c32-site-social" }) {
+        seoImage: file(name: { eq: "dagaz-site-icon" }) {
           childImageSharp {
             resize(width: 1024) {
               src
@@ -43,14 +45,17 @@ export const useSiteMetadata = () => {
       }
     `
   )
+  const [colorMode, setColorMode] = useColorMode()  
+  const logo = (colorMode == 'light') ? Logo : LogoDark
 
   const logo = Logo
+  const useDarkMode = false
   const title = 'Dagaz Therapy'
   const seoImage = data.seoImage.childImageSharp.resize
   const metaData = data.site.siteMetadata
   const twitterUsername = data.site.siteMetadata.social.twitter
   // Local Business Schema
-  const allData = { ...metaData, title, logo, seoImage, twitterUsername,
+  const allData = { ...metaData, title, useDarkMode, logo, seoImage, twitterUsername,
     
     // Local Business Data:
     hasLocalBusinessSchema: true,

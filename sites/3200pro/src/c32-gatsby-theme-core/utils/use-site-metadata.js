@@ -48,7 +48,7 @@ export const useSiteMetadata = () => {
   const metaData = data.site.siteMetadata
   const twitterUsername = data.site.siteMetadata.social.twitter
   // Local Business Schema
-  const allData = { ...metaData, developer,developerLink, useTransitions, title, logo, seoImage, twitterUsername,
+  const allData = { ...metaData, useDarkMode, developer,developerLink, useTransitions, title, logo, seoImage, twitterUsername,
     
     // Local Business Data:
     hasLocalBusinessSchema: true,
