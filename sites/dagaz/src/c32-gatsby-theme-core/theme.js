@@ -224,12 +224,13 @@ export default {
       },
     },
     generalButton: {
-      paddingBottom: '40px',
-        background: 'white',
-        display: 'block',
+      padding: ['20px'],
+        background: ['white'],
+        display: 'inline-block',
         width: 'max-content',
+        maxWidth: '90%',
         float: 'right',
-        textAlign: 'right',
+        textAlign: 'center',
         margin: '0 auto',
         transition: 'background 0.25s ease-in-out, color 0.25s ease-in-out',
         p: 3,
@@ -237,6 +238,9 @@ export default {
           backgroundColor: 'primary',   
           transition: 'background 0.25s ease-in-out, color 0.25s ease-in-out',   
         },
+        a: {
+          fontSize:['14px','18px']
+        }
     },
     ctaButtons: {
       paddingBottom: '40px',
