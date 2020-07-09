@@ -13,6 +13,10 @@ export const query = graphql`
     page: sanityAboutPage {
       header
       _rawBlockContent
+      seo {
+              metaDesc
+              metaTitle
+        }
     }
     heroImage: file(relativePath: { eq: "maple-grove-therapy-mn.jpg" }) {
           childImageSharp {
@@ -46,14 +50,17 @@ const AboutPage = props => {
 
   return (
     <SiteLayout>
-      <SEO title={page.header} />
+      <SEO 
+      title={page.seo.metaTitle}
+      description={page.seo.metaDesc}
+      />
       <Container>
       <Hero
           titleText= 'About Dagaz Therapy'
           buttonText="Schedule Appointment"
           buttonLink="/scheduling"
           buttonText2="Contact Dagaz"
-          buttonLink2="/contact"
+          buttonLink2="/contact-maple-grove-mn-therapist"
           bg = {bg}
           ctaHeight = '250px'
           bgc = '#fff'

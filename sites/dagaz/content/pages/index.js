@@ -23,6 +23,10 @@ export const query = graphql`
               }
           }
     }
+        seo {
+              metaDesc
+              metaTitle
+        }
     }
     services: allSanityServices(
       filter: { slug: { current: { ne: null } }}
@@ -71,14 +75,17 @@ const Homepage = props => {
 
   return (
     <SiteLayout>
-      <SEO title={page.header} />
+      <SEO 
+      title={page.seo.metaTitle}
+      description={page.seo.metaDesc}
+      />
       <Container>
         <Hero
           titleText= { page.header }
           buttonText="Schedule Appointment"
           buttonLink="/scheduling"
           buttonText2="Contact Dagaz"
-          buttonLink2="/contact"
+          buttonLink2="/contact-maple-grove-mn-therapist"
           bg = { bg }
           bgc = '#fff'
           ctaHeight = '250px'

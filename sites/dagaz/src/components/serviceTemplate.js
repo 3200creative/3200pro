@@ -24,7 +24,7 @@ const ServiceTemplate = props => {
           buttonText="Schedule Appointment"
           buttonLink="/scheduling"
           buttonText2="Contact Dagaz"
-          buttonLink2="/contact"
+          buttonLink2="/contact-maple-grove-mn-therapist"
           bg = {bg}
           ctaHeight = '250px'
           bgc = '#fff'

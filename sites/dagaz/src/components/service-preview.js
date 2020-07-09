@@ -47,7 +47,7 @@ function servicePreview (props) {
         marginTop: '40px'
       }}
       >
-      <Link to={getServiceUrl(props.publishedAt, props.slug.current)}>{props.title} Information ></Link></div>
+     <Link to={getServiceUrl(props.publishedAt, props.slug.current)}>{props.title} Information ></Link></div>
     </div>
     </div>
   )

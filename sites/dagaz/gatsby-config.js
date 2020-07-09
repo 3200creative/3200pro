@@ -59,7 +59,7 @@ module.exports = {
       },
       {
         name: 'Contact',
-        link: `/contact`,
+        link: `/contact-maple-grove-mn-therapist`,
       },
     ],
   },

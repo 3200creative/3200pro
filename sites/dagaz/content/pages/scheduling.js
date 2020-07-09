@@ -23,6 +23,10 @@ export const query = graphql`
               }
           }
     }
+    seo {
+              metaDesc
+              metaTitle
+        }
     }
   }
 `
@@ -50,7 +54,10 @@ const Scheduler = props => {
 
   return (
     <SiteLayout>
-      <SEO title='scheduler' />
+      <SEO 
+      title={page.seo.metaTitle}
+      description={page.seo.metaDesc}
+      />
       <Helmet>
       <script src="https://widget-cdn.simplepractice.com/assets/integration-1.0.js"></script>
       </Helmet>

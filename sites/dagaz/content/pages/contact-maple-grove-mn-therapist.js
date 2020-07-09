@@ -12,6 +12,10 @@ export const query = graphql`
     page: sanityContactPage(header: {eq: "Contact Information"}) {
       header
       _rawBlockContent
+      seo {
+              metaDesc
+              metaTitle
+        }
     }
   }
 `
@@ -37,7 +41,10 @@ const ContactPage = props => {
 
   return (
     <SiteLayout>
-      <SEO title={page.header} />
+      <SEO 
+      title={page.seo.metaTitle}
+      description={page.seo.metaDesc}
+      />
       <Container>
         <h1>{page.header}</h1>
         <BlockContent blocks={page._rawBlockContent || []} />
