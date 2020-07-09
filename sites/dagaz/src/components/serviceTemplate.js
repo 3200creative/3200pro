@@ -2,12 +2,13 @@
 import { jsx, Styled } from "theme-ui"
 import { graphql } from "gatsby"
 import { SEO, Layout } from "c32-gatsby-theme-core"
+import { Link } from 'gatsby'
 import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error-lists'
 import Container from 'c32-gatsby-theme-core/src/components/container'
 import BlockContent from './block-content'
 import Hero from 'c32-gatsby-theme-components/src/components/ui/hero'
 import Blank from '../../content/assets/maple-grove-therapy-mn.jpg'
-
+import { Grid, Box } from 'theme-ui'
 const ServiceTemplate = props => {
     const { data, errors } = props
     const service = data && data.service
@@ -19,7 +20,7 @@ const ServiceTemplate = props => {
         {service && <SEO title={service.title} />}
         <Container>
         <Hero
-          titleText= 'Dagaz Therapy Services'
+          titleText= {service.title}
           buttonText="Schedule Appointment"
           buttonLink="/scheduling"
           buttonText2="Contact Dagaz"
@@ -33,8 +34,37 @@ const ServiceTemplate = props => {
                 <GraphQLErrorList errors={errors} />
             )}
         </Container>
-            {service && <Styled.h1>{service.title}</Styled.h1>}
         {service._rawBlockContent && <BlockContent blocks={service._rawBlockContent} />}
+        <h4
+        sx= {{
+          fontSize: 4,
+          textAlign: 'center',
+        }}
+        >Ready to get started or have questions about {service.title}?</h4>
+        <Grid
+        gap={4}
+        columns={[ 1, 2, 2]}
+        sx={{
+          maxWidth: '90%',
+            width: '600px',
+            margin: '0 auto',
+          variant: 'variants.ctaButtons'
+        }}
+        >
+          <Box 
+          sx={{
+            my: [0, null, 4] 
+          }}><Link to='/scheduling'>
+          Schedule Appointment
+        </Link></Box>
+        <Box
+        sx={{
+          my: [0, null, 4] 
+        }}
+        ><Link to='/contact' >
+          Contact Dagaz 
+        </Link></Box>
+        </Grid>
         </Layout>
   )
 }

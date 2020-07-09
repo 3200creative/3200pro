@@ -11,7 +11,7 @@ const Hero = ({ titleText, buttonText, buttonLink, buttonText2, buttonLink2, bg,
   const data = useStaticQuery(
     graphql`
       query Hero {
-        heroImage: file(relativePath: { eq: "ui/hero-bg.jpg" }) {
+        heroImage: file(relativePath: { eq: "ui/blank.png" }) {
           childImageSharp {
             fluid(quality: 80, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
