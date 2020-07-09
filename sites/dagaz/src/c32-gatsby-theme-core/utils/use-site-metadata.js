@@ -1,5 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby"
 import Logo from '../../../content/assets/maple-grove-therapy.svg'
+import seoImage from '../../../content/assets/dagaz-seo-site-icon.jpg'
 export const useSiteMetadata = () => {
   const data = useStaticQuery(
     graphql`
@@ -47,7 +48,7 @@ export const useSiteMetadata = () => {
   const logo = Logo
   const useDarkMode = false
   const title = 'Dagaz Therapy'
-  const seoImage = data.seoImage.childImageSharp.resize
+  //const seoImage = data.seoImage.childImageSharp.resize
   const metaData = data.site.siteMetadata
   const twitterUsername = data.site.siteMetadata.social.twitter
   // Local Business Schema
@@ -60,6 +61,7 @@ export const useSiteMetadata = () => {
     addressRegion: 'MN',
     postalCode: '55369',
     streetAddress: '11292 86th Ave N Suite 100',
+    seoImage: seoImage,
     image: seoImage,
     name: 'Dagaz Therapy',
     telephone: '612-460-0427',
