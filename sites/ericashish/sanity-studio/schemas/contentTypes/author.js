@@ -32,7 +32,7 @@ export default {
     ],
     preview: {
       select: {
-        title: 'name',
+        title: 'author',
         subtitle: 'slug.current',
         media: 'image'
       }

@@ -14,7 +14,7 @@ function ArticleLayoutToggle (props) {
       useEffect(() => getGridLayout(), []);
 
       return (
-        <>
+        <div sx={{variant: 'variants.articleToggle'}}>
         <button onClick={() => 
             setGridLayout('lists')
             
@@ -54,7 +54,7 @@ function ArticleLayoutToggle (props) {
             }
 
         </button>
-        </>
+        </div>
     )
 }
 

@@ -30,6 +30,7 @@
     "gatsby-transformer-sharp": "^2.3.14",
     "prop-types": "^15.7.2",
     "react-helmet": "^6.1.0",
+    "react-string-replace": "^0.4.4",
     "react-typeform-embed": "^0.2.1",
     "remark-slug": "^6.0.0",
     "theme-ui": "^0.3.1"

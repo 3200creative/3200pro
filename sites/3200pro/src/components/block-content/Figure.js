@@ -2,7 +2,10 @@
 import { jsx } from "theme-ui"
 import { getFluidGatsbyImage } from "gatsby-source-sanity"
 import Img from "gatsby-image"
+import { buildImageObj } from '../../lib/helpers'
+import { imageUrlFor } from '../../lib/image-url'
 const sanityConfig = {projectId: 'p6aj32cv', dataset: 'production'}
+
 
 function Figure (props) {
   return (
@@ -10,10 +13,10 @@ function Figure (props) {
       mx: 'auto',
       my: '80px',
     }}>
-      {props.asset && (
+      {props.disableGatsbyImage != true ? (
         <Img sx={{
           variant: 'variants.shadow',
-          maxWidth: '700px',
+          maxWidth: '900px',
           margin: '0 auto',
           float: 'none',
           display: 'block',
@@ -22,11 +25,26 @@ function Figure (props) {
         alt={props.alt}
         loading='lazy'
         />
-      )}
+      ):
+      (
+        <img
+          src={imageUrlFor(buildImageObj(props))
+            .url()}
+          alt={props.alt}
+          sx={{
+            variant: 'variants.shadow',
+            maxWidth: '900px',
+            margin: '0 auto',
+            float: 'none',
+            display: 'block',
+            width: '100%'
+          }}
+        />
+      )
+      }
       <figcaption
       sx={{
-        maxWidth: '700px',
-        margin: '0 auto',
+        margin: '10px auto',
         variant: 'variants.caption'
       }}
       >{props.caption}</figcaption>

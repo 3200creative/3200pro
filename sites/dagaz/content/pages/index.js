@@ -9,7 +9,7 @@ import BlockContent from '../../src/components/block-content'
 import Hero from 'c32-gatsby-theme-components/src/components/ui/sanity-hero'
 import Blank from '../assets/blank.png'
 import { mapEdgesToNodes } from '../../src/lib/helpers'
-import ServicePreviewGrid from '../../src/components/service-preview-grid'
+import ServicePreviewGrid from '../../src/components/home-preview-grid'
 
 export const query = graphql`
   query HomePageQuery {
@@ -42,7 +42,7 @@ export const query = graphql`
             }
             alt
           }
-          _rawExcerpt
+          _rawHomepageExcerpt
           slug {
             current
           }

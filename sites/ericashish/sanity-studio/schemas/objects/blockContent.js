@@ -13,6 +13,7 @@ import {
   MdVideocam,
   MdMusicNote,
   MdChromeReaderMode,
+  MdFace,
 } from 'react-icons/lib/md'
 
 import {
@@ -95,6 +96,10 @@ export default {
     {
       type: 'video',
       icon: MdVideocam,
+    },
+    {
+      type: 'featuredAuthor',
+      icon: MdFace,
     },
     {
       type: 'soundcloud',

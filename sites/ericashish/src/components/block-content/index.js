@@ -8,6 +8,7 @@ import SanityVideo from './Video'
 import SanitySoundcloud from './Soundcloud'
 import RecentPostFeed from './RecentPostFeed'
 import SingularFeaturedPost from './SingularFeaturedPost'
+import AuthorBlock from './AuthorBlock'
 import Quote from './Quote'
 
 const serializers = {
@@ -63,6 +64,9 @@ const serializers = {
     },
     singularFeaturedPost (props) {
       return <SingularFeaturedPost {...props.node} />
+    },
+    featuredAuthor (props) {
+      return <AuthorBlock {...props.node} />
     },
   }
 }

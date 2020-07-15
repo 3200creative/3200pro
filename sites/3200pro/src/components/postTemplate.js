@@ -5,11 +5,16 @@ import { SEO, Layout } from "c32-gatsby-theme-core"
 import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error-lists'
 import Container from 'c32-gatsby-theme-core/src/components/container'
 import BlockContent from './block-content'
+import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
+
 const PageTemplate = props => {
     const { data, errors } = props
     const page = data && data.page
-    console.log('data:');
-    console.log(data);
+    let disqusConfig = {
+      url: `http://localhost:8000/${page.slug.current}`,
+      identifier: page.id,
+      title: page.title,
+    }
     
     return (
       <Layout>
@@ -22,6 +27,13 @@ const PageTemplate = props => {
         </Container>
             {page && <Styled.h1>{page.title}</Styled.h1>}
         {page._rawBlockContent && <BlockContent blocks={page._rawBlockContent} />}
+        <CommentCount config={disqusConfig} placeholder={'...'} />
+        <div
+        sx={{
+          padding: 2
+        }}>
+        <Disqus config={disqusConfig} />
+        </div>
         </Layout>
   )
 }

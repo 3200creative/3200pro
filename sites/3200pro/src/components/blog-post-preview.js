@@ -20,7 +20,10 @@ function BlogPostPreview (props) {
     }}
     >
     <Img
-      fluid={getFluidGatsbyImage(props.featuredImage,{ maxWidth: 800 }, {...clientConfig.sanity})} 
+      fluid={getFluidGatsbyImage(props.featuredImage,{ maxWidth: 800 }, {...clientConfig.sanity})}
+      sx = {{
+        variant: 'variants.shadow'
+      }}
     />
     </div>
       <div

@@ -18,6 +18,10 @@ module.exports = {
         link: `/freelance-gatsby-developer`,
       },
       {
+        name: 'Blog',
+        link: '/blog'
+      },
+      {
         name: 'Reviews',
         link: '/gatsby-developer-reviews'
       },
@@ -35,6 +39,12 @@ module.exports = {
         // contentPath: `content/pages`,
         // assetPath: `content/assets`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `3200pro`
+      }
     },
     `c32-gatsby-theme-components`,
     {

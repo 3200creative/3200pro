@@ -24,6 +24,7 @@ import recentPostFeed from './objects/recentPostFeed'
 import bioPortableText from './objects/bioPortableText'
 import singularFeaturedPost from './objects/singularFeaturedPost'
 import quote from './objects/quote'
+import authorBlock from './objects/authorBlock.js'
 // Content Types:
 import event from './contentTypes/event'
 import business from './contentTypes/business'
@@ -62,6 +63,7 @@ export default createSchema({
     recentPostFeed,
     bioPortableText,
     singularFeaturedPost,
+    authorBlock,
     // Content Types
     siteSettings,
     event,

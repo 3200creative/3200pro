@@ -34,9 +34,6 @@ const serializers = {
     clear (props) {
       return <Spacer {...props.node} />
     },
-    clearline (props) {
-      return <Spacer {...props.node} />
-    },
     spacer (props) {
       return <Spacer {...props.node} />
     },
@@ -48,8 +45,7 @@ const serializers = {
     },
     script (props) {
       return <SanityScript {...props.node} />
-    },
-    
+    }
   }
 }
 

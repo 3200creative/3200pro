@@ -23,8 +23,9 @@ import buttonBlock from './objects/buttonBlock'
 import imgLeftTxtRight from './objects/imgLeftTxtRight'
 import excerptPortableText from './objects/excerptPortableText'
 import bioPortableText from './objects/bioPortableText'
+import spacer from './objects/spacers'
 // Content Types:
-import page from './contentTypes/page'
+import page from   './contentTypes/page'
 import teamMember from './contentTypes/teamMember'
 import service from './contentTypes/service'
 import testimonial from './contentTypes/testimonial'
@@ -59,6 +60,7 @@ export default createSchema({
     imgLeftTxtRight,
     excerptPortableText,
     bioPortableText,
+    spacer,
     // Content Types
     page,
     post,

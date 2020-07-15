@@ -46,47 +46,39 @@ export const HeaderData = () => {
                 }
               }
             }
+            colors: sanityGlobalOptions {
+              teaColor {
+                hex
+              }
+              musicColor {
+                hex
+              }
+              lifeColor {
+                hex
+              }
+              businessColor {
+                hex
+              }
+            }
           }
         `
       )
       const siteMetadata = data.allSanitySiteSettings.nodes[0]
       const title = siteMetadata.title
       const logo = siteMetadata.logo.asset.fluid
+      const multiColoredLogo = true
+      const colors = data.colors
       // const seoImageSrc = siteMetadata.seoImage.asset.url
       // const seoImageHeight = siteMetadata.seoImage.asset.metadata.dimensions.height
       // const seoImageWidth = siteMetadata.seoImage.asset.metadata.dimensions.width
       const menuLinks = data.allSanityMenuLink.nodes
 
-    const placeholderMenuLinks = [
-        {
-            link: '#',
-            name: 'Placeholder 2',
-            subMenu: [
-            {
-                name: `Earth`,
-                link: `/projects/earth`,
-            },
-            ], 
-        },
-        ]
-    const sanityMenuLinks = [
-        {
-            link: '#',
-            name: siteMetadata.title,
-            subMenu: [
-            {
-                name: `Earth`,
-                link: `/projects/earth`,
-            },
-            ], 
-        },
-        ]
     const allData = {
-        placeholderMenuLinks,
-        sanityMenuLinks,
         menuLinks,
         logo,
         title,
+        colors,
+        multiColoredLogo,
         }
     return allData
 }

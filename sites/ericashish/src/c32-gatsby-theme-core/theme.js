@@ -151,7 +151,7 @@ export default {
       fontWeight: 'headingWeight',
     },
     img: {
-      boxShadow: '0 30px 60px -10px rgba(0,0,0,0.3), 0 18px 36px -18px rgba(0,0,0,0.33) !important',
+     boxShadow: '0 30px 60px -10px rgba(0,0,0,0.3), 0 18px 36px -18px rgba(0,0,0,0.33) !important',
     },
 
   },
@@ -195,6 +195,14 @@ export default {
       opacity: '.33',
       mb: 4
     },
+    articleToggle: {
+      width: '100%',
+      marginBottom: '40px',
+      textAlign: 'right',
+      display: 'block',
+      position: 'relative',
+      zIndex: '999999'
+    },
     archiveLayout: {
       outline: 'none',
       background: 'transparent',
@@ -211,6 +219,14 @@ export default {
         outline: 'none'
       },
     },
+    landingPage: {
+      h1: {
+        width: '100%',
+        maxWidth: '100%',
+        fontFamily: 'body',
+        fontWeight: '600'
+      }
+    },
     footer: {
       textAlign: 'left',
       width: 'maxContentWidth',
@@ -221,5 +237,11 @@ export default {
         color: 'lightTxt'
       }
     },
+    smallAuthorBlock: {
+      p: {
+        padding: '0',
+        margin: '0'
+      }
+    }
   },
 }

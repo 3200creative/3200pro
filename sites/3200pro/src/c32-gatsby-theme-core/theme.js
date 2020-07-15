@@ -47,7 +47,7 @@ export default {
         headline: '#fff',
         background: '#000',
         primary: '#0cf',
-        transition: 'all 0.25s ease-in-out-quad',
+  
         shadow: {
           boxShadow: '0 30px 60px -10px rgba(255,255,255,0.3), 0 18px 36px -18px rgba(255,255,255,0.33) !important',
         },
@@ -141,6 +141,36 @@ export default {
     siteLogo: {
       width: '100px',
       height: 'auto',
+    },
+    shadow: {
+      boxShadow: '0 30px 60px -10px rgba(0,0,0,0.3), 0 18px 36px -18px rgba(0,0,0,0.33) !important',
+    },
+    ghostbutton: {
+      backgroundColor: 'background',
+      color: 'headline',
+      borderWidth: '1px',
+      borderColor: 'headline',
+      boxShadow: 'none',
+      p: 2,
+      transition: 'background 0.25s ease-in-out, color 0.25s ease-in-out',
+      '&:hover': {
+        cursor: 'pointer',
+        backgroundColor: 'headline',
+        color: 'background',
+        transition: 'background 0.25s ease-in-out, color 0.25s ease-in-out',
+      }
+
+    },
+    clearline: {
+      width: '100%',
+      backgroundColor: 'light',
+      height: '1px',
+      my: 5
+    },
+    postPreview: {
+      a: {
+        color: 'text'
+      }
     },
     navLinkStyles: {
       fontWeight: '400',

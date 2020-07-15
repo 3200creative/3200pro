@@ -22,9 +22,11 @@ const PageTemplate = props => {
                 <GraphQLErrorList errors={errors} />
             )}
         </Container>
+        <div sx={{variant: 'variants.landingPage'}}>
             {page && <Styled.h1>{page.title}</Styled.h1>}
         
         {page._rawBlockContent && <BlockContent blocks={page._rawBlockContent} />}
+        </div>
         </Layout>
   )
 }
