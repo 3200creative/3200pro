@@ -8,7 +8,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { Grid } from 'theme-ui'
 import { Box } from 'theme-ui'
 import {mapEdgesToNodes, filterOutDocsWithoutSlugs} from '../../lib/helpers'
-import { buildImageObj } from '../../lib/helpers'
+import { buildImageObjMap } from '../../lib/helpers'
 import { imageUrlFor } from '../../lib/image-url'
 import Masonry from 'react-masonry-component';
 // import { GridLayoutContext } from '../articleFeedLayout'
@@ -36,9 +36,26 @@ function RecentPostFeed (props) {
             publishedAt
             featuredImage {
                 asset {
+                  _id
+                  url
                   fluid(maxWidth: 600) {
                     ...GatsbySanityImageFluid
                   }
+                  source {
+                    url
+                  }
+                }
+                crop {
+                  bottom
+                  left
+                  top
+                  right
+                }
+                hotspot {
+                  x
+                  y
+                  height
+                  width
                 }
                 alt
             }
@@ -61,9 +78,26 @@ function RecentPostFeed (props) {
             publishedAt
             featuredImage {
                 asset {
+                  _id
+                  url
                   fluid(maxWidth: 600) {
                     ...GatsbySanityImageFluid
                   }
+                  source {
+                    url
+                  }
+                }
+                crop {
+                  bottom
+                  left
+                  top
+                  right
+                }
+                hotspot {
+                  x
+                  y
+                  height
+                  width
                 }
                 alt
             }
@@ -86,9 +120,26 @@ function RecentPostFeed (props) {
             publishedAt
             featuredImage {
                 asset {
+                  _id
+                  url
                   fluid(maxWidth: 600) {
                     ...GatsbySanityImageFluid
                   }
+                  source {
+                    url
+                  }
+                }
+                crop {
+                  bottom
+                  left
+                  top
+                  right
+                }
+                hotspot {
+                  x
+                  y
+                  height
+                  width
                 }
                 alt
             }
@@ -111,9 +162,26 @@ function RecentPostFeed (props) {
             publishedAt
             featuredImage {
                 asset {
+                  _id
+                  url
                   fluid(maxWidth: 600) {
                     ...GatsbySanityImageFluid
                   }
+                  source {
+                    url
+                  }
+                }
+                crop {
+                  bottom
+                  left
+                  top
+                  right
+                }
+                hotspot {
+                  x
+                  y
+                  height
+                  width
                 }
                 alt
             }
@@ -164,8 +232,7 @@ function RecentPostFeed (props) {
     <ArticleLayoutToggle />
     
     <Masonry
-      className={'my-gallery-class'} // default ''
-      elementTypeg={'div'} // default 'div'
+      elementType={'div'} // default 'div'
       disableImagesLoaded={false} // default false
       updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
     >
@@ -182,28 +249,25 @@ function RecentPostFeed (props) {
        }}
       >
         
-      <Box sx= {{
-        height: '225px',
+      <Box sx= {{ 
+        height: 'max-content',
         maxWidth: '560px',
         width: ['100%','30vw'],
-        overflow: 'hidden',
         variant: 'variants.shadow',
       }}>
         <Link to={post.node.slug.current}>
-        <div
-        sx= {{
-          position: 'relative',
-          top: '-50%',
-        }}
-        >
-         <Img fluid={post.node.featuredImage.asset.fluid} alt="Test"
+          <img
+          src={imageUrlFor(buildImageObjMap(post.node.featuredImage))
+          .auto('format')
+          .url()
+          }
+          alt='test'
           sx= {{
-            height: '225px',
-            maxWidth: '560px',
-            width: '30vw',
+            width: '100%',
+            position: 'relative',
+            float: 'left'
           }}
-         />
-        </div>
+          />
         </Link>
       </Box>
       <Box

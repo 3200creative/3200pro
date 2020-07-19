@@ -11,33 +11,42 @@ import BackgroundImage from "gatsby-background-image"
 
 function BlogPostPreview (props) {
   return (
-    <div sx={{variant: 'variants.postPreview'}}>
-    <Link to={getBlogUrl(props.publishedAt, props.slug.current)}>
+    <div 
+    columns={'1fr 2fr'}
+    gap={5}
+    sx={{
+      justifyContent: "center",
+      variant: 'variants.postPreview'
+      }}>
     <div
     sx= {{
-      variant: 'variants.postPreview.archiveImages'
-
+      variant: 'variants.postPreview.archiveImages',
     }}
+    >
+    <Link to={getBlogUrl(props.publishedAt, props.slug.current)}
     >
     <Img
       fluid={getFluidGatsbyImage(props.featuredImage,{ maxWidth: 800 }, {...clientConfig.sanity})}
       sx = {{
-        variant: 'variants.shadow'
+        width: '100%',
       }}
     />
+    </Link>
     </div>
       <div
     sx={{
+      px: [2],
       variant: 'variants.postPreview.overlay',
       }}>
-      <h4>{props.title}</h4>
+        <Link to={getBlogUrl(props.publishedAt, props.slug.current)}> 
+      <h2>{props.title}</h2>
       {props._rawExcerpt && (
         <span>
           <BlockText blocks={props._rawExcerpt} />
         </span>
       )}
+      </Link>
       </div>
-    </Link>
     </div>
   )
 }

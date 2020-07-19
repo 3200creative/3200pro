@@ -1,10 +1,11 @@
 import BaseBlockContent from '@sanity/block-content-to-react'
 import React from 'react'
-import Figure from './Figure'
+import Figure from './DarkmodeImage'
 import Spacer from './Spacer'
 import ButtonBlock from './ButtonBlock'
 import SanityScript from './Script'
 import ImgLeftTxtRight from './ImgLeftTxtRight'
+import DarkmodeImage from './DarkmodeImage'
 const serializers = {
   types: {
     block (props) {
@@ -45,6 +46,9 @@ const serializers = {
     },
     script (props) {
       return <SanityScript {...props.node} />
+    },
+    darkmodeImage (props) {
+      return <DarkmodeImage {...props.node} />
     }
   }
 }

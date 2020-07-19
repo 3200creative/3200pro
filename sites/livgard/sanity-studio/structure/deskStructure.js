@@ -51,7 +51,7 @@ const hiddenDocTypes = listItem =>
     'practiceArea',
     'testimonial',
     'teamMember',
-    'faq'
+    'faq',
   ].includes(listItem.getId())
 
 export default () =>

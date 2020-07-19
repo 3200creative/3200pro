@@ -13,13 +13,16 @@ function testimonialPreview (props) {
     <div sx={{variant: 'variants.postPreview'}}>
       <div
     sx={{
+      p: 4,
+      px: 5,
       variant: 'variants.postPreview.overlay',
+      variant: 'variants.shadow'
       }}>
       <h4
       sx={{
-        marginTop: '3vw',
-        paddingTop: '3vw',
-        fontSize: [28, null, 30, 40]
+        fontSize: [28, null, 30, 40],
+        paddingTop: 3,
+        m: 0
       }}
       >{props.title}</h4>
       {props._rawBlockContent && (

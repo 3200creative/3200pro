@@ -28,13 +28,41 @@ export default {
         name: 'bio',
         type: 'bioPortableText',
         title: 'Biography'
-      }
+      },
+      {
+        name: 'teaBio',
+        type: 'bioPortableText',
+        title: 'Tea Biography'
+      },
+      {
+        name: 'musicBio',
+        type: 'bioPortableText',
+        title: 'Music Biography'
+      },
+      {
+        name: 'lifeBio',
+        type: 'bioPortableText',
+        title: 'Life Biography'
+      },
+      {
+        name: 'businessBio',
+        type: 'bioPortableText',
+        title: 'Business Biography'
+      },
+      {
+        name: 'altBio1',
+        type: 'bioPortableText',
+        title: 'Alt Bio 1'
+      },
+      {
+        name: 'altBio2',
+        type: 'bioPortableText',
+        title: 'Alt Bio 2'
+      },
+      {
+        name: 'altBio3',
+        type: 'bioPortableText',
+        title: 'Alt Bio 3'
+      },
     ],
-    preview: {
-      select: {
-        title: 'author',
-        subtitle: 'slug.current',
-        media: 'image'
-      }
-    }
   }

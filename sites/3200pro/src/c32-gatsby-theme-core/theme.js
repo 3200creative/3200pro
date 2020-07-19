@@ -14,10 +14,14 @@ export default {
     navLinks: '"SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif', // Font for the nav menu links
     alt: '"SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif', //An alternate font style if needed.
   },
+  shadows: {
+    shadowStyle1: '0 30px 60px -10px rgba(0,0,0,0.3), 0 18px 36px -18px rgba(0,0,0,0.33)',
+  },
   colors: {
     ...tailwind.colors,
     text: '#4a494e',
     headline: '#000',
+    darkbg2: 'white',
     background: baseColors.white, //Try "#954264",
     primary: '#FF00FF',
     light: '#999',
@@ -47,10 +51,7 @@ export default {
         headline: '#fff',
         background: '#000',
         primary: '#0cf',
-  
-        shadow: {
-          boxShadow: '0 30px 60px -10px rgba(255,255,255,0.3), 0 18px 36px -18px rgba(255,255,255,0.33) !important',
-        },
+        darkbg2: '#fff',
         h1: {
           color: 'white'
         },
@@ -143,7 +144,7 @@ export default {
       height: 'auto',
     },
     shadow: {
-      boxShadow: '0 30px 60px -10px rgba(0,0,0,0.3), 0 18px 36px -18px rgba(0,0,0,0.33) !important',
+      boxShadow: 'shadowStyle1',
     },
     ghostbutton: {
       backgroundColor: 'background',
@@ -168,12 +169,20 @@ export default {
       my: 5
     },
     postPreview: {
+      my: [6],
       a: {
         color: 'text'
+      },
+      archiveImages: {
+        backgroundColor: 'darkbg2',
+        
+        boxShadow: 'shadowStyle1',
       }
     },
     navLinkStyles: {
       fontWeight: '400',
+      textTransform: 'uppercase',
+      fontSize: '14px',
       a: {
         fontWeight: '400',
         color: 'text',

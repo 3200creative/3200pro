@@ -8,6 +8,23 @@ import { Grid } from 'theme-ui'
 import { Box } from 'theme-ui'
 
 function AuthorBlock (props) {
+  let authorBio
+  switch(props.authorBlockBio) {
+    case 'teaBio': 
+    authorBio = props.author.teaBio
+    break
+    case 'musicBio':
+    authorBio = props.author.musicBio
+    break
+    case 'businessBio': 
+    authorBio = props.author.businessBio
+    break
+    case 'lifeBio': 
+    authorBio = props.author.lifeBio
+    break
+    default:
+      authorBio = props.author.bio;
+  }
   return (
     <Grid
     columns={['1fr 8fr']}
@@ -28,7 +45,7 @@ function AuthorBlock (props) {
       height: '46px',
       width: '46px',
     }}
-    >
+    >   
         <img
           src={imageUrlFor(buildImageObj(props.author.image))
             .width(100)
@@ -53,7 +70,7 @@ function AuthorBlock (props) {
       lineHeight: '1.45',
       color: 'var(--theme-ui-colors-grey,#73737D)'
     }}>
-    <BlockContent blocks={ props.author.bio || [] } />
+    <BlockContent blocks={ authorBio || [] } />
     </Box>
     </Grid>
   )

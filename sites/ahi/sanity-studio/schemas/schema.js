@@ -18,6 +18,7 @@ import gallery from './objects/gallery'
 import button from './objects/button'
 import buttonBlock from './objects/buttonBlock'
 import imgLeftTxtRight from './objects/imgLeftTxtRight'
+
 // Content Types:
 import page from './contentTypes/page'
 import homepage from './contentTypes/homepage'

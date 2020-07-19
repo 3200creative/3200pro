@@ -1,12 +1,14 @@
 // First, we must import the schema creator
 import createSchema from 'part:@sanity/base/schema-creator'
 
+// Then import schema types from any plugins that might expose them
+import schemaTypes from 'all:part:@sanity/base/schema-type'
 // Utilities
 import menu from './utilities/menu'
 import globalOptions from './utilities/globalOptions'
 import siteSettings from './utilities/siteSettings'
-// Then import schema types from any plugins that might expose them
-import schemaTypes from 'all:part:@sanity/base/schema-type'
+// Taxonomies
+import boatType from './taxonomies/boatType'
 // Object Types:
 import blockContent from './objects/blockContent'
 import script from './objects/script'
@@ -28,7 +30,7 @@ import spacer from './objects/spacers'
 // Content
 import page from   './contentTypes/page'
 import landingPage from './contentTypes/landingPage'
-import testimonial from './contentTypes/testimonial'
+import review from './contentTypes/review'
 import faq from './contentTypes/faq'
 import post from './contentTypes/post'
 import boat from './contentTypes/boat'
@@ -40,6 +42,8 @@ export default createSchema({
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
+        // Taxonomies
+        boatType,
         // Utilities
         menu,
         globalOptions,
@@ -67,7 +71,7 @@ export default createSchema({
         landingPage,
         boat,
         post,
-        testimonial,
+        review,
         faq
 
   ])

@@ -24,6 +24,8 @@ import imgLeftTxtRight from './objects/imgLeftTxtRight'
 import excerptPortableText from './objects/excerptPortableText'
 import bioPortableText from './objects/bioPortableText'
 import spacer from './objects/spacers'
+import darkmodeImage from './objects/darkmodeImage'
+
 // Content Types:
 import page from   './contentTypes/page'
 import teamMember from './contentTypes/teamMember'
@@ -61,6 +63,7 @@ export default createSchema({
     excerptPortableText,
     bioPortableText,
     spacer,
+    darkmodeImage,
     // Content Types
     page,
     post,

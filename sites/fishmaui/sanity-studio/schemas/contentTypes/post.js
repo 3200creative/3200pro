@@ -33,11 +33,6 @@ export default {
       title: 'Featured Image'
     },
     {
-      name: 'pagePattern',
-      type: 'featuredImage',
-      title: 'Page Pattern'
-    },
-    {
       name: 'excerpt',
       type: 'excerptPortableText',
       title: 'Excerpt',

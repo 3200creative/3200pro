@@ -11,15 +11,34 @@ import {
   MdWeb,
 } from 'react-icons/md'
 
+import {
+  GiFishingBoat,
+  GiHamburgerMenu
+} from 'react-icons/gi'
+
+import {
+  RiArticleLine
+} from 'react-icons/ri'
+
+import{
+  BsQuestion
+} from 'react-icons/bs'
+
 const hiddenDocTypes = listItem =>
   ![
     'menu',
     'landingPage',
     'page',
     'service',
-    'testimonial',
+    'review',
     'teamMember',
-    'faq'
+    'faq',
+    'boat',
+    'post',
+    'boatType',
+    'siteSettings',
+    'globalOptions'
+    
   ].includes(listItem.getId())
 
 export default () =>
@@ -43,9 +62,25 @@ S.list()
           .documentId('siteSettings')
         ),
         S.listItem()
+        .title('globalOptions')
+        .icon(MdInfo)
+        .child(
+          S.document()
+          .title('Global Options')
+          .schemaType('globalOptions')
+          .documentId('globalOptions')
+        ),
+        S.listItem()
         .title('Menus')
+        .icon(GiHamburgerMenu)
         .child(
           S.documentTypeList('menu')
+        ),
+        S.listItem()
+        .title('Boat Types')
+        .icon(GiFishingBoat)
+        .child(
+          S.documentTypeList('boatType')
         ),
       ])
     ),
@@ -66,11 +101,11 @@ S.list()
           .documentId('homepage')
         ),
         S.listItem()
-        .title('Profile Page')
+        .title('About Page')
         .icon(MdBusiness)
         .child(
           S.document()
-          .title('Profile Page')
+          .title('About Page')
           .schemaType('page')
           .documentId('profilePage')
         ),
@@ -87,27 +122,34 @@ S.list()
         .title('Other Pages')
         .icon(MdExplore)
         .child(
-
           S.documentTypeList('page')
-        )
+          .filter('_type == "page" && _id != "contactPage" &&  _id != "profilePage"')
+        ),
       ])
     ),
     S.listItem()
     .title('Boats')
-    .icon(MdThumbUp)
+    .icon(GiFishingBoat)
     .child(
       S.documentTypeList('boat')
     ),
     S.listItem()
-    .title('Testimonials')
+    .title('Reviews')
     .icon(MdThumbUp)
     .child(
-      S.documentTypeList('testimonial')
+      S.documentTypeList('review')
     ),
     S.listItem()
     .title('FAQs')
+    .icon(BsQuestion)
     .child(
       S.documentTypeList('faq')
+    ),
+    S.listItem()
+    .title('Blog Posts')
+    .icon(RiArticleLine)
+    .child(
+      S.documentTypeList('post')
     ),
     ...S.documentTypeListItems().filter(hiddenDocTypes),
   ])

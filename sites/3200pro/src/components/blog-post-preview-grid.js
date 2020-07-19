@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import { Link } from 'gatsby'
 import React from 'react'
 import BlogPostPreview from './blog-post-preview'
@@ -14,7 +16,11 @@ function BlogPostPreviewGrid (props) {
           )}
         </h2>
       )}
-      <section>
+      <section
+      sx= {{
+        marginTop: 10
+      }}
+      >
         {props.nodes &&
           props.nodes.map(node => (
             <BlogPostPreview {...node} key={node.id}/>

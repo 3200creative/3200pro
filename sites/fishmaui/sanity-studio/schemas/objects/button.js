@@ -17,7 +17,13 @@ export default {
                 allowRelative: true,
                 scheme: ['https', 'http', 'mailto', 'tel'],
               }),
-          },
+        },
+        {
+            name: 'menuImage',
+            description: 'This is used for hero menus.',
+            type: 'featuredImage',
+            title: 'Menu Image'
+        },
         {
             type: 'array',
             title: 'Optional Sub Buttons',

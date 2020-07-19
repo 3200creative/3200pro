@@ -18,6 +18,9 @@ import {
   MdChromeReaderMode,
 } from 'react-icons/md'
 
+import {
+  WiMoonAltThirdQuarter
+} from 'react-icons/wi'
 
 export default {
   title: 'Block Content',
@@ -92,6 +95,10 @@ export default {
     {
       type: 'script',
       icon: MdCode,
+    },
+    {
+      type: 'darkmodeImage',
+      icon: WiMoonAltThirdQuarter,
     },
     {
       type: 'figure',
