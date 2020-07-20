@@ -1,6 +1,6 @@
 import BaseBlockContent from '@sanity/block-content-to-react'
 import React from 'react'
-import Figure from './DarkmodeImage'
+import Figure from './figure'
 import Spacer from './Spacer'
 import ButtonBlock from './ButtonBlock'
 import SanityScript from './Script'

@@ -7,10 +7,11 @@ import { imageUrlFor } from '../../lib/image-url'
 const sanityConfig = {projectId: 'p6aj32cv', dataset: 'production'}
 
 
-function Figure (props) {
+function DarkmodeImage (props) {
   const [colorMode] = useColorMode()  
-  const GatsbyImageToggle = (colorMode == 'light') ? props.primaryImage.asset._ref : props.darkmodeImage.asset._ref
-  const SanityImageToggle = (colorMode == 'light') ? props.primaryImage : props.darkmodeImage
+  const GatsbyImageToggle = (colorMode == 'light' ) ?  props.primaryImage.asset._ref : props.darkmodeImage.asset._ref
+  const SanityImageToggle = (colorMode == 'light' ) ? props.primaryImage : props.darkmodeImage
+
   return (
     <figure  sx={{
       mx: 'auto',
@@ -55,4 +56,4 @@ function Figure (props) {
   )
 }
 
-export default Figure
+export default DarkmodeImage
