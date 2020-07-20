@@ -6,7 +6,6 @@ import Img from "gatsby-image"
 import { getBlogUrl } from '../lib/helpers'
 import BlockText from '../components/block-text'
 import { getFluidGatsbyImage } from "gatsby-source-sanity"
-import clientConfig from '../../client-config'
 import BackgroundImage from "gatsby-background-image"
 const sanityConfig = {projectId: 'p6aj32cv', dataset: 'production'}
 
