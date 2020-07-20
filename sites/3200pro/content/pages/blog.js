@@ -21,6 +21,18 @@ export const query = graphql`
           title
           id
           featuredImage {
+            crop {
+              bottom
+              left
+              top
+              right
+            }
+            hotspot {
+              x
+              y
+              height
+              width
+            }
             asset {
               _id
             }

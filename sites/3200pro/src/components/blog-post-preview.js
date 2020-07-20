@@ -8,6 +8,7 @@ import BlockText from '../components/block-text'
 import { getFluidGatsbyImage } from "gatsby-source-sanity"
 import clientConfig from '../../client-config'
 import BackgroundImage from "gatsby-background-image"
+const sanityConfig = {projectId: 'p6aj32cv', dataset: 'production'}
 
 function BlogPostPreview (props) {
   return (
@@ -26,10 +27,11 @@ function BlogPostPreview (props) {
     <Link to={getBlogUrl(props.publishedAt, props.slug.current)}
     >
     <Img
-      fluid={getFluidGatsbyImage(props.featuredImage,{ maxWidth: 800 }, {...clientConfig.sanity})}
+      fluid={getFluidGatsbyImage(props.featuredImage.asset._id,{ maxWidth: 800 }, sanityConfig)}
       sx = {{
         width: '100%',
       }}
+      alt = {props.featuredImage.alt}
     />
     </Link>
     </div>
