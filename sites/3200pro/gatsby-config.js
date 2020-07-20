@@ -52,7 +52,7 @@ module.exports = {
       options: {
         projectId: 'p6aj32cv',
         dataset: 'production',
-        watchMode: true,
+        watchMode: false,
         overlayDrafts: true,
         token: 'skqjIQ0mTiREo7FiDTRHyrMCbZaz52KL3SCA6xl7YNxo8XFzvhv3wu1nz34eXIyHiCLeHeTGZcA0kB2rYTXnwsrlq1ArwK0MV7QcxsjJW6gADp5zd1dt6MnfQlbzMnR3l2kJ0QEe2seQD22xx2n0fhqc8od4e3hViLiqHCqWemf6Yv76ISvx',
         // If the Sanity GraphQLs API was deployed using `--tag <name>`,
