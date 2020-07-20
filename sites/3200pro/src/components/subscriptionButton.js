@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js"
 const stripePromise = loadStripe("pk_live_51H4Y2EIZVy7BW60B6qJIMWASOREXD7Ff07FtV68K1yWe2isWDmtBjio92rVNQF1aVMeaDsm5w8dpiLX6yCJP6gLu00UvMRa6yH")
 const mode = 'subscription'
-const successUrl = 'http://localhost:8000/payment-complete'
-const cancelUrl = 'http://localhost:8000/payment-error'
+const successUrl = 'http://3200.pro/payment-complete'
+const cancelUrl = 'http://3200.pro/payment-error'
 // Prices
 const hourly10 = 'price_1H4ZhSIZVy7BW60BiOVbeMI0'
 const testProduct = 'price_1H74m0IZVy7BW60BDVej9nHM'
