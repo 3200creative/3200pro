@@ -2,12 +2,12 @@
 import { jsx } from "theme-ui"
 import React, { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js"
-const stripePromise = loadStripe("pk_test_51H4Y2EIZVy7BW60Ba62HN1ZKmroMoZNdHYbRhBVOk5us7mhPe527OQuAnhbBsjnq5T8mmSB1JiLiHWhi2xrNzPwH00E2bsVzK2")
+const stripePromise = loadStripe("pk_live_51H4Y2EIZVy7BW60B6qJIMWASOREXD7Ff07FtV68K1yWe2isWDmtBjio92rVNQF1aVMeaDsm5w8dpiLX6yCJP6gLu00UvMRa6yH")
 const mode = 'subscription'
 const successUrl = 'http://localhost:8000/payment-complete'
 const cancelUrl = 'http://localhost:8000/payment-error'
 // Prices
-const hourly10 = 'price_1H4ZpYIZVy7BW60BadpDS3VM'
+const hourly10 = 'price_1H4ZhSIZVy7BW60BiOVbeMI0'
 const testProduct = 'price_1H74m0IZVy7BW60BDVej9nHM'
 
 let clientEmail = ''
@@ -65,13 +65,7 @@ const Checkout = () => {
   const signature = 'Thanks, Ryan'
   const { value, bind, reset } = useInput('');
   switch(value) {
-    case 'i': 
-      product = monthly10hours;
-      simpleName = 'Monthly 10 Hours'
-      client = 'Ryan'
-      message = `Hi ${client}, please click checkout to review purchase and make payment.`
-      break;
-    case 'info@3200creative.com': 
+    case 'info': 
       product = dailyDollar
       simpleName = 'Daily Dollar'
       client = 'Ryan'
