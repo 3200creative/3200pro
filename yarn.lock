@@ -6018,6 +6018,13 @@ gatsby-plugin-disqus@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-disqus/-/gatsby-plugin-disqus-1.2.0.tgz#8579e33b983d6de957390aef5445c99e8cb38af5"
 
+gatsby-plugin-google-analytics@^2.3.12:
+  version "2.3.12"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.3.12.tgz#69af49e2087d5aff704ab57a31176615b83726cd"
+  dependencies:
+    "@babel/runtime" "^7.10.3"
+    minimatch "3.0.4"
+
 gatsby-plugin-google-analytics@^2.3.4:
   version "2.3.11"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.3.11.tgz#201769a27ae9ca5852c25af004d83635ef1e1f14"
