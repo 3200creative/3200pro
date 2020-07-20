@@ -18,7 +18,7 @@ function BlogPostPreviewGrid (props) {
       )}
       <section
       sx= {{
-        marginTop: 10
+        marginTop: [0, null, null, 10]
       }}
       >
         {props.nodes &&

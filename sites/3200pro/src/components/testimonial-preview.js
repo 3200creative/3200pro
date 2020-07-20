@@ -13,15 +13,15 @@ function testimonialPreview (props) {
     <div sx={{variant: 'variants.postPreview'}}>
       <div
     sx={{
-      p: 4,
-      px: 5,
+      py: [0],
+      px: [2, null, null, 5],
       variant: 'variants.postPreview.overlay',
       variant: 'variants.shadow'
       }}>
       <h4
       sx={{
         fontSize: [28, null, 30, 40],
-        paddingTop: 3,
+        paddingTop: [0,3],
         m: 0
       }}
       >{props.title}</h4>

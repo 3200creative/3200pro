@@ -62,6 +62,7 @@ const Posts = props => {
        description='Minneapolis Based Gatsby Website Development' 
        />
       <Container>
+        <h1>Blog</h1>
         {/* <BlockContent blocks={posts._rawBlockContent || []} /> */}
       {posts && posts.length > 0 && <BlogPostPreviewGrid nodes={posts} />}
       </Container>

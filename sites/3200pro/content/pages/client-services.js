@@ -13,6 +13,7 @@ const CheckoutPage = () => (
             variant: 'variants.standardPage'
           }}
         >
+          <h1>Client Services</h1>
             <Checkout />
         </div>
       </Container>
