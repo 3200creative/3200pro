@@ -27,7 +27,7 @@ function BlogPostPreview (props) {
     <Link to={getBlogUrl(props.publishedAt, props.slug.current)}
     >
     <Img
-      fluid={getFluidGatsbyImage(props.featuredImage.asset._id,{ maxWidth: 800 }, sanityConfig)}
+      fluid={getFluidGatsbyImage(props.featuredImage,{ maxWidth: 800 }, sanityConfig)}
       sx = {{
         width: '100%',
       }}
