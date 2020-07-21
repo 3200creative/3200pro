@@ -13,8 +13,7 @@ function testimonialPreview (props) {
     <div sx={{variant: 'variants.postPreview'}}>
       <div
     sx={{
-      py: [0],
-      px: [2, null, null, 5],
+      p: [2, null, null, 5],
       variant: 'variants.postPreview.overlay',
       variant: 'variants.shadow'
       }}>

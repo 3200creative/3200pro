@@ -11,7 +11,7 @@ const PageTemplate = props => {
     const { data, errors } = props
     const page = data && data.page
     let disqusConfig = {
-      url: `http://localhost:8000/${page.slug.current}`,
+      url: `http://3200.pro/${page.slug.current}`,
       identifier: page.id,
       title: page.title,
     }
@@ -39,3 +39,16 @@ const PageTemplate = props => {
 }
 
 export default PageTemplate
+
+export const query = graphql`
+  query postQuery($id: String!) {    
+    page: sanityPost(id: { eq: $id }) {
+        id
+        title
+        slug {
+            current
+        }
+        _rawBlockContent
+    }
+  }
+  `
