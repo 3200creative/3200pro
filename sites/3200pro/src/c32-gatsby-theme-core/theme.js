@@ -212,6 +212,17 @@ export default {
       color: 'light',
       a: {
         color: 'light'
+      },
+      ul: {
+        flexDirection: 'row',
+        display: 'flex',
+        listStyleType: 'none',
+        alignItems: 'center',
+        justifyContent: 'center',
+        p: 0,
+        li: {
+          p: 2
+        }
       }
     },
     landingPage: {

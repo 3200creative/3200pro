@@ -39,16 +39,3 @@ const PageTemplate = props => {
 }
 
 export default PageTemplate
-
-export const query = graphql`
-  query postQuery($id: String!) {    
-    page: sanityPost(id: { eq: $id }) {
-        id
-        title
-        slug {
-            current
-        }
-        _rawBlockContent
-  }
-  }
-`

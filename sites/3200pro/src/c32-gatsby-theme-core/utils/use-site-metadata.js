@@ -8,6 +8,7 @@ export const useSiteMetadata = () => {
   const data = useStaticQuery(
     graphql`
       query SiteData{
+        
         seoImage: file(name: { eq: "c32-site-social" }) {
           childImageSharp {
             resize(width: 1024) {
@@ -31,6 +32,10 @@ export const useSiteMetadata = () => {
               name
               link
             }
+            footerLinks {
+              name
+              link
+            }
           }
         }
       }
@@ -43,12 +48,22 @@ export const useSiteMetadata = () => {
   const useDarkMode = true
   const developer = '3200.pro'
   const developerLink = 'https://3200.pro'
+  const additionalLinks = [
+    {
+      name: 'Terms Of Use',
+      url: '/terms'
+    },
+    {
+      name: 'Privacy Policy',
+      url: '/privacy-policy'
+    },
+  ]
   const title = '3200.Pro'
   const seoImage = data.seoImage.childImageSharp.resize
   const metaData = data.site.siteMetadata
   const twitterUsername = data.site.siteMetadata.social.twitter
   // Local Business Schema
-  const allData = { ...metaData, useDarkMode, developer,developerLink, useTransitions, title, logo, seoImage, twitterUsername,
+  const allData = { ...metaData, useDarkMode, additionalLinks, developer,developerLink, useTransitions, title, logo, seoImage, twitterUsername,
     
     // Local Business Data:
     hasLocalBusinessSchema: true,

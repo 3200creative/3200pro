@@ -30,6 +30,16 @@ module.exports = {
         link: `/minneapolis-website-developer-contact`,
       },
     ],
+    footerLinks: [
+      {
+        name: `Terms Of Use`,
+        link: `/terms`,
+      },
+      {
+        name: 'Privacy Policy',
+        link: '/privacy-policy',
+      },
+    ],
   },
   plugins: [
     {
@@ -58,6 +68,12 @@ module.exports = {
         // If the Sanity GraphQLs API was deployed using `--tag <name>`,
         // use `graphqlTag` to specify the tag name. Defaults to `default`.
         graphqlTag: 'default',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-24008671-13",
       },
     },
     {
