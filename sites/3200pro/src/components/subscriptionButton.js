@@ -10,7 +10,7 @@ const cancelUrl = 'http://3200.pro/payment-error'
 const hourly10 = 'price_1H4ZhSIZVy7BW60BiOVbeMI0'
 const fiveHourSingular625 = 'price_1H87USIZVy7BW60BYRawg1gv'
 const lasalleServices625 = 'price_1H87TRIZVy7BW60BDqnTKC66'
-const testProduct = 'price_1H74m0IZVy7BW60BDVej9nHM'
+const forkandBeansHosting = 'price_1H8AvEIZVy7BW60BL7h3jLto'
 
 let clientEmail = ''
 const useInput = initialValue => {
@@ -44,27 +44,12 @@ const monthly10hours = async event => {
   }
 }
 
-const LaSalle = async event => {
+const FbHosting = async event => {
   
   event.preventDefault()
   const stripe = await stripePromise
   const { error } = await stripe.redirectToCheckout({
-    lineItems: [{ price: lasalleServices625, quantity: 1 }],
-    mode: mode,
-    successUrl: successUrl,
-    cancelUrl: cancelUrl,
-  })
-  if (error) {
-    console.warn("Error:", error)
-  }
-}
-
-const dailyDollar = async event => {
-  
-  event.preventDefault()
-  const stripe = await stripePromise
-  const { error } = await stripe.redirectToCheckout({
-    lineItems: [{ price: testProduct, quantity: 1 }],
+    lineItems: [{ price: forkandBeansHosting, quantity: 1 }],
     mode: mode,
     successUrl: successUrl,
     cancelUrl: cancelUrl,
@@ -82,24 +67,18 @@ const Checkout = () => {
   const signature = 'Thanks, Ryan'
   const { value, bind, reset } = useInput('');
   switch(value) {
-    case 'info': 
-      product = dailyDollar
-      simpleName = 'Daily Dollar'
-      client = 'Ryan'
-      message = `Hi ${client}, your about to pay yourself a dollar a day.`
-      break
     case 'chris@grandscape.com':
       product = monthly10hours;
       simpleName = 'Monthly 10 Hours'
       client = 'Chris'
       message = `Hi ${client}, please click checkout to make the payment. Please let me know if you have any questions.`
       break;
-    case 'lasalle0720':
-        product = LaSalle;
-        simpleName = 'Monthly Service'
-        client = 'Kenzie'
-        message = `Hi ${client}, please click checkout to make the payment. Please let me know if you have any questions.`
-        break;
+    case 'fbhosting':
+      product = FbHosting;
+      simpleName = '$100/mo + 30 Days free for doublecharging'
+      client = 'Cara'
+      message = `Hi ${client}, please click checkout to make the payment. Please let me know if you have any questions.`
+      break;
     default:
       product = monthly5hours;
   }
@@ -134,9 +113,9 @@ const Checkout = () => {
     </div>
     {/* LaSalle Setup */}
     <div>
-    {client == 'Kenzie' ? (
+    {client == 'Cara' ? (
     <>
-    <h2>LaSalle Service: {simpleName} </h2>
+    <h2>Hosting Payment: {simpleName} </h2>
     <p>{message}</p>
     <p>{signature}</p>
     <button onClick={ product }
