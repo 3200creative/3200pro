@@ -8,6 +8,7 @@ const successUrl = 'http://3200.pro/payment-complete'
 const cancelUrl = 'http://3200.pro/payment-error'
 // Prices
 const hourly10 = 'price_1H4ZhSIZVy7BW60BiOVbeMI0'
+const monthlyHosting100 = 'price_1H4cNeIZVy7BW60BTuqHWnaF'
 const fiveHourSingular625 = 'price_1H87USIZVy7BW60BYRawg1gv'
 const lasalleServices625 = 'price_1H87TRIZVy7BW60BDqnTKC66'
 const forkandBeansHosting = 'price_1H8AvEIZVy7BW60BL7h3jLto'
@@ -35,6 +36,21 @@ const monthly10hours = async event => {
   const stripe = await stripePromise
   const { error } = await stripe.redirectToCheckout({
     lineItems: [{ price: hourly10, quantity: 1 }],
+    mode: mode,
+    successUrl: successUrl,
+    cancelUrl: cancelUrl,
+  })
+  if (error) {
+    console.warn("Error:", error)
+  }
+}
+
+const hosting100 = async event => {
+  
+  event.preventDefault()
+  const stripe = await stripePromise
+  const { error } = await stripe.redirectToCheckout({
+    lineItems: [{ price: monthlyHosting100, quantity: 1 }],
     mode: mode,
     successUrl: successUrl,
     cancelUrl: cancelUrl,
@@ -72,6 +88,11 @@ const Checkout = () => {
       simpleName = 'Monthly 10 Hours'
       client = 'Chris'
       message = `Hi ${client}, please click checkout to make the payment. Please let me know if you have any questions.`
+      break;
+    case 'pro hosting':
+      product = hosting100;
+      simpleName = 'Monthly hosting with 3200 Creative'
+      message = `Hello!:) Please click checkout to start monthly hosting payments. Please let us know if you have any questions.`
       break;
     case 'fbhosting':
       product = FbHosting;
