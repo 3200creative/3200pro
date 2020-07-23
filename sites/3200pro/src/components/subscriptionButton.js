@@ -136,7 +136,7 @@ const Checkout = () => {
     <div>
     {client == 'Kenzie' ? (
     <>
-    <h2>Grandscape Service: {simpleName} </h2>
+    <h2>LaSalle Service: {simpleName} </h2>
     <p>{message}</p>
     <p>{signature}</p>
     <button onClick={ product }
