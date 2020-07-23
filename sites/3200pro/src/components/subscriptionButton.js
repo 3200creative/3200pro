@@ -75,7 +75,7 @@ const Checkout = () => {
       break;
     case 'fbhosting':
       product = FbHosting;
-      simpleName = '$100/mo + 30 Days free for doublecharging'
+      simpleName = '$100/mo + 30 trial to even out double charge'
       client = 'Cara'
       message = `Hi ${client}, please click checkout to make the payment. Please let me know if you have any questions.`
       break;
