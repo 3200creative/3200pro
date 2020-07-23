@@ -79,7 +79,7 @@ const monthly5hours = async event => {
   alert('5 hours')
 }
 const Checkout = () => {
-  let product, client, message, simpleName;
+  let product, client, message, simpleName, greeting;
   const signature = 'Thanks, Ryan'
   const { value, bind, reset } = useInput('');
   switch(value) {
@@ -89,30 +89,25 @@ const Checkout = () => {
       client = 'Chris'
       message = `Hi ${client}, please click checkout to make the payment. Please let me know if you have any questions.`
       break;
-    case 'pro hosting':
+    case 'prohosting':
       product = hosting100;
       simpleName = 'Monthly hosting with 3200 Creative'
-      message = `Hello!:) Please click checkout to start monthly hosting payments. Please let us know if you have any questions.`
+      greeting = `Hello!`
+      message = `Please click checkout to start monthly hosting payments. Please let us know if you have any questions.`
       break;
     case 'fbhosting':
       product = FbHosting;
       simpleName = '$100/mo + 30 trial to even out double charge'
       client = 'Cara'
-      message = `Hi ${client}, please click checkout to make the payment. Please let me know if you have any questions.`
+      message = `Hi ${client}, Please click checkout to make the payment. Please let me know if you have any questions.`
       break;
     default:
       product = monthly5hours;
   }
-  const handleSubmit = (evt) => {
-      evt.preventDefault();
-      clientEmail = value
-      alert(`email: ${value}`)
-      reset();
-  }
   return (
     <>
     <p>Please enter your password for access:</p>
-    <form onSubmit={handleSubmit}>
+    <form>
     <label>
       <input type='text' placeholder='password' type="password" {...bind}
       sx = {{ p: 2}}
@@ -132,8 +127,8 @@ const Checkout = () => {
     </>
     ) : null}
     </div>
-    {/* LaSalle Setup */}
     <div>
+    {/* F & B*/}
     {client == 'Cara' ? (
     <>
     <h2>Hosting Payment: {simpleName} </h2>
@@ -145,11 +140,12 @@ const Checkout = () => {
     </>
     ) : null}
     </div>
-    {/* Test Ryan Setup */}
+    {/* Monthly $100 Hosting*/}
     <div>
-    {client == 'Ryan' ? (
+    {product == hosting100 ? (
     <>
-    <h2>Test Services: {simpleName} </h2>
+    <h2>Product: {simpleName} </h2>
+    <p>{greeting}</p>
     <p>{message}</p>
     <p>{signature}</p>
     <button onClick={ product }
