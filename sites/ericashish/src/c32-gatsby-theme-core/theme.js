@@ -245,6 +245,13 @@ export default {
     },
     navLinkStyles: {
       
+    },
+    layouts: {
+      singlePages: {
+        tea: {
+
+        }
+      }
     }
   },
 }

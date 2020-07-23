@@ -18,6 +18,11 @@ const TeaPageTemplate = props => {
     
     return (
       <Layout>
+        <div
+        sx = {{
+          variant: 'variants.layouts.singlePages.tea'
+        }}
+        >
         {errors && <SEO title='GraphQL Error' />}
         {page && <SEO title={page.title} />}
         <Container>
@@ -45,6 +50,7 @@ const TeaPageTemplate = props => {
             />
         {page._rawBlockContent && <BlockContent blocks={page._rawBlockContent} />}
         </PostContent>
+        </div>
         </Layout>
   )
 }

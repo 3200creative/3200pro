@@ -34,6 +34,7 @@ import review from './contentTypes/review'
 import faq from './contentTypes/faq'
 import post from './contentTypes/post'
 import boat from './contentTypes/boat'
+import activity from './contentTypes/activity'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -72,6 +73,7 @@ export default createSchema({
         boat,
         post,
         review,
+        activity,
         faq
 
   ])

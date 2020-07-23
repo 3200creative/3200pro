@@ -8,6 +8,8 @@ const successUrl = 'http://3200.pro/payment-complete'
 const cancelUrl = 'http://3200.pro/payment-error'
 // Prices
 const hourly10 = 'price_1H4ZhSIZVy7BW60BiOVbeMI0'
+const fiveHourSingular625 = 'price_1H87USIZVy7BW60BYRawg1gv'
+const lasalleServices625 = 'price_1H87TRIZVy7BW60BDqnTKC66'
 const testProduct = 'price_1H74m0IZVy7BW60BDVej9nHM'
 
 let clientEmail = ''
@@ -33,6 +35,21 @@ const monthly10hours = async event => {
   const stripe = await stripePromise
   const { error } = await stripe.redirectToCheckout({
     lineItems: [{ price: hourly10, quantity: 1 }],
+    mode: mode,
+    successUrl: successUrl,
+    cancelUrl: cancelUrl,
+  })
+  if (error) {
+    console.warn("Error:", error)
+  }
+}
+
+const LaSalle = async event => {
+  
+  event.preventDefault()
+  const stripe = await stripePromise
+  const { error } = await stripe.redirectToCheckout({
+    lineItems: [{ price: lasalleServices625, quantity: 1 }],
     mode: mode,
     successUrl: successUrl,
     cancelUrl: cancelUrl,
@@ -77,6 +94,12 @@ const Checkout = () => {
       client = 'Chris'
       message = `Hi ${client}, please click checkout to make the payment. Please let me know if you have any questions.`
       break;
+    case 'lasalle0720':
+        product = LaSalle;
+        simpleName = 'Monthly Service'
+        client = 'Kenzie'
+        message = `Hi ${client}, please click checkout to make the payment. Please let me know if you have any questions.`
+        break;
     default:
       product = monthly5hours;
   }
@@ -99,6 +122,19 @@ const Checkout = () => {
     {/* Test Login Setup */}
     <div>
     {client == 'Chris' ? (
+    <>
+    <h2>Grandscape Service: {simpleName} </h2>
+    <p>{message}</p>
+    <p>{signature}</p>
+    <button onClick={ product }
+    sx={{variant: 'variants.ghostbutton'}}
+    >Checkout</button>
+    </>
+    ) : null}
+    </div>
+    {/* LaSalle Setup */}
+    <div>
+    {client == 'Kenzie' ? (
     <>
     <h2>Grandscape Service: {simpleName} </h2>
     <p>{message}</p>

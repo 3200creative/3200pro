@@ -11,12 +11,13 @@ const PageTemplate = props => {
     const { data, errors } = props
     const page = data && data.page
     let disqusConfig = {
-      url: `http://3200.pro/${page.slug.current}`,
+      url: `https://3200.pro/${page.slug.current}`,
       identifier: page.id,
       title: page.title,
     }
     
     return (
+
       <Layout>
         {errors && <SEO title='GraphQL Error' />}
         {page && <SEO title={page.title} />}
@@ -33,6 +34,14 @@ const PageTemplate = props => {
           padding: 2
         }}>
         <Disqus config={disqusConfig} />
+        </div>
+        <div className='testing' sx ={{
+          width: '100%',
+          height: '40px',
+          color: 'background',
+          marginTop: '-40px',
+          zIndex: '999999'
+        }}><h1>Test</h1>
         </div>
         </Layout>
   )
