@@ -10,9 +10,14 @@ const sanityConfig = {projectId: 'kw4k4btd', dataset: 'production'}
 
 function servicePreview (props) {
   const image = props.featuredImage
+  const pattern = props.pattern
   
   return (
     <div sx={{variant: 'variants.postPreview'}}>
+      {pattern && (<div sx={{variant: 'variants.postPreview.pattern'}}><Img className='pattern-image'
+      fluid={getFluidGatsbyImage(pattern,{ maxWidth: 800 }, sanityConfig)} 
+      alt= {pattern.alt}
+    /></div>)}
     <div
     sx= {{
        variant: 'variants.postPreview.archiveImages'
@@ -22,6 +27,7 @@ function servicePreview (props) {
     <Link to={getServiceUrl(props.publishedAt, props.slug.current)}>
     {image && (<Img
       fluid={getFluidGatsbyImage(image,{ maxWidth: 800 }, sanityConfig)} 
+      alt={image.alt}
     />)}
     </Link>
     </div>
@@ -49,6 +55,10 @@ function servicePreview (props) {
       >
      <Link to={getServiceUrl(props.publishedAt, props.slug.current)}>{props.title} Information ></Link></div>
     </div>
+    {pattern && (<div sx={{variant: 'variants.postPreview.pattern'}}><Img className='pattern-image'
+      fluid={getFluidGatsbyImage(pattern,{ maxWidth: 800 }, sanityConfig)} 
+      alt= {pattern.alt}
+    /></div>)}
     </div>
   )
 }

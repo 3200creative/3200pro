@@ -42,6 +42,13 @@ export const query = graphql`
             }
             alt
           }
+          pattern {
+            asset {
+              _id
+            }
+            alt
+          }
+
           _rawHomepageExcerpt
           slug {
             current

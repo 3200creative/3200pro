@@ -138,8 +138,6 @@ export default {
       maxWidth: '90vw',
       mx: 'auto',
       backgroundColor: '#d6e3dd',
-      paddingBottom: 4,
-      paddingTop: 24,
       ':first-of-type': {
         marginTop: '80px',
       },
@@ -191,6 +189,17 @@ export default {
         background: '#ccc',
         
       },
+      pattern: {
+        height: '100px',
+        overflow: 'hidden',
+        opacity: '.1',
+        '&:first-of-type': {
+          marginBottom: 4
+        },
+        '&:last-of-type': {
+          marginTop: 4
+        },
+      }
     },
     standardWidth: {
       width: '100%'
