@@ -190,9 +190,9 @@ export default {
         
       },
       pattern: {
-        height: '100px',
+        height: '40px',
         overflow: 'hidden',
-        opacity: '.1',
+        opacity: '.3',
         '&:first-of-type': {
           marginBottom: 4
         },
