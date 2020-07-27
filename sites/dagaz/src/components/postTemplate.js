@@ -20,7 +20,7 @@ const PageTemplate = props => {
         <Hero
           titleText= {page.title}
           buttonText="Schedule Appointment"
-          buttonLink="/contact-maple-grove-mn-therapist"
+          buttonLink="/contact-maple-grove-mn-therapist/"
           bg = {bg}
           ctaHeight = '250px'
           bgc = '#fff'

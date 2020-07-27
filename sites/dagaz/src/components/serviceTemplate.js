@@ -25,9 +25,9 @@ const ServiceTemplate = props => {
         <Hero
           titleText= {service.title}
           buttonText="Schedule Appointment"
-          buttonLink="/scheduling"
+          buttonLink="/scheduling/"
           buttonText2="Contact Dagaz"
-          buttonLink2="/contact-maple-grove-mn-therapist"
+          buttonLink2="/contact-maple-grove-mn-therapist/"
           bg = {bg}
           ctaHeight = '250px'
           bgc = '#fff'

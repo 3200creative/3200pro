@@ -69,9 +69,9 @@ const Blog = props => {
       <Hero
           titleText= 'Dagaz Therapy Services'
           buttonText="Schedule Appointment"
-          buttonLink="/scheduling"
+          buttonLink="/scheduling/"
           buttonText2="Contact Dagaz"
-          buttonLink2="/contact-maple-grove-mn-therapist"
+          buttonLink2="/contact-maple-grove-mn-therapist/"
           bg = {bg}
           ctaHeight = '250px'
           bgc = '#fff'

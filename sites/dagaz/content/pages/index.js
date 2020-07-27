@@ -90,9 +90,9 @@ const Homepage = props => {
         <Hero
           titleText= { page.header }
           buttonText="Schedule Appointment"
-          buttonLink="/scheduling"
+          buttonLink="/scheduling/"
           buttonText2="Contact Dagaz"
-          buttonLink2="/contact-maple-grove-mn-therapist"
+          buttonLink2="/contact-maple-grove-mn-therapist/"
           bg = { bg }
           bgc = '#fff'
           ctaHeight = '250px'

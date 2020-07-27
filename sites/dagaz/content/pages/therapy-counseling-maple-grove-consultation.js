@@ -55,9 +55,9 @@ const Consultation = props => {
       <Hero
           titleText= 'Ready To Get Started?'
           buttonText="Schedule Appointment"
-          buttonLink="/scheduling"
+          buttonLink="/scheduling/"
           buttonText2="Contact Dagaz"
-          buttonLink2="/contact-maple-grove-mn-therapist"
+          buttonLink2="/contact-maple-grove-mn-therapist/"
           bg = {bg}
           ctaHeight = '250px'
           bgc = '#fff'
