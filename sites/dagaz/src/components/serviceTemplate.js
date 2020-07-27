@@ -64,7 +64,7 @@ const ServiceTemplate = props => {
         sx={{
           my: [0, null, 4] 
         }}
-        ><Link to='/contact' >
+        ><Link to='/contact-maple-grove-mn-therapist' >
           Contact Dagaz 
         </Link></Box>
         </Grid>
