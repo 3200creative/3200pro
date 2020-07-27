@@ -14,7 +14,7 @@ function Figure (props) {
         <Img sx={{
           variant: 'variants.shadow',
           maxWidth: '100%',
-          width: props.sizes,
+          width: ['100%', null, props.sizes, null],
           mx: 4,
           marginLeft: props.positioning == 'left' && '0px' || null,
           marginRight: props.positioning == 'right' && '0px' || null,

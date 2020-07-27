@@ -114,6 +114,16 @@ export default {
     whiteTextShadow: {
       textShadow: '1px 1px 6px rgba(0, 0, 0, 0.32)',
     },
+    imageOverlay: {
+      backgroundColor: '#ccc',
+      filter: 'grayscale(0%)', 
+            'mix-blend-mode': 'overlay',
+            '&:hover': {
+            filter: 'grayscale(0%)', 
+            'mix-blend-mode': 'overlay',
+            transition: '-webkit-filter ease-in-out 1s, filter ease-in-out 1s',
+            },
+    },
     siteTitle: {
       fontSize: [4, null, 5, null, null],
     },
