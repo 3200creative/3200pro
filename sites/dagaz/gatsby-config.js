@@ -15,51 +15,51 @@ module.exports = {
       },
       {
         name: `About`,
-        link: `/about`,
+        link: `/about/`,
         subMenu: [
           {
             name: 'Initial Consultation',
-            link: '/therapy-counseling-maple-grove-consultation',
+            link: '/therapy-counseling-maple-grove-consultation/',
           },
           {
             name: 'Payments and Insurance',
-            link: '/minnesota-therapy-counseling-payments-insurance',
+            link: '/minnesota-therapy-counseling-payments-insurance/',
           },
         ]
       },
       {
         name: `Services`,
-        link: `/services`,
+        link: `/services/`,
         subMenu: [
           {
             name: 'Individual Therapy',
-            link: '/services/maple-grove-minnesota-individual-therapy-therapist-counseling',
+            link: '/services/maple-grove-minnesota-individual-therapy-therapist-counseling/',
           },
           {
             name: 'Chemical Health Counseling',
-            link: '/services/chemical-health-counseling-maple-grove-minnesota-therapy',
+            link: '/services/chemical-health-counseling-maple-grove-minnesota-therapy/',
           },
           {
             name: 'Chemical Health/Rule 25 Assessment',
-            link: '/services/chemical-health-rule-25-assessment-minnesota-maple-grove',
+            link: '/services/chemical-health-rule-25-assessment-minnesota-maple-grove/',
           },
           {
             name: 'Parenting Support/Family Therapy',
-            link: '/services/parenting-support-family-therapy-maple-grove-minnesota',
+            link: '/services/parenting-support-family-therapy-maple-grove-minnesota/',
           },
           {
             name: 'Telehealth Counseling',
-            link: '/services/telehealth-counseling-minnesota-therapy-counseling',
+            link: '/services/telehealth-counseling-minnesota-therapy-counseling/',
           },
         ]
       },
       {
         name: 'Schedule Appointment',
-        link: `/scheduling`,
+        link: `/scheduling/`,
       },
       {
         name: 'Contact',
-        link: `/contact-maple-grove-mn-therapist`,
+        link: `/contact-maple-grove-mn-therapist/`,
       },
     ],
   },
