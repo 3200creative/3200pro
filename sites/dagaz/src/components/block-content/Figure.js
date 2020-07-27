@@ -13,9 +13,12 @@ function Figure (props) {
       {props.asset && (
         <Img sx={{
           variant: 'variants.shadow',
-          maxWidth: '700px',
-          margin: '0 auto',
-          float: 'none',
+          maxWidth: '100%',
+          width: props.sizes,
+          mx: 4,
+          marginLeft: props.positioning == 'left' && '0px' || null,
+          marginRight: props.positioning == 'right' && '0px' || null,
+          float: props.positioning,
           display: 'block',
         }}
         fluid={getFluidGatsbyImage(props.asset._ref,{ maxWidth: 800 }, sanityConfig)}

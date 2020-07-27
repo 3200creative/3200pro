@@ -26,6 +26,41 @@ export default {
         isHighlighted: true,
       },
     },
+    {
+      title: 'Positioning',
+      name: 'positioning',
+      type: 'string',
+      of: [{ type: 'string' }],
+      options: {
+        layout: 'radio',
+        name: 'options',
+        list: [
+          { title: 'Normal', value: 'normal' },
+          { title: 'Left', value: 'left' },
+          { title: 'Right', value: 'right' },
+          { title: 'Clearfix', value: 'clearfix' },
+        ],
+        isHighlighted: true,
+      },
+    },
+    {
+      title: 'Size',
+      name: 'sizes',
+      type: 'string',
+      of: [{ type: 'string' }],
+      options: {
+        layout: 'radio',
+        name: 'options',
+        list: [
+          { title: '100% Width', value: '100%' },
+          { title: '66% Width', value: '66%' },
+          { title: '50% Width', value: '50%' },
+          { title: '33% Width', value: '33%' },
+          { title: '25% Width', value: '25%' },
+        ],
+        isHighlighted: true,
+      },
+    },
   ],
   preview: {
     select: {

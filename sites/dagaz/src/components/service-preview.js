@@ -17,11 +17,10 @@ function servicePreview (props) {
       {pattern && (<div sx={{variant: 'variants.postPreview.pattern'}}><Img className='pattern-image'
       fluid={getFluidGatsbyImage(pattern,{ maxWidth: 800 }, sanityConfig)} 
       alt= {pattern.alt}
-    /></div>)}
+    /></div>)} 
     <div
     sx= {{
        variant: 'variants.postPreview.archiveImages'
-
     }}
     >
     <Link to={getServiceUrl(props.publishedAt, props.slug.current)}>
