@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error-lists'
 import Container from 'c32-gatsby-theme-core/src/components/container'
 import BlockContent from './block-content'
-import Hero from 'c32-gatsby-theme-components/src/components/ui/hero'
+import Hero from 'c32-gatsby-theme-components/src/components/ui/sanity-hero'
 import Blank from '../../content/assets/maple-grove-therapy-mn.jpg'
 import { Grid, Box } from 'theme-ui'
 const ServiceTemplate = props => {
@@ -24,6 +24,7 @@ const ServiceTemplate = props => {
         <Container>
         <Hero
           titleText= {service.title}
+          subTitleText= {service.subTitleText ? service.subTitleText : 'Maple Grove Minnesota Therapy and Counseling'}
           buttonText="Schedule Appointment"
           buttonLink="/scheduling/"
           buttonText2="Contact Dagaz"
@@ -64,7 +65,7 @@ const ServiceTemplate = props => {
         sx={{
           my: [0, null, 4] 
         }}
-        ><Link to='/contact-maple-grove-mn-therapist' >
+        ><Link to='/contact-maple-grove-mn-therapist/' >
           Contact Dagaz 
         </Link></Box>
         </Grid>
@@ -79,6 +80,7 @@ export const query = graphql`
     service: sanityServices(id: { eq: $id }) {
         id
         title
+        subTitleText
         slug {
             current
         }

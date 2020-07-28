@@ -137,6 +137,7 @@ export default {
       h1: {
         color: '#4a494e',
         textShadow: 'none',
+        fontSize: ['2rem', null, '3rem', null],
         a: {
           color: '#4a494e',
         },

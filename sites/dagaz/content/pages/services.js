@@ -8,7 +8,7 @@ import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error
 import Container from 'c32-gatsby-theme-core/src/components/container'
 import { mapEdgesToNodes } from '../../src/lib/helpers'
 import ServicePreviewGrid from '../../src/components/service-preview-grid'
-import Hero from 'c32-gatsby-theme-components/src/components/ui/hero'
+import Hero from 'c32-gatsby-theme-components/src/components/ui/sanity-hero'
 import BlockContent from '../../src/components/block-content'
 
 export const query = graphql`
@@ -42,6 +42,7 @@ export const query = graphql`
     }
     page: sanityServicesPage {
       header
+      subTitleText
       _rawBlockContent
       seo {
               metaDesc
@@ -87,6 +88,7 @@ const Services = props => {
       <Container>
       <Hero
           titleText= {page.header}
+          subTitleText= {page.subTitleText ? page.subTitleText : 'We offer counseling and individual therapy to Maple Grove Minnesota'}
           buttonText="Schedule Appointment"
           buttonLink="/scheduling/"
           buttonText2="Contact Dagaz"

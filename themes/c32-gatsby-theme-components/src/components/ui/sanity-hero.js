@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 import BackgroundImage from "gatsby-background-image"
 import { Grid, Box } from 'theme-ui'
 
-const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2, py, bg, bgc, ctaHeight, overlayRGBA }) => {
+const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2, py, bg, bgc, ctaHeight, overlayRGBA,subTitleText }) => {
   // const data = useStaticQuery(
   //   graphql`
   //     query sanityHero {
@@ -42,7 +42,7 @@ const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2
         mt: -3,
         py: 4,
         mb: 5,
-        display: "grid",
+        display: ['block', null, "grid", null],
         minHeight: 'inherit',
         placeItems: "center",
         backgroundColor: rgba,
@@ -52,8 +52,13 @@ const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2
         sx={{
           color: "white",
           variant: 'variants.whiteTextShadow',
-          marginBottom: 4,
+          variant: 'variant:"variants.hero1.h1',
           }}>{titleText}</Styled.h1>
+        <p sx={{
+          marginBottom: 4,
+          maxWidth: '90%',
+          width: '700px'
+        }}>{subTitleText}</p>
         <Grid
         gap={4}
         columns={[ 1, (buttonLink2 && 2) || 1, (buttonLink2 && 2) || 1]}

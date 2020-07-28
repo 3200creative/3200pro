@@ -16,6 +16,7 @@ export const query = graphql`
     page: sanityHomepage {
       header
       _rawBlockContent
+      subTitleText
       heroImage {
         asset {
               fluid(maxWidth: 1200) {
@@ -89,6 +90,7 @@ const Homepage = props => {
       <Container>
         <Hero
           titleText= { page.header }
+          subTitleText= {page.subTitleText ? page.subTitleText : 'We offer counseling and individual therapy to Maple Grove Minnesota'}
           buttonText="Schedule Appointment"
           buttonLink="/scheduling/"
           buttonText2="Contact Dagaz"
