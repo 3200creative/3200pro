@@ -1,24 +1,14 @@
 export default {
-    widgets: [
-        {
-        name: 'netlify',
-        options: {
-          title: 'My Netlify deploys',
-          sites: [
-            {
-              title: 'Sanity Studio',
-              apiId: 'xxxxx-yyyy-zzzz-xxxx-yyyyyyyy',
-              buildHookId: 'xxxyyyxxxyyyyxxxyyy',
-              name: 'sanity-gatsby-blog-20-studio',
-            },
-            {
-              title: 'Website',
-              apiId: 'yyyyy-xxxxx-zzzz-xxxx-yyyyyyyy',
-              buildHookId: 'yyyyxxxxxyyyxxdxxx',
-              name: 'sanity-gatsby-blog-20-web'
-            }
-          ]
-        }
-      }
-    ]
-  }
+  widgets: [
+    {
+      name: "gatsby",
+      options: {
+        sites: [
+          {
+            siteUrl: "https://build-55b7df42-ae92-4de6-9597-e64abdc9078d.gtsb.io/",
+          },
+        ],
+      },
+    },
+  ],
+}

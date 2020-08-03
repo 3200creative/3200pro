@@ -6918,6 +6918,13 @@ same-origin@^0.1.1:
   version "0.1.1"
   resolved "https://registry.npmjs.org/same-origin/-/same-origin-0.1.1.tgz#c2287d3192577df517acbbd6d1451a9c3c3914f5"
 
+sanity-plugin-dashboard-widget-gatsby@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.npmjs.org/sanity-plugin-dashboard-widget-gatsby/-/sanity-plugin-dashboard-widget-gatsby-1.0.9.tgz#2f7e2fcbb0e9465cd44a0cca06c4d30824b55546"
+  dependencies:
+    abort-controller "^2.0.3"
+    react-props-stream "^1.0.0"
+
 sanity-plugin-dashboard-widget-netlify@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/sanity-plugin-dashboard-widget-netlify/-/sanity-plugin-dashboard-widget-netlify-1.0.1.tgz#e510e40e05b9bcfdf11a4a2affed590e191bb93b"
