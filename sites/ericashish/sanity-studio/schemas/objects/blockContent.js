@@ -106,6 +106,14 @@ export default {
       icon: MdMusicNote,
     },
     {
+      type: 'soundcloudPlaylist',
+      icon: MdMusicNote,
+    },
+    {
+      type: 'soundcloudPlaylistDropdown',
+      icon: MdMusicNote,
+    },
+    {
       type: 'gallery',
       icon: MdViewModule,
     },

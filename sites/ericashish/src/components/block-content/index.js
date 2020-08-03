@@ -6,6 +6,8 @@ import Spacer from './Spacer'
 import Gallery from './Gallery'
 import SanityVideo from './Video'
 import SanitySoundcloud from './Soundcloud'
+import SanitySoundcloudPlaylist from './SoundcloudPlaylist'
+import SanitySoundcloudPlaylistDropdown from './SoundcloudPlaylistDropdown'
 import RecentPostFeed from './RecentPostFeed'
 import SingularFeaturedPost from './SingularFeaturedPost'
 import AuthorBlock from './AuthorBlock'
@@ -46,6 +48,12 @@ const serializers = {
     },
     soundcloud (props) {
       return <SanitySoundcloud {...props.node} />
+    },
+    soundcloudPlaylist (props) {
+      return <SanitySoundcloudPlaylist {...props.node} />
+    },
+    soundcloudPlaylistDropdown (props) {
+      return <SanitySoundcloudPlaylistDropdown {...props.node} />
     },
     clear (props) {
       return <Spacer {...props.node} />

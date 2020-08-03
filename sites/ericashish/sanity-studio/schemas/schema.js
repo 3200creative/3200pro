@@ -20,6 +20,8 @@ import menuLink from './objects/menuLink'
 import subMenu from './objects/subMenu'
 import gallery from './objects/gallery'
 import soundcloud from './objects/soundcloud'
+import soundcloudPlaylistDropdown from './objects/soundcloudPlaylistDropdown'
+import soundcloudPlaylist from './objects/soundcloudPlaylist'
 import recentPostFeed from './objects/recentPostFeed'
 import bioPortableText from './objects/bioPortableText'
 import singularFeaturedPost from './objects/singularFeaturedPost'
@@ -64,6 +66,8 @@ export default createSchema({
     bioPortableText,
     singularFeaturedPost,
     featuredAuthorBlock,
+    soundcloudPlaylist,
+    soundcloudPlaylistDropdown,
     // Content Types
     siteSettings,
     event,
