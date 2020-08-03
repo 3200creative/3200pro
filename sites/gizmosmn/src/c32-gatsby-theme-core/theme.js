@@ -112,6 +112,14 @@ export default {
         fontSize: [30, 60, 80],
       },
     },
+    navLinkStyles: {
+      color: '#ffffff',
+      a: {
+        color: '#ffffff',
+        fontWeight: '700',
+        mx: 2,
+      },
+    },
     footer: {
       padding: 0,
       backgroundColor: 'background',
