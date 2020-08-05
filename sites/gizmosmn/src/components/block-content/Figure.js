@@ -14,14 +14,16 @@ const Figure = (props, {node}) => {
       my: '80px',
     }}>
       {props.asset && (
-        <Img sx={{
+        <img sx={{
           variant: 'variants.shadow',
           maxWidth: '700px',
           margin: '0 auto',
           float: 'none',
           display: 'block',
         }}
-        fluid={fluidProps}
+        src={imageUrlFor(buildImageObj(props))
+          .width(1200)
+          .url()}
         alt={props.alt}
         />
       )}

@@ -9,7 +9,11 @@ import BlockContent from '../../src/components/block-content'
 import SanityHero from 'c32-gatsby-theme-components/src/components/ui/sanity-hero'
 import { Grid } from 'theme-ui'
 import { Box } from 'theme-ui'
-import Img from "gatsby-image"
+import { buildPageImageObj } from '../../src/lib/helpers'
+import { imageUrlFor } from '../../src/lib/image-url'
+import { getFluidGatsbyImage } from "gatsby-source-sanity"
+const sanityConfig = {projectId: 'yit7sywj', dataset: 'production'}
+
 
 export const query = graphql`
   query ShowcaseQuery {
@@ -35,10 +39,24 @@ export const query = graphql`
             id
             featuredImage {
                 asset {
+                  _id
                     fluid(maxWidth: 1200) {
                         ...GatsbySanityImageFluid
                     }
                 }
+                crop {
+                  bottom
+                  left
+                  top
+                  right
+                }
+                hotspot {
+                  x
+                  y
+                  height
+                  width
+                }
+                alt
             }
         }
         }
@@ -93,7 +111,19 @@ const Showcase = props => {
             margin: '0'
             }}
         >
-        {post.node.featuredImage && (<Img fluid={post.node.featuredImage.asset.fluid} />) || 'needs featured image'}
+        {post.node.featuredImage && (<img
+        sx= {{
+          width: '100%',
+        }}
+        src={imageUrlFor(buildPageImageObj(post.node.featuredImage))
+          .width(1200)
+          .format('webp')
+          .url()
+          
+        }
+          alt={post.node.featuredImage.alt}
+        />
+        ) || 'needs featured image'}
         <h2>{post.node.title}</h2>
         </Box>
         </Link>
