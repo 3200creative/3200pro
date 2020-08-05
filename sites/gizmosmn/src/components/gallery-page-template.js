@@ -22,8 +22,8 @@ const PageTemplate = props => {
         </Container>
         <SanityHero
           titleText= {galleryPage.title}
-          buttonText="Inquire About Your Remodeling Project"
-          buttonLink="/contact"
+          // buttonText="Inquire About Your Remodeling Project"
+          // buttonLink="/contact"
           overlayRGBA='rgba(0,0,0,.4)'
           bg = {galleryPage.featuredImage.asset.fluid}
         />
