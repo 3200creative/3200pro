@@ -21,7 +21,6 @@ const SiteLayout = ({ children }) => {
       },
     }
     const { scrollYProgress } = useViewportScroll()
-
   return (
     <Styled.root>
       <Normalize />

@@ -26,6 +26,7 @@ const hiddenDocTypes = listItem =>
     'page',
     'podcast',
     'siteSettings',
+    'newsletterSignup',
     'menuLinks',
   ].includes(listItem.getId())
 
@@ -64,6 +65,15 @@ export default () =>
                   .schemaType("globalOptions")
                   .documentId("globalOptions")
               ),
+              S.listItem()
+                .title("Newsletter Signup")
+                .icon(MdInfo)
+                .child(
+                  S.document()
+                    .title("Newsletter Signup")
+                    .schemaType("newsletterSignup")
+                    .documentId("newsletterSignup")
+                ),
             ])
         ),
         S.divider(),

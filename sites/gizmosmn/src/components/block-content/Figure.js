@@ -3,7 +3,6 @@ import { jsx } from "theme-ui"
 import { buildImageObj } from '../../lib/helpers'
 import { imageUrlFor } from '../../lib/image-url'
 import { getFluidGatsbyImage } from "gatsby-source-sanity"
-import Img from "gatsby-image"
 const sanityConfig = {projectId: 'yit7sywj', dataset: 'production'}
 const Figure = (props, {node}) => {
   const fluidProps = getFluidGatsbyImage(props.asset._ref,{ maxWidth: 800 }, sanityConfig)

@@ -4,6 +4,7 @@ import { tailwind, baseColors } from "@theme-ui/preset-tailwind"
 import prism from "@theme-ui/prism/presets/oceanic-next"
 
 export default {
+  
   initialColorModeName: 'light',
   useColorSchemeMediaQuery: true,
   ...tailwind,
@@ -20,13 +21,19 @@ export default {
     ...tailwind.colors,
     text: baseColors.black,
     background: '#fafafa', //Try "#954264",
+    backgroundWhite: '#ffffff',
     primary: baseColors.blue[7],
     secondary: baseColors.orange[7],
     accent: baseColors.orange[2],
     grayTxt: '#73737D',
     lightTxt: '#73737D',
     muted: baseColors.gray[2],
-
+    newsletter: {
+      background: '#ffffff',
+      fields: {
+        background: '#ffffff'
+      },
+    },
     header: {
       background: baseColors.gray[2],
       backgroundOpen: baseColors.blue[2],
@@ -40,6 +47,7 @@ export default {
 
     footer: {
       background: 'transparent',
+      backgroundWhite: 'black',
       text: baseColors.gray[8],
       links: baseColors.gray[8],
       icons: baseColors.gray[8],
@@ -50,6 +58,12 @@ export default {
         background: '#000',
         primary: '#0cf',
         transition: 'all 0.25s ease-in-out-quad',
+        newsletter: {
+          background: '#111',
+          fields: {
+            background: '#fff'
+          },
+        },
         shadow: {
           boxShadow: '0 30px 60px -10px rgba(255,255,255,0.3), 0 18px 36px -18px rgba(255,255,255,0.33) !important',
         },
@@ -169,6 +183,23 @@ export default {
       display: 'none',
       img: {
         display: 'none',
+      },
+    },
+    newsletter: {
+      backgroundColor: 'newsletter.background',
+      width: '90%',
+      py: [2, null, 5, null],
+      px: 4,
+      mx: 'auto',
+      my: 5,
+      boxShadow: '0 30px 60px -10px rgba(0,0,0,0.3), 0 18px 36px -18px rgba(0,0,0,0.33)',
+      h2: {
+        fontFamily: '"Merriweather",Georgia,Serif',
+        fontSize: [1,2,3,4]
+      },
+      p: {
+        color: 'lightTxt',
+        fontSize: 1,
       },
     },
     postContainer: {

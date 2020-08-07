@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx, useColorMode } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby"
 export const useSiteMetadata = () => {
   const data = useStaticQuery(
@@ -42,11 +44,14 @@ export const useSiteMetadata = () => {
       }
     `
   )
-
+  const [colorMode, setColorMode] = useColorMode() 
+  const useTransitions = true
+  const useDarkMode = true
   const logo = data.logo.childImageSharp.fluid
   const seoImage = data.seoImage.childImageSharp.resize
   const metaData = data.site.siteMetadata
   const twitterUsername = data.site.siteMetadata.social.twitter
-  const allData = { ...metaData, logo, seoImage, twitterUsername }
+  const allData = { ...metaData, logo, seoImage, twitterUsername, useDarkMode, useTransitions }
   return allData
+  
 }

@@ -3,7 +3,7 @@
 import { jsx, useColorMode } from "theme-ui"
 
 const DarkModeIcon = () => {
-  const [colorMode, setColorMode] = useColorMode()
+  const [colorMode, setColorMode] = useColorMode('light')
   const newColorMode = colorMode === 'light'
     ? 'dark'
     : 'light'

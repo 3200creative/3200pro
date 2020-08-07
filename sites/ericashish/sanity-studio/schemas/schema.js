@@ -16,6 +16,7 @@ import podcast from './objects/podcast'
 import simpleUrl from './objects/url'
 import featuredPodcastImages from './objects/featuredPodcastImages'
 import siteSettings from './contentTypes/siteSettings'
+import newsletterSignup from './contentTypes/newsletterSignup'
 import menuLink from './objects/menuLink'
 import subMenu from './objects/subMenu'
 import gallery from './objects/gallery'
@@ -70,6 +71,7 @@ export default createSchema({
     soundcloudPlaylistDropdown,
     // Content Types
     siteSettings,
+    newsletterSignup,
     event,
     business,
     life,

@@ -10,6 +10,14 @@ export default {
         validation: (Rule) => Rule.required(),
       },
       {
+        name: "siteUrl",
+        type: "url",
+        title: "Site URL",
+        description:
+          "The root url of your website, e.g. https://3200.pro",
+        validation: (Rule) => Rule.required(),
+      },
+      {
         name: "description",
         type: "text",
         rows: "3",
@@ -50,14 +58,6 @@ export default {
         type: "figure",
         description:
           "The default sharing image for places like Twitter and Facebook when sharing a link to your website.",
-        validation: (Rule) => Rule.required(),
-      },
-      {
-        name: "siteUrl",
-        type: "url",
-        title: "Site URL",
-        description:
-          "The root url of your website, e.g. https://www.erichowey.dev",
         validation: (Rule) => Rule.required(),
       },
     ],
