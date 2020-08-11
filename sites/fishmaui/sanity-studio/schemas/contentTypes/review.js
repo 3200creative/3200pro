@@ -9,16 +9,10 @@ export default {
             type: 'string'
         },
         {
-            name: 'boat',
-            type: 'object',
-            fields: [
-              {
-                title: 'Boat',
-                name: 'boat',
-                type: 'reference',
-                to: [{type: 'boat'}]
-              }
-            ]
+            title: 'Boat',
+            name: 'boatReviewed',
+            type: 'reference',
+            to: [{type: 'boat'}]
         },
         {
             name: 'reviewerName',

@@ -50,7 +50,11 @@
     "10:dev": "yarn workspace 10sec develop",
     "10:build": "yarn workspace 10sec build",
     "10:serve": "yarn workspace 10sec serve",
-    "10:clean": "yarn workspace 10sec clean"
+    "10:clean": "yarn workspace 10sec clean",
+    "fm:dev": "yarn workspace fishmaui develop",
+    "fm:build": "yarn workspace fishmaui build",
+    "fm:serve": "yarn workspace fishmaui serve",
+    "fm:clean": "yarn workspace fishmaui clean"
   },
   "dependencies": {
     "core-js": "^3.6.5"

@@ -20,11 +20,9 @@ export default {
         },
         {
             name: 'boatType',
-            type: 'object',
-            fields: [
+            type: 'array',
+            of: [
               {
-                title: 'Boat Type',
-                name: 'boatType',
                 type: 'reference',
                 to: [{type: 'boatType'}]
               }

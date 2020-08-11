@@ -38,9 +38,14 @@ export default {
             type: 'featuredImage', 
         },
         {
-            name: 'blockContent',
+            name: 'leftContent',
             type: 'blockContent',
-            title: 'Body'
+            title: 'Left Content'
+        },
+        {
+            name: 'rightContent',
+            type: 'blockContent',
+            title: 'Right Content'
         },
         {
             name: 'seo',

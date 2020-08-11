@@ -94,6 +94,7 @@ module.exports = options => {
       `gatsby-plugin-theme-ui`,
       `gatsby-plugin-offline`,
       `framer-motion`,
+      `gatsby-plugin-material-ui`,
     ],
   }
 }

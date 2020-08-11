@@ -14,9 +14,8 @@ import { motion, useViewportScroll,  useTransform, useMotionValue, useRef} from 
 
 export const query = graphql`
   query HomePageQuery {
-    page: sanityLandingPage(adminTitle: {eq: "Homepage"}) {
+    page: sanityPage(title: {eq: "Homepage"}) {
       displayedTitle
-      _rawHeroText
       _rawBlockContent
       seo {
           metaDesc
@@ -60,7 +59,6 @@ const Homepage = props => {
         }}
         >
           <h1>{page.displayedTitle}</h1>
-          <BlockContent blocks={page._rawHeroText || []} />
           <BlockContent blocks={page._rawBlockContent || []} />
         </div>
       </Container>

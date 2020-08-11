@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `3200.pro`,
-    description: `Placeholder description`,
+    title: `10 Second Recipes`,
+    description: `Super Fast Recipes`,
     keywords: [`gatsby`, `theme`, `react`],
     author: `3200.Pro`,
-    siteUrl: `https://3200.pro/`, //Change to you site address, required for sitemap.xml and robots.txt file among other things
+    siteUrl: `https://10secondrecipes.com`, //Change to you site address, required for sitemap.xml and robots.txt file among other things
     social: {
       twitter: `@3200pro`,
     },
@@ -12,22 +12,6 @@ module.exports = {
       {
         name: `Home`,
         link: `/`,
-      },
-      {
-        name: `Profile`,
-        link: `/freelance-gatsby-developer`,
-      },
-      {
-        name: 'Blog',
-        link: '/blog'
-      },
-      {
-        name: 'Reviews',
-        link: '/gatsby-developer-reviews'
-      },
-      {
-        name: 'Contact',
-        link: `/minneapolis-website-developer-contact`,
       },
     ],
     footerLinks: [
@@ -60,11 +44,11 @@ module.exports = {
     {
       resolve: 'gatsby-source-sanity',
       options: {
-        projectId: 'p6aj32cv',
+        projectId: 'oezz26tv',
         dataset: 'production',
         watchMode: true,
         overlayDrafts: true,
-        token: 'skqjIQ0mTiREo7FiDTRHyrMCbZaz52KL3SCA6xl7YNxo8XFzvhv3wu1nz34eXIyHiCLeHeTGZcA0kB2rYTXnwsrlq1ArwK0MV7QcxsjJW6gADp5zd1dt6MnfQlbzMnR3l2kJ0QEe2seQD22xx2n0fhqc8od4e3hViLiqHCqWemf6Yv76ISvx',
+        token: 'sk1IHb3naWrHmitAjxvFHIIl8QkcJh3tcmJnaJMe1qRhiCRZzknovl8f2Zg7otlgsvjqXyqkdT7U3djhkuYxb7uSGZbbyFRuP0DetV2uTR1pvfouSwWr3ZP2z5zqalFjqgThoG28tcm3J0b5Xm2pnJWcIDEv5Mk7w2v3gqAFnnpfMDTb1laq',
         // If the Sanity GraphQLs API was deployed using `--tag <name>`,
         // use `graphqlTag` to specify the tag name. Defaults to `default`.
         graphqlTag: 'default',
