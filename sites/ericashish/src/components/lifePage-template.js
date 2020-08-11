@@ -36,7 +36,7 @@ const LifePageTemplate = props => {
           >
           {differenceInDays(new Date(page.publishedAt), new Date()) > 3
             ? distanceInWords(new Date(page.publishedAt), new Date())
-            : format(new Date(page.publishedAt), 'MMMM Do YYYY')}
+            : format(new Date(page.publishedAt), 'MMMM dd, yyyy')}
           </div>
          </header>
             {page && <Styled.h1>{page.title}</Styled.h1>}

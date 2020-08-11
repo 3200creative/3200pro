@@ -299,9 +299,9 @@ function RecentPostFeed (props) {
           opacity: '.33',
         }}
         >
-        {differenceInDays(new Date(post.node.publishedAt), new Date()) > 3
-          ? distanceInWords(new Date(post.node.publishedAt), new Date())
-          : format(new Date(post.node.publishedAt), 'MMMM Do YYYY')}
+        {differenceInDays(new Date(post.node.publishedAt), new Date()), { useAdditionalDayOfYearTokens: true, useAdditionalWeekYearTokens: true } > 3
+          ? distanceInWords(new Date(post.node.publishedAt), new Date(), { useAdditionalDayOfYearTokens: true, useAdditionalWeekYearTokens: true } )
+          : format(new Date(post.node.publishedAt), 'MMMM dd, yyyy')}
          </div>
       </Box>
       </Grid>

@@ -17,10 +17,10 @@ import FeaturedImage from './FeaturedImage'
 const MusicPageTemplate = props => {
     const { data, errors } = props
     const page = data && data.page
+    const showFeaturedImage = data.sanityGlobalOptions.musicFeaturedImageHero
     console.log('data:');
     console.log(data);
     console.log('Show Featured Image:');
-    console.log(data.sanityGlobalOptions.musicFeaturedImageHero );
     return (
       <Layout>
         {errors && <SEO title='GraphQL Error' />}
@@ -39,13 +39,13 @@ const MusicPageTemplate = props => {
           {page && <Styled.h1>{page.title}</Styled.h1>}
           <div
           >
-          {differenceInDays(new Date(page.publishedAt), new Date()) > 3
+          {differenceInDays(new Date(page.publishedAt), new Date()), { useAdditionalDayOfYearTokens: true, useAdditionalWeekYearTokens: true } > 3
             ? distanceInWords(new Date(page.publishedAt), new Date())
-            : format(new Date(page.publishedAt), 'MMMM Do YYYY')}
+            : format(new Date(page.publishedAt), 'MMMM dd, yyyy')}
           </div>
          </header>
          <FeaturedImage
-         showFeaturedImage={data.sanityGlobalOptions.musicFeaturedImageHero}
+         showFeaturedImage={showFeaturedImage}
          featuredImage={page.featuredImage}
          />
         {page._rawBlockContent && <BlockContent blocks={page._rawBlockContent} />}
