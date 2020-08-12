@@ -8,6 +8,7 @@ import BlockContent from './block-content'
 import FeaturedImage from './FeaturedImage'
 import PostContent from './singlePostContainer'
 import { format, distanceInWords, differenceInDays } from 'date-fns'
+import MailChimpForm from './MailChimpForm'
 
 
 const TeaPageTemplate = props => {
@@ -51,6 +52,7 @@ const TeaPageTemplate = props => {
         {page._rawBlockContent && <BlockContent blocks={page._rawBlockContent} />}
         </PostContent>
         </div>
+        <MailChimpForm />
         </Layout>
   )
 }

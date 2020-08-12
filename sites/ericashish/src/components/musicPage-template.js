@@ -11,6 +11,7 @@ import GridLayoutProvider from './articleFeedLayout'
 import { getFluidGatsbyImage } from "gatsby-source-sanity"
 import PostContent from './singlePostContainer'
 import FeaturedImage from './FeaturedImage'
+import MailChimpForm from './MailChimpForm'
 
 
 
@@ -50,6 +51,7 @@ const MusicPageTemplate = props => {
          />
         {page._rawBlockContent && <BlockContent blocks={page._rawBlockContent} />}
         </PostContent>
+        <MailChimpForm />
         </Layout>
   )
 }

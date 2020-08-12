@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx, useColorMode } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby"
 export const HeaderData = () => {
     const data = useStaticQuery(
@@ -25,6 +27,13 @@ export const HeaderData = () => {
                   }
                 }
                 logo {
+                  asset {
+                    fluid(maxWidth: 512) {
+                      ...GatsbySanityImageFluid
+                    }
+                  }
+                }
+                darkLogo {
                   asset {
                     fluid(maxWidth: 512) {
                       ...GatsbySanityImageFluid
@@ -63,9 +72,13 @@ export const HeaderData = () => {
           }
         `
       )
+      const [colorMode, setColorMode] = useColorMode()  
+
       const siteMetadata = data.allSanitySiteSettings.nodes[0]
       const title = siteMetadata.title
-      const logo = siteMetadata.logo.asset.fluid
+      const darkLogo = siteMetadata.darkLogo.asset.fluid
+      const lightLogo = siteMetadata.logo.asset.fluid
+      const logo = (colorMode == 'light') ? lightLogo : darkLogo
       const multiColoredLogo = true
       const colors = data.colors
       // const seoImageSrc = siteMetadata.seoImage.asset.url

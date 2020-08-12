@@ -8,6 +8,7 @@ import BlockContent from './block-content'
 import FeaturedImage from './FeaturedImage'
 import PostContent from './singlePostContainer'
 import { format, distanceInWords, differenceInDays } from 'date-fns'
+import MailChimpForm from './MailChimpForm'
 
 
 const LifePageTemplate = props => {
@@ -46,6 +47,7 @@ const LifePageTemplate = props => {
          />
         {page._rawBlockContent && <BlockContent blocks={page._rawBlockContent} />}
         </PostContent>
+        <MailChimpForm />
         </Layout>
   )
 }

@@ -5,8 +5,8 @@ import { format, distanceInWords, differenceInDays } from 'date-fns'
 import Img from "gatsby-image"
 import { Link } from 'gatsby'
 import { graphql, useStaticQuery } from "gatsby"
-import { Grid } from 'theme-ui'
-import { Box } from 'theme-ui'
+// import { Grid } from 'theme-ui'
+// import { Box } from 'theme-ui'
 import {mapEdgesToNodes, filterOutDocsWithoutSlugs} from '../../lib/helpers'
 import { buildImageObjMap } from '../../lib/helpers'
 import { imageUrlFor } from '../../lib/image-url'
@@ -15,7 +15,7 @@ import Masonry from 'react-masonry-component';
 // import { GridLayoutProvider } from '../articleFeedLayout'
 import ArticleLayoutToggle  from '../ArticleLayoutToggle'
 import { GridLayoutContext } from '../articleFeedLayout'
-
+import Grid from '@material-ui/core/Grid';
 
 function RecentPostFeed (props) {
   const data = useStaticQuery(graphql`
@@ -227,86 +227,68 @@ function RecentPostFeed (props) {
   );
 
 
+
   return (
     <>
     <ArticleLayoutToggle />
     
-    <Masonry
-      elementType={'div'} // default 'div'
-      disableImagesLoaded={false} // default false
-      updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
-    >
+    <Grid container justify="space-between">
     {contentType.slice(0, Math.min(100, maxCount)).map(post => (
-      <Grid key={post.node.key}
-      gridLayout={gridLayout}
-      gap={5}
-      columns={[
-        'unset',
-        gridLayout === 'lists' && '1fr 2fr' || 'unset']}
-      sx= {{
-        my: 4,
-        width: gridLayout === 'lists' && '100%' || '50%',
-       }}
-      >
+      <Grid container key={post.node.key} xs={12} md={gridLayout === 'lists' && 12 || 6} sx={{py:4}}>
         
-      <Box sx= {{ 
-        height: 'max-content',
-        maxWidth: '560px',
-        width: ['100%','30vw'],
-        variant: 'variants.shadow',
-      }}>
-        <Link to={post.node.slug.current}>
-          <img
-          src={imageUrlFor(buildImageObjMap(post.node.featuredImage))
-          .auto('format')
-          .url()
-          }
-          alt='test'
-          sx= {{
-            width: '100%',
-            position: 'relative',
-            float: 'left'
-          }}
-          />
-        </Link>
-      </Box>
-      <Box
-      sx = {{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-      }}
-      >
-        <h4 sx= {{
-          m: 0,
-          color: 'text',
-          fontFamily:  'header',
-        }}><Link to={post.node.slug.current}
-          sx= {{
+        <Grid item xs={12} md={gridLayout === 'lists' && 6 || 12} sx={{height:gridLayout === 'lists' && [null, null, null, '285px'] || [null, null, null, '360px'], }}>
+          <Link to={post.node.slug.current}>
+            <img
+            src={imageUrlFor(buildImageObjMap(post.node.featuredImage))
+            .auto('format')
+            .url()
+            }
+            alt='test'
+            sx= {{
+              width: '96%',
+              maxHeight: [null, null, null, '285px'],
+              variant: 'variants.shadow',
+            }}
+            />
+          </Link>
+        </Grid>
+        <Grid item xs={12} md={gridLayout === 'lists' && 6 || 12} sx={{
+          display: [null, null, null,  gridLayout === 'lists' && 'flex' || 'block'],
+          flexDirection: [null, null, null, gridLayout === 'lists' && 'column' || 'none'],
+          justifyContent: [null, null, null,  gridLayout === 'lists' && 'center' || 'none'],
+          height: '100%',
+        }}  >
+          <h4 sx= {{
+            m: 0,
             color: 'text',
+            fontFamily:  'header',
+          }}><Link to={post.node.slug.current}
+            sx= {{
+              color: 'text',
+            }}
+          >{post.node.title}</Link></h4>
+          <p sx= {{
+            py: 0,
+            fontSize: 1,
+            color: 'grayTxt',
+            width: ['100%', null, null, '96%']
+            }}
+          >{post.node.excerpt}</p>
+          <div
+          sx={{
+            color: 'lightTxt',
+            fontSize: 1,
+            opacity: '.33',
           }}
-        >{post.node.title}</Link></h4>
-        <p sx= {{
-          py: 0,
-          fontSize: 1,
-          color: 'grayTxt',
-          }}
-        >{post.node.excerpt}</p>
-        <div
-        sx={{
-          color: 'lightTxt',
-          fontSize: 1,
-          opacity: '.33',
-        }}
-        >
-        {differenceInDays(new Date(post.node.publishedAt), new Date()), { useAdditionalDayOfYearTokens: true, useAdditionalWeekYearTokens: true } > 3
-          ? distanceInWords(new Date(post.node.publishedAt), new Date(), { useAdditionalDayOfYearTokens: true, useAdditionalWeekYearTokens: true } )
-          : format(new Date(post.node.publishedAt), 'MMMM dd, yyyy')}
-         </div>
-      </Box>
+          >
+          {differenceInDays(new Date(post.node.publishedAt), new Date()), { useAdditionalDayOfYearTokens: true, useAdditionalWeekYearTokens: true } > 3
+            ? distanceInWords(new Date(post.node.publishedAt), new Date(), { useAdditionalDayOfYearTokens: true, useAdditionalWeekYearTokens: true } )
+            : format(new Date(post.node.publishedAt), 'MMMM dd, yyyy')}
+          </div>
+        </Grid>
       </Grid>
     ))}
-    </Masonry>
+    </Grid>
     </>
   )
 }

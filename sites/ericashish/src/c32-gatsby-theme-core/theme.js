@@ -4,7 +4,6 @@ import { tailwind, baseColors } from "@theme-ui/preset-tailwind"
 import prism from "@theme-ui/prism/presets/oceanic-next"
 
 export default {
-  
   initialColorModeName: 'light',
   useColorSchemeMediaQuery: false,
   ...tailwind,

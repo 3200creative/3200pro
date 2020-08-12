@@ -6,6 +6,7 @@ import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error
 import Container from 'c32-gatsby-theme-core/src/components/container'
 import BlockContent from './block-content'
 import TxtColorChange from '../components/TxtColorChange'
+import MailChimpForm from './MailChimpForm'
 
 const PageTemplate = props => {
     const { data, errors } = props
@@ -27,6 +28,7 @@ const PageTemplate = props => {
         
         {page._rawBlockContent && <BlockContent blocks={page._rawBlockContent} />}
         </div>
+        <MailChimpForm />
         </Layout>
   )
 }

@@ -48,8 +48,12 @@ export default {
         title: "Logo",
         name: "logo",
         type: "figure",
-        description:
-          "Your website logo, whether this is displayed can be controlled by feature flags in gatsby-theme-catalyst-core.",
+        validation: (Rule) => Rule.required(),
+      },
+      {
+        title: "Dark Logo",
+        name: "darkLogo",
+        type: "figure",
         validation: (Rule) => Rule.required(),
       },
       {

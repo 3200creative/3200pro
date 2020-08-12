@@ -2,7 +2,7 @@
 import { jsx, Styled } from "theme-ui"
 import React from 'react'
 import reactStringReplace from 'react-string-replace'
-
+// Attention future developer or me... These are offset. the 'let replaces the previous coloredTitle'. Forgetting this will cost additional development time...
 const TxtColorChange = ({colors, txtBlock}) => {
 let ColoredTitle1 = reactStringReplace(txtBlock, 'Music.', (match, i) => (
     <span key={match + i} style={{ color: colors.musicColor.hex }}>{match}</span>
