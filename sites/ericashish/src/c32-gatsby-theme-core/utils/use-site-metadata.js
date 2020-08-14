@@ -51,7 +51,9 @@ export const useSiteMetadata = () => {
   const seoImage = data.seoImage.childImageSharp.resize
   const metaData = data.site.siteMetadata
   const twitterUsername = data.site.siteMetadata.social.twitter
-  const allData = { ...metaData, logo, seoImage, twitterUsername, useDarkMode, useTransitions }
+  const developer = '3200.PRO'
+  const developerLink = 'https://3200.pro'
+  const allData = { ...metaData, logo,developerLink, developer, seoImage, twitterUsername, useDarkMode, useTransitions }
   return allData
   
 }

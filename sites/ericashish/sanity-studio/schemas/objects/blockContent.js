@@ -14,6 +14,7 @@ import {
   MdMusicNote,
   MdChromeReaderMode,
   MdFace,
+  MdUnfoldLess,
 } from 'react-icons/lib/md'
 
 import {
@@ -86,6 +87,10 @@ export default {
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
+    {
+      type: 'spacer',
+      icon: MdUnfoldLess,
+    },
     {
       type: 'quote',
       icon: FaQuoteLeft,

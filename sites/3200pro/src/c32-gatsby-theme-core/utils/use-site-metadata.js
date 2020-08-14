@@ -62,6 +62,8 @@ export const useSiteMetadata = () => {
   const seoImage = data.seoImage.childImageSharp.resize
   const metaData = data.site.siteMetadata
   const twitterUsername = data.site.siteMetadata.social.twitter
+  const developer = '3200.pro'
+  const developerLink = 'https://3200.pro'
   // Local Business Schema
   const allData = { ...metaData, useDarkMode, additionalLinks, developer,developerLink, useTransitions, title, logo, seoImage, twitterUsername,
     

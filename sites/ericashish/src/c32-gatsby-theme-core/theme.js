@@ -25,7 +25,7 @@ export default {
     secondary: baseColors.orange[7],
     accent: baseColors.orange[2],
     grayTxt: '#73737D',
-    lightTxt: '#73737D',
+    lightTxt: '#999',
     muted: baseColors.gray[2],
     newsletter: {
       background: '#ffffff',
@@ -47,8 +47,8 @@ export default {
     footer: {
       background: 'transparent',
       backgroundWhite: 'black',
-      text: baseColors.gray[8],
-      links: baseColors.gray[8],
+      text: 'lightTxt',
+      links: 'lightTxt',
       icons: baseColors.gray[8],
     },
     modes: {
@@ -169,6 +169,12 @@ export default {
 
   },
   variants: {
+    clearline: {
+      borderBottom: '1px solid #ddd',
+      width: '100%',
+      clear: 'both',
+      height: '10px',
+    },
     shadow: {
       boxShadow: '0 30px 60px -10px rgba(0,0,0,0.3), 0 18px 36px -18px rgba(0,0,0,0.33) !important',
     },
@@ -205,6 +211,14 @@ export default {
       width: '750px',
       header: {
         my: 4,
+        h1: {
+          fontSize: [4,5,null,null],
+          maxWidth: '100%'
+        },
+        postMeta: {
+          color: 'lightTxt',
+          fontSize: '14px'
+        },
       },
       img: {
         boxShadow: 'none',
@@ -231,7 +245,7 @@ export default {
       textAlign: 'right',
       display: 'block',
       position: 'relative',
-      zIndex: '999999'
+      zIndex: '999999',
     },
     archiveLayout: {
       outline: 'none',
@@ -255,14 +269,14 @@ export default {
         maxWidth: '100%',
         fontFamily: 'body',
         fontWeight: '600'
-      }
+      },
     },
     footer: {
       textAlign: 'left',
       width: 'maxContentWidth',
       margin: '0 auto',
       color: 'lightTxt',
-      fontSize: 1,
+      fontSize: '10px',
       a: {
         color: 'lightTxt'
       }
@@ -282,6 +296,6 @@ export default {
 
         }
       }
-    }
+    },
   },
 }

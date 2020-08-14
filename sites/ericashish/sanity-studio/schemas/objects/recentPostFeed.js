@@ -4,6 +4,26 @@ export default {
     type: 'object',
     fields: [
       {
+        title: 'Optional Title',
+        name: 'title',
+        type: 'string'
+      },
+      {
+        title: 'Optional Title Link',
+        name: 'link',
+        type: 'url',
+        validation: (Rule) =>
+          Rule.uri({
+            allowRelative: true,
+            scheme: ["https", "http", "mailto"],
+          }),
+      },
+      {
+        title: 'Show Post Layout',
+        name:'showToggle',
+        type:'boolean'
+      },
+      {
         title: 'Content Type',
         name: 'contentType',
         type: 'string',

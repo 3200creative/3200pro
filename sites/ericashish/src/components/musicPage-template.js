@@ -37,9 +37,8 @@ const MusicPageTemplate = props => {
             variant: 'variants.postContainer.header'
           }}
         >
-          {page && <Styled.h1>{page.title}</Styled.h1>}
-          <div
-          >
+          <Styled.h1>{page.title}</Styled.h1>
+          <div sx={{ variant: 'variants.postContainer.header.postMeta'}}>
           {differenceInDays(new Date(page.publishedAt), new Date()), { useAdditionalDayOfYearTokens: true, useAdditionalWeekYearTokens: true } > 3
             ? distanceInWords(new Date(page.publishedAt), new Date())
             : format(new Date(page.publishedAt), 'MMMM dd, yyyy')}

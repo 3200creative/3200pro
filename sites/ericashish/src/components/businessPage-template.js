@@ -9,6 +9,7 @@ import BlockContent from './block-content'
 import FeaturedImage from './FeaturedImage'
 import PostContent from './singlePostContainer'
 import { format, distanceInWords, differenceInDays } from 'date-fns'
+import MailChimpForm from '../../src/components/MailChimpForm'
 
 
 const BusinessPageTemplate = props => {
@@ -31,7 +32,7 @@ const BusinessPageTemplate = props => {
           }}
         >
           {page && <Styled.h1>{page.title}</Styled.h1>}
-          <div
+          <div sx={{variant: 'variants.postContainer.header.postMeta'}}
           >
           {differenceInDays(new Date(page.publishedAt), new Date()), { useAdditionalDayOfYearTokens: true, useAdditionalWeekYearTokens: true } > 3
             ? distanceInWords(new Date(page.publishedAt), new Date())

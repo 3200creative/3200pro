@@ -225,19 +225,37 @@ function RecentPostFeed (props) {
   const { gridLayout = 'lists', hasSetGridLayout, setGridLayout, getGridLayout } = useContext(
     GridLayoutContext,
   );
-
+  const url = typeof window !== 'undefined' ? window.location.href : ''
+  let isHome = 'false'
+  const defineHome = () => {
+    if(url === 'http://localhost:8000'){
+      return true
+    }
+    if(url === 'http://ericashish.com'){
+      return true
+    }else {
+      return false
+    }
+  }
 
 
   return (
     <>
-    <ArticleLayoutToggle />
-    
+    <Grid container justify="space-between" sx={{
+      paddingTop: 4}}>
+    <Grid item xs={8} md={10} sx={{
+      display: [null, null, null,  gridLayout === 'lists' && 'flex' || 'block'],
+      flexDirection: [null, null, null, gridLayout === 'lists' && 'column' || 'none'],
+      justifyContent: [null, null, null,  gridLayout === 'lists' && 'center' || 'none'],
+      }}>{props.link ? (<Link to={props.link}>{props.title}</Link>) : null}</Grid><Grid item xs={4} md={2}><div sx={{display:['none',null,null,'block', null]}}>{props.showToggle ? (<ArticleLayoutToggle />) : null}</div></Grid>
+    </Grid>
     <Grid container justify="space-between">
-    {contentType.slice(0, Math.min(100, maxCount)).map(post => (
-      <Grid container key={post.node.key} xs={12} md={gridLayout === 'lists' && 12 || 6} sx={{py:4}}>
-        
+    {contentType.slice(0, Math.min(props.postCount ? props.postCount : 100, maxCount)).map(post => (
+      <Grid container key={post.node.key} xs={12} md={gridLayout === 'lists' && 12 || 6} sx={{
+        py:4}}>
+          
         <Grid item xs={12} md={gridLayout === 'lists' && 6 || 12} sx={{height:gridLayout === 'lists' && [null, null, null, '285px'] || [null, null, null, '360px'], }}>
-          <Link to={post.node.slug.current}>
+          <Link to={defineHome == true ? '' + '/' + post.node.slug.current: post.node.slug.current}>
             <img
             src={imageUrlFor(buildImageObjMap(post.node.featuredImage))
             .auto('format')
@@ -262,6 +280,7 @@ function RecentPostFeed (props) {
             m: 0,
             color: 'text',
             fontFamily:  'header',
+            width: ['100%', null, null, '92%']
           }}><Link to={post.node.slug.current}
             sx= {{
               color: 'text',
@@ -271,7 +290,7 @@ function RecentPostFeed (props) {
             py: 0,
             fontSize: 1,
             color: 'grayTxt',
-            width: ['100%', null, null, '96%']
+            width: ['100%', null, null, '92%']
             }}
           >{post.node.excerpt}</p>
           <div

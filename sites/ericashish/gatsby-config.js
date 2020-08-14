@@ -4,13 +4,13 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `C32 Base`,
-    description: `Placeholder description`,
+    title: `Eric Ashish`,
+    description: `Creating music, serving tea, podcasting, exploring wellness and lifestyle.`,
     keywords: [`gatsby`, `theme`, `react`],
-    author: `Eric Howey`,
-    siteUrl: `https://www.netlify.com`, //Change to you site address, required for sitemap.xml and robots.txt file among other things
+    author: `3200.Pro`,
+    siteUrl: `https://www.ericashish.com/`, 
     social: {
-      twitter: `@erchwy`,
+      twitter: `@ericashish`,
     },
     menuLinks: [
       {
@@ -62,7 +62,7 @@ module.exports = {
         dataset: 'production',
         watchMode: true,
         overlayDrafts: true,
-        token: 'skXsAKOITVxtKEQySYGz5PcD3ZkFNb6D1H3qpqXaY2bcdht5YHhxo8ygpY4a9sXCURQQASBtEN2Ppokgpc5rMIaz7x8LMPdyCXdDCIpeLQc17lK2rW6kGrNuhhhE3h3n8J5UM4JRyhAFBLqyNw36QnnFaBTcVyKCZP9FllPr5e0iOZCYxwmf',
+        token: 'sk1hkTiVeAZT81lP96H1cACPBppV7soAZjXiyvk36rwj6BKWM7NpIvWtfJufJEm016opyhDxAOCsxdozgw9zTm9eNLDqaKVAR1obX8F4zJiFVH1rUUoq5oTZHCAtCqpFFMwHMl9U7XZCpYoE0RKlVXGndtBTkESWgdHIxm7JNmvhKNAak6wu',
         // If the Sanity GraphQL API was deployed using `--tag <name>`,
         // use `graphqlTag` to specify the tag name. Defaults to `default`.
         graphqlTag: 'default',

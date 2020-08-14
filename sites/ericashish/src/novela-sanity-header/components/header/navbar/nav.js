@@ -43,7 +43,7 @@ export default function Nav(props) {
         alignSelf: ["start", null, "center", null, null],
         alignItems: "center",
         mt: isNavOpen ? 2 : 0,
-        display: [isNavOpen ? "flex" : "none", null, "flex", null, null],
+        display: [isNavOpen ? "block" : "none", null, "flex", null, null],
         flexDirection: ["column", null, "row", null, null],
       }}
       role="navigation"
@@ -54,7 +54,7 @@ export default function Nav(props) {
           display: "flex",
           flexDirection: ["column", null, "row", null, null],
           flexWrap: "wrap",
-          textAlign: ["center", null, "left", null, null],
+          textAlign: ["left", null, "left", null, null],
           listStyle: "none",
           m: 0,
           p: 0,
@@ -70,7 +70,7 @@ export default function Nav(props) {
               a: {
                 color: isNavOpen ? "header.textOpen" : "header.textClosed",
                 textDecoration: "none",
-                fontSize: '16px',
+                fontSize: isNavOpen ? "34px" : "16px",
                 py: 1,
                 px: 1,
                 mr: [0, null, 2, null, null],

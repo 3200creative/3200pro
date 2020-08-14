@@ -1,15 +1,16 @@
 /** @jsx jsx */
+import Grid from '@material-ui/core/Grid';
 import { jsx } from "theme-ui"
 //import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { getFluidGatsbyImage } from "gatsby-source-sanity"
+import BackgroundImage from 'gatsby-background-image'
 import Img from "gatsby-image"
 import SiteLayout from 'c32-gatsby-theme-core/src/components/layout'
 import { SEO, Layout } from "c32-gatsby-theme-core"
 import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error-lists'
 import Container from 'c32-gatsby-theme-core/src/components/container'
 import BlockContent from '../../src/components/block-content'
-import Grid from '@material-ui/core/Grid';
 const sanityConfig = {projectId: '4m7jmrdc', dataset: 'production'}
 
 
@@ -17,6 +18,7 @@ export const query = graphql`
   query HomePageQuery {
     page: sanityLandingPage(adminTitle: {eq: "Homepage"}) {
       displayedTitle
+      subTitle
       _rawHeroText
       _rawLeftContent
       _rawRightContent
@@ -38,12 +40,20 @@ export const query = graphql`
           metaTitle
         }
     }
+    heroImage: file( relativePath: { eq: "maui-fishing.jpg" } ) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+    }
   }
 `
 
 const Homepage = props => {
    const { data, errors } = props
    const heroMenu = data.page.heroMenu
+   const { heroImage } = props.data;
    if (errors) {
      return (
        <Layout>
@@ -71,11 +81,27 @@ const Homepage = props => {
       <Container>
         <div
         sx= {{
-          variant: 'variants.landingPage'
+          variant: 'variants.homepage'
         }}
-        ><Grid container spacing={8}>
-          <Grid item xs={12} md={6} xl={8}>
+        >
+        <section sx= {{variant: 'variants.hero'}}>
+        <div sx= {{
+          position: 'absolute',
+          objectFit: 'cover',
+          objectPosition: 'center center',
+          maxWidth: '100%',
+          width: '1500px',
+          height: '100%',
+          top: 0,
+          opacity: '.5'
+        }}><Img fluid={heroImage.childImageSharp.fluid} />
+        </div>
+        <Grid container spacing={8} style={{margin: '10vh auto', width: '98%'}}>
+          <Grid item xs={12} md={6} xl={8} sx={{
+            zIndex: '99999',
+            }}>
             <h1>{page.displayedTitle}</h1>
+            <p>{page.subTitle}</p>
             <BlockContent blocks={page._rawHeroText || []} />
           </Grid>
           <Grid item xs={12} md={6} xl={4}>
@@ -94,7 +120,14 @@ const Homepage = props => {
                   alt={btn.menuImage.alt}
                   loading='lazy'
                 />
-                {btn.buttonTxt}
+                <div sx={{
+                  marginTop: '-40px', 
+                  zIndex: '99999', 
+                  position: 'absolute', 
+                  mx: 3, 
+                  color: 'white',
+                  textTransform: 'uppercase'
+                  }}>{btn.buttonTxt}</div>
                 
               </Link>
               </Grid>
@@ -106,6 +139,7 @@ const Homepage = props => {
             <Grid item xs={6} sx={{variant: 'variants.homeLeft'}}><BlockContent blocks={page._rawLeftContent || []} /></Grid>
             <Grid item xs={6} sx={{variant: 'variants.homeRight'}}><BlockContent blocks={page._rawRightContent || []} /></Grid>
           </Grid>
+        </section>
         </div>
       </Container>
     </SiteLayout>

@@ -23,7 +23,8 @@ const PageTemplate = props => {
                 <GraphQLErrorList errors={errors} />
             )}
         </Container>
-        <div sx={{variant: 'variants.landingPage'}}>
+        <div sx={{
+          variant: 'variants.landingPage'}}>
             {page && <Styled.h1><TxtColorChange txtBlock= {page.title} colors={colors} /></Styled.h1>}
         
         {page._rawBlockContent && <BlockContent blocks={page._rawBlockContent} />}

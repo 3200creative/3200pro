@@ -35,7 +35,7 @@ export default {
     muted: baseColors.gray[2],
 
     header: {
-      background: 'transparent',
+      background: '#C7664F',
       backgroundOpen: 'white',
       text: 'text',
       textOpen: 'text',
@@ -150,8 +150,13 @@ export default {
       margin: '0 auto',
       boxShadow: 'shadowStyle1'
     },
+    orangeBtn: {
+      background: 'fmOrange',
+      boxShadow: 'shadowStyle1'
+    },
     contentContainer: {
       maxWidth: '100%',
+      p: 0,
     },
     homeLeft: {
       backgroundColor: 'fmOrange',
@@ -267,12 +272,25 @@ export default {
         }
       }
     },
-    landingPage: {
-      marginTop: '10vw',
+    buttonBlock: {
+      a: {
+        backgroundColor: 'fmOrange',
+        color: 'white',
+        px: 4,
+        py: 3,
+        borderRadius: 4,
+        textTransform: 'uppercase'
+      },
+    },
+    homepage: {
       width: '100%',
+      wrapper: {
+        width: '90% !important',
+        mx: 'auto'
+      },
+
       h1: {
         textAlign: 'left',
-        width:  ['90%', null, '500px'],
         my: 4,
         color: 'headline',
         lineHeight: '1'

@@ -28,6 +28,7 @@ import bioPortableText from './objects/bioPortableText'
 import singularFeaturedPost from './objects/singularFeaturedPost'
 import quote from './objects/quote'
 import featuredAuthorBlock from './objects/featuredAuthorBlock.js'
+import spacer from './objects/spacers'
 // Content Types:
 import event from './contentTypes/event'
 import business from './contentTypes/business'
@@ -69,6 +70,7 @@ export default createSchema({
     featuredAuthorBlock,
     soundcloudPlaylist,
     soundcloudPlaylistDropdown,
+    spacer,
     // Content Types
     siteSettings,
     newsletterSignup,
