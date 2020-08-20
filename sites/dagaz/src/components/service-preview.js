@@ -1,10 +1,11 @@
+
 /** @jsx jsx */
 import { jsx, Styled, Button } from "theme-ui"
 import { Link } from 'gatsby'
 import React from 'react'
 import Img from "gatsby-image"
 import { getServiceUrl } from '../lib/helpers'
-import BlockText from '../components/block-text'
+import BlockText from './block-text'
 import { getFluidGatsbyImage } from "gatsby-source-sanity"
 const sanityConfig = {projectId: 'kw4k4btd', dataset: 'production'}
 

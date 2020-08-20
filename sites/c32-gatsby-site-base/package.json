@@ -3,7 +3,7 @@
   "description": "site for core theme",
   "version": "0.0.1",
   "private": true,
-  "author": "Eric Howey <eric@erichowey.dev>",
+  "author": "3200.Pro <info@3200.pro>",
   "dependencies": {
     "gatsby": "^2.19.19",
     "c32-gatsby-theme-core": "*",

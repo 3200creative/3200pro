@@ -3,7 +3,7 @@ module.exports = {
     title: `C32 Base`,
     description: `Placeholder description`,
     keywords: [`gatsby`, `theme`, `react`],
-    author: `Eric Howey`,
+    author: `3200.Pro`,
     siteUrl: `https://www.netlify.com`, //Change to you site address, required for sitemap.xml and robots.txt file among other things
     social: {
       twitter: `@erchwy`,

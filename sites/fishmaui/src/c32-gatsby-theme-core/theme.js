@@ -150,6 +150,15 @@ export default {
       margin: '0 auto',
       boxShadow: 'shadowStyle1'
     },
+    subHeader: {
+      marginTop: '100px',
+      a: {
+        color: 'white'
+      },
+    },
+    subNavStyles: {
+      float: 'left'
+    },
     orangeBtn: {
       background: 'fmOrange',
       boxShadow: 'shadowStyle1'
@@ -179,14 +188,16 @@ export default {
         maxWidth: '400px',
         my: 4,
         py: 4,
+        color: 'white!important',
         backgroundColor: 'fmOrange',
         '&:nth-of-type(even)': {
           backgroundColor: 'tanL',
+          color: 'fmBlue',
         },
       },
     },
     siteLogo: {
-      width: '100px',
+      width: '70px',
       height: 'auto',
     },
     shadow: {
@@ -231,10 +242,10 @@ export default {
     navLinkStyles: {
       fontWeight: '400',
       textTransform: 'uppercase',
-      fontSize: '14px',
+      fontSize: '16px',
       a: {
         fontWeight: '400',
-        color: 'text',
+        color: 'white',
         mx: 3
       }
     },

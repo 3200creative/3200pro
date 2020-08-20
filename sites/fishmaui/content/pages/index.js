@@ -91,13 +91,20 @@ const Homepage = props => {
           objectPosition: 'center center',
           maxWidth: '100%',
           width: '1500px',
-          height: '100%',
+          height: '80vh',
           top: 0,
-          opacity: '.5'
-        }}><Img fluid={heroImage.childImageSharp.fluid} />
+          opacity: '.5',
+          overflow: 'hidden'
+        }}><Img fluid={heroImage.childImageSharp.fluid} 
+        sx={{
+          width: '1500px',
+          maxWidth: [null,null,'100%', null],
+          minHeight: ['100vh', null, null,'60vh'],
+        }}
+        />
         </div>
-        <Grid container spacing={8} style={{margin: '10vh auto', width: '98%'}}>
-          <Grid item xs={12} md={6} xl={8} sx={{
+        <Grid container spacing={8} style={{margin: '6vh 1vh 6vh 1vh', width: '98%'}}>
+          <Grid item xxs={12} md={6} xl={8} sx={{
             zIndex: '99999',
             }}>
             <h1>{page.displayedTitle}</h1>
@@ -111,7 +118,7 @@ const Homepage = props => {
               <Link to={btn.href} sx={{variant: 'variants.heroBtns'}}>
                 <Img sx={{
                   variant: 'variants.shadow',
-                  maxWidth: '900px',
+                  maxWidth: '100%',
                   margin: '0 auto',
                   float: 'none',
                   display: 'block',
@@ -121,10 +128,11 @@ const Homepage = props => {
                   loading='lazy'
                 />
                 <div sx={{
-                  marginTop: '-40px', 
-                  zIndex: '99999', 
+                  zIndex: '9', 
                   position: 'absolute', 
-                  mx: 3, 
+                  marginTop: '-30px',
+                  marginLeft: '10px',
+                  fontSize: '16px',
                   color: 'white',
                   textTransform: 'uppercase'
                   }}>{btn.buttonTxt}</div>
@@ -135,9 +143,34 @@ const Homepage = props => {
             </Grid>
             </Grid>
           </Grid>
-          <Grid container sx={{variant: 'variants.homeTwoSection'}}>
-            <Grid item xs={6} sx={{variant: 'variants.homeLeft'}}><BlockContent blocks={page._rawLeftContent || []} /></Grid>
-            <Grid item xs={6} sx={{variant: 'variants.homeRight'}}><BlockContent blocks={page._rawRightContent || []} /></Grid>
+          <Grid container sx={{
+            position: 'relative',
+            zIndex: '9999999',
+            width: '1500px!important',
+            maxWidth: '100%!important'
+          }} >
+            <Grid item xs={6} sx={{
+            width: '50%',
+            px: 4,
+            variant: 'variants.homeLeft',
+            h2: {
+              color: 'white',
+              fontWeight: '300',
+              textTransform: 'uppercase',
+              marginBottom: 5
+            },
+            h3: {
+              a: {
+                color: 'white',
+                fontWeight: '300',
+                textTransform: 'uppercase'
+              },
+            },
+            }}><BlockContent blocks={page._rawLeftContent || []} /></Grid>
+            <Grid item xs={6} 
+            sx={{
+            width: '50%', 
+            variant: 'variants.homeRight'}}><BlockContent blocks={page._rawRightContent || []} /></Grid>
           </Grid>
         </section>
         </div>

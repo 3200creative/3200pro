@@ -3,7 +3,7 @@
   "description": "novela styled header",
   "private": true,
   "version": "0.0.1",
-  "author": "Eric Howey <eric@erichowey.dev>",
+  "author": "3200.Pro <info@3200.pro>",
   "devDependencies": {
     "gatsby": "^2.19.19",
     "prettier": "^2.0.5",

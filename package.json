@@ -51,6 +51,7 @@
     "10:build": "yarn workspace 10sec build",
     "10:serve": "yarn workspace 10sec serve",
     "10:clean": "yarn workspace 10sec clean",
+    "10:s": "cd sites/10sec/sanity-studio && sanity start",
     "fm:dev": "yarn workspace fishmaui develop",
     "fm:build": "yarn workspace fishmaui build",
     "fm:serve": "yarn workspace fishmaui serve",

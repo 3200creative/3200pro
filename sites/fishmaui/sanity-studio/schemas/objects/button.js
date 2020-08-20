@@ -19,6 +19,22 @@ export default {
               }),
         },
         {
+            name: 'urlType',
+            title: 'URL Type',
+            type: 'string',
+            options: {
+                list: [
+                    {title: 'Site URL', value: 'siteUrl'},
+                    {title: 'External URL', value: 'externalUrl'},
+                    {title: 'Phone Number', value: 'phone'},
+                ],
+                layout: 'radio'
+            },
+            initialValue: {
+                urlType: 'siteUrl'
+            },
+        },
+        {
             name: 'menuImage',
             description: 'This is used for hero menus.',
             type: 'featuredImage',

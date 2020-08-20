@@ -27,6 +27,7 @@ import imgLeftTxtRight from './objects/imgLeftTxtRight'
 import excerptPortableText from './objects/excerptPortableText'
 import bioPortableText from './objects/bioPortableText'
 import spacer from './objects/spacers'
+import alert from './objects/alert'
 // Content
 import page from   './contentTypes/page'
 import landingPage from './contentTypes/landingPage'
@@ -67,6 +68,7 @@ export default createSchema({
         excerptPortableText,
         bioPortableText,
         spacer,
+        alert,
         // Content Types
         page,
         landingPage,

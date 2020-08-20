@@ -57,8 +57,13 @@ export default {
         type: "url",
         title: "Site URL",
         description:
-          "The root url of your website, e.g. https://www.erichowey.dev",
+          "The root url of your website, e.g. https://3200.pro",
         validation: (Rule) => Rule.required(),
+      },
+      {
+        title: "Footer Background",
+        name: "footerBackground",
+        type: "figure",
       },
     ],
   }

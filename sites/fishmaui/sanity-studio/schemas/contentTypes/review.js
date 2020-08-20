@@ -4,6 +4,12 @@ export default {
     title: 'Review',
     fields: [
         {
+            name: 'archiveOrder',
+            title: 'Archive Order',
+            description: 'Number Value. If two boats have the same number, the most recent will be first.',
+            type: 'number'
+        },
+        {
             name: 'title',
             title: 'Title',
             type: 'string'

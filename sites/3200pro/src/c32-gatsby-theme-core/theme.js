@@ -141,6 +141,9 @@ export default {
     },
   },
   variants: {
+    contentContainer: {
+      mb: 0
+    },
     siteLogo: {
       width: '100px',
       height: 'auto',
@@ -224,6 +227,13 @@ export default {
           p: 2
         }
       }
+    },
+    footerOverlay: {
+      background: 'rgba(255,255,255,.5)',
+      width: '100%',
+      display: 'block',
+      pt: 0,
+      overflow: 'hidden'
     },
     landingPage: {
       marginTop: '10vw',

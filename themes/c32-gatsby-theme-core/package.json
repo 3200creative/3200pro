@@ -3,7 +3,7 @@
   "description": "C32 Core theme",
   "version": "0.0.1",
   "private": true,
-  "author": "Eric Howey <eric@erichowey.dev>",
+  "author": "3200.Pro <info@3200.pro>",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/styles": "^4.10.0",

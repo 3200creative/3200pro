@@ -4,18 +4,19 @@ import { jsx } from "theme-ui"
 import { Link } from 'gatsby'
 import React from 'react'
 import Img from "gatsby-image"
-import { getServiceUrl } from '../lib/helpers'
-import BlockText from '../components/block-text'
+import { getBoatUrl } from '../lib/helpers'
+import BlockText from './block-text'
 import { getFluidGatsbyImage } from "gatsby-source-sanity"
 import clientConfig from '../../client-config'
+import Grid from '@material-ui/core/Grid';
 
-function servicePreview (props) {
+function BoatPreview (props) {
   const image = props.featuredImage
   
   return (
-    <div sx={{variant: 'variants.postPreview'}}>
+    <Grid item xs={10} md={5}>
     
-    <Link to={getServiceUrl(props.publishedAt, props.slug.current)}>
+    <Link to={getBoatUrl(props.slug.current)}>
     <div
     sx= {{
        variant: 'variants.postPreview.archiveImages'
@@ -36,8 +37,8 @@ function servicePreview (props) {
       )}
       </div>
     </Link>
-    </div>
+    </Grid>
   )
 }
 
-export default servicePreview
+export default BoatPreview
