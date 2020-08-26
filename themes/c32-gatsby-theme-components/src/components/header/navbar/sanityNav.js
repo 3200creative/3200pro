@@ -7,7 +7,6 @@ import { useSiteMetadata } from "c32-gatsby-theme-core"
 
 const SanityNav = () => {
   const [isNavOpen, setIsNavOpen] = useContext(NavContext)
-  const { menuLinks } = useSiteMetadata()
   const { navItems } = useSiteMetadata()
   return (
     <nav
