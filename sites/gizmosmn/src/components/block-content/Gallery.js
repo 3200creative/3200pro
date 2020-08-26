@@ -9,6 +9,7 @@ import { imageUrlFor } from '../../lib/image-url'
 import Masonry from 'react-masonry-component';
 import { getFluidGatsbyImage } from "gatsby-source-sanity"
 import Img from "gatsby-image"
+import { buildPageImageObj } from '../../../src/lib/helpers'
 const sanityConfig = {projectId: 'yit7sywj', dataset: 'production'}
 
 function Gallery (props) {
@@ -87,18 +88,24 @@ function Gallery (props) {
       >
       <figure
       onClick={() => {        
-        changeImage(getFluidGatsbyImage(image.asset._ref,{ maxWidth: 800 }, sanityConfig));
+        changeImage(getFluidGatsbyImage(image,{ maxWidth: 800 }, sanityConfig));
         setOpen(true)
       }}
       >
         {image.asset && (
-          <Img sx={{
+          <img sx={{
             variant: 'variants.shadow',
             maxWidth: '100%',
             minHeight: columns === '33%' ? '180px' : '260px'
           }}
           className={image.positioning +' '+ image.sizes}
-          fluid={getFluidGatsbyImage(image.asset._ref,{ maxWidth: 800 }, sanityConfig)}
+          src={imageUrlFor(buildPageImageObj(image))
+            .width(1200)
+            .format('webp')
+            .url()
+            
+          }
+          // fluid={getFluidGatsbyImage(image.asset._ref,{ maxWidth: 800 }, sanityConfig)}
           alt={image.alt}
           />
         )}
