@@ -104,5 +104,6 @@ module.exports = {
         icon: `content/assets/c32-site-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-preact`,
   ],
 }
