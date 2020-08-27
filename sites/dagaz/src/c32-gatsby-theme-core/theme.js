@@ -35,7 +35,7 @@ export default {
     },
 
     footer: {
-      background: baseColors.white,
+      background: baseColors.white, 
       text: baseColors.gray[8],
       links: baseColors.gray[8],
       icons: baseColors.gray[8],

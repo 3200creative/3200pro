@@ -48,7 +48,6 @@ const SanityNav = () => {
                 px: 1,
                 mr: [0, null, 2, null, null],
                 position: "relative",
-                color: 'text',
                 fontWeight: "bold",
                 letterSpacing: "1px",
                 transition: "all 0.2s ease",

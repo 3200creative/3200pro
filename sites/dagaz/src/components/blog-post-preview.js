@@ -1,13 +1,11 @@
 /** @jsx jsx */
-import { jsx, Styled, Button } from "theme-ui"
+import { jsx} from "theme-ui"
 import { Link } from 'gatsby'
-import React from 'react'
 import Img from "gatsby-image"
 import { getBlogUrl } from '../lib/helpers'
 import BlockText from '../components/block-text'
 import { getFluidGatsbyImage } from "gatsby-source-sanity"
 import clientConfig from '../../client-config'
-import BackgroundImage from "gatsby-background-image"
 
 function BlogPostPreview (props) {
   return (

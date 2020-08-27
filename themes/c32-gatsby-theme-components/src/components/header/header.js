@@ -47,7 +47,7 @@ const SiteHeader = () => {
         <Branding />
         {useSanityNav ? (<SanityNav />) : (<Nav />)}
         <HamburgerButton />
-        {useDarkMode == true && (<DarkModeIcon />) || null}
+        {useDarkMode === true ? (<DarkModeIcon />) : null}
       </div>
     </header>
   )

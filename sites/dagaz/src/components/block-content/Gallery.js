@@ -1,11 +1,9 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Modal from 'react-modal';
 import { Grid } from 'theme-ui'
 import { Box } from 'theme-ui'
-import { buildImageObj } from '../../lib/helpers'
-import { imageUrlFor } from '../../lib/image-url'
 import Masonry from 'react-masonry-component';
 import { getFluidGatsbyImage } from "gatsby-source-sanity"
 import Img from "gatsby-image"
@@ -44,7 +42,9 @@ function Gallery (props) {
         zIndex: '9999999',
       }}
     >
-      <button onClick={() => {setOpen(false)}}
+      <button 
+      onClick={() => {setOpen(false)}}
+      onKeyDown={() => {setOpen(false)}}
       sx = {{
         right: 0,
         top: 90,
@@ -55,9 +55,6 @@ function Gallery (props) {
         X
       </button>
     <figure
-    onClick={() => {
-      setOpen(false)
-    }}
     sx={{
         textAlign: 'center',
         width: '70vw',
@@ -67,7 +64,10 @@ function Gallery (props) {
         margin: '40px auto 0 auto',
 
       }}>        
-        <Img sx={{
+        <Img 
+        onClick={() => {setOpen(false)}}
+        onKeyDown={() => {setOpen(false)}}
+        sx={{
             variant: 'variants.shadow',
             width: '70vw',
             maxWidth: '500px',
@@ -100,14 +100,19 @@ function Gallery (props) {
         width: ['100%','100%', columns],
       }}
       >
-      <figure
-      onClick={() => {        
-        changeImage(getFluidGatsbyImage(image.asset._ref,{ maxWidth: 800 }, sanityConfig));
-        setOpen(true)
-      }}
-      >
+      <figure>
         {image.asset && (
-          <Img sx={{
+          <Img 
+          
+          onClick={() => {        
+            changeImage(getFluidGatsbyImage(image.asset._ref,{ maxWidth: 800 }, sanityConfig));
+            setOpen(true)
+          }}
+          onKeyDown={() => {        
+            changeImage(getFluidGatsbyImage(image.asset._ref,{ maxWidth: 800 }, sanityConfig));
+            setOpen(true)
+          }}
+          sx={{
             variant: 'variants.shadow',
             maxWidth: '100%',
           }}

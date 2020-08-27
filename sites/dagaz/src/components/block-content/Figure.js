@@ -16,8 +16,8 @@ function Figure (props) {
           maxWidth: '100%',
           width: ['100%', null, props.sizes, null],
           mx: 4,
-          marginLeft: props.positioning == 'left' && '0px' || null,
-          marginRight: props.positioning == 'right' && '0px' || null,
+          marginLeft: props.positioning === 'left' ? '0px' : null,
+          marginRight: props.positioning === 'right' ? '0px' : null,
           float: props.positioning,
           display: 'block',
         }}

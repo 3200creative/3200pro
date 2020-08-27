@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
 import { Link } from 'gatsby'
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 //import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -21,7 +22,6 @@ const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2
   //   `
   // )
   const heroBg = bg ? bg : 'none'
-  const rgba = overlayRGBA
   return (
     <>
     {/* <BackgroundImage
@@ -72,7 +72,6 @@ const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2
         <Styled.h1 
         sx={{
           color: "white",
-          variant: 'variants.whiteTextShadow',
           variant: 'variant:"variants.hero1.h1',
           }}>{titleText}</Styled.h1>
         <p sx={{

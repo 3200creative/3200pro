@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
+import { jsx } from "theme-ui"
 import { graphql } from "gatsby"
 import { SEO, Layout } from "c32-gatsby-theme-core"
 import { Link } from 'gatsby'
@@ -7,7 +7,6 @@ import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error
 import Container from 'c32-gatsby-theme-core/src/components/container'
 import BlockContent from './block-content'
 import Hero from 'c32-gatsby-theme-components/src/components/ui/sanity-hero'
-import Blank from '../../content/assets/maple-grove-therapy-mn.jpg'
 import { Grid, Box } from 'theme-ui'
 const ServiceTemplate = props => {
     const { data, errors } = props

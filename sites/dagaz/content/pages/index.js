@@ -7,7 +7,6 @@ import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error
 import Container from 'c32-gatsby-theme-core/src/components/container'
 import BlockContent from '../../src/components/block-content'
 import SanityHero from 'c32-gatsby-theme-components/src/components/ui/sanity-hero-faux-bg'
-import Blank from '../assets/blank.png'
 import { mapEdgesToNodes } from '../../src/lib/helpers'
 import ServicePreviewGrid from '../../src/components/home-preview-grid'
 
