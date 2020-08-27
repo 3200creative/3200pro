@@ -5,7 +5,7 @@ import { SEO, Layout } from "c32-gatsby-theme-core"
 import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error-lists'
 import Container from 'c32-gatsby-theme-core/src/components/container'
 import BlockContent from '../../src/components/block-content'
-import Hero from 'c32-gatsby-theme-components/src/components/ui/sanity-hero'
+import SanityHero from 'c32-gatsby-theme-components/src/components/ui/sanity-hero-faux-bg'
 
 
 export const query = graphql`
@@ -56,7 +56,7 @@ const AboutPage = props => {
       description={page.seo.metaDesc}
       />
       <Container>
-      <Hero
+      <SanityHero
           titleText= 'Maple Grove MN Therapy and Counseling'
           subTitleText= {page.subTitleText ? page.subTitleText : ''}
           buttonText="Schedule Appointment"
@@ -64,6 +64,7 @@ const AboutPage = props => {
           buttonText2="Contact Dagaz"
           buttonLink2="/contact-maple-grove-mn-therapist/"
           bg = {bg}
+          alt = 'Maple Grove Addiction therapy'
           ctaHeight = '250px'
           bgc = '#fff'
           overlayRGBA = 'rgba(255,255,255,.5)'

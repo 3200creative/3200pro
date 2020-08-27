@@ -8,7 +8,7 @@ import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error
 import Container from 'c32-gatsby-theme-core/src/components/container'
 import { mapEdgesToNodes } from '../../src/lib/helpers'
 import ServicePreviewGrid from '../../src/components/service-preview-grid'
-import Hero from 'c32-gatsby-theme-components/src/components/ui/sanity-hero'
+import SanityHero from 'c32-gatsby-theme-components/src/components/ui/sanity-hero-faux-bg'
 import BlockContent from '../../src/components/block-content'
 
 export const query = graphql`
@@ -86,7 +86,7 @@ const Services = props => {
       description={page.seo.metaDesc}
       />
       <Container>
-      <Hero
+      <SanityHero
           titleText= {page.header}
           subTitleText= {page.subTitleText ? page.subTitleText : 'We offer counseling and individual therapy to Maple Grove Minnesota'}
           buttonText="Schedule Appointment"
@@ -94,6 +94,7 @@ const Services = props => {
           buttonText2="Contact Dagaz"
           buttonLink2="/contact-maple-grove-mn-therapist/"
           bg = {bg}
+          alt = 'Maple Grove Therapy - Addiction - Family Therapist'
           ctaHeight = '250px'
           bgc = '#fff'
           overlayRGBA = 'rgba(255,255,255,.5)'
