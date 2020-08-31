@@ -91,7 +91,7 @@ module.exports = options => {
       `gatsby-plugin-react-helmet`,
       `gatsby-transformer-sharp`,
       `gatsby-plugin-sharp`,
-      `gatsby-plugin-theme-ui`,
+      //`gatsby-plugin-theme-ui`,
       `gatsby-plugin-offline`,
       `framer-motion`,
       `gatsby-plugin-material-ui`,
