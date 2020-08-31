@@ -8,7 +8,7 @@ export default {
   ...tailwind,
   breakpoints: ["480px", "768px", "2024px", "2440px"],
   fonts: {
-    ...tailwind.fonts,
+    ...tailwind.fonts, 
     siteTitle: "inherit", // Font for main site title
     navLinks: "inherit", // Font for the nav menu links
     alt: "inherit", //An alternate font style if needed.
