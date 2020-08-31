@@ -29,6 +29,7 @@ export const query = graphql`
         }
     }
     posts: allSanityGalleryPage(
+      sort: {fields: position, order: ASC}
       filter: { slug: { current: { ne: null } }}) {
         edges {
         node {
