@@ -65,7 +65,7 @@ export default {
     },
   },
   sizes: {
-    //...tailwind.sizes,
+    ...tailwind.sizes,
     maxContentWidth: "900px", // Sets the container size on larger screens, e.g. tablets and laptops
     // logoWidthXS: "50%", // Logo width on extra small screens, up to 480px
     // logoWidthS: "30%", // Logo width on small screens, 480px - 768px
