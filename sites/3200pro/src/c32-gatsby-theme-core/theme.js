@@ -24,7 +24,7 @@ export default {
     headline: '#000',
     darkbg2: 'white',
     background: baseColors.white, //Try "#954264",
-    primary: '#FF00FF',
+    primary: '#00FFFF',
     light: '#999',
     secondary: baseColors.black,
     accent: baseColors.orange[2],
