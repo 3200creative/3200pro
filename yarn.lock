@@ -6439,7 +6439,7 @@ gatsby-plugin-page-creator@^2.1.40, gatsby-plugin-page-creator@^2.3.25:
     lodash "^4.17.15"
     slugify "^1.4.4"
 
-gatsby-plugin-preact@^4.0.9:
+gatsby-plugin-preact@^4.0.10, gatsby-plugin-preact@^4.0.9:
   version "4.0.10"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-preact/-/gatsby-plugin-preact-4.0.10.tgz#97a056313c6ff7330eb42f323ebb9df79f1f7fe2"
   dependencies:

@@ -95,6 +95,7 @@ module.exports = options => {
       `gatsby-plugin-offline`,
       `framer-motion`,
       `gatsby-plugin-material-ui`,
+      `gatsby-plugin-preact`,
     ],
   }
 }
