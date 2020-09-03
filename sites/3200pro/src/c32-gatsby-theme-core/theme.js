@@ -212,9 +212,9 @@ export default {
     },
     footer: {
       fontSize: '12px',
-      color: 'light',
+      color: 'text',
       a: {
-        color: 'light'
+        color: 'text'
       },
       ul: {
         flexDirection: 'row',
