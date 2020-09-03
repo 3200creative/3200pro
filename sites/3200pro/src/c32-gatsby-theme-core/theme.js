@@ -27,8 +27,8 @@ export default {
     primary: '#c71585',
     light: '#999',
     secondary: '#000',
-    //accent: baseColors.orange[2],
-    //muted: baseColors.gray[2],
+    accent: baseColors.orange[2],
+    muted: baseColors.gray[2],
 
     header: {
       background: 'transparent',
@@ -79,7 +79,7 @@ export default {
     logoHeightXL: "5vw", // Logo height on extra large screens, above 1440px
   },
   styles: {
-    //...tailwind.styles,
+    ...tailwind.styles,
     root: {
       backgroundColor: "background",
       color: "text",
