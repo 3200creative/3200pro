@@ -229,7 +229,6 @@ export default {
       }
     },
     footerOverlay: {
-      background: 'rgba(255,255,255,.5)',
       width: '100%',
       display: 'block',
       pt: 0,
