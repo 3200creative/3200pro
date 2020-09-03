@@ -1,16 +1,16 @@
 // See https://theme-ui.com/ for more info and also https://www.gatsbyjs.org/docs/theme-ui/
 // Try changing some of the colors below to see what happens.
 /** @jsx jsx */
-//import { tailwind, baseColors } from "@theme-ui/preset-tailwind"
+import { tailwind, baseColors } from "@theme-ui/preset-tailwind"
 import prism from "@theme-ui/prism/presets/oceanic-next"
 
 export default {
   initialColorModeName: 'light',
   useColorSchemeMediaQuery: false,
-  //...tailwind,
+  ...tailwind,
   breakpoints: ["480px", "768px", "1024px", "1440px"],
   fonts: {
-    //...tailwind.fonts,
+    ...tailwind.fonts,
     siteTitle: '"SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif', // Font for main site title
     navLinks: '"SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif', // Font for the nav menu links
     alt: '"SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif', //An alternate font style if needed.
@@ -19,11 +19,11 @@ export default {
     shadowStyle1: '0 30px 60px -10px rgba(0,0,0,0.3), 0 18px 36px -18px rgba(0,0,0,0.33)',
   },
   colors: {
-    //...tailwind.colors,
+    ...tailwind.colors,
     text: '#4a494e',
     headline: '#000',
     darkbg2: 'white',
-    background:   '#000', //Try "#954264",
+    background:   '#fff', //Try "#954264",
     primary: '#c71585',
     light: '#999',
     secondary: '#000',
@@ -35,16 +35,16 @@ export default {
       backgroundOpen: 'white',
       text: 'text',
       textOpen: 'text',
-      //icons: baseColors.gray[6],
-      //iconsHover: baseColors.blue[7],
-      //iconsOpen: baseColors.gray[8],
+      icons: baseColors.gray[6],
+      iconsHover: baseColors.blue[7],
+      iconsOpen: baseColors.gray[8],
     },
 
     footer: {
       background: 'transparent',
-      //text: baseColors.gray[8],
-      //links: baseColors.gray[8],
-      //icons: baseColors.gray[8],
+      text: '#000',
+      links: '#000',
+      icons: '#000',
     },
     modes: {
       dark: {
