@@ -15,7 +15,8 @@ const Figure = (props, {node}) => {
       {props.asset && (
         <img sx={{
           variant: 'variants.shadow',
-          maxWidth: '700px',
+          maxWidth: '100%',
+          width: '700px',
           margin: '0 auto',
           float: 'none',
           display: 'block',

@@ -6,7 +6,7 @@ import { SEO, Layout } from "c32-gatsby-theme-core"
 import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error-lists'
 import Container from 'c32-gatsby-theme-core/src/components/container'
 import BlockContent from '../../src/components/block-content'
-import SanityHero from 'c32-gatsby-theme-components/src/components/ui/sanity-hero'
+import SanityHero from 'c32-gatsby-theme-components/src/components/ui/sanity-hero-faux-bg'
 import { Grid } from 'theme-ui'
 import { Box } from 'theme-ui'
 import { buildPageImageObj } from '../../src/lib/helpers'
@@ -95,12 +95,14 @@ const Showcase = props => {
           buttonLink="/contact"
           overlayRGBA='rgba(0,0,0,.4)'
           bg = { bg }
+          opacity = '1'
         />
         <BlockContent blocks={page._rawBlockContent || []} />
         <Grid 
             width={[ '100%', '40%' ]}
             gap={6}
             sx={{
+            paddingTop: ['60px', null, '120px', null],
             width: '90%',
             variant: 'variants.showcaseFeed'
         }}

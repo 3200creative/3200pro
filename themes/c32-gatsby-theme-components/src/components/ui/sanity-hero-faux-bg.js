@@ -7,7 +7,7 @@ import React from 'react'
 import Img from "gatsby-image"
 import { Grid, Box } from 'theme-ui'
 
-const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2, py, bg, bgc, ctaHeight, overlayRGBA,subTitleText, alt }) => {
+const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2, py, bg, bgc, ctaHeight, opacity, overlayRGBA, maxHeight, subTitleText, alt }) => {
   // const data = useStaticQuery(
   //   graphql`
   //     query sanityHero {
@@ -22,6 +22,8 @@ const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2
   //   `
   // )
   const heroBg = bg ? bg : 'none'
+  const customOpacity = opacity;
+  const customMaxHeight = maxHeight;
   return (
     <>
     {/* <BackgroundImage
@@ -41,14 +43,14 @@ const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2
           width: '100vw',
           left: "calc(-50vw + 50%)",
           minHeight: ctaHeight || ['70vh','40vh'],
-          maxHeight: '500px',
+          maxHeight: customMaxHeight ? customMaxHeight : '500px',
           top: 0,
-          opacity: '.3',
+          opacity: customOpacity ? customOpacity : '.3',
           overflow: 'hidden',
         }}><Img fluid={heroBg} 
         sx={{
-          width: '100vw',
-          minHeight: ctaHeight || ['70vh','40vh'],
+          maxWidth: '100vw',
+          minHeight: ctaHeight || ['70vh','40vh', null, null],
         }}
         alt={alt}
         />

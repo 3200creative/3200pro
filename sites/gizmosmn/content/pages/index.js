@@ -6,7 +6,7 @@ import { SEO, Layout } from "c32-gatsby-theme-core"
 import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error-lists'
 import Container from 'c32-gatsby-theme-core/src/components/container'
 import BlockContent from '../../src/components/block-content'
-import Hero from 'c32-gatsby-theme-components/src/components/ui/sanity-hero'
+import Hero from 'c32-gatsby-theme-components/src/components/ui/sanity-hero-faux-bg'
 
 export const query = graphql`
   query HomePageQuery {
@@ -52,10 +52,11 @@ const Homepage = props => {
           buttonText="Inquire About Your Remodeling Project"
           buttonLink="/contact"
           overlayRGBA='rgba(0,0,0,.4)'
+          opacity = '1'
           bg = { bg }
+          maxHeight = '100px'
         />
-        <BlockContent blocks={page._rawBlockContent || []} />
-
+          <BlockContent blocks={page._rawBlockContent || []} />
       </Container>
     </SiteLayout>
   )

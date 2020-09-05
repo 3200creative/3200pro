@@ -19,7 +19,7 @@ const SanityNav = () => {
         mt: isNavOpen ? 2 : 0,
         display: [isNavOpen ? "flex" : "none", null, "flex", null, null],
         flexDirection: ["column", null, "row", null, null],
-        variant: "variants.navStyles",
+        variant: "variants.navStyles"
       }}
       role="navigation"
       aria-label="main-navigation"
