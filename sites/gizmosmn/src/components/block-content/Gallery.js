@@ -67,11 +67,6 @@ function Gallery (props) {
           />
     </figure>
     </Modal> */}
-    <Grid
-    sx={{
-    width: '100%'
-    }}
-    >
   <Masonry
     className={'my-gallery-class'} // default ''
     elementType={'div'} // default 'div'
@@ -91,15 +86,17 @@ function Gallery (props) {
         changeImage(getFluidGatsbyImage(image,{ maxWidth: 800 }, sanityConfig));
         setOpen(true)
       }}
+
       >
         {image.asset && (
           <img sx={{
             variant: 'variants.shadow',
             maxWidth: '100%',
-            minHeight: columns === '33%' ? '180px' : '260px'
+            //minHeight: [null ,columns === '33%' ? '180px' : '260px'],
           }}
           src={imageUrlFor(buildPageImageObj(image))
             .width(1200)
+            .auto('format')
             .url()
             
           }
@@ -112,7 +109,6 @@ function Gallery (props) {
       </Box>
     ))}
     </Masonry>
-    </Grid>
     </>
     )
 }
