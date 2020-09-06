@@ -38,7 +38,7 @@ const SiteFooter = ({footerBG}) => {
         }}>
         © {new Date().getFullYear()} {title} | Site Design: <a href={developerLink}> {developer ? developer : 'Localized Pro'}</a>
       </Styled.p>
-      <ul>
+      {footerNavItems ? (<ul>
     {
       footerNavItems ? (
         footerNavItems.map(footerNavItems => (
@@ -53,7 +53,7 @@ const SiteFooter = ({footerBG}) => {
         ))
       ) : null 
     }
-    </ul>
+    </ul>) : null }
     </div>
     </footer>
   )
