@@ -98,10 +98,8 @@ function Gallery (props) {
             maxWidth: '100%',
             minHeight: columns === '33%' ? '180px' : '260px'
           }}
-          className={image.positioning +' '+ image.sizes}
           src={imageUrlFor(buildPageImageObj(image))
             .width(1200)
-            .format('webp')
             .url()
             
           }
