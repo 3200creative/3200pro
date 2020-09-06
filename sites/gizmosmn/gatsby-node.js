@@ -54,6 +54,7 @@ exports.createPages = ({ graphql, actions }) => {
             slug {
               current
             }
+            
           }
         }
       }
