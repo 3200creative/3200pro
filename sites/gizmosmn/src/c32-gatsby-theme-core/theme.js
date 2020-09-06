@@ -123,10 +123,10 @@ export default {
     footer: {
       padding: 0,
       backgroundColor: 'background',
-      color: '#999',
+      color: '#666',
       fontSize: '16px',
       a: {
-        color: '#999',
+        color: '#666',
       },
     },
     header: {
