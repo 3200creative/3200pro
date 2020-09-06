@@ -69,7 +69,7 @@ export const useSiteMetadata = () => {
     image: seoImage,
     name: 'Gizmos Custom Cars',
     telephone: '612-845-2515',
-    priceRange: '$$$',
+    priceRange: '$',
     url: data.site.siteMetadata.url,
     bestRating: '5',
     ratingCount: '5',
