@@ -92,8 +92,8 @@ const Showcase = props => {
   return (
     <SiteLayout>
       <SEO 
-      title={page.seo.metaTitle}
-      description={page.seo.metaDesc}
+      title='Minnesota Custom Car Shop'
+      description='Award winning, custom cars, muscle cars, racecars, and hot rods","name":"Gizmos - Custom Car Builder'
       />
       <Container>
         <SanityHero
