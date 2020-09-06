@@ -59,6 +59,10 @@ export const query = graphql`
                 }
                 alt
             }
+            seo {
+              metaDesc
+              metaTitle
+            }
         }
         }
     }
@@ -87,7 +91,10 @@ const Showcase = props => {
 
   return (
     <SiteLayout>
-      <SEO title={page.header} />
+      <SEO 
+      title={page.seo.metaTitle}
+      description={page.seo.metaDesc}
+      />
       <Container>
         <SanityHero
           titleText= {page.header}

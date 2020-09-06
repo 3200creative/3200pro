@@ -52,6 +52,10 @@ export const query = graphql`
                     }
                 }
         }
+        seo {
+              metaDesc
+              metaTitle
+      }
   }
   }
 `

@@ -18,7 +18,11 @@ export const query = graphql`
                 ...GatsbySanityImageFluid
               }
           }
-    }
+      }
+      seo {
+              metaDesc
+              metaTitle
+      }
     }
   }
 `
@@ -45,7 +49,10 @@ const AboutPage = props => {
 
   return (
     <SiteLayout>
-      <SEO title={page.header} />
+      <SEO 
+      title={page.seo.metaTitle}
+      description={page.seo.metaDesc}
+      />
       <Container>
       <Hero
           titleText= { page.header }
