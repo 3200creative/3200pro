@@ -19,7 +19,7 @@ function Gallery (props) {
   const columns = props.column
   return (
     <>
-    <Modal
+    {/* <Modal
       isOpen= {openModal}
       contentLabel="Example Modal"
       sx = {{
@@ -66,7 +66,7 @@ function Gallery (props) {
           alt='lightbox'
           />
     </figure>
-    </Modal>
+    </Modal> */}
     <Grid
     sx={{
     width: '100%'
