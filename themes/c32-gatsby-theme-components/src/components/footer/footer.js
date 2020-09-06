@@ -10,7 +10,6 @@ const SiteFooter = ({footerBG}) => {
   const { additionalLinks } = useSiteMetadata()
   const { footerNavItems } = useSiteMetadata()
   const bg = footerBG
-  console.log(`this is the background: ${bg}`);
   return (
     <footer
       sx={{
