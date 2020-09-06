@@ -157,6 +157,13 @@ export default {
     siteTitle: {
       fontSize: [4, null, 5, null, null],
     },
+    primaryContent: {
+      backgroundColor: '#fff',
+        zIndex: '999999',
+        position: 'relative',
+        py: 2,
+        px: 4,
+    },
     main: {
       p: {
         a: {

@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import BaseBlockContent from '@sanity/block-content-to-react'
 import React from 'react'
 import Figure from './Figure'
@@ -56,6 +58,9 @@ const serializers = {
   }
 }
 
-const BlockContent = ({ blocks }) => <BaseBlockContent blocks={blocks} serializers={serializers} />
+const BlockContent = ({ blocks }) => 
+<div sx={{
+        variant: 'variants.primaryContent',
+        }}><BaseBlockContent blocks={blocks} serializers={serializers} /></div>
 
 export default BlockContent

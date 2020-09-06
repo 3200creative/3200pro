@@ -23,6 +23,11 @@ const PageTemplate = props => {
                 <GraphQLErrorList errors={errors} />
             )}
         </Container>
+        <div
+        sx = {{
+          height: '45vh',
+        }}
+        >
         <SanityHero
           titleText= {galleryPage.title}
           // buttonText="Inquire About Your Remodeling Project"
@@ -31,8 +36,11 @@ const PageTemplate = props => {
           opacity = '1'
           bg = {galleryPage.featuredImage.asset.fluid}
         />
-
-        {galleryPage._rawBlockContent && <BlockContent blocks={galleryPage._rawBlockContent} />}
+        </div>
+        {galleryPage._rawBlockContent && 
+        
+        <BlockContent blocks={galleryPage._rawBlockContent} />
+        }
         </Layout>
   )
 }

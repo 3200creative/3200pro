@@ -3,54 +3,28 @@ import { jsx, Styled } from "theme-ui"
 import { Link } from 'gatsby'
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
-//import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Grid, Box } from 'theme-ui'
 
 const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2, py, bg, bgc, ctaHeight, opacity, overlayRGBA, maxHeight, subTitleText, alt }) => {
-  // const data = useStaticQuery(
-  //   graphql`
-  //     query sanityHero {
-  //       heroImage: file(relativePath: { eq: "ui/hero-bg.jpg" }) {
-  //         childImageSharp {
-  //           fluid(quality: 80, maxWidth: 1920) {
-  //             ...GatsbyImageSharpFluid_withWebp
-  //           }
-  //         }
-  //       }
-  //     }
-  //   `
-  // )
   const heroBg = bg ? bg : 'none'
   const customOpacity = opacity;
   const customMaxHeight = maxHeight;
   return (
     <>
-    {/* <BackgroundImage
-      fluid={heroBg}
-      backgroundColor= {bgc}
-      sx={{
-        minHeight: ctaHeight || ['70vh','40vh'],
-        width: "100vw",
-        position: "relative",
-        left: "calc(-50vw + 50%)",
-        variant:"variants.hero1"
-      }}
-    >  */}
     <div sx= {{
           position: 'absolute',
           objectFit: 'cover',
           width: '100vw',
           left: "calc(-50vw + 50%)",
-          minHeight: ctaHeight || ['70vh','40vh'],
-          maxHeight: customMaxHeight ? customMaxHeight : '500px',
           top: 0,
           opacity: customOpacity ? customOpacity : '.3',
           overflow: 'hidden',
         }}><Img fluid={heroBg} 
         sx={{
           maxWidth: '100vw',
-          minHeight: ctaHeight || ['70vh','40vh', null, null],
+          marginTop: ['0', '0', '-10vw', '-20vw', '-20vw'],
+          //minHeight: ctaHeight || ['70vh','40vh', null, null],
         }}
         alt={alt}
         />
@@ -104,7 +78,6 @@ const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2
         </Link></Box>)}
         </Grid>
       </div>
-    {/* </BackgroundImage> */}
     </>
   )
 }

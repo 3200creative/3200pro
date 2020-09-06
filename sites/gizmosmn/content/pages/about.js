@@ -1,11 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import SiteLayout from 'c32-gatsby-theme-core/src/components/layout'
 import { SEO, Layout } from "c32-gatsby-theme-core"
 import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error-lists'
-import Container from 'c32-gatsby-theme-core/src/components/container'
 import BlockContent from '../../src/components/block-content'
-import Hero from 'c32-gatsby-theme-components/src/components/ui/sanity-hero-faux-bg'
+import SanityHero from 'c32-gatsby-theme-components/src/components/ui/sanity-hero-faux-bg'
 
 export const query = graphql`
   query AboutPageQuery {
@@ -48,13 +46,12 @@ const AboutPage = props => {
   }
 
   return (
-    <SiteLayout>
+    <Layout>
       <SEO 
       title={page.seo.metaTitle}
       description={page.seo.metaDesc}
       />
-      <Container>
-      <Hero
+      <SanityHero
           titleText= { page.header }
           buttonText="Inquire About Your Remodeling Project"
           buttonLink="/contact"
@@ -62,10 +59,8 @@ const AboutPage = props => {
           bg = { bg }
           opacity = '1'
         />
-        <h1>{page.header}</h1>
         <BlockContent blocks={page._rawBlockContent || []} />
-      </Container>
-    </SiteLayout>
+    </Layout>
   )
 }
 

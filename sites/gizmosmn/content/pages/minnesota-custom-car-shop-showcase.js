@@ -104,7 +104,10 @@ const Showcase = props => {
           bg = { bg }
           opacity = '1'
         />
-        <BlockContent blocks={page._rawBlockContent || []} />
+        {/* <BlockContent blocks={page._rawBlockContent || []} /> */}
+        <div sx={{
+        variant: 'variants.primaryContent',
+        }}>
         <Grid 
             width={[ '100%', '40%' ]}
             gap={6}
@@ -139,6 +142,7 @@ const Showcase = props => {
         </Link>
         ))}
         </Grid>
+        </div>
       </Container>
     </SiteLayout>
   )
