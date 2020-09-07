@@ -15,7 +15,7 @@ function ImageCardBlock (props) {
     <Grid
     width={[ '100%', '30%' ]}
     gap={3}
-    columns={[ 1, 3 ]}
+    columns={[ 1, 3]}
     sx={{
       marginTop: '40px'
     }}
@@ -38,8 +38,8 @@ function ImageCardBlock (props) {
             variant: 'variants.shadow',
             height: '200px',
           }}
-          src={imageUrlFor(buildImageObj(card.blockImage)).width(1200).url()}
-          alt={card.blockImage.alt}
+          src={imageUrlFor(buildImageObj(card.blockImage)).width(400).url()}
+          alt={card.blockImage.alt ? card.blockImage.alt : 'Minnesota Custom Car Shop'}
           />
     <h4
      sx={{
