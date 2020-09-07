@@ -10,7 +10,7 @@ const Figure = (props, {node}) => {
     <figure  sx={{
       width: '100%',
       mx: 'auto',
-      my: '80px',
+      variant: 'variants.globalFigure'
     }}>
       {props.asset && (
         <img sx={{

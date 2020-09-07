@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
 import './gallery.css'
 import React, { useState } from 'react';
 import Modal from 'react-modal';
@@ -14,6 +14,7 @@ import { buildPageImageObj } from '../../../src/lib/helpers'
 const sanityConfig = {projectId: 'yit7sywj', dataset: 'production'}
 const customStyles = {
   overlay: {zIndex: 1000},
+  backgroundColor: 'rgba(0,0,0,.5)',
 };
 
 
@@ -28,7 +29,11 @@ function Gallery (props) {
       isOpen= {openModal}
       contentLabel="Example Modal"
       closeTimeoutMS = {1000}
+      onClick={() => {
+        setOpen(false)
+      }}
       sx = {{
+        
         position: "relative",
     top: "auto",
     left: "auto",
@@ -36,27 +41,38 @@ function Gallery (props) {
     bottom: "auto",
     maxWidth: "100%",
     margin: "32px auto",
+    height: '100vh',
     width: '100%',
     padding: 0,
     border: 0,
+    alignItems: 'center',
+    display: 'flex',
+    justifyContent: 'center'
       }}
     >
       <button onClick={() => {setOpen(false)}}
       sx = {{
-        right: 0,
-        top: 90,
-        position: 'absolute',
+        right: '10px',
+        padding: '20px',
+        color: 'white',
+        backgroundColor: 'black',
+        bottom: '10px',
+        border: 'none',
+        borderRadius: '4px',
+        position: 'fixed',
+        boxShadow: '0 30px 60px -10px rgba(0,0,0,0.3), 0 18px 36px -18px rgba(0,0,0,0.5) !important',
       }}
       >
-        X
+        Close
       </button>
     <figure
     onClick={() => {
       setOpen(false)
     }}
     sx={{
-        width: '90vw',
+        width: '100vw',
         maxHeight: '100vh',
+        maxWidth: '100%',
         textAlign: 'center',
         
 
@@ -66,6 +82,7 @@ function Gallery (props) {
             maxWidth: '100%',
             marginTop: '5vh',
             maxHeight: '80vh',
+            boxShadow: '0 30px 60px -10px rgba(0,0,0,0.3), 0 18px 36px -18px rgba(0,0,0,0.5) !important',
           }}
           src={ currentImage }
           alt='Minnesota Custom Cars'
@@ -88,7 +105,8 @@ function Gallery (props) {
       >
       <figure
       sx={{
-        //mx: [0, 1],
+        margin: ['20px', '40px'],
+        variant: 'variants.globalFigure'
       }}
       onClick={() => { 
         changeImage(imageUrlFor(buildPageImageObj(image))

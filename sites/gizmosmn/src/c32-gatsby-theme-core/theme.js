@@ -95,6 +95,11 @@ export default {
       padding: 2,
       textAlign: "inherit",
     },
+    figure: {
+      backgroundColor: 'red',
+      margin: '20px',
+      padding: '10px'
+    },
     td: {
       borderWidth: "2px",
       borderStyle: "solid",
@@ -106,6 +111,9 @@ export default {
   variants: {
     whiteTextShadow: {
       textShadow: '1px 1px 6px rgba(0, 0, 0, 0.32)',
+    },
+    globalFigure: {
+
     },
     hero1: {
       h1: {

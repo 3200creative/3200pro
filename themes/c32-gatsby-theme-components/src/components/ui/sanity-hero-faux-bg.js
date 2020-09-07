@@ -15,6 +15,7 @@ const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2
     <div sx= {{
           position: 'absolute',
           objectFit: 'cover',
+          minHeight: '350px',
           width: '100vw',
           left: "calc(-50vw + 50%)",
           top: 0,
@@ -22,6 +23,7 @@ const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2
           overflow: 'hidden',
         }}><Img fluid={heroBg} 
         sx={{
+          minHeight: '350px',
           maxWidth: '100vw',
           marginTop: ['0', '0', '-10vw', '-20vw', '-20vw'],
           //minHeight: ctaHeight || ['70vh','40vh', null, null],
@@ -48,6 +50,7 @@ const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2
         <Styled.h1 
         sx={{
           color: "white",
+          textShadow: '1px 1px 6px rgba(0, 0, 0, 0.72)',
           variant: 'variant:"variants.hero1.h1',
           }}>{titleText}</Styled.h1>
         <p sx={{
