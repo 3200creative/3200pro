@@ -130,7 +130,7 @@ const Showcase = props => {
         }}
         src={imageUrlFor(buildPageImageObj(post.node.featuredImage))
           .width(1200)
-          .format('webp')
+          .auto('format')
           .url()
           
         }

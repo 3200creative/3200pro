@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
+import './gallery.css'
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import { Grid } from 'theme-ui'
@@ -11,29 +12,33 @@ import { getFluidGatsbyImage } from "gatsby-source-sanity"
 import Img from "gatsby-image"
 import { buildPageImageObj } from '../../../src/lib/helpers'
 const sanityConfig = {projectId: 'yit7sywj', dataset: 'production'}
+const customStyles = {
+  overlay: {zIndex: 1000},
+};
+
 
 function Gallery (props) {
-  
+  Modal.setAppElement(`#___gatsby`);
   const [openModal, setOpen] = useState(false)
   const [currentImage, changeImage] = useState('cat')
   const columns = props.column
   return (
     <>
-    {/* <Modal
+    <Modal style={customStyles}
       isOpen= {openModal}
       contentLabel="Example Modal"
+      closeTimeoutMS = {1000}
       sx = {{
-        paddingTop: 90,
-        bg: 'rgba(0,0,0,.9)',
-        display: 'grid',
-        gridAutoColumns: '1fr 1fr 1fr',
-        gridTemplateRows: 'auto',
-        height: '100vh',
-        width: '100vw',
-        position: 'fixed',
-        left: '0',
-        top: '0',
-        zIndex: '9999999',
+        position: "relative",
+    top: "auto",
+    left: "auto",
+    right: "auto",
+    bottom: "auto",
+    maxWidth: "100%",
+    margin: "32px auto",
+    width: '100%',
+    padding: 0,
+    border: 0,
       }}
     >
       <button onClick={() => {setOpen(false)}}
@@ -55,18 +60,18 @@ function Gallery (props) {
         textAlign: 'center',
         
 
-      }}>        
-        <Img sx={{
+      }}>
+        <img sx={{
             variant: 'variants.shadow',
             maxWidth: '100%',
             marginTop: '5vh',
             maxHeight: '80vh',
           }}
-          fluid={ currentImage }
-          alt='lightbox'
-          />
+          src={ currentImage }
+          alt='Minnesota Custom Cars'
+          />       
     </figure>
-    </Modal> */}
+    </Modal>
   <Masonry
     className={'my-gallery-class'} // default ''
     elementType={'div'} // default 'div'
@@ -82,17 +87,22 @@ function Gallery (props) {
       }}
       >
       <figure
-      onClick={() => {        
-        changeImage(getFluidGatsbyImage(image,{ maxWidth: 800 }, sanityConfig));
+      sx={{
+        //mx: [0, 1],
+      }}
+      onClick={() => { 
+        changeImage(imageUrlFor(buildPageImageObj(image))
+        .width(1200)
+        .auto('format')
+        .url())
         setOpen(true)
       }}
-
       >
         {image.asset && (
           <img sx={{
             variant: 'variants.shadow',
             maxWidth: '100%',
-            //minHeight: [null ,columns === '33%' ? '180px' : '260px'],
+           minHeight: [null ,columns === '33%' ? '180px' : '260px'],
           }}
           src={imageUrlFor(buildPageImageObj(image))
             .width(1200)
