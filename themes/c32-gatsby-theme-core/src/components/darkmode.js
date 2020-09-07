@@ -20,7 +20,11 @@ const DarkModeIcon = () => {
         top: '20px',
         right: '30px',
         color: colorMode === 'light' ? 'text' : 'text',
-        variant: 'variants.darkmodeicon'
+        outline: 'none !important',
+        variant: 'variants.darkmodeicon',
+        ':focus': {
+          outline: 'none !important',
+        },
       }}
       onClick ={e => {
         setColorMode(newColorMode)        
