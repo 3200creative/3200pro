@@ -16,7 +16,7 @@ function BoatPreview (props) {
   return (
     <Grid item xs={10} md={5}>
     
-    <Link to={getBoatUrl(props.slug.current)}>
+    <Link to={getBoatUrl(props.slug.current, props.boatType._id)}>
     <div
     sx= {{
        variant: 'variants.postPreview.archiveImages'

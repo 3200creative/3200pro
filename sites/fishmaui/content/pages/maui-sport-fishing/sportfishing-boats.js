@@ -15,7 +15,7 @@ export const query = graphql`
     boat: allSanityBoat(
       filter: { 
           slug: { current: { ne: null } },
-          boatType: {elemMatch: {title: {eq: "Sport Fishing Charter"}}}
+          boatType: {elemMatch: {_id: {eq: "drafts.92303495-a1f7-44a3-8603-51b8703f4a87"}}}
           }
       ){
       edges {
@@ -27,6 +27,9 @@ export const query = graphql`
               _id
             }
             alt
+          }
+          boatType {
+            _id
           }
           _rawExcerpt
           slug {

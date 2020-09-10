@@ -102,7 +102,7 @@ function Gallery (props) {
       >
       <figure
       onClick={() => {        
-        changeImage(getFluidGatsbyImage(image.asset._ref,{ maxWidth: 800 }, sanityConfig));
+        changeImage(getFluidGatsbyImage(image.asset._resf,{ maxWidth: 800 }, sanityConfig));
         setOpen(true)
       }}
       >

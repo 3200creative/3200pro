@@ -58,7 +58,7 @@ const ContactPage = props => {
         }}
         >
         <Typeform 
-          url= "https://demo.typeform.com/to/mjndet"
+          url= "https://demo.typeform.com/to/NutWBI"
           buttonText = "Click Here To Contact By Email"
         />
         </div>

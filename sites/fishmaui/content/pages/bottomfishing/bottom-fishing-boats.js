@@ -13,15 +13,19 @@ import BlockContent from '../../../src/components/block-content'
 export const query = graphql`
   query bottomBoatArchiveQuery {
     boat: allSanityBoat(
+      sort: {fields: archiveOrder}
       filter: { 
           slug: { current: { ne: null } },
-          boatType: {elemMatch: {title: {eq: "Bottom Fishing Charter"}}}
+          boatType: {elemMatch: {_id: {eq: "drafts.9483f680-0b87-41c7-b330-d47c822eccec"}}}
           }
       ){
       edges {
         node {
           title
           id
+          boatType {
+            _id
+          }
           featuredImage {
             asset {
               _id
@@ -43,7 +47,7 @@ const Page = props => {
   if (errors) {
     return (
       <Layout>
-        <GraphQLErrorList errors={errors} />
+        <GraphQLErrorList ersrors={errors} />
       </Layout>
     )
   }
@@ -63,7 +67,6 @@ const Page = props => {
       description='PlaceHolder'
       />
       <Container>
-        {/* <BlockContent blocks={page._rawBlockContent || []} /> */}
       {boat && boat.length > 0 && <BoatPreviewGrid nodes={boat} />}
       </Container>
     </SiteLayout>

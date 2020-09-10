@@ -6,6 +6,8 @@ import ButtonBlock from './ButtonBlock'
 import SanityScript from './Script'
 import ImgLeftTxtRight from './ImgLeftTxtRight'
 import DarkmodeImage from './DarkmodeImage'
+import Gallery from './Gallery'
+import Highlight from './Highlight'
 const serializers = {
   types: {
     block (props) {
@@ -24,6 +26,9 @@ const serializers = {
 
         case 'blockquote':
           return <blockquote>{props.children}</blockquote>
+        
+        case 'highlight':
+          return <span className='highlight'>{props.children}</span>
 
         default:
           return <p>{props.children}</p>
@@ -31,6 +36,9 @@ const serializers = {
     },
     figure (props) {
       return <Figure {...props.node} />
+    },
+    highlight (props) {
+      return <Highlight {...props.node} />
     },
     clear (props) {
       return <Spacer {...props.node} />
@@ -41,6 +49,9 @@ const serializers = {
     buttonBlock (props) {
       return <ButtonBlock {...props.node} />
     },
+    gallery (props) {
+      return <Gallery {...props.node} />
+    },
     imgLeftTxtRight (props) {
       return <ImgLeftTxtRight {...props.node} />
     },
@@ -49,6 +60,11 @@ const serializers = {
     },
     darkmodeImage (props) {
       return <DarkmodeImage {...props.node} />
+    }
+  },
+  marks: {
+    highlight (props) {
+      return <span classNam='highlight'>{props.children}</span>
     }
   }
 }

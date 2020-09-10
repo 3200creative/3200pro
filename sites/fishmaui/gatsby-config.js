@@ -34,7 +34,9 @@ module.exports = {
         // assetPath: `content/assets`,
       },
     },
+    `react-masonry-component`,
     `c32-gatsby-theme-components`,
+    `react-modal`,
     {
       resolve: 'gatsby-source-sanity',
       options: {

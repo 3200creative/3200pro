@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 // import React from 'react'
-// import { graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import SiteLayout from 'c32-gatsby-theme-core/src/components/layout'
 import { SEO, Layout } from "c32-gatsby-theme-core"
 import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error-lists'

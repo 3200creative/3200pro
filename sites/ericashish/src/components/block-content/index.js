@@ -24,6 +24,9 @@ const serializers = {
         case 'h2':
           return <h2>{props.children}</h2>
 
+        case 'highlight':
+          return <span class='highlight'>{props.children}</span>
+
         case 'h3':
           return <h3>{props.children}</h3>
 
