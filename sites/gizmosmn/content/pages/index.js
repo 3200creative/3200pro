@@ -63,7 +63,11 @@ const Homepage = props => {
           bg = { bg }
           maxHeight = '100px'
         />
+        <div sx={{
+          variant: 'variants.primaryContentWrapper'
+        }}>
           <BlockContent blocks={page._rawBlockContent || []} />
+        </div>
       </Container>
     </SiteLayout>
   )

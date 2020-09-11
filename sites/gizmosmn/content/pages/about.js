@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import React from 'react'
 import { graphql } from 'gatsby'
 import { SEO, Layout } from "c32-gatsby-theme-core"
@@ -59,7 +61,11 @@ const AboutPage = props => {
           bg = { bg }
           opacity = '1'
         />
+        <div sx={{
+          variant: 'variants.primaryContentWrapper'
+        }}>
         <BlockContent blocks={page._rawBlockContent || []} />
+        </div>
     </Layout>
   )
 }

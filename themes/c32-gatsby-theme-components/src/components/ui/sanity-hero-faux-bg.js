@@ -26,6 +26,7 @@ const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2
           minHeight: '350px',
           maxWidth: '100vw',
           marginTop: ['0', '0', '-10vw', '-20vw', '-20vw'],
+          variant: 'variants.cta.img'
           //minHeight: ctaHeight || ['70vh','40vh', null, null],
         }}
         alt={alt}

@@ -35,7 +35,7 @@ const SiteFooter = ({footerBG}) => {
         m: 0, 
         mx: 'auto'
         }}>
-        © {new Date().getFullYear()} {title} | Site Design: <a href={developerLink}> {developer ? developer : 'Localized Pro'}</a>
+        © {new Date().getFullYear()} {title} | Site Design: <a href={developerLink}> {developer ? developer : 'Localized Pro'}</a>, <a href='https://3200.pro'>3200 Pro</a>
       </Styled.p>
       {footerNavItems ? (<ul>
     {

@@ -3,7 +3,7 @@ module.exports = {
     title: `C32 Base`,
     description: `Placeholder description`,
     keywords: [`gatsby`, `theme`, `react`],
-    author: `LocalizedPro`,
+    author: `LocalizedPro | 3200pros`,
     siteUrl: `https://gizmosmn.com/`, 
     social: {
       twitter: `@localizedpro`,

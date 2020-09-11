@@ -13,7 +13,7 @@ import Img from "gatsby-image"
 import { buildPageImageObj } from '../../../src/lib/helpers'
 const sanityConfig = {projectId: 'yit7sywj', dataset: 'production'}
 const customStyles = {
-  overlay: {zIndex: 1000},
+  overlay: {zIndex: 9999999999},
   backgroundColor: 'rgba(0,0,0,.5)',
 };
 
@@ -120,7 +120,7 @@ function Gallery (props) {
           <img sx={{
             variant: 'variants.shadow',
             maxWidth: '100%',
-           minHeight: [null ,columns === '33%' ? '180px' : '260px'],
+            minHeight: [null ,columns === '33%' ? 'auto' : '260px'],
           }}
           src={imageUrlFor(buildPageImageObj(image))
             .width(1200)

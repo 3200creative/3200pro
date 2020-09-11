@@ -15,6 +15,7 @@ const Typeform = ({ url, buttonText }) => {
         border: '1px solid #999',
         borderRadius: '8',
         marginBottom: '40',
+        variant: 'variants.typeform'
     }}>
         <ReactTypeformEmbed 
             url= { url || '#' }

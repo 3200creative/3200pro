@@ -48,8 +48,24 @@ const ContactPage = props => {
       description={page.seo.metaDesc}
       />
       <Container>
-        <h1>{page.header}</h1>
-        <BlockContent blocks={page._rawBlockContent || []} />
+        <div
+        sx= {{ 
+          backgroundColor: '#000',
+          width: '100vw',
+          position: 'relative',
+          marginLeft: '-50vw',
+          left: '50%',
+          height: '100vh'
+        }}
+        >
+        <h1
+        sx= {{
+          color: 'white',
+          margin: '0',
+          textAlign: 'center',
+          paddingTop: 4
+        }}
+        >{page.header}</h1>
         <div
         sx= {{
           m: 2,
@@ -60,7 +76,9 @@ const ContactPage = props => {
         <Typeform 
           url= "https://demo.typeform.com/to/NutWBI"
           buttonText = "Click Here To Contact By Email"
+          s
         />
+        </div>
         </div>
       </Container>
     </SiteLayout>

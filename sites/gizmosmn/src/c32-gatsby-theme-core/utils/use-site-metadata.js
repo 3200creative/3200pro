@@ -55,9 +55,10 @@ export const useSiteMetadata = () => {
   const seoImage = data.seoImage.childImageSharp.resize
   const metaData = data.site.siteMetadata
   const twitterUsername = data.site.siteMetadata.social.twitter
-
+  const developerLink = 'https://localizedpro.com'
+  const developer = 'Localized Pro'
   // Local Business Schema
-  const allData = { ...metaData, title, logo, seoImage, twitterUsername,
+  const allData = { ...metaData, title,developer,developerLink, logo, seoImage, twitterUsername,
     
     // Local Business Data:
     hasLocalBusinessSchema: true,
@@ -69,7 +70,7 @@ export const useSiteMetadata = () => {
     image: seoImage,
     name: 'Gizmos Custom Cars',
     telephone: '612-845-2515',
-    priceRange: '$',
+    priceRange: '$$$',
     url: data.site.siteMetadata.url,
     bestRating: '5',
     ratingCount: '5',

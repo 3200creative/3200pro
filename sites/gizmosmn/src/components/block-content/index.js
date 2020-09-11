@@ -58,9 +58,11 @@ const serializers = {
   }
 }
 
-const BlockContent = ({ blocks }) => 
+const BlockContent = ({ blocks, colorBG }) => 
 <div sx={{
+        
         variant: 'variants.primaryContent',
+        backgroundColor: colorBG ? colorBG : null,
         }}><BaseBlockContent blocks={blocks} serializers={serializers} /></div>
 
 export default BlockContent

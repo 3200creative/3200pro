@@ -34,7 +34,7 @@ export default {
     },
 
     footer: {
-      background: baseColors.black,
+      backgroundColor: '#000',
       text: baseColors.white,
       links: '#333',
       icons: baseColors.gray[8],
@@ -115,6 +115,17 @@ export default {
     globalFigure: {
 
     },
+    cta: {
+      img: {
+        borderBottom: '4px solid #333'
+      },
+    },
+    siteContainer: {
+      background: '#000'
+    },
+    typeform: {
+      border: 'none'
+    },
     hero1: {
       h1: {
         fontSize: [30, 60, 80],
@@ -128,13 +139,14 @@ export default {
         mx: 2,
       },
     },
+    
     footer: {
       padding: 0,
-      backgroundColor: 'background',
-      color: '#666',
+      backgroundColor: '#000',
+      color: '#fff',
       fontSize: '16px',
       a: {
-        color: '#666',
+        color: '#fff',
       },
     },
     header: {
@@ -165,8 +177,12 @@ export default {
     siteTitle: {
       fontSize: [4, null, 5, null, null],
     },
+    primaryContentWrapper: {
+      marginTop: [0,0,'30vw','35vw',null]
+    },
     primaryContent: {
       backgroundColor: '#fff',
+      borderRadius: '8px',
         zIndex: '999999',
         position: 'relative',
         py: 2,
