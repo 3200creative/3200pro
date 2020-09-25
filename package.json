@@ -55,9 +55,14 @@
     "fm:dev": "yarn workspace fishmaui develop",
     "fm:build": "yarn workspace fishmaui build",
     "fm:serve": "yarn workspace fishmaui serve",
-    "fm:clean": "yarn workspace fishmaui clean"
+    "fm:clean": "yarn workspace fishmaui clean",
+    "fynn:dev": "yarn workspace fynn develop",
+    "fynn:build": "yarn workspace fynn build",
+    "fynn:serve": "yarn workspace fynn serve",
+    "fynn:clean": "yarn workspace fynn clean"
   },
   "dependencies": {
     "core-js": "^3.6.5"
-  }
+  },
+  "version": "1.22.5"
 }
