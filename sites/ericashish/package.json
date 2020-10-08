@@ -12,7 +12,7 @@
     "@sanity/image-url": "^0.140.19",
     "c32-gatsby-theme-components": "*",
     "c32-gatsby-theme-core": "*",
-    "cypress": "^4.0.2",
+    "cypress": "^5.3.0",
     "dotenv": "^8.2.0",
     "gatsby": "^2.24.65",
     "gatsby-plugin-mailchimp": "^5.2.2",

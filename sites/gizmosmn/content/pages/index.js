@@ -61,7 +61,6 @@ const Homepage = props => {
           overlayRGBA='rgba(0,0,0,.4)'
           opacity = '1'
           bg = { bg }
-          maxHeight = '100px'
         />
         <div sx={{
           variant: 'variants.primaryContentWrapper'

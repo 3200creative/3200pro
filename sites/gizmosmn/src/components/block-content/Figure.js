@@ -16,7 +16,7 @@ const Figure = (props, {node}) => {
         <img sx={{
           variant: 'variants.shadow',
           maxWidth: '100%',
-          width: '700px',
+          width: props.fullWidth ? '100%' : null,
           margin: '0 auto',
           float: 'none',
           display: 'block',

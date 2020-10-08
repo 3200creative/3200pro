@@ -5,7 +5,7 @@ import { SEO, Layout } from "c32-gatsby-theme-core"
 import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error-lists'
 import Container from 'c32-gatsby-theme-core/src/components/container'
 import BlockContent from './block-content'
-import SanityHero from 'c32-gatsby-theme-components/src/components/ui/sanity-hero-faux-bg'
+import Hero from 'c32-gatsby-theme-components/src/components/ui/sanity-hero-faux-bg'
 
 const PageTemplate = props => {
     const { data, errors } = props
@@ -23,16 +23,15 @@ const PageTemplate = props => {
                 <GraphQLErrorList errors={errors} />
             )}
         </Container>
-        <SanityHero
+        <div><Hero
           titleText= {galleryPage.title}
           // buttonText="Inquire About Your Remodeling Project"
           // buttonLink="/contact"
           overlayRGBA='rgba(0,0,0,.4)'
-          opacity = '1'
+          opacity = '.3'
           bg = {galleryPage.featuredImage.asset.fluid}
-        />
+        /></div>
         {galleryPage._rawBlockContent && 
-        
         <BlockContent blocks={galleryPage._rawBlockContent} />
         }
         </Layout>

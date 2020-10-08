@@ -6,10 +6,9 @@ import React from 'react'
 import Img from "gatsby-image"
 import { Grid, Box } from 'theme-ui'
 
-const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2, py, bg, bgc, ctaHeight, opacity, overlayRGBA, maxHeight, subTitleText, alt }) => {
+const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2, py, bg, bgc, ctaHeight, opacity, overlayRGBA, customMaxWidth, subTitleText, alt }) => {
   const heroBg = bg ? bg : 'none'
   const customOpacity = opacity;
-  const customMaxHeight = maxHeight;
   return (
     <>
     <div sx= {{
@@ -24,7 +23,7 @@ const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2
         }}><Img fluid={heroBg} 
         sx={{
           minHeight: '350px',
-          maxWidth: '100vw',
+          width: '100vw',
           marginTop: ['0', '0', '-10vw', '-20vw', '-20vw'],
           variant: 'variants.cta.img'
           //minHeight: ctaHeight || ['70vh','40vh', null, null],

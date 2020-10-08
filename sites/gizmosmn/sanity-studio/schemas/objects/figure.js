@@ -26,6 +26,11 @@ export default {
         isHighlighted: true,
       },
     },
+    {
+      name: 'fullWidth',
+      type: 'boolean',
+      title: 'Full Width',
+    },
   ],
   preview: {
     select: {
