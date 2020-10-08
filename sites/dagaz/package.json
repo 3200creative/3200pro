@@ -7,7 +7,7 @@
   "dependencies": {
     "c32-gatsby-theme-components": "*",
     "c32-gatsby-theme-core": "*",
-    "gatsby": "^2.24.51",
+    "gatsby": "^2.24.65",
     "gatsby-plugin-google-analytics": "^2.3.4",
     "gatsby-plugin-preact": "^4.0.9",
     "gatsby-source-sanity": "^6.0.0",

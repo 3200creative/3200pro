@@ -145,6 +145,9 @@ export default {
       width: ['100%', null,'400px', null],
       height: 'auto',
     },
+    starCount: {
+      color: 'yellow'
+    },
     shadow: {
       boxShadow: 'shadowStyle1',
     },

@@ -10,25 +10,21 @@ export default {
     },
     {
       title: 'URL',
-      name: 'link',
-      type: 'object',
-      fields: [
-        {
-          title: 'URL',
-          name: 'href',
-          type: 'url',
-          validation: Rule =>
-            Rule.uri({
-              allowRelative: true,
-              scheme: ['https', 'http', 'mailto', 'tel'],
-            }),
-        },
-        {
-          title: 'Open in new tab?',
-          name: 'blank',
-          type: 'boolean',
-        },
-      ],
+      name: 'href',
+      type: 'url',
+      validation: Rule =>
+        Rule.uri({
+          allowRelative: true,
+          scheme: ['https', 'http', 'mailto', 'tel'],
+        }),
+    },
+    {
+      title: 'Open in new tab?',
+      name: 'blank',
+      type: 'boolean',
     },
   ],
+  initialValue: {
+    blank: true
+  },
 }

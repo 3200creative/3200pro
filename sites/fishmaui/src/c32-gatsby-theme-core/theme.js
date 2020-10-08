@@ -144,11 +144,64 @@ export default {
       lineHeight: '1'
     },
   },
+  reviews:  {
+    container: {
+      borderTop: '1px solid #ddd',
+    },
+    singleReview: {
+      border: '1px solid #ddd',
+      padding: 5,
+      my: 5,
+      titleBlock: {
+        display: 'flex',
+        mb: 3,
+      },
+      title: {
+        fontSize: 24,
+        my: 0,
+        mx: 2,
+      },
+      meta: {
+        display: 'flex',
+        fontSize: 16,
+        div: {
+          background: '#f5f5f5',
+          padding: 2,
+        },
+      },
+    },
+  },
+  archive: {
+    singleItem: {
+      padding: 2,
+      borderRadius: 4,
+      minHeight: '100%',
+      boxShadow: 'shadowStyle1',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'stretch',
+      media: {
+      },
+      body: {
+        flexGrow: '1',
+      },
+      footer: {
+        display: 'flex',
+        flex: '1 0 auto',
+        alignItems: 'flex-end',
+        justifyContent: 'center',
+        flexDirection: 'column',
+      }, 
+    },
+  },
   variants: {
     siteContainer: {
       maxWidth: '1500px',
       margin: '0 auto',
       boxShadow: 'shadowStyle1'
+    },
+    starCount: {
+      color: 'yellow'
     },
     subHeader: {
       marginTop: '100px',
@@ -227,17 +280,6 @@ export default {
       backgroundColor: 'light',
       height: '1px',
       my: 5
-    },
-    postPreview: {
-      my: [6],
-      a: {
-        color: 'text'
-      },
-      archiveImages: {
-        backgroundColor: 'darkbg2',
-        
-        boxShadow: 'shadowStyle1',
-      }
     },
     navLinkStyles: {
       fontWeight: '400',

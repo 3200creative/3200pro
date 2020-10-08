@@ -7,6 +7,7 @@ import { useSiteMetadata } from "c32-gatsby-theme-core"
 
 const SanityNav = () => {
   const [isNavOpen, setIsNavOpen] = useContext(NavContext)
+  const { menuLinks } = useSiteMetadata()
   const { navItems } = useSiteMetadata()
   return (
     <nav
@@ -19,7 +20,7 @@ const SanityNav = () => {
         mt: isNavOpen ? 2 : 0,
         display: [isNavOpen ? "flex" : "none", null, "flex", null, null],
         flexDirection: ["column", null, "row", null, null],
-        variant: "variants.navStyles"
+        variant: "variants.navStyles",
       }}
       role="navigation"
       aria-label="main-navigation"
@@ -48,6 +49,7 @@ const SanityNav = () => {
                 px: 1,
                 mr: [0, null, 2, null, null],
                 position: "relative",
+                color: 'text',
                 fontWeight: "bold",
                 letterSpacing: "1px",
                 transition: "all 0.2s ease",

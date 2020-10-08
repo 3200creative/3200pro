@@ -9,6 +9,7 @@ const SEO = ({
   meta,
   keywords: propKeywords,
   title: propTitle,
+  image: propImage,
   isBlogPost,
 }) => {
   const {
@@ -25,6 +26,7 @@ const SEO = ({
     addressRegion,
     postalCode,
     streetAddress,
+    image,
     name,
     telephone,
     priceRange,
@@ -159,6 +161,8 @@ const SEO = ({
         )
         .concat(meta)}     
     >
+      {console.log('Check Schema')}
+      {console.log(siteUrl)}
       
     {checkBusinessSchema ? <script type="application/ld+json">{JSON.stringify(schemaOrgLocalBusiness)}</script> : null}
     </Helmet>

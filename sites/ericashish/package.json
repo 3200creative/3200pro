@@ -14,7 +14,7 @@
     "c32-gatsby-theme-core": "*",
     "cypress": "^4.0.2",
     "dotenv": "^8.2.0",
-    "gatsby": "^2.19.19",
+    "gatsby": "^2.24.65",
     "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-material-ui": "^2.1.10",
     "gatsby-source-sanity": "^6.0.1",

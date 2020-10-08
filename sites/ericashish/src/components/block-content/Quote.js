@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
 
 function Quote (props) {
   return (
-    <p>{props.text}</p>
+    <Styled.blockquote><p>{props.text}</p></Styled.blockquote>
   )
 }
 

@@ -64,7 +64,7 @@ const serializers = {
   },
   marks: {
     highlight (props) {
-      return <span classNam='highlight'>{props.children}</span>
+      return <span className='highlight' >{props.children}</span>
     }
   }
 }

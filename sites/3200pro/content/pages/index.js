@@ -56,6 +56,7 @@ const Homepage = props => {
         }}
         >
           <h1>{page.displayedTitle}</h1>
+          
           <BlockContent blocks={page._rawHeroText || []} />
           <BlockContent blocks={page._rawBlockContent || []} />
         </div>

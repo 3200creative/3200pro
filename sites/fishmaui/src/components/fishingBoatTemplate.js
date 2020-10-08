@@ -9,6 +9,7 @@ import Container from 'c32-gatsby-theme-core/src/components/container'
 import BlockContent from './block-content'
 //import FeaturedImage from './FeaturedImage'
 import PostContent from './singlePostContainer'
+import Reviews from './reviews'
 //import { format, distanceInWords, differenceInDays } from 'date-fns'
 //import MailChimpForm from '../../src/components/MailChimpForm'
 
@@ -46,6 +47,7 @@ const FishingBoatTemplate = props => {
               featuredImage={page.featuredImage}
             /> */}
         {page._rawBlockContent && <BlockContent blocks={page._rawBlockContent} />}
+        <Reviews filterReviews={page.title}/>
         </PostContent>
         </Layout>
   )
@@ -62,6 +64,21 @@ export const query = graphql`
             current
         }
         _rawBlockContent(resolveReferences: {maxDepth: 20})
-  }
+    }
+    reviews: allSanityReview {
+      edges {
+        node {
+          id
+          boatReviewed {
+            title
+          }
+          _rawBlockContent
+          _rawAdminResponse
+          title
+          reviewerName
+          rating
+        }
+      }
+    }
   }
 `

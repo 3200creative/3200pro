@@ -35,7 +35,7 @@ export default {
         {
           type: 'reference',
           to: {
-            type: 'category'
+            type: 'productCategory'
           }
         }
       ],

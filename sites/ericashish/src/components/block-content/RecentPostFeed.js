@@ -2,21 +2,14 @@
 import { jsx } from "theme-ui"
 import React, { useContext} from 'react'
 import { format, distanceInWords, differenceInDays } from 'date-fns'
-import Img from "gatsby-image"
 import { Link } from 'gatsby'
 import { graphql, useStaticQuery } from "gatsby"
-// import { Grid } from 'theme-ui'
-// import { Box } from 'theme-ui'
-import {mapEdgesToNodes, filterOutDocsWithoutSlugs} from '../../lib/helpers'
 import { buildImageObjMap } from '../../lib/helpers'
 import { imageUrlFor } from '../../lib/image-url'
-import Masonry from 'react-masonry-component';
-// import { GridLayoutContext } from '../articleFeedLayout'
-// import { GridLayoutProvider } from '../articleFeedLayout'
 import ArticleLayoutToggle  from '../ArticleLayoutToggle'
 import { GridLayoutContext } from '../articleFeedLayout'
-import Grid from '@material-ui/core/Grid';
-
+import Grid from '@material-ui/core/Grid'
+import TxtColorChange from '../TxtColorChange'
 function RecentPostFeed (props) {
   const data = useStaticQuery(graphql`
     query  { 
@@ -146,6 +139,20 @@ function RecentPostFeed (props) {
           }
         }
       }
+      colors: sanityGlobalOptions {
+      teaColor {
+          hex
+        }
+        musicColor {
+          hex
+        }
+        lifeColor {
+          hex
+        }
+        businessColor {
+          hex
+        }
+      }
       music: allSanityMusic(
         sort: {fields: [publishedAt], order: DESC }
         filter: { slug: { current: { ne: null } } }
@@ -194,49 +201,43 @@ function RecentPostFeed (props) {
   let contentType = props.contentType
   let maxCount = null
   let base = contentType
-  const businessPosts = data && data.business.edges
-  const lifePosts = data && data.life.edges
-  const teaPosts = data && data.tea.edges
-  const musicPosts = data && data.music.edges
+  let color = null
+  const businessPosts = data ? data.business.edges : null
+  const lifePosts = data ? data.life.edges : null 
+  const teaPosts = data ? data.tea.edges : null
+  const musicPosts = data ? data.music.edges : null
+  const colors = data && data.colors
   const count = props.postCount
   switch(contentType) {
     case 'business':
       contentType = businessPosts
       base = 'business'
+      color = colors.businessColor.hex
       maxCount = contentType.length
       break
     case 'tea':
       contentType = teaPosts
       base = 'tea'
+      color = colors.teaColor.hex
       maxCount = contentType.length
       break
     case 'music':
       contentType = musicPosts
       base = 'music'
       maxCount = contentType.length
+      color = colors.musicColor.hex
       break
     case 'life':
       contentType = lifePosts
       base = 'life'
       maxCount = contentType.length
+      color = colors.lifeColor.hex
       break
   }
-  
+
   const { gridLayout = 'lists', hasSetGridLayout, setGridLayout, getGridLayout } = useContext(
     GridLayoutContext,
   );
-  const url = typeof window !== 'undefined' ? window.location.href : ''
-  let isHome = 'false'
-  const defineHome = () => {
-    if(url === 'http://localhost:8000'){
-      return true
-    }
-    if(url === 'http://ericashish.com'){
-      return true
-    }else {
-      return false
-    }
-  }
 
 
   return (
@@ -244,18 +245,31 @@ function RecentPostFeed (props) {
     <Grid container justify="space-between" sx={{
       paddingTop: 4}}>
     <Grid item xs={8} md={10} sx={{
-      display: [null, null, null,  gridLayout === 'lists' && 'flex' || 'block'],
-      flexDirection: [null, null, null, gridLayout === 'lists' && 'column' || 'none'],
-      justifyContent: [null, null, null,  gridLayout === 'lists' && 'center' || 'none'],
-      }}>{props.link ? (<Link to={props.link}>{props.title}</Link>) : null}</Grid><Grid item xs={4} md={2}><div sx={{display:['none',null,null,'block', null]}}>{props.showToggle ? (<ArticleLayoutToggle />) : null}</div></Grid>
+      display: [null, null, null,  gridLayout == 'lists' ? 'flex' : 'block'],
+      flexDirection: [null, null, null, gridLayout == 'lists'? 'column' : 'none'],
+      justifyContent: [null, null, null,  gridLayout == 'lists' ? 'center' : 'none'],
+      }}>{props.link ? (
+        <Link 
+        sx= {{
+          backgroundColor: color ? color : '#000',
+          color: 'white',
+          border: `1px solid white`,
+          size: 'max-content',
+          px: 4,
+          py: 2,
+          borderRadius: 100,
+          variant: 'variants.lightShadow'
+        }}
+        to={props.link}>{props.title}</Link>
+      ) : null}</Grid><Grid item xs={4} md={2}><div sx={{display:['none',null,null,'block', null]}}>{props.showToggle ? (<ArticleLayoutToggle />) : null}</div></Grid>
     </Grid>
     <Grid container justify="space-between">
     {contentType.slice(0, Math.min(props.postCount ? props.postCount : 100, maxCount)).map(post => (
-      <Grid container key={post.node.key} xs={12} md={gridLayout === 'lists' && 12 || 6} sx={{
+      <Grid container key={post.node.key} xs={12} md={gridLayout === 'lists' ? 12 : 6} sx={{
         py:4}}>
           
-        <Grid item xs={12} md={gridLayout === 'lists' && 6 || 12} sx={{height:gridLayout === 'lists' && [null, null, null, '285px'] || [null, null, null, '360px'], }}>
-          <Link to={defineHome == true ? '' + '/' + post.node.slug.current: post.node.slug.current}>
+        <Grid item xs={12} md={gridLayout === 'lists' ? 6 : 12} sx={{height:gridLayout === 'lists' ? [null, null, null, '285px'] : [null, null, null, '360px'], }}>
+          <Link to={base + '/' + post.node.slug.current}>
             <img
             src={imageUrlFor(buildImageObjMap(post.node.featuredImage))
             .auto('format')
@@ -270,10 +284,10 @@ function RecentPostFeed (props) {
             />
           </Link>
         </Grid>
-        <Grid item xs={12} md={gridLayout === 'lists' && 6 || 12} sx={{
-          display: [null, null, null,  gridLayout === 'lists' && 'flex' || 'block'],
-          flexDirection: [null, null, null, gridLayout === 'lists' && 'column' || 'none'],
-          justifyContent: [null, null, null,  gridLayout === 'lists' && 'center' || 'none'],
+        <Grid item xs={12} md={gridLayout === 'lists' ? 6 : 12} sx={{
+          display: [null, null, null,  gridLayout === 'lists' ? 'flex' : 'block'],
+          flexDirection: [null, null, null, gridLayout === 'lists' ? 'column' : 'none'],
+          justifyContent: [null, null, null,  gridLayout === 'lists' ? 'center' : 'none'],
           height: '100%',
         }}  >
           <h4 sx= {{

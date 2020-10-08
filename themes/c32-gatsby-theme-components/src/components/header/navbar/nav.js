@@ -19,15 +19,11 @@ const Nav = () => {
         mt: isNavOpen ? 2 : 0,
         display: [isNavOpen ? "flex" : "none", null, "flex", null, null],
         flexDirection: ["column", null, "row", null, null],
-        backgroundColor: [isNavOpen ? 'header.backgroundOpen' : 'header.background'],
         variant: "variants.navStyles",
-        height: [isNavOpen ? '100vh' : null],
-        width: [isNavOpen ? '100vw' : null]
       }}
       role="navigation"
       aria-label="main-navigation"
     >
-
       <ul
         sx={{
           display: "flex",
@@ -52,6 +48,7 @@ const Nav = () => {
                 px: 1,
                 mr: [0, null, 2, null, null],
                 position: "relative",
+                color: 'text',
                 fontWeight: "bold",
                 letterSpacing: "1px",
                 transition: "all 0.2s ease",

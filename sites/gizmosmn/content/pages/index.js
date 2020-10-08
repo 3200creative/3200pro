@@ -15,7 +15,7 @@ export const query = graphql`
       _rawBlockContent
       heroImage {
         asset {
-              fluid(maxWidth: 1200) {
+              fluid(maxWidth: 2000) {
                 ...GatsbySanityImageFluid
               }
           }
@@ -56,7 +56,7 @@ const Homepage = props => {
       <Container>
         <Hero
           titleText= { page.header }
-          buttonText="Inquire About Your Remodeling Project"
+          buttonText="Inquire About Your Project"
           buttonLink="/contact"
           overlayRGBA='rgba(0,0,0,.4)'
           opacity = '1'
@@ -66,6 +66,7 @@ const Homepage = props => {
         <div sx={{
           variant: 'variants.primaryContentWrapper'
         }}>
+
           <BlockContent blocks={page._rawBlockContent || []} />
         </div>
       </Container>

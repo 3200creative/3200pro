@@ -104,10 +104,23 @@ export default {
       
     },
     blockquote: {
-      bg: "muted",
-      p: 3,
-      borderLeft: "5px solid",
-      borderColor: "primary",
+      margin: '15px auto 50px',
+      color: 'text',
+      marginLeft: '-200px',
+      marginRight: '-200px',
+      p: {
+        float:'none',
+        textAlign: 'center',
+        fontFamily: 'Merriweather, Georgia, serif',
+        fontStyle: 'italic',
+        paddingRight: '100px',
+        paddingBottom: '0px',
+        width: '100%',
+        margin: '0px auto',
+        fontSize: ['24px','36px'],
+        lineHeight: '1.32',
+        fontWeight: '400',
+      }
     },
     inlineCode: {
       color: "text",
@@ -165,8 +178,7 @@ export default {
     },
     img: {
      boxShadow: '0 30px 60px -10px rgba(0,0,0,0.3), 0 18px 36px -18px rgba(0,0,0,0.33) !important',
-    },
-
+    }
   },
   variants: {
     clearline: {
@@ -177,6 +189,9 @@ export default {
     },
     shadow: {
       boxShadow: '0 30px 60px -10px rgba(0,0,0,0.3), 0 18px 36px -18px rgba(0,0,0,0.33) !important',
+    },
+    lightShadow: {
+      boxShadow: '0 15px 30px -50px rgba(0,0,0,0.3), 0 9px 17px -9px rgba(0,0,0,0.3) !important',
     },
     siteTitle: {
       fontSize: [4, null, 5, null, null],

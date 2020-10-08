@@ -7,13 +7,12 @@ import { Grid } from 'theme-ui'
 import { Box } from 'theme-ui'
 import { imageUrlFor } from '../../lib/image-url'
 import Masonry from 'react-masonry-component';
-import { buildPageImageObj } from '../../../src/lib/helpers'
+import { buildImageObj } from '../../lib/helpers'
 const sanityConfig = {projectId: '4m7jmrdc', dataset: 'production'}
 const customStyles = {
   overlay: {zIndex: 1000},
   backgroundColor: 'rgba(0,0,0,.5)',
 };
-
 
 function Gallery (props) {
   Modal.setAppElement(`#___gatsby`);
@@ -106,7 +105,7 @@ function Gallery (props) {
         variant: 'variants.globalFigure'
       }}
       onClick={() => { 
-        changeImage(imageUrlFor(buildPageImageObj(image))
+        changeImage(imageUrlFor(buildImageObj(image))
         .width(1200)
         .auto('format')
         .url())
@@ -119,11 +118,10 @@ function Gallery (props) {
             maxWidth: '100%',
            minHeight: [null ,columns === '33%' ? '180px' : '260px'],
           }}
-          src={imageUrlFor(buildPageImageObj(image))
+          src={imageUrlFor(buildImageObj(image))
             .width(1200)
             .auto('format')
             .url()
-            
           }
           // fluid={getFluidGatsbyImage(image.asset._ref,{ maxWidth: 800 }, sanityConfig)}
           alt={image.alt}

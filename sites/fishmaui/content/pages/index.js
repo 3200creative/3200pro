@@ -102,9 +102,10 @@ const Homepage = props => {
           minHeight: ['100vh', null, null,'60vh'],
         }}
         />
+
         </div>
         <Grid container spacing={8} style={{margin: '6vh 1vh 6vh 1vh', width: '98%'}}>
-          <Grid item xxs={12} md={6} xl={8} sx={{
+          <Grid item xxs={12} md={6} xl={6} sx={{
             zIndex: '99999',
             }}>
             <h1>{page.displayedTitle}</h1>

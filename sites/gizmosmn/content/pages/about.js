@@ -46,7 +46,7 @@ const AboutPage = props => {
       'Missing "About" page data. Open the studio at http://localhost:3333 and add "About" page data and restart the development server.'
     )
   }
-
+  
   return (
     <Layout>
       <SEO 
@@ -55,7 +55,7 @@ const AboutPage = props => {
       />
       <SanityHero
           titleText= { page.header }
-          buttonText="Inquire About Your Remodeling Project"
+          buttonText="Inquire About Your Project"
           buttonLink="/contact"
           overlayRGBA='rgba(0,0,0,.4)'
           bg = { bg }

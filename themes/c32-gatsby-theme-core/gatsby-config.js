@@ -39,6 +39,53 @@ module.exports = options => {
           path: options.contentPath || `content/pages`,
         },
       },
+      {
+        resolve: `gatsby-plugin-mdx`,
+        options: {
+          extensions: [`.md`, `.mdx`],
+          defaultLayouts: {
+            default: require.resolve("./src/components/layout.js"),
+          },
+          gatsbyRemarkPlugins: [
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                maxWidth: 1440,
+                linkImagesToOriginal: false,
+                withWebp: true,
+                backgroundColor: `transparent`,
+              },
+            },
+            {
+              resolve: `gatsby-remark-copy-linked-files`,
+              options: {
+                destinationDir: `content/assets`,
+              },
+            },
+            { resolve: `gatsby-remark-smartypants` },
+            { resolve: `gatsby-remark-reading-time` },
+          ],
+          remarkPlugins: [remarkSlug],
+          plugins: [
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                maxWidth: 1440,
+                linkImagesToOriginal: false,
+                withWebp: true,
+                backgroundColor: `transparent`,
+              },
+            },
+          ],
+        },
+      },
+    //   {
+    //     resolve: "gatsby-plugin-transition-link",
+    //     options: {
+    //         layout: require.resolve(`./src/components/layout.js`)
+    //       }
+    //  },
+      `gatsby-plugin-transition-link`,
       `gatsby-plugin-sitemap`,
       `gatsby-plugin-robots-txt`,
       `gatsby-plugin-react-helmet`,
@@ -46,7 +93,8 @@ module.exports = options => {
       `gatsby-plugin-sharp`,
       `gatsby-plugin-theme-ui`,
       `gatsby-plugin-offline`,
-      `gatsby-plugin-preact`,
+      `framer-motion`,
+      `gatsby-plugin-material-ui`,
     ],
   }
 }

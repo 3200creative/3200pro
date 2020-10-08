@@ -51,6 +51,7 @@ const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2
         <Styled.h1 
         sx={{
           color: "white",
+          variant: 'variants.whiteTextShadow',
           variant: 'variant:"variants.hero1.h1',
           }}>{titleText}</Styled.h1>
         <p sx={{

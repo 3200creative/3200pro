@@ -10,6 +10,7 @@ const SiteFooter = ({footerBG}) => {
   const { additionalLinks } = useSiteMetadata()
   const { footerNavItems } = useSiteMetadata()
   const bg = footerBG
+  console.log(`this is the background: ${bg}`);
   return (
     <footer
       sx={{
@@ -35,9 +36,9 @@ const SiteFooter = ({footerBG}) => {
         m: 0, 
         mx: 'auto'
         }}>
-        © {new Date().getFullYear()} {title} | Site Design: <a href={developerLink}> {developer ? developer : 'Localized Pro'}</a>, <a href='https://3200.pro'>3200 Pro</a>
+        © {new Date().getFullYear()} {title} | Site Design: <a href={developerLink}> {developer ? developer : 'Localized Pro'}</a>
       </Styled.p>
-      {footerNavItems ? (<ul>
+      <ul>
     {
       footerNavItems ? (
         footerNavItems.map(footerNavItems => (
@@ -52,7 +53,7 @@ const SiteFooter = ({footerBG}) => {
         ))
       ) : null 
     }
-    </ul>) : null }
+    </ul>
     </div>
     </footer>
   )

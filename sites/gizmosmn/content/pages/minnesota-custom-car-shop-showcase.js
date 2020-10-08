@@ -98,7 +98,7 @@ const Showcase = props => {
       <Container>
         <SanityHero
           titleText= {page.header}
-          buttonText="Inquire About Your Remodeling Project"
+          buttonText="Inquire About Your Project"
           buttonLink="/contact"
           overlayRGBA='rgba(0,0,0,.4)'
           bg = { bg }

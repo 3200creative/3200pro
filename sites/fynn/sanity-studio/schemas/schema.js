@@ -6,6 +6,8 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Utilities
 import menu from './utilities/menu'
+import globalOptions from './utilities/globalOptions'
+import siteSettings from './utilities/siteSettings'
 
 // Taxonomies
 import category from './taxonomies/category'
@@ -41,12 +43,14 @@ import affiliate from './contentTypes/affiliate'
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
-  name: 'livegard',
+  name: 'fynn',
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     // Utilities
     menu,
+    globalOptions,
+    siteSettings,
     // Taxonomies
     category,
     productCategory,

@@ -10,6 +10,11 @@ export default {
             type: 'number'
         },
         {
+            name: 'tripType',
+            title: 'Trip Type',
+            type: 'string'
+        },
+        {
             name: 'title',
             title: 'Title',
             type: 'string'

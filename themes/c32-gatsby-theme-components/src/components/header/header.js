@@ -3,7 +3,7 @@ import { jsx } from "theme-ui"
 import { useContext } from "react"
 import Branding from "./branding/branding"
 import Nav from "./navbar/nav"
-import SanityNav from "./navbar/sanityNav"
+import SanityNav from "./navbar/SanityNav"
 import HamburgerButton from "./navbar/hamburger-button"
 import { NavContext } from "c32-gatsby-theme-core"
 import DarkModeIcon from "c32-gatsby-theme-core/src/components/darkmode"
@@ -47,7 +47,7 @@ const SiteHeader = () => {
         <Branding />
         {useSanityNav ? (<SanityNav />) : (<Nav />)}
         <HamburgerButton />
-        {useDarkMode === true ? (<DarkModeIcon />) : null}
+        {useDarkMode == true && (<DarkModeIcon />) || null}
       </div>
     </header>
   )
