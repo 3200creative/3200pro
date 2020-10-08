@@ -11,7 +11,6 @@ const hourly10 = 'price_1H4ZhSIZVy7BW60BiOVbeMI0'
 const hourly40 = 'price_1Ha7XAIZVy7BW60BitkeQFb0'
 const monthlyHosting100 = 'price_1H4cNeIZVy7BW60BTuqHWnaF'
 const fiveHourSingular625 = 'price_1H87USIZVy7BW60BYRawg1gv'
-const lasalleServices625 = 'price_1H87TRIZVy7BW60BDqnTKC66'
 const forkandBeansHosting = 'price_1H8AvEIZVy7BW60BL7h3jLto'
 
 let clientEmail = ''
@@ -51,7 +50,7 @@ const monthly40hours = async event => {
   event.preventDefault()
   const stripe = await stripePromise
   const { error } = await stripe.redirectToCheckout({
-    lineItems: [{ price: hourly10, quantity: 1 }],
+    lineItems: [{ price: hourly40, quantity: 1 }],
     mode: mode,
     successUrl: successUrl,
     cancelUrl: cancelUrl,
@@ -95,7 +94,7 @@ const monthly5hours = async event => {
   alert('5 hours')
 }
 const Checkout = () => {
-  let product, client, message, simpleName, greeting;
+  let product, client, welcome, message, simpleName, greeting;
   const signature = 'Thanks, Ryan'
   const { value, bind, reset } = useInput('');
   switch(value) {
@@ -103,25 +102,22 @@ const Checkout = () => {
       product = monthly40hours;
       simpleName = 'Monthly payment of $5,000.'
       client = 'Len'
-      message = `Hi ${client}, please click checkout to make the payment. Please let me know if you have any questions.`
-      break;
-    case 'chris@grandscape.com':
-      product = monthly10hours;
-      simpleName = 'Monthly 10 Hours'
-      client = 'Chris'
-      message = `Hi ${client}, please click checkout to make the payment. Please let me know if you have any questions.`
+      welcome = `Hi ${client},`
+      message = `Please click checkout to make the payment. Please let me know if you have any questions.`
       break;
     case 'prohosting':
       product = hosting100;
       simpleName = 'Monthly hosting with 3200 Creative'
       greeting = `Hello!`
+      welcome = `Hi ${client},`
       message = `Please click checkout to start monthly hosting payments. Please let us know if you have any questions.`
       break;
     case 'fbhosting':
       product = FbHosting;
       simpleName = '$100/mo + 30 trial to even out double charge'
       client = 'Cara'
-      message = `Hi ${client}, Please click checkout to make the payment. Please let me know if you have any questions.`
+      welcome = `Hi ${client},`
+      message = `Please click checkout to make the first payment. Our monthly service is described in our contract. Please let me know if you have any questions.`
       break;
     default:
       product = monthly5hours;
@@ -138,9 +134,10 @@ const Checkout = () => {
     </form>
     {/* Test Login Setup */}
     <div>
-    {client == 'Chris' ? (
+    {client == 'Len' ? (
     <>
-    <h2>Grandscape Service: {simpleName} </h2>
+    <h2>Paranet Web Development: {simpleName} </h2>
+    <p>{welcome}</p>
     <p>{message}</p>
     <p>{signature}</p>
     <button onClick={ product }
