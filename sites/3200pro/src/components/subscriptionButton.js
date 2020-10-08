@@ -8,6 +8,7 @@ const successUrl = 'http://3200.pro/payment-complete'
 const cancelUrl = 'http://3200.pro/payment-error'
 // Prices
 const hourly10 = 'price_1H4ZhSIZVy7BW60BiOVbeMI0'
+const hourly40 = 'price_1Ha7XAIZVy7BW60BitkeQFb0'
 const monthlyHosting100 = 'price_1H4cNeIZVy7BW60BTuqHWnaF'
 const fiveHourSingular625 = 'price_1H87USIZVy7BW60BYRawg1gv'
 const lasalleServices625 = 'price_1H87TRIZVy7BW60BDqnTKC66'
@@ -31,6 +32,21 @@ const useInput = initialValue => {
 };
 
 const monthly10hours = async event => {
+  
+  event.preventDefault()
+  const stripe = await stripePromise
+  const { error } = await stripe.redirectToCheckout({
+    lineItems: [{ price: hourly10, quantity: 1 }],
+    mode: mode,
+    successUrl: successUrl,
+    cancelUrl: cancelUrl,
+  })
+  if (error) {
+    console.warn("Error:", error)
+  }
+}
+
+const monthly40hours = async event => {
   
   event.preventDefault()
   const stripe = await stripePromise
@@ -83,6 +99,12 @@ const Checkout = () => {
   const signature = 'Thanks, Ryan'
   const { value, bind, reset } = useInput('');
   switch(value) {
+    case 'lbpara':
+      product = monthly40hours;
+      simpleName = 'Monthly payment of $5,000.'
+      client = 'Len'
+      message = `Hi ${client}, please click checkout to make the payment. Please let me know if you have any questions.`
+      break;
     case 'chris@grandscape.com':
       product = monthly10hours;
       simpleName = 'Monthly 10 Hours'
