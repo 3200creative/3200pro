@@ -60,8 +60,6 @@ export default {
         title: "Default Social Sharing Image",
         name: "seoImage",
         type: "figure",
-        description:
-          "The default sharing image for places like Twitter and Facebook when sharing a link to your website.",
         validation: (Rule) => Rule.required(),
       },
     ],

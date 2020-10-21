@@ -44,11 +44,14 @@ function AuthorBlock (props) {
       borderRadius: '50%',
       height: '46px',
       width: '46px',
+      overflow: 'hidden',
     }}
     >   
         <img
           src={imageUrlFor(buildImageObj(props.author.image))
-            .width(100)
+            .width(40)
+            .height(40)
+            .fit('crop')
             .url()}
           alt={props.author.name}
           sx= {{

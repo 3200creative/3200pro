@@ -41,15 +41,13 @@ export default {
         name: "logo",
         type: "figure",
         description:
-          "Your website logo, whether this is displayed can be controlled by feature flags in gatsby-theme-catalyst-core.",
+          "Company or Site Logo",
         validation: (Rule) => Rule.required(),
       },
       {
         title: "Default Social Sharing Image",
         name: "seoImage",
         type: "figure",
-        description:
-          "The default sharing image for places like Twitter and Facebook when sharing a link to your website.",
         validation: (Rule) => Rule.required(),
       },
       {

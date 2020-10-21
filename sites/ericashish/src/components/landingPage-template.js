@@ -12,7 +12,6 @@ const PageTemplate = props => {
     const { data, errors } = props
     const page = data && data.page
     const colors = data && data.colors
-
     
     return (
       <Layout>

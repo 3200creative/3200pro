@@ -251,14 +251,11 @@ function RecentPostFeed (props) {
       }}>{props.link ? (
         <Link 
         sx= {{
-          backgroundColor: color ? color : '#000',
-          color: 'white',
-          border: `1px solid white`,
+          borderLeft: color ? `4px solid ${color}`  : '4px solid #000',
+          color: color ? color : 'black',
           size: 'max-content',
-          px: 4,
           py: 2,
-          borderRadius: 100,
-          variant: 'variants.lightShadow'
+          px: 2,
         }}
         to={props.link}>{props.title}</Link>
       ) : null}</Grid><Grid item xs={4} md={2}><div sx={{display:['none',null,null,'block', null]}}>{props.showToggle ? (<ArticleLayoutToggle />) : null}</div></Grid>

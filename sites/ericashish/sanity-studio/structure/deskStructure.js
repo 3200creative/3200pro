@@ -13,7 +13,7 @@ import {
   MdMic,
   MdHome,
   MdLanguage,
-} from 'react-icons/lib/md'
+} from "react-icons/md"
 
 
 const hiddenDocTypes = listItem =>
@@ -27,7 +27,9 @@ const hiddenDocTypes = listItem =>
     'podcast',
     'siteSettings',
     'newsletterSignup',
-    'menuLinks',
+    'menuLink',
+    'globalOptions',
+    'author'
   ].includes(listItem.getId())
 
 export default () =>
@@ -56,6 +58,12 @@ export default () =>
                 .child(
                   S.documentTypeList("menuLink").title("Navigation Links")
                 ),
+              S.listItem()
+                .title('Author')
+                .icon(MdFace)
+                .child(
+                  S.documentTypeList('author')
+              ),
               S.listItem()
               .title("Global Options")
               .icon(MdLanguage)

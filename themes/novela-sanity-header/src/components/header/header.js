@@ -17,7 +17,7 @@ const SiteHeader = () => {
         color: isNavOpen ? "header.textOpen" : "header.text",
         paddingTop: '50px',
         gridArea: "header",
-        mb: [0,1,100],
+        mb: [0,1],
         zIndex: "888", // Ensure the header is always on top
       }}
       id="header"

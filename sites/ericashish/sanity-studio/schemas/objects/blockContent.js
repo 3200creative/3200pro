@@ -15,12 +15,12 @@ import {
   MdChromeReaderMode,
   MdFace,
   MdUnfoldLess,
-} from 'react-icons/lib/md'
+} from "react-icons/md"
 
 import {
   FaThList,
   FaQuoteLeft,
-} from 'react-icons/lib/fa'
+} from "react-icons/fa"
 
 
 export default {

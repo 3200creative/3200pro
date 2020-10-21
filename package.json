@@ -59,7 +59,10 @@
     "fynn:dev": "yarn workspace fynn develop",
     "fynn:build": "yarn workspace fynn build",
     "fynn:serve": "yarn workspace fynn serve",
-    "fynn:clean": "yarn workspace fynn clean"
+    "p:clean": "yarn workspace paranet clean",
+    "p:dev": "yarn workspace paranet develop",
+    "p:build": "yarn workspace paranet build",
+    "p:serve": "yarn workspace paranet serve"
   },
   "dependencies": {
     "core-js": "^3.6.5"
