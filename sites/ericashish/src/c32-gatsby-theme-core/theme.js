@@ -188,7 +188,8 @@ export default {
       height: '10px',
     },
     darkmodeicon: {
-      top: '60px',
+      top: '10px',
+      right: '20px'
     },
     shadow: {
       boxShadow: '0 30px 60px -10px rgba(0,0,0,0.3), 0 18px 36px -18px rgba(0,0,0,0.33) !important',

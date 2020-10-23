@@ -43,7 +43,9 @@ const hiddenDocTypes = listItem =>
     'teamPosition',
     'post',
     'siteSettings',
-    'globalOptions'
+    'globalOptions',
+    'serviceType',
+    'location'
     
   ].includes(listItem.getId())
 
