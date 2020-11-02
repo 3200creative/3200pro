@@ -12,7 +12,7 @@ import RecentPostFeed from './RecentPostFeed'
 import SingularFeaturedPost from './SingularFeaturedPost'
 import AuthorBlock from './AuthorBlock'
 import Quote from './Quote'
-import HTML from './HTML'
+import HTML from './html'
 import ImageCardBlock from './imageCardBlock'
 
 const serializers = {
