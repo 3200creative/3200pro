@@ -29,6 +29,12 @@ import singularFeaturedPost from './objects/singularFeaturedPost'
 import quote from './objects/quote'
 import featuredAuthorBlock from './objects/featuredAuthorBlock.js'
 import spacer from './objects/spacers'
+import imageCardBlock from './objects/imageCardBlock'
+import button from './objects/button'
+import buttonBlock from './objects/buttonBlock'
+import portableTextMin from './objects/portableTextMin'
+import imageCard from './objects/imageCard'
+import html from './objects/html'
 // Content Types:
 import event from './contentTypes/event'
 import business from './contentTypes/business'
@@ -71,6 +77,12 @@ export default createSchema({
     soundcloudPlaylist,
     soundcloudPlaylistDropdown,
     spacer,
+    imageCardBlock,
+    imageCard,
+    button,
+    buttonBlock,
+    portableTextMin,
+    html,
     // Content Types
     siteSettings,
     newsletterSignup,

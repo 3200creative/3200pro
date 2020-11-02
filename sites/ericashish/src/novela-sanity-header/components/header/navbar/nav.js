@@ -37,7 +37,7 @@ export default function Nav(props) {
   return (
     <nav
       sx={{
-        gridColumn: ["1 / -1", null, "2 / 3", null, null],
+        gridColumn: [null, null, "2 / 3", null, null],
         gridRow: ["2 / 3", null, "1 / 2", null, null],
         justifySelf: ["center", null, "end", null, null],
         alignSelf: ["start", null, "center", null, null],
@@ -70,7 +70,7 @@ export default function Nav(props) {
               a: {
                 color: isNavOpen ? "header.textOpen" : "header.textClosed",
                 textDecoration: "none",
-                fontSize: isNavOpen ? "34px" : "16px",
+                fontSize: isNavOpen ? "24px" : "16px",
                 py: 1,
                 px: 1,
                 mr: [0, null, 2, null, null],

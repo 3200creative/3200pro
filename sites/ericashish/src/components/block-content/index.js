@@ -12,6 +12,8 @@ import RecentPostFeed from './RecentPostFeed'
 import SingularFeaturedPost from './SingularFeaturedPost'
 import AuthorBlock from './AuthorBlock'
 import Quote from './Quote'
+import HTML from './HTML'
+import ImageCardBlock from './imageCardBlock'
 
 const serializers = {
   types: {
@@ -43,6 +45,9 @@ const serializers = {
     figure (props) {
       return <Figure {...props.node} />
     },
+    imageCardBlock (props) {
+      return <ImageCardBlock {...props.node} />
+    },
     gallery (props) {
       return <Gallery {...props.node} />
     },
@@ -69,6 +74,9 @@ const serializers = {
     },
     quote (props) {
       return <Quote {...props.node} />
+    },
+    html (props) {
+      return <HTML {...props.node} />
     },
     recentPostFeed (props) {
       return <RecentPostFeed {...props.node} />

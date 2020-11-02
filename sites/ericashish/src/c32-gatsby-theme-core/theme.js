@@ -99,7 +99,7 @@ export default {
       fontWeight: "body",
       lineHeight: "body",
       fontSize: 2,
-      boxShadow: 'inset 0px -600px 500px -300px rgba(41,44,52,.15)',
+      boxShadow: 'inset 0px -600px 500px -300px rgba(41,44,52,.10)',
       transition: 'background 0.25s ease-in-out, color 0.25s ease-in-out',
       
     },
