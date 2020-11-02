@@ -10,9 +10,14 @@ import ArticleLayoutToggle  from '../ArticleLayoutToggle'
 import { GridLayoutContext } from '../articleFeedLayout'
 import Grid from '@material-ui/core/Grid'
 import TxtColorChange from '../TxtColorChange'
-function RecentPostFeed (props) {
+function RecentPostFeed (props, location) {
   const data = useStaticQuery(graphql`
-    query  { 
+    query  {
+      site {
+        siteMetadata {
+          siteUrl
+        }
+      }
       business: allSanityBusiness(
         sort: { fields: [publishedAt], order: DESC }
         filter: { slug: { current: { ne: null } } }
@@ -238,8 +243,7 @@ function RecentPostFeed (props) {
   const { gridLayout = 'lists', hasSetGridLayout, setGridLayout, getGridLayout } = useContext(
     GridLayoutContext,
   );
-
-
+  const url = typeof window !== 'undefined' ? window.location.href : '';
   return (
     <>
     <Grid container justify="space-between" sx={{
@@ -266,7 +270,7 @@ function RecentPostFeed (props) {
         py:4}}>
           
         <Grid item xs={12} md={gridLayout === 'lists' ? 6 : 12} sx={{height:gridLayout === 'lists' ? [null, null, null, '285px'] : [null, null, null, '360px'], }}>
-          <Link to={window.location.href.indexOf(base) > -1 ? post.node.slug.current : base + '/' + post.node.slug.current}>
+          <Link to={url.indexOf(base) > -1 ? post.node.slug.current : base + '/' + post.node.slug.current}>
             <img
             src={imageUrlFor(buildImageObjMap(post.node.featuredImage))
             .auto('format')
@@ -292,7 +296,7 @@ function RecentPostFeed (props) {
             color: 'text',
             fontFamily:  'header',
             width: ['100%', null, null, '92%']
-          }}><Link to={window.location.href.indexOf(base) > -1 ? post.node.slug.current : base + '/' + post.node.slug.current}
+          }}><Link to={url.indexOf(base) > -1 ? post.node.slug.current : base + '/' + post.node.slug.current}
             sx= {{
               color: 'text',
             }}
