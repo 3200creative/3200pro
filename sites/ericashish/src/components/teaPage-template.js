@@ -10,7 +10,6 @@ import PostContent from './singlePostContainer'
 import { format, distanceInWords, differenceInDays } from 'date-fns'
 import MailChimpForm from './MailChimpForm'
 
-
 const TeaPageTemplate = props => {
     const { data, errors } = props
     const page = data && data.page

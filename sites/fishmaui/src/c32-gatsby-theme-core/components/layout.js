@@ -17,6 +17,12 @@ const SiteLayout = ({ children }) => {
     graphql`
       query layout {
       settings : sanitySiteSettings(_id: {eq: "siteSettings"}) {
+        sitewideBackground {
+          asset {
+            _id
+            url
+          }
+        }
         footerBackground {
           asset {
             _id
@@ -28,8 +34,13 @@ const SiteLayout = ({ children }) => {
     `
   )
 
+  const sitewideBG = data.settings.sitewideBackground ? data.settings.sitewideBackground.asset.url : null;
+  const footerBG = data.settings.footerBackground ? data.settings.footerBackground.asset.url : null;
+
   return (
-    <Styled.root>
+    <Styled.root sx= {{
+      backgroundImage: sitewideBG ? (`url(${sitewideBG})`): null,
+    }}>
       <Normalize />
       <SiteContainer>
         <Header />
@@ -37,7 +48,7 @@ const SiteLayout = ({ children }) => {
         <Main>
           <ContentContainer>{children}</ContentContainer>
         </Main>
-        <Footer footerBG={data.settings.footerBackground.asset.url} />
+        <Footer footerBG={footerBG ? footerBG : null} />
       </SiteContainer>
     </Styled.root>
   )

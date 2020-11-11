@@ -6,6 +6,8 @@ import Header from "c32-gatsby-theme-core/src/components/header"
 import Main from "c32-gatsby-theme-core/src/components/main"
 import ContentContainer from "c32-gatsby-theme-core/src/components/content-container"
 import Footer from "c32-gatsby-theme-core/src/components/footer"
+import SiteFooter from 'c32-gatsby-theme-components/src/components/footer/sanityMenuFooter'
+
 import ArticlesContextProvider from '../../components/articleFeedLayout'
 
 const SiteLayout = ({ children }) => {
@@ -18,6 +20,7 @@ const SiteLayout = ({ children }) => {
         <Main>
           <ContentContainer>{children}</ContentContainer>
         </Main>
+        <SiteFooter />
         <Footer />
       </SiteContainer>
       </ArticlesContextProvider>

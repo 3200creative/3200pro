@@ -35,6 +35,7 @@ import buttonBlock from './objects/buttonBlock'
 import portableTextMin from './objects/portableTextMin'
 import imageCard from './objects/imageCard'
 import html from './objects/html'
+import menu from './objects/menu'
 // Content Types:
 import event from './contentTypes/event'
 import business from './contentTypes/business'
@@ -45,8 +46,8 @@ import page from './contentTypes/page'
 import author from './contentTypes/author'
 import landingPage from './contentTypes/landingPage'
 import globalOptions from './contentTypes/globalOptions'
-
-
+import footer from './contentTypes/footer'
+import footerSection from './contentTypes/footerSection'
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({ 
   // We name our schema
@@ -83,6 +84,7 @@ export default createSchema({
     buttonBlock,
     portableTextMin,
     html,
+    menu,
     // Content Types
     siteSettings,
     newsletterSignup,
@@ -96,5 +98,7 @@ export default createSchema({
     landingPage,
     author,
     globalOptions,
+    footer,
+    footerSection,
   ])
 })

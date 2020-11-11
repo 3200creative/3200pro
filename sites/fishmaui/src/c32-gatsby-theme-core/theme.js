@@ -8,7 +8,7 @@ export default {
   initialColorModeName: 'light',
   useColorSchemeMediaQuery: false,
   ...tailwind,
-  breakpoints: ["480px", "768px", "1024px", "1440px"],
+  breakpoints: ["700px", "768px", "1024px", "1440px"],
   fonts: {
     ...tailwind.fonts,
     siteTitle: '"SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif', // Font for main site title
@@ -150,6 +150,7 @@ export default {
     },
     singleReview: {
       border: '1px solid #ddd',
+      background: 'rgba(255,255,255,.7)',
       padding: 5,
       my: 5,
       titleBlock: {
@@ -165,18 +166,29 @@ export default {
         display: 'flex',
         fontSize: 16,
         div: {
-          background: '#f5f5f5',
+          backgroundColor: 'fmBlue',
           padding: 2,
+          color: '#fff',
+          span: {
+            borderRight: '1px solid #fff',
+            paddingRight: '20px'
+          },
+          '&:last-of-type': {
+            span: {
+              borderRight: 'none',
+              paddingRight: '0px'
+            },
+          },
         },
       },
     },
   },
   archive: {
     singleItem: {
-      padding: 2,
+      background: 'transparent!important',
+      boxShadow: 'none !important',
       borderRadius: 4,
       minHeight: '100%',
-      boxShadow: 'shadowStyle1',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'stretch',
@@ -184,6 +196,9 @@ export default {
       },
       body: {
         flexGrow: '1',
+        boxShadow: 'shadowStyle1 !important',
+        textAlign: 'left',
+        p: 3,
       },
       footer: {
         display: 'flex',
@@ -198,7 +213,8 @@ export default {
     siteContainer: {
       maxWidth: '1500px',
       margin: '0 auto',
-      boxShadow: 'shadowStyle1'
+      boxShadow: 'shadowStyle1',
+      background: 'rgba(255,255,255,.7)'
     },
     starCount: {
       color: 'yellow'

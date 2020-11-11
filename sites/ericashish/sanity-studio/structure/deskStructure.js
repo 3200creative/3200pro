@@ -15,6 +15,13 @@ import {
   MdLanguage,
 } from "react-icons/md"
 
+import {
+  RiLayoutBottom2Fill,
+  RiLayoutTop2Fill
+} from "react-icons/ri"
+import  {
+  GiHamburgerMenu
+} from "react-icons/gi"
 
 const hiddenDocTypes = listItem =>
   ![
@@ -29,7 +36,10 @@ const hiddenDocTypes = listItem =>
     'newsletterSignup',
     'menuLink',
     'globalOptions',
-    'author'
+    'author',
+    'footer',
+    'footerSection',
+    'menus'
   ].includes(listItem.getId())
 
 export default () =>
@@ -53,11 +63,26 @@ export default () =>
                     .documentId("siteSettings")
                 ),
               S.listItem()
-                .title("Navigation Links")
-                .icon(MdList)
+                .title("Header")
+                  .icon(RiLayoutTop2Fill)
+                  .child(
+                    S.documentTypeList("menuLink").title("Navigation Links")
+                  ),
+              S.listItem()
+                .title("Footer")
+                .icon(RiLayoutBottom2Fill)
+              .child(
+                S.document()
+                  .title("Footer")
+                  .schemaType("footer")
+                  .documentId("footer")
+              ),
+              S.listItem()
+                .title('Additional Menus')
+                .icon(GiHamburgerMenu)
                 .child(
-                  S.documentTypeList("menuLink").title("Navigation Links")
-                ),
+                  S.documentTypeList('menu')
+              ),
               S.listItem()
                 .title('Author')
                 .icon(MdFace)

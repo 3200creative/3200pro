@@ -9,6 +9,12 @@ export default {
             type: 'string',
         },
         {
+            title: 'Icon',
+            description: 'Ex: FaFacebookF from: https://react-icons.github.io/icons?name=fa',
+            name: 'icon',
+            type: 'string',
+        },
+        {
             title: 'URL',
             name: 'href',
             type: 'url',

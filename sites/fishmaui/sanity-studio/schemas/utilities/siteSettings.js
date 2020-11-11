@@ -59,9 +59,15 @@ export default {
         validation: (Rule) => Rule.required(),
       },
       {
+        title: "Sitewide Background",
+        name: "sitewideBackground",
+        type: "backgroundImage",
+      },
+      {
         title: "Footer Background",
         name: "footerBackground",
-        type: "figure",
+        type: "backgroundImage",
       },
+      
     ],
   }

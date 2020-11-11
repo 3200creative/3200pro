@@ -38,9 +38,9 @@ export default function Reviews(props) {
               <div><h4 sx= {{variant: 'reviews.singleReview.title'}}>{edge.node.title}</h4></div>
             </div>
             <div sx= {{variant: 'reviews.singleReview.meta'}}>
-              <div>Boat: {edge.node.boatReviewed.title}</div>
-              <div>Trip Type: {edge.node.boatReviewed.title}</div>
-              <div>Reviewed By: {edge.node.reviewerName}</div>
+              <div><span><strong>Boat:</strong> {edge.node.boatReviewed.title}</span></div>
+              <div><span><strong>Trip Type:</strong> {edge.node.boatReviewed.title}</span></div>
+              <div><span><strong>Reviewed By:</strong> {edge.node.reviewerName}</span></div>
             </div>
             <div>{edge.node._rawBlockContent && <BlockContent blocks={edge.node._rawBlockContent} />}</div>
             </div>

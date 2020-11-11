@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx, Flex, css } from "theme-ui"
 import { Link } from 'gatsby'
 import React from 'react'
 import BoatPreview from './boat-preview'

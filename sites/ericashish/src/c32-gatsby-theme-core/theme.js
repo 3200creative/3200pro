@@ -290,15 +290,71 @@ export default {
         fontWeight: '600'
       },
     },
+    footerSections: {
+      borderTop: '1px solid white',
+      borderBottom: '1px solid #eee',
+      pt: 4,
+      textAlign: 'left',
+      display: ['block',null, 'flex', null],
+      width: ['100vw',null,null,'maxContentWidth'],
+      gridArea: 'auto',
+      margin: '0 auto',
+      color: 'lightTxt',
+      span: {
+        color: 'black',
+        fontFamily: '"Merriweather",Georgia,Serif',
+        fontSize: [1,1,2,3]
+      },
+      a: {  
+        color: 'lightTxt'
+      },
+      p: {
+        fontSize: 1
+      },
+      ul: {
+        p: 0,
+        textAlign: ['center', null, 'left', null],
+        li: {
+          py: 2,
+          listStyleType: 'none',
+          display: ['inline-block', 'inline-block', 'block', null],
+          px: [3,null,0, null],
+          '&:first-of-type': {
+            borderLeft: 'none',
+          },
+          a: {
+            borderLeft: ['1px solid #999', null, 'none', null ],
+            color: 'lightTxt',
+            overflow: 'hidden',
+            textAlign: 'center',
+          },
+        },
+      },
+      svg: {
+        height: ['10px','20px','30px','30px'],
+        width: '30px',
+        margin: '0 auto'
+      },
+    },
     footer: {
       textAlign: 'left',
-      width: 'maxContentWidth',
+      width: '100vw',
+      maxWidth: '100vw',
+      gridArea: 'auto',
       margin: '0 auto',
       color: 'lightTxt',
       fontSize: '10px',
+      paddingTop: '0',
+      marginTop: '0',
+      pt: 3,
       a: {
         color: 'lightTxt'
       }
+    },
+    footerOverlay: {
+      width: '100%',
+      pt: 0,
+      textAlign: 'center'
     },
     smallAuthorBlock: {
       p: {
