@@ -9,7 +9,7 @@ import BlockContent from '../../src/components/block-content'
 import Hero from 'c32-gatsby-theme-components/src/components/ui/sanity-hero'
 import reactStringReplace from 'react-string-replace'
 import TxtColorChange from '../../src/components/TxtColorChange'
-import MailChimpForm from '../../src/components/MailChimpForm'
+import ActiveCampaignForm from '../../src/components/ActiveCampaignForm'
 
 export const query = graphql`
   query HomePageQuery {
@@ -61,7 +61,7 @@ const Homepage = props => {
       <TxtColorChange txtBlock= {page.title} colors={colors} />
       </h1>
         <BlockContent blocks={ page._rawBlockContent || [] } />
-        <MailChimpForm />
+        <ActiveCampaignForm />
       </Container>
     </SiteLayout>
   )
