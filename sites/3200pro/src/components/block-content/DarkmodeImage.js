@@ -17,7 +17,7 @@ function DarkmodeImage (props) {
       mx: 'auto',
       my: '80px',
     }}>
-      {props.disableGatsbyImage !== true ? (
+      {props.disableGatsbyImage != true ? (
         <Img sx={{
           variant: 'variants.shadow',
           maxWidth: props.maxWidth ? props.maxWidth : '900px',
