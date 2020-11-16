@@ -45,7 +45,8 @@ const SiteFooter = ({footerBG}) => {
           <li><Link to={footerNavItems.href}>{footerNavItems.buttonTxt}</Link></li>
         ))
       ) : null 
-    },
+    }
+    {footerNavItems ? (',') : null}
     {
       additionalLinks ? (
         additionalLinks.map(addtionalLink => (
