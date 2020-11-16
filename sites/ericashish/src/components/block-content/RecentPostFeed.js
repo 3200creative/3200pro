@@ -269,7 +269,7 @@ function RecentPostFeed (props, location) {
       <Grid container key={post.node.key} xs={12} md={gridLayout === 'lists' ? 12 : 6} sx={{
         py:4}}>
           
-        <Grid item xs={12} md={gridLayout === 'lists' ? 6 : 12} sx={{height:gridLayout === 'lists' ? [null, null, null, '285px'] : [null, null, null, '360px'], }}>
+        <Grid item xs={12} md={gridLayout === 'lists' ? 6 : 12} sx={{height:gridLayout === 'lists' ? [null, null, null, '360px'] : [null, null, null, '360px'], }}>
           <Link to={url.indexOf(base) > -1 ? post.node.slug.current : base + '/' + post.node.slug.current}>
             <img
             src={imageUrlFor(buildImageObjMap(post.node.featuredImage))
@@ -279,7 +279,7 @@ function RecentPostFeed (props, location) {
             alt='test'
             sx= {{
               width: '96%',
-              maxHeight: [null, null, null, '285px'],
+              maxHeight: [null, null, null, '340px'],
               variant: 'variants.shadow',
             }}
             />

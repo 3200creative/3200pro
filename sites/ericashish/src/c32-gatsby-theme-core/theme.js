@@ -177,7 +177,7 @@ export default {
       fontWeight: 'headingWeight',
     },
     img: {
-     boxShadow: '0 30px 60px -10px rgba(0,0,0,0.3), 0 18px 36px -18px rgba(0,0,0,0.33) !important',
+     boxShadow: 'rgba(0, 0, 0, 0.3) 0px 20px 40px -20px, rgba(0, 0, 0, 0.33) 0px 18px 36px -18px !important',
     }
   },
   variants: {
@@ -192,7 +192,7 @@ export default {
       right: '20px'
     },
     shadow: {
-      boxShadow: '0 30px 60px -10px rgba(0,0,0,0.3), 0 18px 36px -18px rgba(0,0,0,0.33) !important',
+      boxShadow: 'rgba(0, 0, 0, 0.3) 0px 20px 40px -20px, rgba(0, 0, 0, 0.33) 0px 18px 36px -18px !important',
     },
     lightShadow: {
       boxShadow: '0 15px 30px -50px rgba(0,0,0,0.3), 0 9px 17px -9px rgba(0,0,0,0.3) !important',
@@ -215,8 +215,8 @@ export default {
       py: [2, null, 5, null],
       px: 4,
       mx: 'auto',
-      my: 5,
-      boxShadow: '0 30px 60px -10px rgba(0,0,0,0.3), 0 18px 36px -18px rgba(0,0,0,0.33)',
+      my: 4,
+      boxShadow: 'rgba(0, 0, 0, 0.3) 0px 20px 40px -20px, rgba(0, 0, 0, 0.33) 0px 18px 36px -18px !important',
       h2: {
         fontFamily: '"Merriweather",Georgia,Serif',
         fontSize: [1,2,3,4]
