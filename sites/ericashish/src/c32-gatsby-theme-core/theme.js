@@ -3,6 +3,7 @@
 import { tailwind, baseColors } from "@theme-ui/preset-tailwind"
 import prism from "@theme-ui/prism/presets/oceanic-next"
 
+
 export default {
   initialColorModeName: 'light',
   useColorSchemeMediaQuery: false,
@@ -16,6 +17,8 @@ export default {
     alt: "inherit", //An alternate font style if needed.
     header: '"Merriweather",Georgia,Serif',
   },
+
+
   colors: {
     ...tailwind.colors,
     text: baseColors.black,
@@ -57,6 +60,7 @@ export default {
         background: '#000',
         primary: '#0cf',
         transition: 'all 0.25s ease-in-out-quad',
+        footerShadow: 'footerShadowDark',
         newsletter: {
           background: '#111',
           fields: {
@@ -101,7 +105,6 @@ export default {
       fontSize: 2,
       boxShadow: 'inset 0px -600px 500px -300px rgba(41,44,52,.10)',
       transition: 'background 0.25s ease-in-out, color 0.25s ease-in-out',
-      
     },
     blockquote: {
       margin: '15px auto 50px',
@@ -181,6 +184,9 @@ export default {
     }
   },
   variants: {
+    root: {
+      boxShadow: 'footerShadow',
+    },
     clearline: {
       borderBottom: '1px solid #ddd',
       width: '100%',
@@ -203,6 +209,7 @@ export default {
     innerBoxShadow: {
       boxShadow: 'inset 0px -200px 300px -200px rgba(221,221,221,1)',
     },
+    
     homePreview: {
       display: 'none',
       img: {

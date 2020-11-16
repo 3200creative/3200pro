@@ -22,7 +22,7 @@ const SiteLayout = ({ children }) => {
     }
     const { scrollYProgress } = useViewportScroll()
   return (
-    <Styled.root>
+    <Styled.root sx={{variant: 'variants.root'}}>
       <Normalize />
       <SiteContainer>
         <Header />
