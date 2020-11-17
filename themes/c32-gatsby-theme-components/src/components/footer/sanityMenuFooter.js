@@ -40,7 +40,8 @@ const FooterSections = ({footerBG}) => {
           mx: 4
         }}>
           <div><span sx={{
-            fontSize: 2
+            fontSize: 2,
+            variant: 'variants.footerSections.title'
           }}>{footerSections.title}</span></div>
           <div>
           {footerSections._rawText && <BlockText blocks={footerSections._rawText} />}

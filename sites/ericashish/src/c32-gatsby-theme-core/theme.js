@@ -56,7 +56,7 @@ export default {
     },
     modes: {
       dark: {
-        text: '#fff',
+        text: 'red',
         background: '#000',
         primary: '#0cf',
         transition: 'all 0.25s ease-in-out-quad',
@@ -307,8 +307,8 @@ export default {
       gridArea: 'auto',
       margin: '0 auto',
       color: 'lightTxt',
-      span: {
-        color: 'black',
+      title: {
+        color: 'text',
         fontFamily: '"Merriweather",Georgia,Serif',
         fontSize: [1,1,2,3]
       },
@@ -320,20 +320,20 @@ export default {
       },
       ul: {
         p: 0,
-        textAlign: ['center', null, 'left', null],
+        textAlign: ['left', null, 'left', null],
         li: {
-          py: 2,
+          pb: 1,
           listStyleType: 'none',
           display: ['inline-block', 'inline-block', 'block', null],
-          px: [3,null,0, null],
+          pr: [3,null,0, null],
           '&:first-of-type': {
             borderLeft: 'none',
           },
           a: {
-            borderLeft: ['1px solid #999', null, 'none', null ],
             color: 'lightTxt',
             overflow: 'hidden',
             textAlign: 'center',
+            fontSize: 1,
           },
         },
       },
