@@ -57,6 +57,7 @@ module.exports = {
       }
     },
     `c32-gatsby-theme-components`,
+    `@twistezo/react-text-scramble`,
     {
       resolve: 'gatsby-source-sanity',
       options: {

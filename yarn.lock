@@ -2151,6 +2151,10 @@
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/@turist/time/-/time-0.0.1.tgz#57637d2a7d1860adb9f9cecbdcc966ce4f551d63"
 
+"@twistezo/react-text-scramble@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@twistezo/react-text-scramble/-/react-text-scramble-1.0.6.tgz#34064d86249c7fdfbb84c00e2776beee122db79e"
+
 "@typeform/embed@^0.10.0":
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/@typeform/embed/-/embed-0.10.0.tgz#377a0558c8c743e2f2b0d87761ad8557bc0e955e"
@@ -6444,7 +6448,7 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
-framer-motion@^2.3.0:
+framer-motion@^2.3.0, framer-motion@^2.9.4:
   version "2.9.4"
   resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-2.9.4.tgz#366656ae240776c923cbd4359815e5c1ed56084d"
   dependencies:
@@ -11981,6 +11985,13 @@ react-remove-scroll@^2.3.0:
 react-side-effect@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-2.1.0.tgz#1ce4a8b4445168c487ed24dab886421f74d380d3"
+
+react-spring@^8.0.27:
+  version "8.0.27"
+  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-8.0.27.tgz#97d4dee677f41e0b2adcb696f3839680a3aa356a"
+  dependencies:
+    "@babel/runtime" "^7.3.1"
+    prop-types "^15.5.8"
 
 react-string-replace@^0.4.4:
   version "0.4.4"

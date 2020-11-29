@@ -11,7 +11,6 @@ import blockContent from './objects/blockContent'
 import script from './objects/script'
 import figure from './objects/figure'
 import figureWide from './objects/figureWide'
-import tags from './objects/tags'
 import meta from './objects/meta'
 import featuredImage from './objects/featuredImage'
 import quoteBlock from './objects/quoteBlock'
@@ -25,7 +24,10 @@ import excerptPortableText from './objects/excerptPortableText'
 import bioPortableText from './objects/bioPortableText'
 import spacer from './objects/spacers'
 import darkmodeImage from './objects/darkmodeImage'
-
+import shuffleTextBlock from './objects/textShuffler/shuffleTextBlock'
+import shuffledTextSection from './objects/textShuffler/shuffledTextSection'
+import shuffledText from './objects/textShuffler/shuffledText'
+import standardText from './objects/textShuffler/standardText'
 // Content Types:
 import page from   './contentTypes/page'
 import teamMember from './contentTypes/teamMember'
@@ -34,7 +36,9 @@ import testimonial from './contentTypes/testimonial'
 import landingPage from './contentTypes/landingPage'
 import faq from './contentTypes/faq'
 import post from './contentTypes/post'
-
+// Taxonomies
+import category from './taxonomies/category'
+import tags from './taxonomies/tags'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -50,7 +54,6 @@ export default createSchema({
     script,
     figure,
     figureWide,
-    tags,
     meta,
     featuredImage,
     quoteBlock,
@@ -64,6 +67,10 @@ export default createSchema({
     bioPortableText,
     spacer,
     darkmodeImage,
+    shuffleTextBlock,
+    shuffledTextSection,
+    shuffledText,
+    standardText,
     // Content Types
     page,
     post,
@@ -71,7 +78,10 @@ export default createSchema({
     service,
     testimonial,
     landingPage,
-    faq
+    faq,
+    // Taxonomies
+    category,
+    tags
   ])
 })
 

@@ -47,5 +47,10 @@ export default {
             title: 'Tags',
             type: 'tags'
         },
+        {
+            name: 'seo',
+            title: 'SEO Title And Description',
+            type: 'meta',            
+        },
     ],
 }

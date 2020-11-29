@@ -7,7 +7,7 @@ const sanityConfig = {projectId: 'tjb00633', dataset: 'production'}
 function SanitySoundcloudPlaylistDropdown (props) {
   let selectedPlaylist = props.playlists[0].track
   const playlistItems = props.playlists.map((playlist) =>
-    <option key={playlist.title} value={playlist.track}>Playlist: {playlist.title}</option>
+    <option key={playlist.title} value={playlist.track}>{playlist.title}</option>
   );
   const [playlistSelected, setPlayList] = useState(selectedPlaylist);
   

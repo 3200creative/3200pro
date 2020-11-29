@@ -15,6 +15,7 @@ import {
   MdStorage,
   MdSdCard,
   MdCode,
+  MdSortByAlpha,
   MdChromeReaderMode,
 } from 'react-icons/md'
 
@@ -113,6 +114,10 @@ export default {
     {
       type: 'imgLeftTxtRight',
       icon: MdChromeReaderMode,
+    },
+    {
+      type: 'shuffledTextSection',
+      icon: MdSortByAlpha,
     },
   ],
 }

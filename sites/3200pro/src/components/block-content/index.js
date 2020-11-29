@@ -2,10 +2,13 @@ import BaseBlockContent from '@sanity/block-content-to-react'
 import React from 'react'
 import Figure from './Figure'
 import Spacer from './Spacer'
+import clientConfig from '../../../client-config'
+import Gallery from './Gallery'
 import ButtonBlock from './ButtonBlock'
 import SanityScript from './Script'
 import ImgLeftTxtRight from './ImgLeftTxtRight'
 import DarkmodeImage from './DarkmodeImage'
+import ShuffleText from './ShuffleText'
 const serializers = {
   types: {
     block (props) {
@@ -41,6 +44,9 @@ const serializers = {
     buttonBlock (props) {
       return <ButtonBlock {...props.node} />
     },
+    gallery (props) {
+      return <Gallery {...props.node} />
+    },
     imgLeftTxtRight (props) {
       return <ImgLeftTxtRight {...props.node} />
     },
@@ -49,10 +55,13 @@ const serializers = {
     },
     darkmodeImage (props) {
       return <DarkmodeImage {...props.node} />
+    },
+    shuffledTextSection (props) {
+      return <ShuffleText {...props.node} />
     }
   }
 }
 
-const BlockContent = ({ blocks }) => <BaseBlockContent blocks={blocks} serializers={serializers} />
+const BlockContent = ({ blocks }) => <BaseBlockContent blocks={blocks} serializers={serializers} {...clientConfig.sanity} />
 
 export default BlockContent

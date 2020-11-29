@@ -15,7 +15,8 @@
     "@sanity/desk-tool",
     "@sanity/dashboard",
     "dashboard-widget-gatsby",
-    "@sanity/color-input"
+    "@sanity/color-input",
+    "graph-view"
   ],
   "env": {
     "development": {
