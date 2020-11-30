@@ -17,7 +17,6 @@ const PageTemplate = props => {
     }
     
     return (
-
       <Layout>
         {errors && <SEO title='GraphQL Error' />}
         {page && 
