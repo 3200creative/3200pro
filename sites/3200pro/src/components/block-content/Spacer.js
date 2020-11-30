@@ -6,12 +6,8 @@ function Spacer (props) {
   return (
     <>
     {(props.spacerType == 'clearline' && (
-    <div
-    sx= {{
-      variant: 'variants.clearline'
-    }}
-    ></div>
-    )) || (<div className='clear-both py-2'></div>)}
+    <div sx= {{variant: 'variants.clearline'}}></div>
+    )) || (<div sx= {{variant: 'variants.clear'}}></div>)}
     </>
   )
 }

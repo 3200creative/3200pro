@@ -171,11 +171,14 @@ export default {
       }
 
     },
+    clear: {
+      my: [1, null, 3, null]
+    },
     clearline: {
       width: '100%',
       backgroundColor: 'light',
       height: '1px',
-      my: 5
+      my: [2, null, 5, null]
     },
     postPreview: {
       my: [6],

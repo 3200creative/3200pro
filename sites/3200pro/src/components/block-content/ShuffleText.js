@@ -8,6 +8,7 @@ function ShuffleText (props) {
   const ShuffleText = props && props.phrase
   const [pause] = useState(false)  
   return (
+    <div>
       <Style>
         {ShuffleText ? ShuffleText.map(section => (
           <>
@@ -24,6 +25,7 @@ function ShuffleText (props) {
           </>
         )): null}
       </Style>
+    </div>
   )
 }
 
