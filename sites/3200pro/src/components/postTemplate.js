@@ -20,7 +20,12 @@ const PageTemplate = props => {
 
       <Layout>
         {errors && <SEO title='GraphQL Error' />}
-        {page && <SEO title={page.title} />}
+        {page && 
+        <SEO 
+        title={page.metaTitle} 
+        description={page.metaDesc} 
+        />
+        }
         <Container>
             {errors && (
                 <GraphQLErrorList errors={errors} />

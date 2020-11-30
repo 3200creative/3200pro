@@ -39,7 +39,7 @@ export default {
             name: 'textSize',
             type: 'number',
             validation: Rule =>
-            Rule.error("Please select a style (or none)").required(),
+            Rule.error("Please select a size").required(),
             options: {
                 list: [
                     {title: 'Standard', value: 1},

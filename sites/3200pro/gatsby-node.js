@@ -35,18 +35,5 @@ exports.createPages = ({ graphql, actions }) => {
         context: {id},
       })
     })
-
-  // Create Tea pages.
-  // result.data.allSanityServices.edges.forEach(edge => {
-  //   const id = edge.node.id
-  //   const slug = edge.node.slug.current
-  //   const path = `services/${slug}/`
-  //   createPage({
-  //     // Path for this page — required
-  //     path,
-  //     component: serviceTemplate,
-  //     context: {id},
-  //   })
-  // })
   })
 }

@@ -54,7 +54,12 @@ export default {
       name: 'blockContent',
       type: 'blockContent',
       title: 'Body'
-    }
+    },
+    {
+      name: 'seo',
+      title: 'SEO Title And Description',
+      type: 'meta',            
+    },
   ],
   orderings: [
     {

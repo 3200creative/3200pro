@@ -47,6 +47,7 @@ export default {
       links: '#000',
       icons: '#000',
     },
+    
     modes: {
       dark: {
         text: '#fff',
@@ -89,6 +90,9 @@ export default {
       lineHeight: "body",
       fontSize: 2,
       transition: 'background 0.25s ease-in-out, color 0.25s ease-in-out',
+      a: {
+        color: 'primary'
+      },
     },
     blockquote: {
       bg: "muted",
@@ -96,6 +100,7 @@ export default {
       borderLeft: "5px solid",
       borderColor: "primary",
     },
+  
     inlineCode: {
       color: "text",
       bg: "muted",
