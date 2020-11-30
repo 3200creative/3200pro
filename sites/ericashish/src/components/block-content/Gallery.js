@@ -90,7 +90,7 @@ function Gallery (props) {
     disableImagesLoaded={false} // default false
     updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
   >
-    {props.gallery.map(image => (
+    {props.gallery ? props.gallery.map(image => (
 
       <Box key={image.key}
       sx={{
@@ -128,7 +128,7 @@ function Gallery (props) {
         <figcaption>{image.caption}</figcaption>
       </figure>
       </Box>
-    ))}
+    )): null}
     </Masonry>
     </>
     )
