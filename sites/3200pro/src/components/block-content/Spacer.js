@@ -11,7 +11,7 @@ function Spacer (props) {
       variant: 'variants.clearline'
     }}
     ></div>
-    )) || (<div className='clear-both py-2'>Spacer?</div>)}
+    )) || (<div className='clear-both py-2'></div>)}
     </>
   )
 }
