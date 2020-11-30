@@ -1,129 +1,136 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
+import './gallery.css'
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import { Grid } from 'theme-ui'
 import { Box } from 'theme-ui'
-import { buildImageObj } from '../../lib/helpers'
 import { imageUrlFor } from '../../lib/image-url'
 import Masonry from 'react-masonry-component';
-import { getFluidGatsbyImage } from "gatsby-source-sanity"
-import Img from "gatsby-image"
+import { buildImageObj } from '../../lib/helpers'
 const sanityConfig = {projectId: 'tjb00633', dataset: 'production'}
+const customStyles = {
+  overlay: {zIndex: 1000},
+  backgroundColor: 'rgba(0,0,0,.5)',
+};
 
 function Gallery (props) {
-  
+  Modal.setAppElement(`#___gatsby`);
   const [openModal, setOpen] = useState(false)
   const [currentImage, changeImage] = useState('cat')
   const columns = props.column
-  const galleryLayout = props.gallerySize
-  console.log('props of gallery:');
-  console.log(props.gallery);
-  
   return (
-    <div className='gallery'
-      sx={{
-        variant: `variants.${galleryLayout}`,
-      }}
-    >
-    <Modal
+    <>
+    <Modal style={customStyles}
       isOpen= {openModal}
       contentLabel="Example Modal"
+      closeTimeoutMS = {1000}
+      onClick={() => {
+        setOpen(false)
+      }}
       sx = {{
-        paddingTop: 90,
-        bg: 'rgba(0,0,0,.9)',
-        display: 'grid',
-        gridAutoColumns: '1fr 1fr 1fr',
-        gridTemplateRows: 'auto',
-        height: '100vh',
-        overflow: 'hidden',
-        width: '100vw',
-        position: 'fixed',
-        left: '0',
-        top: '0',
-        zIndex: '9999999',
+        
+        position: "relative",
+    top: "auto",
+    left: "auto",
+    right: "auto",
+    bottom: "auto",
+    maxWidth: "100%",
+    margin: "32px auto",
+    height: '100vh',
+    width: '100%',
+    padding: 0,
+    border: 0,
+    alignItems: 'center',
+    display: 'flex',
+    justifyContent: 'center'
       }}
     >
       <button onClick={() => {setOpen(false)}}
       sx = {{
-        right: 0,
-        top: 90,
-        marginTop: '40px',
-        position: 'absolute',
+        right: '10px',
+        padding: '20px',
+        color: 'white',
+        backgroundColor: 'black',
+        bottom: '10px',
+        border: 'none',
+        borderRadius: '4px',
+        position: 'fixed',
+        boxShadow: '0 30px 60px -10px rgba(0,0,0,0.3), 0 18px 36px -18px rgba(0,0,0,0.5) !important',
       }}
       >
-        X
+        Close
       </button>
     <figure
     onClick={() => {
       setOpen(false)
     }}
     sx={{
+        width: '100vw',
+        maxHeight: '100vh',
+        maxWidth: '100%',
         textAlign: 'center',
-        width: '70vw',
-        maxWidth: '500px',
-        height: '100vh',
-        overflow: 'hidden',
-        margin: '40px auto 0 auto',
+        
 
-      }}>        
-        <Img sx={{
+      }}>
+        <img sx={{
             variant: 'variants.shadow',
-            width: '70vw',
-            maxWidth: '500px',
-            margin: '40px auto 0 auto',
+            maxWidth: '100%',
+            marginTop: '5vh',
+            maxHeight: '80vh',
+            boxShadow: '0 30px 60px -10px rgba(0,0,0,0.3), 0 18px 36px -18px rgba(0,0,0,0.5) !important',
           }}
-          fluid={ currentImage }
-          loading='lazy'
-          alt='lightbox'
-          
-          />
+          src={ currentImage }
+          />       
     </figure>
     </Modal>
-    <Grid
-    width={[ '100%' ]}
-    gap={1}
-    sx={{
-    width: '100%'
-    }}
-    >
   <Masonry
     className={'my-gallery-class'} // default ''
     elementType={'div'} // default 'div'
     disableImagesLoaded={false} // default false
     updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
   >
-    {props.gallery && props.gallery.map(image => (
+    {props.gallery.map(image => (
 
       <Box key={image.key}
       sx={{
         width: ['100%','100%', columns],
+        
       }}
       >
       <figure
-      onClick={() => {        
-        changeImage(getFluidGatsbyImage(image.asset._resf,{ maxWidth: 800 }, sanityConfig));
+      sx={{
+        margin: ['20px', '40px'],
+        variant: 'variants.globalFigure'
+      }}
+      onClick={() => { 
+        changeImage(imageUrlFor(buildImageObj(image))
+        .width(1200)
+        .auto('format')
+        .url())
         setOpen(true)
       }}
       >
         {image.asset && (
-          <Img sx={{
+          <img sx={{
             variant: 'variants.shadow',
             maxWidth: '100%',
           }}
-          className={image.positioning +' '+ image.sizes}
-          fluid={getFluidGatsbyImage(image.asset._ref,{ maxWidth: 800 }, sanityConfig)}
+          src={imageUrlFor(buildImageObj(image))
+            .width(1200)
+            .auto('format')
+            .url()
+          }
+          // fluid={getFluidGatsbyImage(image.asset._ref,{ maxWidth: 800 }, sanityConfig)}
           alt={image.alt}
-          loading='lazy'
           />
         )}
-        <figcaption>{image.caption && image.caption}</figcaption>
+        <figcaption>{image.caption}</figcaption>
       </figure>
       </Box>
     ))}
     </Masonry>
-    </Grid>
-    </div>
+    </>
     )
 }
 
