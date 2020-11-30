@@ -12,7 +12,7 @@ const PageTemplate = props => {
     const page = data && data.page
     let disqusConfig = {
       url: `https://3200.pro/${page.slug.current}`,
-      identifier: page.id,
+      identifier: page.id, 
       title: page.title,
     }
     
@@ -22,8 +22,8 @@ const PageTemplate = props => {
         {errors && <SEO title='GraphQL Error' />}
         {page && 
         <SEO 
-        title={page.metaTitle} 
-        description={page.metaDesc} 
+        title={page.seo.metaTitle} 
+        description={page.seo.metaDesc} 
         />
         }
         <Container>
@@ -61,6 +61,10 @@ export const query = graphql`
         title
         slug {
             current
+        }
+        seo {
+          metaDesc
+          metaTitle
         }
         _rawBlockContent
     }
