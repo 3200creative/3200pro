@@ -40,11 +40,12 @@ const LifePageTemplate = props => {
             : format(new Date(page.publishedAt), 'MMMM dd, yyyy')}
           </div>
          </header>
-            {page && <Styled.h1>{page.title}</Styled.h1>}
+        { data.sanityGlobalOptions.lifeFeaturedImageHero ? (
         <FeaturedImage
          showFeaturedImage={data.sanityGlobalOptions.lifeFeaturedImageHero}
          featuredImage={page.featuredImage}
          />
+        ): null}
         {page._rawBlockContent && <BlockContent blocks={page._rawBlockContent} />}
         </PostContent>
         <MailChimpForm />
