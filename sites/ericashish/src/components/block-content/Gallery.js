@@ -100,7 +100,7 @@ function Gallery (props) {
       >
       <figure
       sx={{
-        margin: ['20px', '40px'],
+        margin: ['20px', '20px'],
         variant: 'variants.globalFigure'
       }}
       onClick={() => { 
