@@ -7,38 +7,39 @@ import { imageUrlFor } from '../../lib/image-url'
 const sanityConfig = {projectId: 'p6aj32cv', dataset: 'production'}
 
 
-function Figure (props) {
+function Figure ({props, parentProps, variant, disableStyling}) {
+  const data = parentProps ? parentProps : props
   return (
-    <figure  sx={{
+    <figure  sx={disableStyling != 'true' ?{
       mx: 'auto',
       my: '80px',
-    }}>
-      {props.disableGatsbyImage != true ? (
-        <Img sx={{
-          variant: 'variants.shadow',
+    }: {}}>
+      {data.disableGatsbyImage != true ? (
+        <Img sx={ disableStyling != 'true' ? {
+          variant: variant ? variant : 'variants.shadow',
           maxWidth: '900px',
           margin: '0 auto',
           float: 'none',
           display: 'block',
-        }}
-        fluid={getFluidGatsbyImage(props.asset._ref,{ maxWidth: 800 }, sanityConfig)}
-        alt={props.alt}
+        }: {}}
+        fluid={getFluidGatsbyImage(data.asset._ref,{ maxWidth: 800 }, sanityConfig)}
+        alt={data.alt}
         loading='lazy'
         />
       ):
       (
         <img
-          src={imageUrlFor(buildImageObj(props))
+          src={imageUrlFor(buildImageObj(data))
             .url()}
-          alt={props.alt}
-          sx={{
+          alt={data.alt}
+          sx={ disableStyling != 'true' ? {
             variant: 'variants.shadow',
             maxWidth: '900px',
             margin: '0 auto',
             float: 'none',
             display: 'block',
             width: '100%'
-          }}
+          } : {}}
         />
       )
       }
@@ -47,7 +48,7 @@ function Figure (props) {
         margin: '10px auto',
         variant: 'variants.caption'
       }}
-      >{props.caption}</figcaption>
+      >{data.caption}</figcaption>
     </figure>
   )
 }

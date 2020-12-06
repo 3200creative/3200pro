@@ -141,5 +141,9 @@ export default {
       type: 'alert',
       icon: GoAlert,
     },
+    {
+      type: 'blockTitleTxtButtonBg',
+      icon: MdCode,
+    }
   ],
 }

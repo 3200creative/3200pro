@@ -92,6 +92,7 @@ const Homepage = props => {
           subTitleText= {page.subTitleText ? page.subTitleText : 'We offer counseling and individual therapy to Maple Grove Minnesota'}
           buttonText="Schedule Appointment"
           buttonLink="/scheduling/"
+          maxHeight = '500px'
           buttonText2="Contact Dagaz"
           buttonLink2="/contact-maple-grove-mn-therapist/"
           bg = { bg }

@@ -119,5 +119,9 @@ export default {
       type: 'shuffledTextSection',
       icon: MdSortByAlpha,
     },
+    {
+      type: 'blockTitleTxtButtonBg',
+      icon: MdCode,
+    }
   ],
 }

@@ -59,6 +59,7 @@ const Consultation = props => {
           buttonText2="Contact Dagaz"
           buttonLink2="/contact-maple-grove-mn-therapist/"
           bg = {bg}
+          maxHeight = '500px'
           ctaHeight = '250px'
           bgc = '#fff'
           overlayRGBA = 'rgba(255,255,255,.5)'

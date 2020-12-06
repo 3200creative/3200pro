@@ -29,6 +29,8 @@ import bioPortableText from './objects/bioPortableText'
 import spacer from './objects/spacers'
 import alert from './objects/alert'
 import backgroundImage from './objects/backgroundImage'
+import simplePortableText from './objects/simplePortableText'
+import blockTitleTxtButtonBg from './objects/blockTitleTxtButtonBg'
 // Content
 import page from   './contentTypes/page'
 import landingPage from './contentTypes/landingPage'
@@ -71,6 +73,8 @@ export default createSchema({
         spacer,
         alert,
         backgroundImage,
+        simplePortableText,
+        blockTitleTxtButtonBg,
         // Content Types
         page,
         landingPage,

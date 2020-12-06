@@ -6,7 +6,7 @@ import React from 'react'
 import Img from "gatsby-image"
 import { Grid, Box } from 'theme-ui'
 
-const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2, py, bg, bgc, ctaHeight, opacity, overlayRGBA, customMaxWidth, subTitleText, alt }) => {
+const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2, py, bg, bgc, ctaHeight, maxHeight, opacity, overlayRGBA, customMaxWidth, subTitleText, alt }) => {
   const heroBg = bg ? bg : 'none'
   const customOpacity = opacity;
   return (
@@ -15,6 +15,7 @@ const SanityHero = ({ titleText, buttonText, buttonLink,buttonText2, buttonLink2
           position: 'absolute',
           objectFit: 'cover',
           minHeight: '350px',
+          maxHeight: maxHeight ? maxHeight : null,
           width: '100vw',
           left: "calc(-50vw + 50%)",
           top: 0,

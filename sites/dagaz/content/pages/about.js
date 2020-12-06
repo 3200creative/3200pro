@@ -66,6 +66,7 @@ const AboutPage = props => {
           bg = {bg}
           alt = 'Maple Grove Addiction therapy'
           ctaHeight = '250px'
+          maxHeight = '500px'
           bgc = '#fff'
           overlayRGBA = 'rgba(255,255,255,.5)'
         />

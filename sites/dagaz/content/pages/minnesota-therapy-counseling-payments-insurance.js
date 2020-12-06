@@ -57,6 +57,7 @@ const Payment = props => {
           buttonText="Schedule Appointment"
           buttonLink="/scheduling/"
           buttonText2="Contact Dagaz"
+          maxHeight = '500px'
           buttonLink2="/contact-maple-grove-mn-therapist/"
           bg = {bg}
           ctaHeight = '250px'

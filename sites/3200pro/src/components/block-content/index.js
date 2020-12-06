@@ -9,6 +9,7 @@ import SanityScript from './Script'
 import ImgLeftTxtRight from './ImgLeftTxtRight'
 import DarkmodeImage from './DarkmodeImage'
 import ShuffleText from './ShuffleText'
+import BlockTitleTxtButtonBg from './BlockTitleTxtButtonBg'
 const serializers = {
   types: {
     block (props) {
@@ -58,6 +59,9 @@ const serializers = {
     },
     shuffledTextSection (props) {
       return <ShuffleText {...props.node} />
+    },
+    blockTitleTxtButtonBg (props) {
+      return <BlockTitleTxtButtonBg {...props.node} />
     }
   }
 }

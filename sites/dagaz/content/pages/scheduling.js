@@ -63,6 +63,7 @@ const Scheduler = props => {
           py = '100px'
           ctaHeight = '200px'
           bgc = '#fff'
+          maxHeight = '500px'
           overlayRGBA = 'rgba(255,255,255,.7)'
         />
         <div

@@ -28,6 +28,8 @@ import shuffleTextBlock from './objects/textShuffler/shuffleTextBlock'
 import shuffledTextSection from './objects/textShuffler/shuffledTextSection'
 import shuffledText from './objects/textShuffler/shuffledText'
 import standardText from './objects/textShuffler/standardText'
+import blockTitleTxtButtonBg from './objects/blockTitleTxtButtonBg'
+import simplePortableText from './objects/simplePortableText'
 // Content Types:
 import page from   './contentTypes/page'
 import teamMember from './contentTypes/teamMember'
@@ -71,6 +73,8 @@ export default createSchema({
     shuffledTextSection,
     shuffledText,
     standardText,
+    blockTitleTxtButtonBg,
+    simplePortableText,
     // Content Types
     page,
     post,

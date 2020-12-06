@@ -6,20 +6,23 @@ import { Button } from 'theme-ui'
 //import { buildImageObj } from '../../lib/helpers'
 //import { imageUrlFor } from '../../lib/image-url'
 
-function ButtonBlock (props) {
+function ButtonBlock ({props, parentProps}) {
+  const sanityProps = parentProps ? parentProps : props
   return (
     <div 
     sx={{
     width: '100%',
     margin: '0 auto',
-    textAlign: 'center'
+    textAlign: 'center',
+    variant: 'variants.buttonBlock'
     }}
     >
-    {console.log('Buttons:')}
-    {console.log(props.buttons)}
-    {props.buttons.map(btn => (
+    {sanityProps.buttons.map(btn => (
       <Link key={btn.key} to={btn.href}>
-        <Button
+        <Button sx={{
+          my: 2,
+          mx: 2
+        }}
         >{btn.buttonTxt}</Button>
       </Link>
     ))}

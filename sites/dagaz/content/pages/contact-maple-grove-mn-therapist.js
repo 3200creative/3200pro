@@ -9,7 +9,7 @@ import Typeform from 'c32-gatsby-theme-components/src/components/ui/typeform'
 export const query = graphql`
   query ContactPageQuery {
     
-    page: sanityContactPage(header: {eq: "Contact Information"}) {
+    page: sanityContactPage(header: {eq: "Contact Dagaz Therapy"}) {
       header
       _rawBlockContent
       seo {
@@ -35,7 +35,7 @@ const ContactPage = props => {
 
   if (!page) {
     throw new Error(
-      'Missing "About" page data. Open the studio at http://localhost:3333 and add "About" page data and restart the development server.'
+      'Missing "Contact" page data. Open the studio at http://localhost:3333 and add "About" page data and restart the development server.'
     )
   }
 
