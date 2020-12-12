@@ -58,5 +58,11 @@ export default {
           "The root url of your website, e.g. https://3200.pro",
         validation: (Rule) => Rule.required(),
       },
+      {
+        title: 'Open graph',
+        name: 'openGraph',
+        description: 'These will be the default meta tags on all pages that have not set their own',
+        type: 'openGraph'
+      },
     ],
   }

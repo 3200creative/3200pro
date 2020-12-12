@@ -7,15 +7,15 @@ import { imageUrlFor } from '../../lib/image-url'
 const sanityConfig = {projectId: 'p6aj32cv', dataset: 'production'}
 
 
-function Figure ({props, parentProps, variant, disableStyling}) {
-  const data = parentProps ? parentProps : props
+function Figure ({props, disableGatsbyImage, parentProps, variant, disableStyling, ...rest}) {
+  const data = parentProps ? parentProps : rest
   return (
-    <figure  sx={disableStyling != 'true' ?{
+    <figure sx={disableStyling !== 'true' ?{
       mx: 'auto',
       my: '80px',
     }: {}}>
-      {data.disableGatsbyImage != true ? (
-        <Img sx={ disableStyling != 'true' ? {
+      {data.disableGatsbyImage !== 'false' ? (
+        <Img sx={ disableStyling !== 'true' ? {
           variant: variant ? variant : 'variants.shadow',
           maxWidth: '900px',
           margin: '0 auto',

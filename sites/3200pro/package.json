@@ -16,7 +16,8 @@
     "gatsby-source-sanity": "^6.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-spring": "^8.0.27"
+    "react-spring": "^8.0.27",
+    "react-xarrows": "^1.5.2"
   },
   "devDependencies": {
     "prettier": "^2.0.5"

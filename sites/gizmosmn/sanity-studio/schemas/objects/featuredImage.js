@@ -8,7 +8,15 @@ export default {
     fields: [
       {
         name: 'alt',
-        title: 'Alternative text',
+        title: 'GizmosMN Alternative text',
+        type: 'string',
+        options: {
+          isHighlighted: true
+        }
+      },
+      {
+        name: 'ccAlt',
+        title: 'Custom Cars Alternative text',
         type: 'string',
         options: {
           isHighlighted: true

@@ -7,6 +7,7 @@ import Gallery from './Gallery'
 import SanityVideo from './Video'
 import SanitySoundcloud from './Soundcloud'
 import SanitySoundcloudPlaylist from './SoundcloudPlaylist'
+import ButtonBlock from './ButtonBlock'
 import SanitySoundcloudPlaylistDropdown from './SoundcloudPlaylistDropdown'
 import RecentPostFeed from './RecentPostFeed'
 import SingularFeaturedPost from './SingularFeaturedPost'
@@ -16,6 +17,20 @@ import HTML from './html'
 import ImageCardBlock from './imageCardBlock'
 
 const serializers = {
+  marks: {
+    internalLink: ({mark, children}) => {
+      const {slug = {}} = mark
+      const href = `/${slug.current}`
+      return <a href={href}>{children}</a>
+    },
+    link: ({mark, children}) => {
+      // Read https://css-tricks.com/use-target_blank/
+      const { blank, href } = mark
+      return blank ?
+        <a href={href} target="_blank" rel="noopener">{children}</a>
+        : <a href={href}>{children}</a>
+    }
+  },
   types: {
     //singularFeaturedPost: SingularFeaturedPost,
     block (props) {
@@ -62,6 +77,9 @@ const serializers = {
     },
     soundcloudPlaylistDropdown (props) {
       return <SanitySoundcloudPlaylistDropdown {...props.node} />
+    },
+    buttonBlock (props) {
+      return <ButtonBlock {...props.node} />
     },
     clear (props) {
       return <Spacer {...props.node} />

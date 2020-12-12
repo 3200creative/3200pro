@@ -9,7 +9,7 @@ import { Button } from 'theme-ui'
 function ButtonBlock ({props, parentProps}) {
   const sanityProps = parentProps ? parentProps : props
   return (
-    <div 
+    <div
     sx={{
     width: '100%',
     margin: '0 auto',
@@ -18,7 +18,7 @@ function ButtonBlock ({props, parentProps}) {
     }}
     >
     {sanityProps.buttons.map(btn => (
-      <Link key={btn.key} to={btn.href}>
+      <Link  key={btn.key} to={btn.href}>
         <Button sx={{
           my: 2,
           mx: 2

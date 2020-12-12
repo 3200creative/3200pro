@@ -33,7 +33,7 @@
         "markDefs": [],
         "style": "normal"
       },
-      {
+      {a
         "_key": "6bb64f5cb083",
         "_type": "figure",
         "alt": "example alt tag",

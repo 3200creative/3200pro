@@ -14,7 +14,11 @@ const SiteLayout = ({ children }) => {
   const [colorMode, setColorMode] = useColorMode()  
   const shadow = (colorMode == 'light') ? 'inset 0px -600px 500px -300px rgba(41,44,52,.10)' : 'inset 0px -600px 500px -300px rgba(41,44,52,.5)'
   return (
-    <Styled.root sx={{boxShadow: shadow}}>
+    <Styled.root sx={{boxShadow: shadow,
+    a: {
+      color: 'primary'
+    }
+    }}>
       <Normalize />
       <ArticlesContextProvider>
       <SiteContainer>

@@ -1,6 +1,6 @@
 
 export default {
-    name: 'simplePortableText',
+    name: 'sa',
     type: 'array',
     title: 'Excerpt',
     of: [

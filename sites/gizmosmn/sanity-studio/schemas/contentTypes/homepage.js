@@ -5,22 +5,37 @@ export default {
     fields: [
         {
             name: 'header',
-            title: 'Header Text',
+            title: 'GizmosMN Header Text',
+            type: 'string'
+        },
+        {
+            name: 'ccHeader',
+            title: 'CustomCars Header Text',
             type: 'string'
         },
         {
             name: 'heroImage',
-            title: 'First Background Image',
+            title: 'GizmosMN First Background Image',
             type: 'featuredImage'
         },
         {
             name: 'blockContent',
-            title: 'Content',
+            title: 'GizmosMN Content',
+            type: 'blockContent'
+        },
+        {
+            name: 'ccBlockContent',
+            title: 'CustomCars Content',
             type: 'blockContent'
         },
         {
             name: 'seo',
-            title: 'SEO Title And Description',
+            title: 'GizmosMN SEO Title And Description',
+            type: 'meta',            
+        },
+        {
+            name: 'ccSeo',
+            title: 'CustomCars SEO Title And Description',
             type: 'meta',            
         },
     ],

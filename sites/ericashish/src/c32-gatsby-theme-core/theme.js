@@ -24,7 +24,7 @@ export default {
     text: baseColors.black,
     background: '#fafafa', //Try "#954264",
     backgroundWhite: '#ffffff',
-    primary: baseColors.blue[7],
+    primary: '#3C5CCF',
     secondary: baseColors.orange[7],
     accent: baseColors.orange[2],
     grayTxt: '#73737D',
@@ -56,9 +56,9 @@ export default {
     },
     modes: {
       dark: {
-        text: 'red',
+        text: 'white',
         background: '#000',
-        primary: '#0cf',
+        primary: '#8F2DF0',
         transition: 'all 0.25s ease-in-out-quad',
         footerShadow: 'footerShadowDark',
         newsletter: {
@@ -105,6 +105,9 @@ export default {
       fontSize: 2,
       boxShadow: 'inset 0px -600px 500px -300px rgba(41,44,52,.10)',
       transition: 'background 0.25s ease-in-out, color 0.25s ease-in-out',
+      a: {
+        color: '#3C5CCF'
+      },
     },
     blockquote: {
       margin: '15px auto 50px',

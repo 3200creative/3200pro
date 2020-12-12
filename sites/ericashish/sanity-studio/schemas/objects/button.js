@@ -15,6 +15,11 @@ export default {
             type: 'string',
         },
         {
+            title: 'Button Color',
+            name: 'buttonColor',
+            type: 'color'
+          },
+        {
             title: 'URL',
             name: 'href',
             type: 'url',

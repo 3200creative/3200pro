@@ -15,7 +15,8 @@
     "@sanity/desk-tool",
     "@sanity/dashboard",
     "dashboard-widget-netlify",
-    "dashboard-widget-gatsby"
+    "dashboard-widget-gatsby",
+    "graph-view"
   ],
   "env": {
     "development": {

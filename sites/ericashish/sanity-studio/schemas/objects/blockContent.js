@@ -58,7 +58,7 @@ export default {
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
           {
-            title: 'URL',
+            title: 'External Link',
             name: 'link',
             type: 'object',
             fields: [
@@ -75,11 +75,36 @@ export default {
               {
                 title: 'Open in new tab?',
                 name: 'blank',
-                description: 'Read https://css-tricks.com/use-target_blank/',
                 type: 'boolean',
               },
+              {
+                title: 'Wistia Lightbox Video',
+                name: 'wistiaLightbox',
+                type: 'boolean',
+              }
             ],
           },
+          {
+            name: 'internalLink',
+            type: 'object',
+            title: 'Option 2: Internal link',
+            fields: [
+              {
+                name: 'reference',
+                type: 'reference',
+                title: 'Reference',
+                to: [
+                  { type: 'life' },
+                  { type: 'music' },
+                  { type: 'tea' },
+                  { type: 'business' },
+                  { type: 'page' },
+                  { type: 'landingPage' },
+                ]
+              }
+            ]
+          },
+          
         ],
       },
     },
@@ -88,6 +113,10 @@ export default {
     // as a block type.
     {
       type: 'spacer',
+      icon: MdUnfoldLess,
+    },
+    {
+      type: 'buttonBlock',
       icon: MdUnfoldLess,
     },
     {

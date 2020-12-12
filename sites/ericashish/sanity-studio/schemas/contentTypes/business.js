@@ -53,4 +53,20 @@ export default {
             type: 'meta',            
         },
     ],
+    orderings: [
+        {
+          title: 'By Date: Newest -> Oldest',
+          name: 'archiveOrdering',
+          by: [
+            {field: 'publishedAt', direction: 'desc'}
+          ]
+        },
+        {
+            title: 'By Date: Oldest -> Newest',
+            name: 'archiveOrdering',
+            by: [
+              {field: 'publishedAt', direction: 'asc'}
+            ]
+          },
+      ]
 }

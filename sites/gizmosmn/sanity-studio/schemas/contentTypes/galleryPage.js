@@ -5,12 +5,21 @@ export default {
     fields: [
         {
             name: 'title',
-            title: 'Title',
+            title: 'GizmosMN Title',
             type: 'string'
         },
         {
             name: 'slug',
-            title: 'Slug',
+            title: 'GizmosMN Slug',
+            type: 'slug',
+            options: {
+              source: 'title',
+              maxLength: 96
+            }
+        },
+        {
+            name: 'ccSlug',
+            title: 'CustomCars Slug',
             type: 'slug',
             options: {
               source: 'title',
@@ -35,17 +44,32 @@ export default {
         },
         {
             name: 'blockContent',
-            title: 'Content',
+            title: 'GizmosMN Content',
+            type: 'blockContent'
+        },
+        {
+            name: 'ccBlockContent',
+            title: 'CustomCars Content',
             type: 'blockContent'
         },
         {
             name: 'tags',
-            title: 'Tags',
+            title: 'GizmosMN Tags',
+            type: 'tags'
+        },
+        {
+            name: 'ccTags',
+            title: 'CustomCars Tags',
             type: 'tags'
         },
         {
             name: 'seo',
-            title: 'SEO Title And Description',
+            title: 'GizmosMN SEO Title And Description',
+            type: 'meta',            
+        },
+        {
+            name: 'ccSeo',
+            title: 'CustomCars SEO Title And Description',
             type: 'meta',            
         },
     ],

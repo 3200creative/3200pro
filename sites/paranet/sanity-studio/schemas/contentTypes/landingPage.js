@@ -10,14 +10,22 @@ export default {
             type: 'string'
         },
         {
-            name: 'displayedTitle',
+            name: 'title',
             title: 'Displayed Title',
             type: 'string'
         },
         {
-            name: 'pageBuilder',
+            name: 'navMenu',
+            type: 'reference',
+            title: 'Navigation menu',
+            // weak: true, // Uncomment if you want to be able to delete navigation even though pages refer to it
+            to: [{ type: 'menu' }],
+            description: 'Which nav menu should be shown, if any',
+          },
+        {
+            name: 'content',
             type: 'array',
-            title: 'Page Builder',
+            title: 'content',
             of: [
                 { type: 'modularContent'},
                 { type: 'buttonBlock'},

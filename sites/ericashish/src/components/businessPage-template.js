@@ -19,7 +19,7 @@ const BusinessPageTemplate = props => {
     return (
       <Layout>
         {errors && <SEO title='GraphQL Error' />}
-        {page && <SEO title={page.title} />}
+        {page && <SEO title={page.seo !== null  ? page.seo.metaTitle : page.title} description={page.seo !== null ? page.seo.metaDesc : page.excerpt} />}
         <Container>
             {errors && (
                 <GraphQLErrorList errors={errors} />
@@ -58,6 +58,10 @@ export const query = graphql`
         title
         slug {
             current
+        }
+        seo {
+          metaTitle
+          metaDesc
         }
         excerpt
         publishedAt

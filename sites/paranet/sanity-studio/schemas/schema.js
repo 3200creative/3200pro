@@ -7,6 +7,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import menu from './utilities/menu'
 import globalOptions from './utilities/globalOptions'
 import siteSettings from './utilities/siteSettings'
+import route from './utilities/route'
 // Taxonomies
 import teamPosition from './taxonomies/teamPosition'
 import serviceType from './taxonomies/serviceType'
@@ -22,8 +23,9 @@ import button from './objects/button'
 import subBtn from './objects/subBtn'
 import buttonBlock from './objects/buttonBlock'
 import modularContent from './objects/modularContent'
-
+import openGraph from './objects/openGraph'
 import spacer from './objects/spacers'
+import cta from './objects/cta'
 // Content
 import review from './contentTypes/review'
 import service from './contentTypes/service'
@@ -46,12 +48,15 @@ export default createSchema({
         menu,
         globalOptions,
         siteSettings,
+        route,
         // Object Types
         blockContent,
+        openGraph,
         modularContent,
         figure,
         tags,
         meta,
+        cta,
         featuredImage,
         simpleUrl,
         button,

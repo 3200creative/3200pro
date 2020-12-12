@@ -38,51 +38,15 @@ export const useSiteMetadata = () => {
             }
           }
         }
-        sanityMenuLinks: sanityMenu(title: {eq: "Primary Menu"}) {
-          title
-          button {
-            buttonTxt
-            href
-            subMenu {
-              buttonTxt
-              href
-            }
-          }
-        }
-        secondaryMenuLinks: sanityMenu(title: {eq: "Header Contact Menu"}) {
-          title
-          button {
-            buttonTxt
-            href
-            subMenu {
-              buttonTxt
-              href
-            }
-          }
-        }
-        footerMenuLinks: sanityMenu(title: {eq: "Footer Menu"}) {
-          title
-          button {
-            buttonTxt
-            href
-            subMenu {
-              buttonTxt
-              href
-            }
-          }
-        }
       }
     `
   )
   const [colorMode, setColorMode] = useColorMode()  
   const logo = (colorMode == 'light') ? Logo : LogoDark
-  const useSanityNav = true
+  const useSanityNavV2 = true
   const useTransitions = true
   const useDarkMode = true
-  // Sanity Menu Information
-  const navItems = data.sanityMenuLinks.button
-  const secondaryNavItems = data.secondaryMenuLinks.button
-  const footerNavItems = data.footerMenuLinks.button
+
   //Footer Information
   const developer = '3200.pro'
   const developerLink = 'https://3200.pro'
@@ -104,11 +68,11 @@ export const useSiteMetadata = () => {
   const seoImage = data.seoImage.childImageSharp.resize
   const metaData = data.site.siteMetadata
   const twitterUsername = data.site.siteMetadata.social.twitter
-  
+
   
   
   // Local Business Schema
-  const allData = { ...metaData, useDarkMode, navItems, secondaryNavItems, footerNavItems, useSanityNav, additionalLinks, developer,developerLink, useTransitions, title, logo, seoImage, twitterUsername,
+  const allData = { ...metaData, useDarkMode, useSanityNavV2, additionalLinks, developer,developerLink, useTransitions, title, logo, seoImage, twitterUsername,
     
     // Local Business Data:
     hasLocalBusinessSchema: true,
