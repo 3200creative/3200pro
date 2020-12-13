@@ -196,6 +196,11 @@ export default {
       clear: 'both',
       height: '10px',
     },
+    clear: {
+      width: '100%',
+      clear: 'both',
+      height: '2rem',
+    },
     darkmodeicon: {
       top: '10px',
       right: '20px'
@@ -225,7 +230,9 @@ export default {
       py: [2, null, 5, null],
       px: 4,
       mx: 'auto',
-      my: 4,
+      mt: 5,
+      mb: 4,
+      
       boxShadow: 'rgba(0, 0, 0, 0.3) 0px 20px 40px -20px, rgba(0, 0, 0, 0.33) 0px 18px 36px -18px !important',
       h2: {
         fontFamily: '"Merriweather",Georgia,Serif',

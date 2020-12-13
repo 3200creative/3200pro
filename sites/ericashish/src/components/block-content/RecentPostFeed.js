@@ -116,6 +116,7 @@ function RecentPostFeed (props, location) {
             }
             excerpt
             publishedAt
+            
             featuredImage {
                 asset {
                   _id
@@ -323,6 +324,8 @@ function RecentPostFeed (props, location) {
       </Grid>
     ))}
     </Grid>
+    {props.showArchiveBtn && <div sx={{float: 'right', width: 'auto'}}><Link to={`/${base}`}>view all {base} content</Link></div>}
+
     </>
   )
 }

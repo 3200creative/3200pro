@@ -5,7 +5,7 @@ import React from 'react'
 function Spacer (props) {
   return (
     <>
-    {(props.spacerType === 'clearline' && (<div sx={{variant: 'variants.clearline'}}></div>)) || ('clear')}
+    {(props.spacerType === 'clearline' && (<div sx={{variant: 'variants.clearline'}}></div>)) || (<div sx={{variant: 'variants.clear'}}></div>)}
     </>
   )
 }

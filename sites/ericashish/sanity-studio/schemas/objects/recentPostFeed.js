@@ -49,5 +49,10 @@ export default {
         description: '6 posts is default',
         type: 'number',
       },
+      {
+        title: 'Enable Button To Archive',
+        name: 'showArchiveBtn',
+        type: 'boolean'
+      }
     ]
   }
