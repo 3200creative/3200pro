@@ -77,7 +77,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#cccccc`,
         display: `minimal-ui`,
-        icon: `content/asse2ts/c32-site-icon.png`, // This path is relative to the root of the site.
+        icon: `content/assets/c32-site-icon.png`, // This path is relative to the root of the site.
       },
     },
     {
