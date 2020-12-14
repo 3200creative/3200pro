@@ -318,7 +318,7 @@ function RecentPostFeed (props, location) {
           >
           {differenceInDays(new Date(post.node.publishedAt), new Date()), { useAdditionalDayOfYearTokens: true, useAdditionalWeekYearTokens: true } > 3
             ? distanceInWords(new Date(post.node.publishedAt), new Date(), { useAdditionalDayOfYearTokens: true, useAdditionalWeekYearTokens: true } )
-            : format(new Date(post.node.publishedAt), 'MMMM dd, yyyy')}
+            : format(new Date(post.node.publishedAt), 'MMMM DD, YYYY')}
           </div>
         </Grid>
       </Grid>
