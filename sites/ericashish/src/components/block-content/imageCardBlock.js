@@ -5,25 +5,19 @@ import React from 'react'
 import clientConfig from '../../../client-config'
 
 import { Link } from 'gatsby'
-import { Grid } from 'theme-ui'
-import { Box } from 'theme-ui'
+import { GridLayoutContext } from '../articleFeedLayout'
+import Grid from '@material-ui/core/Grid'
 import { buildImageObjMap } from '../../lib/helpers'
 import { imageUrlFor } from '../../lib/image-url'
-
+import ButtonBlock  from './ButtonBlock'
 function ImageCardBlock (props) {
     console.log(props);
   return (
-    <>
-        {/* {props.imageCards && props.imageCards.map(card =>(
-            <Grid
-            width={[ '100%', '30%' ]}
-            gap={3}
-            columns={[ 1, 2]}
-            sx={{
-              marginTop: '40px'
-            }}
-            >
-            <div>
+    <div sx={{mt:5}}>
+        {props.imageCards && props.imageCards.map(card =>(
+            <>
+            <Grid container justify="space-between">
+            <Grid item xs={12} md={6}>
             <img
             src={imageUrlFor(buildImageObjMap(card.blockImage))
             .auto('format')
@@ -32,12 +26,12 @@ function ImageCardBlock (props) {
             alt='test'
             sx= {{
               width: '96%',
-              maxHeight: [null, null, null, '285px'],
+              maxHeight: [null, null, null, '340px'],
               variant: 'variants.shadow',
             }}
             />
-            </div>
-            <div><h4
+            </Grid>
+            <Grid item xs={12} md={6}><h4
             sx= {{
                     m: 0,
                     color: 'text',
@@ -48,15 +42,13 @@ function ImageCardBlock (props) {
             <p>
             <BaseBlockContent blocks={card.text} {...clientConfig.sanity}  />
             </p>
-            {props.buttons. && props.buttons.map(buttons =>(
-                <div>
-                    text:{buttons.buttonTxt}
-                </div>
-            ))}
-            </div>
+            {card.cardButtons && <ButtonBlock parentProps={card.cardButtons} />}
             </Grid>
-        ))} */}
-    </>
+            </Grid>
+            <div sx={{ border: '1px solid #eee', my: 5}}></div>
+            </>
+        ))}
+    </div>
   )
 }
 

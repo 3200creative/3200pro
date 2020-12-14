@@ -10,7 +10,7 @@ export default {
         },
         {
             title: 'Icon',
-            description: 'Ex: FaFacebookF from: https://react-icons.github.io/icons?name=fa',
+            description: 'Ex: FaFacebookF from: https://react-icons.github.io/react-icons/icons?name=fa',
             name: 'icon',
             type: 'string',
         },

@@ -252,7 +252,7 @@ function RecentPostFeed (props, location) {
     <Grid item xs={8} md={10} sx={{
       display: [null, null, null,  gridLayout == 'lists' ? 'flex' : 'block'],
       flexDirection: [null, null, null, gridLayout == 'lists'? 'column' : 'none'],
-      justifyContent: [null, null, null,  gridLayout == 'lists' ? 'center' : 'none'],
+      justifyContent: [null, null, null,  gridLayout == 'lists' ? 'center' : 'none'], 
       }}>{props.link ? (
         <Link 
         sx= {{
@@ -268,9 +268,9 @@ function RecentPostFeed (props, location) {
     <Grid container justify="space-between">
     {contentType.slice(0, Math.min(props.postCount ? props.postCount : 100, maxCount)).map(post => (
       <Grid container key={post.node.key} xs={12} md={gridLayout === 'lists' ? 12 : 6} sx={{
-        py:4}}>
+        py:4, variant: 'variants.recentPosts'}}>
           
-        <Grid item xs={12} md={gridLayout === 'lists' ? 6 : 12} sx={{height:gridLayout === 'lists' ? [null, null, null, '360px'] : [null, null, null, '360px'], }}>
+        <Grid item xs={12} md={gridLayout === 'lists' ? 6 : 12} sx={{height:gridLayout === 'lists' ? [null, null, null, '360px'] : [null, null, null, '360px']}}>
           <Link to={url.indexOf(base) > -1 ? post.node.slug.current : base + '/' + post.node.slug.current}>
             <img
             src={imageUrlFor(buildImageObjMap(post.node.featuredImage))

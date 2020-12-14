@@ -3,7 +3,6 @@
 import { tailwind, baseColors } from "@theme-ui/preset-tailwind"
 import prism from "@theme-ui/prism/presets/oceanic-next"
 
-
 export default {
   initialColorModeName: 'light',
   useColorSchemeMediaQuery: false,
@@ -18,10 +17,9 @@ export default {
     header: '"Merriweather",Georgia,Serif',
   },
 
-
   colors: {
     ...tailwind.colors,
-    text: baseColors.black,
+    text: '#000',
     background: '#fafafa', //Try "#954264",
     backgroundWhite: '#ffffff',
     primary: '#3C5CCF',
@@ -59,7 +57,7 @@ export default {
         text: 'white',
         background: '#000',
         primary: '#8F2DF0',
-        transition: 'all 0.25s ease-in-out-quad',
+        transition: 'color 0.25s ease-in-out-quad',
         footerShadow: 'footerShadowDark',
         newsletter: {
           background: '#111',
@@ -105,27 +103,46 @@ export default {
       fontSize: 2,
       boxShadow: 'inset 0px -600px 500px -300px rgba(41,44,52,.10)',
       transition: 'background 0.25s ease-in-out, color 0.25s ease-in-out',
-      a: {
-        color: '#3C5CCF'
+      p: {
+        fontSize: '16px',
+        color: '#08080B',
+        my: '10px',
+        a: {
+          cursor: 'pointer',
+          color: '#3C5CCF',
+          '&:hover': {
+            textDecoration: 'underline'
+          }
+        },
       },
+      h4: {
+        a: {
+          '&:hover': {
+            color: '#3C5CCF'
+          }
+        }
+      }
     },
     blockquote: {
-      margin: '15px auto 50px',
       color: 'text',
-      marginLeft: '-200px',
-      marginRight: '-200px',
+      marginLeft: '-50vw',
+      left: '50%',
+      width: '100vw',
+      position: 'relative',
       p: {
         float:'none',
-        textAlign: 'center',
+        textAlign: 'left',
         fontFamily: 'Merriweather, Georgia, serif',
         fontStyle: 'italic',
-        paddingRight: '100px',
         paddingBottom: '0px',
-        width: '100%',
+        px: '20px',
+        maxWidth: '100%',
+        width: '1000px',
         margin: '0px auto',
-        fontSize: ['24px','36px'],
+        fontSize: ['18px', '24px','30px', null],
         lineHeight: '1.32',
-        fontWeight: '400',
+        fontWeight: '700',
+        textJustify: 'inter-word',
       }
     },
     inlineCode: {
@@ -190,11 +207,28 @@ export default {
     root: {
       boxShadow: 'footerShadow',
     },
+    buttons: {
+      cursor: 'pointer',
+      transition: 'box-shadow 0.25s ease-in-out',
+      boxShadow: 'rgba(0, 0, 0, 0.3) 0px 20px 40px -20px, rgba(0, 0, 0, 0.33) 0px 18px 36px -18px',
+      '&:hover': {
+        transition: 'box-shadow 0.25s ease-in-out',
+        boxShadow: 'none',
+      }
+    },
+    postContent: {
+      mt: '20px'
+    },
+    video: {
+      my: '10px',
+      border: '#ff0000 100px solid !important'
+    },
     clearline: {
       borderBottom: '1px solid #ddd',
       width: '100%',
       clear: 'both',
-      height: '10px',
+      height: '1px',
+      my: '2rem'
     },
     clear: {
       width: '100%',
@@ -288,12 +322,10 @@ export default {
       background: 'transparent',
       borderRadius: '100px',
       padding: '10px',
-      transition: 'all 0.5s ease-in-out-quad',
       '&:hover': {
         background: '#f5f5f5',
         borderRadius: '100px',
         padding: '10px',
-        transition: 'all 0.5s ease-in-out-quad'
       },
       '&:active': {
         outline: 'none'
@@ -364,8 +396,14 @@ export default {
       paddingTop: '0',
       marginTop: '0',
       pt: 3,
+      p: {
+        fontSize: '12px',
+        a: {
+          color: '#999'
+        }
+      },
       a: {
-        color: 'lightTxt'
+        color: '#999'
       }
     },
     footerOverlay: {

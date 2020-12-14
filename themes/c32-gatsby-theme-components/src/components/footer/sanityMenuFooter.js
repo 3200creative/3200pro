@@ -23,7 +23,7 @@ const FooterSections = ({footerBG}) => {
     <div
       sx={{
         width: '100%',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         color: "footer.text",
         bg: "footer.background",
         a: {

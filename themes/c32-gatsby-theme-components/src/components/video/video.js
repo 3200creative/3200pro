@@ -6,6 +6,7 @@ const Video = ({ videoSrcURL, videoTitle, ...props }) => (
       display: 'block',
       width: ['640px'],
       height: ['360px'],
+      variant: 'variants.video'
     }}
       src={videoSrcURL}
       title={videoTitle}
