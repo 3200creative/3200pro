@@ -36,7 +36,7 @@ const BusinessPageTemplate = props => {
           >
           {differenceInDays(new Date(page.publishedAt), new Date()), { useAdditionalDayOfYearTokens: true, useAdditionalWeekYearTokens: true } > 3
             ? distanceInWords(new Date(page.publishedAt), new Date())
-            : format(new Date(page.publishedAt), 'MMMM dd, yyyy')}
+            : format(new Date(page.publishedAt), 'MMMM DD, YYYY')}
           </div>
          </header>
             <FeaturedImage

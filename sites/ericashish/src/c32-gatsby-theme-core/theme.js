@@ -19,7 +19,7 @@ export default {
 
   colors: {
     ...tailwind.colors,
-    text: '#000',
+    text: '#08080B',
     background: '#fafafa', //Try "#954264",
     backgroundWhite: '#ffffff',
     primary: '#3C5CCF',
@@ -54,7 +54,7 @@ export default {
     },
     modes: {
       dark: {
-        text: 'white',
+        text: '#fff',
         background: '#000',
         primary: '#8F2DF0',
         transition: 'color 0.25s ease-in-out-quad',
@@ -64,6 +64,9 @@ export default {
           fields: {
             background: '#fff'
           },
+        },
+        p: {
+          color: '#fff'
         },
         shadow: {
           boxShadow: '0 30px 60px -10px rgba(255,255,255,0.3), 0 18px 36px -18px rgba(255,255,255,0.33) !important',
@@ -105,7 +108,6 @@ export default {
       transition: 'background 0.25s ease-in-out, color 0.25s ease-in-out',
       p: {
         fontSize: '16px',
-        color: '#08080B',
         my: '10px',
         a: {
           cursor: 'pointer',
@@ -215,9 +217,6 @@ export default {
         transition: 'box-shadow 0.25s ease-in-out',
         boxShadow: 'none',
       }
-    },
-    postContent: {
-      mt: '20px'
     },
     video: {
       my: '10px',

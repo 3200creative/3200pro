@@ -16,5 +16,11 @@ export default {
         layout: 'radio',
       }, 
     },
+    {
+      name: 'size',
+      title: 'Size',
+      description: 'Any number 1-100',
+      type: 'number'
+    }
   ],  
 };

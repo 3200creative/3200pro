@@ -4,8 +4,8 @@ import BlockContent from '../block-content'
 import { buildImageObj } from '../../lib/helpers'
 import { imageUrlFor } from '../../lib/image-url'
 import { React } from "react"
-import { Grid } from 'theme-ui'
-import { Box } from 'theme-ui'
+import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography'
 
 function AuthorBlock (props) {
   let authorBio
@@ -26,18 +26,22 @@ function AuthorBlock (props) {
       authorBio = props.author.bio;
   }
   return (
-    <Grid
-    columns={['1fr 8fr']}
+    <div container
     sx= {{
       maxWidth: '100%',
-      width: '500px',
+      width: '900px !important',
       fontSize: '12px',
+      display: 'flex',
+      justifyContent: 'start',
       variant: 'variants.smallAuthorBlock'
     }}
     >
-    <Box>
+    <div sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '46px', marginRight: '10px', }}>
     <figure
     sx = {{
+      float: 'left',
+      display: 'block',
+      clear: 'none',
       margin: 0,
       border: '1px solid #aaa',
       padding: '2px',
@@ -66,16 +70,25 @@ function AuthorBlock (props) {
             }}
         />
     </figure>
-    </Box>
-    <Box
+    </div>
+    <div
     sx = {{
+      float: 'left',
+      width: '550px',
+      display: 'block',
+      clear: 'none',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
       fontSize: '14px',
       lineHeight: '1.45',
       color: 'var(--theme-ui-colors-grey,#73737D)'
     }}>
+    <Typography wrap>
     <BlockContent blocks={ authorBio || [] } />
-    </Box>
-    </Grid>
+    </Typography>
+    </div>
+    </div>
   )
 }
 
