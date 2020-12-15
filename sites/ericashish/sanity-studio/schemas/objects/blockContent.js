@@ -104,6 +104,24 @@ export default {
               }
             ]
           },
+          {
+            name: 'lightboxIframe',
+            type: 'object',
+            title: 'Lightbox Iframe',
+            fields: [
+              {
+                name: 'wistiaVideo',
+                type: 'string',
+                title: 'Wistia Video',
+                description: 'Ex: g5pnf59ala'
+              },
+              {
+                name: 'other',
+                type: 'html',
+                title: 'Iframe Code',
+              }
+            ]
+          },
           
         ],
       },

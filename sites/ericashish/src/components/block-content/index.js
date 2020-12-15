@@ -18,20 +18,23 @@ import Quote from './Quote'
 import HTML from './html'
 import ImageCardBlock from './imageCardBlock'
 
-const serializers = {
+const serializers = {  
   marks: {
-    internalLink: ({mark, children}) => {
-      const {slug = {}} = mark
-      const href = `/${slug.current}`
+    internalLink: ({mark: { reference } , children}) => {
+      const {slug = {}} = reference
+      const href = `https://www.ericashish.com/${reference._type}/${slug.current}`
       return <a href={href}>{children}</a>
     },
     link: ({mark, children}) => {
-      // Read https://css-tricks.com/use-target_blank/
       const { blank, href } = mark
       return blank ?
         <a href={href} target="_blank" rel="noopener">{children}</a>
         : <a href={href}>{children}</a>
-    }
+    },
+    lightboxIframe: ({mark, children}) => {
+      const { blank, href } = mark
+      return <span>Video modal: {children}</span>
+    },
   },
   types: {
     //singularFeaturedPost: SingularFeaturedPost,

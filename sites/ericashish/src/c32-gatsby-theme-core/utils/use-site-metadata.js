@@ -47,13 +47,14 @@ export const useSiteMetadata = () => {
   const [colorMode, setColorMode] = useColorMode() 
   const useTransitions = true
   const useDarkMode = true
+  const siteURL = data.site.siteMetadata.siteUrl
   const logo = data.logo.childImageSharp.fluid
   const seoImage = data.seoImage.childImageSharp.resize
   const metaData = data.site.siteMetadata
   const twitterUsername = data.site.siteMetadata.social.twitter
   const developer = '3200.PRO'
   const developerLink = 'https://3200.pro'
-  const allData = { ...metaData, logo,developerLink, developer, seoImage, twitterUsername, useDarkMode, useTransitions }
+  const allData = { ...metaData,siteURL, logo,developerLink, developer, seoImage, twitterUsername, useDarkMode, useTransitions }
   return allData
   
 }

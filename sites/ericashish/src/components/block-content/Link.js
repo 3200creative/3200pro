@@ -6,7 +6,7 @@ function Link ({mark, children}) {
   return (
   <span>{blank ?
     <a href={href} target="_blank" rel="noopener">{children}</a>
-    : <a href={href} rel=">">{children}</a>}</span>
+    : <a href='#' rel=">">{children}</a>}</span>
   )
 }
 
