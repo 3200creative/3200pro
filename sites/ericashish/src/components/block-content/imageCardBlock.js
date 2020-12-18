@@ -45,7 +45,6 @@ function ImageCardBlock (props) {
             {card.cardButtons && <ButtonBlock parentProps={card.cardButtons} />}
             </Grid>
             </Grid>
-            <div sx={{ border: '1px solid #eee', my: 5}}></div>
             </>
         ))}
     </div>

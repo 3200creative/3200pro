@@ -40,7 +40,7 @@ import {
 
 export default {
   title: 'Text Block',
-  name: 'modularContent',
+  name: 'modularTextBlock',
   type: 'object',
   hidden: true,
   fields: [

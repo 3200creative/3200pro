@@ -10,7 +10,7 @@ module.exports = {
     },
     menuLinks: [
       {
-        name: `Home`,
+        name: `Not Real Link...`,
         link: `/`,
       },
     ],
@@ -30,7 +30,7 @@ module.exports = {
       resolve: `c32-gatsby-theme-core`,
       options: {
         //Default options are:
-        // contentPath: `content/pages`,
+         //contentPath: `src/pages`,
         // assetPath: `content/assets`,
       },
     },

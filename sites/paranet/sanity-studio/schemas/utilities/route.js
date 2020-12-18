@@ -48,7 +48,7 @@ export default {
           return true
         }),
       options: {
-        source: 'page',
+        source: 'landingPage',
         // Read more: https://www.sanity.io/docs/slug-type
         slugify: myAsyncSlugifier
       }
@@ -112,7 +112,7 @@ export default {
   preview: {
     select: {
       title: 'slug.current',
-      subtitle: 'page.title',
+      subtitle: 'landingPage.title',
     },
     prepare({ title, subtitle }) {
       return {

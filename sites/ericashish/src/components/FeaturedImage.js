@@ -17,7 +17,8 @@ return (
       width: '750px',
       maxWidth: '100%',
       margin: '0 auto',
-      variant: 'variants.shadow'
+      variant: 'variants.shadow',
+      marginBottom: 3
     }} 
 />)}
 </>

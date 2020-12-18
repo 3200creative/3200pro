@@ -209,6 +209,9 @@ export default {
     root: {
       boxShadow: 'footerShadow',
     },
+    header: {
+      pt: [1, 3]
+    },
     buttons: {
       cursor: 'pointer',
       transition: 'box-shadow 0.25s ease-in-out',
@@ -335,7 +338,7 @@ export default {
         width: '100%',
         maxWidth: '100%',
         fontFamily: 'body',
-        fontWeight: '600'
+        fontWeight: '600',
       },
     },
     footerSections: {
@@ -361,7 +364,7 @@ export default {
       },
       ul: {
         p: 0,
-        textAlign: ['left', null, 'left', null],
+        textAlign: ['center', 'left', 'left', null],
         li: {
           pb: 1,
           listStyleType: 'none',
@@ -379,7 +382,7 @@ export default {
         },
       },
       svg: {
-        height: ['10px','20px','30px','30px'],
+        height: ['30px', null ],
         width: '30px',
         margin: '0 auto'
       },

@@ -39,8 +39,9 @@ const FooterSections = ({footerBG}) => {
         <div sx={{
           mx: 4
         }}>
-          <div><span sx={{
+          <div sx={{width: '100%', textAlign: 'center'}}><span sx={{
             fontSize: 2,
+            textAlign: ['center', null],
             variant: 'variants.footerSections.title'
           }}>{footerSections.title}</span></div>
           <div>
@@ -51,7 +52,7 @@ const FooterSections = ({footerBG}) => {
                 display: button.icon ? 'inline-block!important' : null,
                 padding: button.icon ? '10px!important' : null,
                 lineHeight: button.icon ? '2!important' : null,
-              }}><Link to={button.href}>{button.icon ? React.createElement(FontIcon[button.icon]): button.buttonTxt}</Link></li>
+              }}><Link to={button.href}>{button.icon ? (<div sx=''>{React.createElement(FontIcon[button.icon])}</div>): button.buttonTxt}</Link></li>
             )
               )}
           </ul>

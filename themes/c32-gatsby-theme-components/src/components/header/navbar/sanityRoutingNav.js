@@ -6,7 +6,7 @@ import { NavContext } from "c32-gatsby-theme-core"
 import { useSiteMetadata } from "c32-gatsby-theme-core"
 import CTALink from "./CTALink";
 
-const SanityNav2 = ({navMenuItems}) => {
+const SanityRoutingNav = ({navMenuItems}) => {
   const [isNavOpen, setIsNavOpen] = useContext(NavContext)
   const  navItems  = navMenuItems
   return (
@@ -36,4 +36,4 @@ const SanityNav2 = ({navMenuItems}) => {
   )
 }
 
-export default SanityNav2
+export default SanityRoutingNav

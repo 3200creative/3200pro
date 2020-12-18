@@ -35,7 +35,6 @@ import{
 const hiddenDocTypes = listItem =>
   ![
     'menu',
-    'landingPage',
     'page',
     'service',
     'review',

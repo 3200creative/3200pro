@@ -19,6 +19,7 @@ const SiteHeader = () => {
         gridArea: "header",
         mb: [0,1],
         zIndex: "888", // Ensure the header is always on top
+        variant: 'variants.header'
       }}
       id="header"
     >

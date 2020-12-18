@@ -1,7 +1,7 @@
 import { graphql } from "gatsby";
 
 export const PostInfo = graphql`
-  fragment PageInfo on SanityLandingPage {
+  fragment LandingPageInfo on SanityLandingPage {
     id
     seo {
       metaDesc
@@ -10,7 +10,7 @@ export const PostInfo = graphql`
     navMenu {
       ...navMenu
     }
-    _rawContent(resolveReferences: { maxDepth: 10 })
+    _rawContent(resolveReferences: { maxDepth: 40 })
     title
   }
 `;

@@ -246,13 +246,14 @@ function RecentPostFeed (props, location) {
   );
   const url = typeof window !== 'undefined' ? window.location.href : '';
   return (
-    <>
+    <div sx={{mb:5}}>
     <Grid container justify="space-between" sx={{
       paddingTop: 4}}>
     <Grid item xs={8} md={10} sx={{
       display: [null, null, null,  gridLayout == 'lists' ? 'flex' : 'block'],
       flexDirection: [null, null, null, gridLayout == 'lists'? 'column' : 'none'],
-      justifyContent: [null, null, null,  gridLayout == 'lists' ? 'center' : 'none'], 
+      justifyContent: [null, null, null,  gridLayout == 'lists' ? 'center' : 'none'],
+      
       }}>{props.link ? (
         <Link 
         sx= {{
@@ -281,6 +282,7 @@ function RecentPostFeed (props, location) {
             sx= {{
               width: '96%',
               maxHeight: [null, null, null, '340px'],
+              marginBottom: 3,
               variant: 'variants.shadow',
             }}
             />
@@ -324,9 +326,9 @@ function RecentPostFeed (props, location) {
       </Grid>
     ))}
     </Grid>
-    {props.showArchiveBtn && <div sx={{float: 'right', width: 'auto'}}><Link to={`/${base}`}>view all {base} content</Link></div>}
+    {props.showArchiveBtn && <div sx={{position: 'relative', margin: '0 auto', zIndex: '99999', textAlign: 'right', mr: '4'}}><Link to={`/${base}`} sx={{background: color ? `${color}`  : '4px solid #000', py: 2, px: 4, color: 'white', borderRadius: '4px'}}>view all {base} content</Link></div>}
 
-    </>
+    </div>
   )
 }
 

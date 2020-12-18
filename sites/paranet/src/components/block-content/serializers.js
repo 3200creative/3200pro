@@ -7,7 +7,8 @@ import ImgLeftTxtRight from './ImgLeftTxtRight'
 import DarkmodeImage from './DarkmodeImage'
 import Gallery from './Gallery'
 import Highlight from './Highlight'
-
+import ModularTextBlock from './ModularTextBlock'
+import SimpleBlockContent from './SimpleBlockContent'
 const serializers = {
     types: {
       block (props) {
@@ -60,6 +61,12 @@ const serializers = {
       },
       darkmodeImage (props) {
         return <DarkmodeImage {...props.node} />
+      },
+      modularTextBlock (props) {
+        return <ModularTextBlock {...props.node} />
+      },
+      simpleBlockContent (props) {
+        return <SimpleBlockContent {...props.node} />
       }
     },
     marks: {

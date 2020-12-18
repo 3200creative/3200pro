@@ -47,8 +47,8 @@ export const query = graphql`
   }
 
   query FrontpageQuery {
-    page: sanityLandingPage(_id: { regex: "/(drafts.|)homepage/" }) {
-      ...PageInfo
+    landingPage: sanityLandingPage(_id: { regex: "/(drafts.|)homepage/" }) {
+      ...LandingPageInfo
     }
 
     site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {

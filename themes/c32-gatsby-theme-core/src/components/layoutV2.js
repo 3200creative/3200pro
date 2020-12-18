@@ -2,7 +2,7 @@
 import { jsx, Styled } from "theme-ui"
 import Normalize from "../utils/normalize-css"
 import SiteContainer from "./site-container"
-import HeaderV2 from "./headerV2"
+import HeaderRoutingSanity from "./headerRoutingSanity"
 import Main from "./main"
 import ContentContainer from "./content-container"
 import Footer from "./footer"
@@ -25,7 +25,7 @@ const Layout = ({ children, navMenuItems}) => {
     <Styled.root sx={{variant: 'variants.root'}}>
       <Normalize />
       <SiteContainer>
-        <HeaderV2 navMenuItems={navMenuItems} />
+        <HeaderRoutingSanity navMenuItems={navMenuItems} />
         <Main>
         <motion.path
           d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"

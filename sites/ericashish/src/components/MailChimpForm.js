@@ -68,7 +68,7 @@ render() {
       }}
       >
         <Grid container spacing={2} >
-        <Grid item xs={5} >
+        <Grid item xs={12} md={5} >
         <TextField
           id="outlined-email-input"
           label="First Name"
@@ -83,7 +83,7 @@ render() {
           }}
         />
         </Grid>
-        <Grid item xs={5} >
+        <Grid item xs={12} md={5} >
         <TextField
           id="outlined-email-input"
           label="Email"
@@ -98,7 +98,7 @@ render() {
           }}
         />
         </Grid>
-        <Grid item xs={2}  >
+        <Grid item xs={12} md={2}  >
         <Button
           variant="contained"
           color="#333333"

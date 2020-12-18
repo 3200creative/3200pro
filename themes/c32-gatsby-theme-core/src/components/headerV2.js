@@ -1,9 +1,9 @@
 // This is a placeholder for latent shadowing in sibling themes
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-const SiteHeader = () => {
+const SiteHeader = ( { navMenuItems } ) => {
   return (
-    <header
+    <header 
       sx={{
         bg: "#ddd",
         p: 3,

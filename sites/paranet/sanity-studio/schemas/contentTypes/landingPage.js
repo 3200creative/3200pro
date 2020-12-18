@@ -27,7 +27,8 @@ export default {
             type: 'array',
             title: 'content',
             of: [
-                { type: 'modularContent'},
+                { type: 'heroBlock'},
+                { type: 'modularTextBlock'},
                 { type: 'buttonBlock'},
                 { type: 'button'},
                 { type: 'figure', title: 'Image'},

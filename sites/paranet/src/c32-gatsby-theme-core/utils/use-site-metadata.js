@@ -43,7 +43,7 @@ export const useSiteMetadata = () => {
   )
   const [colorMode, setColorMode] = useColorMode()  
   const logo = (colorMode == 'light') ? Logo : LogoDark
-  const useSanityNavV2 = true
+  const useSanityRoutingNav = true
   const useTransitions = true
   const useDarkMode = true
 
@@ -72,7 +72,7 @@ export const useSiteMetadata = () => {
   
   
   // Local Business Schema
-  const allData = { ...metaData, useDarkMode, useSanityNavV2, additionalLinks, developer,developerLink, useTransitions, title, logo, seoImage, twitterUsername,
+  const allData = { ...metaData, useDarkMode, useSanityRoutingNav, additionalLinks, developer,developerLink, useTransitions, title, logo, seoImage, twitterUsername,
     
     // Local Business Data:
     hasLocalBusinessSchema: true,
