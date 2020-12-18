@@ -28,6 +28,24 @@ export default {
         ],
         },
         {
+            title: 'Layout',
+            name: 'cardlayout',
+            type: 'string',
+            options: {
+                list: [
+                    {title: '50% Card', value: 'card'},
+                    {title: '100% Row', value: 'row'},
+                ],
+                layout: 'radio'
+            }
+        },
+        {
+            title: 'Vertical Space',
+            name: 'verticalSpace',
+            description: 'Recommendation: 1-10',
+            type: 'number'
+        },
+        {
         title: 'Text',
         name: 'text',
         type: 'portableTextMin',

@@ -8,7 +8,7 @@ function ButtonBlock ({parentProps, ...rest}) {
   const sanityProps = parentProps ? parentProps : rest
   return (
     <div
-    sx={{ width: '100%', margin: '0 auto', textAlign: 'center', variant: 'variants.buttonBlock'
+    sx={{ width: '100%', margin: '0 auto', textAlign: sanityProps.position, variant: 'variants.buttonBlock'
     }}
     >
     {sanityProps.buttons.map(btn => (

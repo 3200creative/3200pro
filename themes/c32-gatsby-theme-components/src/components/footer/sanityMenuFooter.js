@@ -52,7 +52,10 @@ const FooterSections = ({footerBG}) => {
                 display: button.icon ? 'inline-block!important' : null,
                 padding: button.icon ? '10px!important' : null,
                 lineHeight: button.icon ? '2!important' : null,
-              }}><Link to={button.href}>{button.icon ? (<div sx=''>{React.createElement(FontIcon[button.icon])}</div>): button.buttonTxt}</Link></li>
+                textAlign: 'center!important',
+                width: ['100%', 'max-content', null, null]
+                
+              }}><Link to={button.href} sx={{width: '100%'}}>{button.icon ? (<div>{React.createElement(FontIcon[button.icon])}</div>): button.buttonTxt}</Link></li>
             )
               )}
           </ul>

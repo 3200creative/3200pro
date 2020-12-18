@@ -7,17 +7,19 @@ import clientConfig from '../../../client-config'
 import { Link } from 'gatsby'
 import { GridLayoutContext } from '../articleFeedLayout'
 import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography';
+
 import { buildImageObjMap } from '../../lib/helpers'
 import { imageUrlFor } from '../../lib/image-url'
 import ButtonBlock  from './ButtonBlock'
 function ImageCardBlock (props) {
     console.log(props);
   return (
-    <div sx={{mt:5}}>
-        {props.imageCards && props.imageCards.map(card =>(
+    <Grid container justify="space-between" spacing= {5} sx={{mt:'20px!important', width: '100%'}}>
+        {props.imageCards && props.imageCards.map(card => (
             <>
-            <Grid container justify="space-between">
-            <Grid item xs={12} md={6}>
+            <Grid  container xs={12}  md={card.cardlayout === 'card' ? 6 : 12} sx={{my: card.verticalSpace ? card.verticalSpace : 4}}>
+            <Grid item xs={12} md={card.cardlayout === 'card' ? 12 : 6}>
             <img
             src={imageUrlFor(buildImageObjMap(card.blockImage))
             .auto('format')
@@ -31,7 +33,9 @@ function ImageCardBlock (props) {
             }}
             />
             </Grid>
-            <Grid item xs={12} md={6}><h4
+            <Grid item xs={12} md={card.cardlayout === 'card' ? 12 : 6} sx={{align:"flex-start !important", flexDirection:"row !important"}} >
+            <Typography>
+              <h4
             sx= {{
                     m: 0,
                     color: 'text',
@@ -43,11 +47,12 @@ function ImageCardBlock (props) {
             <BaseBlockContent blocks={card.text} {...clientConfig.sanity}  />
             </p>
             {card.cardButtons && <ButtonBlock parentProps={card.cardButtons} />}
+            </Typography>
             </Grid>
             </Grid>
             </>
         ))}
-    </div>
+    </Grid>
   )
 }
 

@@ -23,7 +23,8 @@ export default {
                     {title: 'Alt Bio1', value: 'altBio1'},
                     {title: 'Alt Bio2', value: 'altBio2'},
                     {title: 'Alt Bio3', value: 'altBio3'},
-                ]
+                ],
+                layout: 'radio'
             }
 
         },
@@ -35,10 +36,11 @@ export default {
                 list: [
                     {title: 'Small', value: 'small'},
                     {title: 'Large', value: 'large'},
-                ]
+                ],
+                layot: 'radio'
             }
 
-        },
+        }
     ],
     preview: {
         select: {
