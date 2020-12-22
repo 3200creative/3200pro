@@ -125,7 +125,6 @@ export default {
         span: {
           a: {
             color: 'primary'
-          
           }
         }
       },

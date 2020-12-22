@@ -15,11 +15,11 @@ import ButtonBlock  from './ButtonBlock'
 function ImageCardBlock (props) {
     console.log(props);
   return (
-    <Grid container justify="space-between" spacing= {5} sx={{mt:'20px!important', width: '100%'}}>
+    <Grid container justify="space-between"  sx={{mt:'20px!important', width: '100%'}}>
         {props.imageCards && props.imageCards.map(card => (
-            <>
-            <Grid  container xs={12}  md={card.cardlayout === 'card' ? 6 : 12} sx={{my: card.verticalSpace ? card.verticalSpace : 4}}>
-            <Grid item xs={12} md={card.cardlayout === 'card' ? 12 : 6}>
+            <Grid  item xs={12}  md={card.cardlayout === 'card' ? 6 : 12} sx={{my: card.verticalSpace ? card.verticalSpace : 4}}>
+            <Grid container>
+            <Grid item xs={12} md={card.cardlayout === 'card' ? 12 : 6} sx={{height: 'max-content'}}>
             <img
             src={imageUrlFor(buildImageObjMap(card.blockImage))
             .auto('format')
@@ -27,16 +27,18 @@ function ImageCardBlock (props) {
             }
             alt='test'
             sx= {{
+              margin: '0 auto',
+              mb: card.cardlayout === 'card' ? 4 : 0,
               width: '96%',
               maxHeight: [null, null, null, '340px'],
               variant: 'variants.shadow',
             }}
             />
             </Grid>
-            <Grid item xs={12} md={card.cardlayout === 'card' ? 12 : 6} sx={{align:"flex-start !important", flexDirection:"row !important"}} >
-            <Typography>
+            <Grid items md={card.cardlayout === 'card' ? 12 : 6} sx={{display: 'flex', paddingRight: card.cardlayout === 'card' ? 4 : 0, flexDirection: 'column'}}>
               <h4
-            sx= {{
+            sx= {{  
+
                     m: 0,
                     color: 'text',
                     fontFamily:  'header',
@@ -47,10 +49,11 @@ function ImageCardBlock (props) {
             <BaseBlockContent blocks={card.text} {...clientConfig.sanity}  />
             </p>
             {card.cardButtons && <ButtonBlock parentProps={card.cardButtons} />}
-            </Typography>
             </Grid>
             </Grid>
-            </>
+            </Grid>
+
+            
         ))}
     </Grid>
   )
