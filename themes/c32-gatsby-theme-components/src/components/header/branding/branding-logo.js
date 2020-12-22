@@ -1,4 +1,4 @@
-/** @jsx jsx */
+ /** @jsx jsx */
 import { jsx } from "theme-ui"
 import { Link } from "gatsby"
 import { useSiteMetadata } from "c32-gatsby-theme-core"

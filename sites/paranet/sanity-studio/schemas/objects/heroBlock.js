@@ -3,10 +3,7 @@ export default {
   name: 'heroBlock',
   title: 'Hero',
   fields: [
-    {
-      name: 'label',
-      type: 'string'
-    },
+
     {
       name: 'heading',
       type: 'string',

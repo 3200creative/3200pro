@@ -39,23 +39,21 @@ const FooterSections = ({footerBG}) => {
         <div sx={{
           mx: 4
         }}>
-          <div sx={{width: '100%', textAlign: 'center'}}><span sx={{
+          <div sx={{
             fontSize: 2,
-            textAlign: ['center', null],
             variant: 'variants.footerSections.title'
-          }}>{footerSections.title}</span></div>
+          }}>{footerSections.title}</div>
           <div>
           {footerSections._rawText && <BlockText blocks={footerSections._rawText} />}
           <ul>
             {footerSections.menu.button.map(button => (
               <li sx={{
                 display: button.icon ? 'inline-block!important' : null,
-                padding: button.icon ? '10px!important' : null,
+                paddingRight: button.icon ? '20px!important' : null,
                 lineHeight: button.icon ? '2!important' : null,
-                textAlign: 'center!important',
                 width: ['100%', 'max-content', null, null]
                 
-              }}><Link to={button.href} sx={{width: '100%'}}>{button.icon ? (<div>{React.createElement(FontIcon[button.icon])}</div>): button.buttonTxt}</Link></li>
+              }}><Link to={button.href} sx={{width: '100%'}}>{button.icon ? (<div sx={{variant: 'variants.footerSections.icon'}}>{React.createElement(FontIcon[button.icon])}</div>): button.buttonTxt}</Link></li>
             )
               )}
           </ul>

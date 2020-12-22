@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, navigate } from "gatsby";
-import Subnav from './Subnav'
+import Subnav from './sanityRoutingSubnav'
 const doNavigate = target => {
   if (!target || !target.length) {
     return;
@@ -15,7 +15,6 @@ const doNavigate = target => {
 };
 
 const CTALink = props => {
-
   let link = props.route || props.link || "#";
   if (
     props.landingPageRoute &&
@@ -45,7 +44,7 @@ const CTALink = props => {
   return (
     <Link to={props.relativeNavItem && `${link}` || `/${link}`} sx={{'&hover':{div: {display: 'inline-block'}}}}>
       {props.title}
-      {props.subnav ? <Subnav subMenu= {props.subnav} /> : null}
+      {props.subnav ? <Subnav subNav= {props.subnav} /> : null}
     </Link>
   );
 };

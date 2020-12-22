@@ -12,9 +12,12 @@ function ButtonBlock ({parentProps, ...rest}) {
     }}
     >
     {sanityProps.buttons.map(btn => (
-      <Link  key={btn.key} to={btn.href}>
-        <Button sx={{my: 4, mx: 2,backgroundColor: btn.buttonColor.hex, variant: 'variants.buttons'}}>
-          {btn.buttonTxt}{btn.icon && (<span sx= {{pl:3}}>{Icons(btn.icon)}</span>)}
+      <Link  key={btn.key} to={btn.href} 
+      target={btn.urlType = 'externalUrl' ? '_blank' : null}
+      rel={btn.urlType = 'externalUrl' ? 'noopener' : null}
+      >
+        <Button sx={{ my: 4, mx: 2,backgroundColor: btn.buttonColor.hex, variant: 'variants.buttons'}}>
+        <span>{btn.buttonTxt}</span>{btn.icon && (<span sx={{float: btn.iconPosition, pl: btn.iconPosition = 'left' ? 2 : 0, pr: btn.iconPosition = 'right' ? 2 : 0}}>{Icons(btn.icon)}</span>)}
         </Button>
       </Link>
     ))}

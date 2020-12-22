@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import React, { useState } from "react";
 import { graphql } from "gatsby";
 import { SEO } from "c32-gatsby-theme-core"
@@ -79,10 +81,10 @@ const LandingPage = (props) => {
   return (
     <Layout navMenuItems={menuItems} textWhite={true}>
       <SEO 
-       title={page.seo.metaTitle} 
-       description={page.seo.metaDesc} 
+       title={page.seo.metaTitle && page.seo.metaTitle} 
+       description={page.seo.metaDesc && page.seo.metaDesc} 
        />
-      <div className="pt-24">{content}</div>
+      <div sx={{pt:22}}>{content}</div>
     </Layout>
   );
 };

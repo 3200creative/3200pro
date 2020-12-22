@@ -24,7 +24,7 @@ async function createLandingPages(pathPrefix = "/", graphql, actions, reporter) 
   const { createPage } = actions;
   const result = await graphql(`
     {
-      allSanityRoute(filter: { slug: { current: { ne: null } }, landingPage: { id: { ne: null } } }) {
+      allSanityRoute(filter: { slug: { current: { ne: null } } }) {
         edges {
           node {
             id

@@ -326,7 +326,7 @@ function RecentPostFeed (props, location) {
       </Grid>
     ))}
     </Grid>
-    {props.showArchiveBtn && <div sx={{position: 'relative', margin: '0 auto', zIndex: '99999', textAlign: 'right', mr: '4'}}><Link to={`/${base}`} sx={{background: color ? `${color}`  : '4px solid #000', py: 2, px: 4, color: 'white', borderRadius: '4px'}}>view all {base} content</Link></div>}
+    {props.showArchiveBtn && <div sx={{position: 'relative', margin: '0 auto', zIndex: '99999', textAlign: 'right', mr: '4'}}><Link to={`/${base}`} sx={{background: color ? `${color}`  : '4px solid #000', py: 2, px: 3, fontSize: '16px', color: 'white', fontWeight: 'bold', borderRadius: '4px'}}>view all {base} content</Link></div>}
 
     </div>
   )

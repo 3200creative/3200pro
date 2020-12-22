@@ -15,6 +15,19 @@ export default {
             type: 'string',
         },
         {
+          title: 'Icon Position',
+          name: 'iconPosition',
+          type: 'string',
+          options: {
+            list: [
+              {title: 'Default', value: 'none'},
+              {title: 'Left', value: 'left'},
+              {title: 'Right', value: 'right'},
+            ],
+            layout: 'radio'
+          }
+      },
+        {
             title: 'Button Color',
             name: 'buttonColor',
             type: 'color'
@@ -29,5 +42,20 @@ export default {
                 scheme: ['https', 'http', 'mailto', 'tel'],
               }),
           },
+          {
+            name: 'urlType',
+            title: 'URL Type',
+            type: 'string',
+            options: {
+                list: [
+                  {title: 'Default', value: 'default'},
+                    {title: 'External URL', value: 'externalUrl'},
+                ],
+                layout: 'radio'
+            },
+            initialValue: {
+                urlType: 'siteUrl'
+            },
+        },
     ]
 }

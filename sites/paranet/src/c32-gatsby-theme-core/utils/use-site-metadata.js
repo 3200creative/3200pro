@@ -38,15 +38,33 @@ export const useSiteMetadata = () => {
             }
           }
         }
+        sanitySiteSettings {
+          _id
+          logo {
+            asset {
+              url
+            }
+          }
+          logoDark {
+            asset {
+              url
+            }
+            alt
+          }
+        }
+        
       }
     `
   )
+  const Logo = data.sanitySiteSettings.logo.asset.url
+  const LogoDark = data.sanitySiteSettings.logoDark.asset.url
   const [colorMode, setColorMode] = useColorMode()  
   const logo = (colorMode == 'light') ? Logo : LogoDark
   const useSanityRoutingNav = true
   const useTransitions = true
   const useDarkMode = true
-
+  const lockMobileMenu = true
+  const headerDisplayType = 'block'
   //Footer Information
   const developer = '3200.pro'
   const developerLink = 'https://3200.pro'
@@ -68,11 +86,11 @@ export const useSiteMetadata = () => {
   const seoImage = data.seoImage.childImageSharp.resize
   const metaData = data.site.siteMetadata
   const twitterUsername = data.site.siteMetadata.social.twitter
-
+  const HamburgerTxt = 'Menu'
   
   
   // Local Business Schema
-  const allData = { ...metaData, useDarkMode, useSanityRoutingNav, additionalLinks, developer,developerLink, useTransitions, title, logo, seoImage, twitterUsername,
+  const allData = { ...metaData, HamburgerTxt, headerDisplayType, lockMobileMenu, useDarkMode, useSanityRoutingNav, additionalLinks, developer,developerLink, useTransitions, title, logo, seoImage, twitterUsername,
     
     // Local Business Data:
     hasLocalBusinessSchema: true,

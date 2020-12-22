@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import { useContext } from "react"
-import Branding from "./branding/branding"
+import Branding from "./branding/sanity/branding"
 import Nav from "./navbar/nav"
 import SanityRoutingNav from "./navbar/sanityRoutingNav"
 import HamburgerButton from "./navbar/hamburger-button"
@@ -13,6 +13,7 @@ const SiteHeader = ({navMenuItems}) => {
   const [isNavOpen] = useContext(NavContext)
   const { useDarkMode } = useSiteMetadata()
   const { useSanityRoutingNav } = useSiteMetadata()
+  const { headerDisplayType } = useSiteMetadata()
   return (
     <header
       sx={{
@@ -33,15 +34,16 @@ const SiteHeader = ({navMenuItems}) => {
           gridRow: "1 / -1",
           gridColumn: "1 / -1",
           alignSelf: "start",
-          display: "grid",
+          display: headerDisplayType ? headerDisplayType : "grid",
           gridTemplateColumns: "auto 1fr",
           gridTemplateRows: ["auto 1fr", null, "auto", null, null],
           width: "100%",
-          height: isNavOpen ? "100vh" : "auto",
+          height: (isNavOpen && headerDisplayType) ? "auto" : isNavOpen ? "100vh" : "auto",
           minHeight: "50px",
           m: "0 auto",
           px: [1, null, 3, null, null],
           py: [1, null, 2, null, null],
+          variant: 'variants.header.wrapper',
         }}
       >
         <Branding />

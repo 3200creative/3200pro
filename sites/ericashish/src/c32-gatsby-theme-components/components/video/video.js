@@ -6,7 +6,7 @@ const Video = ({ videoSrcURL, videoTitle, ...props }) => (
     <iframe
     sx={{
       mx: 'auto',
-      my: [40, 40, 100],
+      my: 40,
       display: 'block',
       width: ['640px'],
       height: ['360px'],

@@ -12,6 +12,15 @@ export const NavMenu = graphql`
         ... on SanityMenu {
           title
         }
+        items {
+          ... on SanityNavItem {
+          title
+          route
+          link
+          kind
+          relativeNavItem
+          }
+        }
       }
       landingPageRoute {
         ... on SanityRoute {

@@ -1,7 +1,9 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
+import React from "react"
 import { useContext } from "react"
 import { NavContext } from "c32-gatsby-theme-core"
+import { useSiteMetadata } from "c32-gatsby-theme-core"
 
 const Span = ({ open }) => (
   <span
@@ -33,8 +35,10 @@ const Span = ({ open }) => (
   ></span>
 )
 
-const SiteMobileButton = () => {
+const HamburgerButton = () => {
   const [isNavOpen, setIsNavOpen] = useContext(NavContext)
+  const { lockMobileMenu } = useSiteMetadata();
+  const { HamburgerTxt } = useSiteMetadata();
   return (
     <button
       aria-label="Toggle Menu"
@@ -45,20 +49,22 @@ const SiteMobileButton = () => {
         alignSelf: "center",
         color: isNavOpen ? "header.textOpen" : "header.text",
         cursor: "pointer",
-        display: ["block", null, "none", null, null],
-        height: "3rem",
+        display: ["block", null, lockMobileMenu ? null : "none", null, null],
         position: "relative",
-        width: "3rem",
         marginLeft: "auto",
         backgroundColor: "transparent",
         border: "none",
+        variant: 'variants.header.hamburger'
       }}
     >
-      <Span open={isNavOpen} />
-      <Span open={isNavOpen} />
-      <Span open={isNavOpen} />
+      <div sx={{width: '60px',  variant: 'variants.header.hamburger.icon'}}>
+        <Span open={isNavOpen} />
+        <Span open={isNavOpen} />
+        <Span open={isNavOpen} />
+      </div>
+      {HamburgerTxt && (<div sx={{height: '60px', width: '100px', variant: 'variants.header.hamburger.txt'}}>{HamburgerTxt}</div>)}
     </button>
   )
 }
 
-export default SiteMobileButton
+export default HamburgerButton

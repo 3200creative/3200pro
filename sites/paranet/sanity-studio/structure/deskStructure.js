@@ -18,7 +18,8 @@ import {
 
 import {
   RiArticleLine,
-  RiTeamFill
+  RiTeamFill,
+  RiRouteFill
 } from 'react-icons/ri'
 
 import {
@@ -44,7 +45,9 @@ const hiddenDocTypes = listItem =>
     'siteSettings',
     'globalOptions',
     'serviceType',
-    'location'
+    'location',
+    'route'
+    
     
   ].includes(listItem.getId())
 
@@ -83,6 +86,12 @@ S.list()
         .child(
           S.documentTypeList('menu')
         ),
+        S.listItem()
+        .title('Page Routes')
+        .icon(RiRouteFill)
+        .child(
+          S.documentTypeList('route')
+        ),
       ])
     ),
     S.listItem()
@@ -107,8 +116,8 @@ S.list()
         .child(
           S.document()
           .title('About Page')
-          .schemaType('page')
-          .documentId('profilePage')
+          .schemaType('landingPage')
+          .documentId('aboutPage')
         ),
         S.listItem()
         .title('Contact Page')
@@ -116,7 +125,7 @@ S.list()
         .child(
           S.document()
           .title('Contact Page')
-          .schemaType('page')
+          .schemaType('landingPage')
           .documentId('contactPage')
         ),
         S.listItem()

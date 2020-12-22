@@ -45,6 +45,14 @@ export default {
         validation: (Rule) => Rule.required(),
       },
       {
+        title: "Dark Logo",
+        name: "logoDark",
+        type: "figure",
+        description:
+          "Company or Site Logo",
+        validation: (Rule) => Rule.required(),
+      },
+      {
         title: "Default Social Sharing Image",
         name: "seoImage",
         type: "figure",

@@ -117,6 +117,18 @@ export default {
           }
         },
       },
+      li: {
+        fontSize: '16px',
+        a: {
+          color: 'primary'
+        },
+        span: {
+          a: {
+            color: 'primary'
+          
+          }
+        }
+      },
       h4: {
         a: {
           '&:hover': {
@@ -202,7 +214,7 @@ export default {
       fontWeight: 'headingWeight',
     },
     img: {
-     boxShadow: 'rgba(0, 0, 0, 0.3) 0px 20px 40px -20px, rgba(0, 0, 0, 0.33) 0px 18px 36px -18px !important',
+     boxShadow: 'rgba(0, 0, 0, 0.3) 0px 20px 40px -20px, rgba(0, 0, 0, 0.33) 0px 18px 36px -18px',
     }
   },
   variants: {
@@ -212,13 +224,27 @@ export default {
     header: {
       pt: [1, 3]
     },
+    featuredImage: {
+      boxShadow: 'rgba(0, 0, 0, 0.3) 0px 20px 40px -20px, rgba(0, 0, 0, 0.33) 0px 18px 36px -18px !important',
+      marginBottom: 4
+    },
     buttons: {
       cursor: 'pointer',
       transition: 'box-shadow 0.25s ease-in-out',
-      boxShadow: 'rgba(0, 0, 0, 0.3) 0px 20px 40px -20px, rgba(0, 0, 0, 0.33) 0px 18px 36px -18px',
+      boxShadow: 'rgba(0, 0, 0, 0.3) 0px 0px 10px -12px, rgba(0, 0, 0, 0.33) 0px 8px 10px -6px',
       '&:hover': {
         transition: 'box-shadow 0.25s ease-in-out',
         boxShadow: 'none',
+      },
+      span: {
+        verticalAlign: 'middle',
+        
+      },
+      svg: {
+        p: 0,
+        height: '26px',
+        width: '26px',
+        verticalAlign: 'text-bottom'
       }
     },
     video: {
@@ -345,7 +371,6 @@ export default {
       borderTop: '1px solid white',
       borderBottom: '1px solid #eee',
       pt: 4,
-      textAlign: 'left',
       display: ['block',null, 'flex', null],
       width: ['100vw',null,null,'maxContentWidth'],
       gridArea: 'auto',
@@ -353,8 +378,10 @@ export default {
       color: 'lightTxt',
       title: {
         color: 'text',
+        textAlign: ['center', 'left', null, null],
         fontFamily: '"Merriweather",Georgia,Serif',
-        fontSize: [1,1,2,3]
+        fontSize: [1,1,2,3],
+        width: '100%'
       },
       a: {  
         color: 'lightTxt'
@@ -382,10 +409,13 @@ export default {
         },
       },
       svg: {
-        height: ['30px', null ],
-        width: '30px',
-        margin: '0 auto'
+        height: ['25px', null ],
+        width: '25px',
+        margin: '0 auto',
       },
+      icon: {
+        paddingLeft: '0px !important'
+      }
     },
     footer: {
       textAlign: 'left',
@@ -399,13 +429,13 @@ export default {
       marginTop: '0',
       pt: 3,
       p: {
-        fontSize: '12px',
+        fontSize: '12px !important',
         a: {
           color: '#999'
         }
       },
       a: {
-        color: '#999'
+        color: '#999 !important'
       }
     },
     footerOverlay: {

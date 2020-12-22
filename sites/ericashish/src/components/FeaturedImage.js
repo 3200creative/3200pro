@@ -16,9 +16,8 @@ return (
     sx= {{
       width: '750px',
       maxWidth: '100%',
-      margin: '0 auto',
-      variant: 'variants.shadow',
-      marginBottom: 3
+      margin: '0 auto 40px auto',
+      variant: ['variants.featuredImage'],
     }} 
 />)}
 </>

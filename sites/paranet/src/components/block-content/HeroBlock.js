@@ -25,13 +25,13 @@ const maybeImage = illustration => {
 function HeroBlock(props) {
   const img = maybeImage(props.illustration);
   return (
-    <div sx={{background: 'pink', width: '100%', mx: 'auto', display: 'flex', flexWrap: 'wrap', flexDirection: 'column', alignItems: 'center', variant: 'variants.heroBlock' }}>
+    <div sx={{width: '100%', mx: 'auto', display: 'flex', flexWrap: 'wrap', flexDirection: 'column', alignItems: 'center', variant: 'variants.heroBlock' }}>
       {/* Left col */}
       <div sx={{display: 'flex', width: '100%', flexDirection: 'column', justify:'center', alignItems: 'flex-start', textAlign: 'center' }}>
-        <p sx={{width: '100%', textTransform: 'uppercase', letterSpacing: '0em'}}>{props.label}</p>
+        
         <h1 className="my-4 text-5xl font-bold leading-tight">{props.heading}</h1>
+        <BlockContent blocks={props.tagline} />
         <div className="leading-normal text-2xl mb-8">
-          <BlockContent blocks={props.tagline} />
         </div>
         {props.cta && props.cta.title && (
           <CTALink
@@ -41,7 +41,8 @@ function HeroBlock(props) {
         )}
       </div>
       {/* Right col */}
-      <div className="w-full md:w-3/5 py-6 text-center">{img}</div>
+      <div sx={{height: '1000px', width: '1000px', position: 'absolute', top: '0', left: '0'}}>{img}</div>
+      <div sx={{background: '#f9f9f9', height: '1500px', width: '1000px', position: 'absolute', transform: 'rotate(20deg)', right: '-50%', top: '-40%'}}></div>
     </div>
   );
 }

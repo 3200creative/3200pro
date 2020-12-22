@@ -23,7 +23,7 @@ export default {
     text: '#444444',
     headline: '#000',
     darkbg2: 'white',
-    fmOrange: '#C7664F',
+    pOrange: '#FF8336',
     fmBlue: '#517487',
     tanD: '#D9C99D',
     tanL: '#E6E4D0',
@@ -35,7 +35,7 @@ export default {
     muted: baseColors.gray[2],
 
     header: {
-      background: '#C7664F',
+      background: 'transparent',
       backgroundOpen: 'white',
       text: 'text',
       textOpen: 'text',
@@ -195,10 +195,46 @@ export default {
     },
   },
   variants: {
+    header: {
+      wrapper: {
+        height: 'auto !important'
+      },
+      nav: {
+        justifyContent: "space-between",
+        position: 'fixed',
+        zIndex: '99999',
+        left:'50vw',
+        alignItems: 'top',
+        a: {
+          mr: 4
+        }
+      },
+      subnav: {
+        display: 'block'
+      },
+      wrapper: {
+
+      },
+      hamburger: {
+        backgroundColor: 'pOrange',
+        right: '60vw',
+        top: '10px',
+        minWidth: 'min-content',
+        position: 'fixed',
+        icon: {
+          width: '30px',
+          float: 'float'
+        },
+        txt: {
+          clear: 'none',
+          float: 'float'
+        }
+        
+      },
+    },
     siteContainer: {
       maxWidth: '1500px',
       margin: '0 auto',
-      boxShadow: 'shadowStyle1'
     },
     starCount: {
       color: 'yellow'
