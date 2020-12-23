@@ -4,8 +4,8 @@ import { tailwind, baseColors } from "@theme-ui/preset-tailwind"
 import prism from "@theme-ui/prism/presets/oceanic-next"
 
 export default {
-  initialColorModeName: 'default',
-  useColorSchemeMediaQuery: true,
+  initialColorModeName: 'light',
+  useColorSchemeMediaQuery: false,
   ...tailwind,
   breakpoints: ["480px", "768px", "1024px", "1440px"],
   fonts: {
@@ -38,8 +38,8 @@ export default {
       background: baseColors.gray[2],
       backgroundOpen: baseColors.blue[2],
       text: baseColors.gray[8],
-      textOpen: 'grayTxt',
-      textClosed: '#73737D',
+      textOpen: 'text',
+      textClosed: 'text',
       icons: baseColors.gray[6],
       iconsHover: baseColors.blue[7],
       iconsOpen: baseColors.gray[8],

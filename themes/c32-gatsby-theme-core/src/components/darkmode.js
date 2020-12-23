@@ -16,7 +16,7 @@ const DarkModeIcon = () => {
         position: 'absolute',
         top: '10px',
         right: '20px',
-        color: colorMode == 'light' && 'text' || 'text',
+        color: 'text',
         variant: 'variants.darkmodeicon',
         variant: 'variants.header.darkmodeicon',
 
