@@ -428,8 +428,9 @@ export default {
         margin: '0 auto',
       },
       icon: {
-        paddingLeft: '0px !important'
-      }
+        paddingLeft: '0px !important',
+        display: 'inlineBlock !important',
+      },
     },
     footer: {
       textAlign: 'left',
