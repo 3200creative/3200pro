@@ -407,7 +407,7 @@ export default {
       },
       ul: {
         p: 0,
-        textAlign: ['center', 'left', 'left', null],
+        textAlign: 'left',
         li: {
           pb: 1,
           listStyleType: 'none',
@@ -418,8 +418,6 @@ export default {
           },
           a: {
             color: 'lightTxt',
-            overflow: 'hidden',
-            textAlign: 'center',
             fontSize: 1,
           },
         },
