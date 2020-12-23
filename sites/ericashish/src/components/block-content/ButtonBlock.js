@@ -17,7 +17,7 @@ function ButtonBlock ({parentProps, ...rest}) {
       rel={btn.urlType = 'externalUrl' ? 'noopener' : null}
       >
         <Button sx={{ my: 4, mx: 2,backgroundColor: btn.buttonColor.hex, variant: 'variants.buttons'}}>
-        <span>{btn.buttonTxt}</span>{btn.icon && (<span sx={{float: btn.iconPosition, pl: btn.iconPosition = 'left' ? 2 : 0, pr: btn.iconPosition = 'right' ? 2 : 0}}>{Icons(btn.icon)}</span>)}
+        <div>{btn.buttonTxt}</div>{btn.icon && (<span sx={{float: btn.iconPosition, pl: btn.iconPosition = 'left' ? 2 : 0, pr: btn.iconPosition = 'right' ? 2 : 0}}>{Icons(btn.icon)}</span>)}
         </Button>
       </Link>
     ))}
