@@ -217,14 +217,29 @@ export default {
     }
   },
   variants: {
+    siteContainer: {
+      backgroundColor: 'background'
+    },
     root: {
       boxShadow: 'footerShadow',
     },
     header: {
       pt: [1, 3],
       darkmodeicon: {
-        top: ['30px !important', null,'10px', null],
-        right: ['50px !important', null, '20px', null]
+        backroundColor: 'background',
+        right: '2vw',
+        top: '96vh',
+        position: 'fixed',
+        dispaly: 'block !important',
+        '&:hover': {
+          cursor: 'pointer'
+        }
+      },
+      hamburger: {
+        color: 'text',
+        span: {
+          color: 'text'
+        }
       },
     },
     featuredImage: {

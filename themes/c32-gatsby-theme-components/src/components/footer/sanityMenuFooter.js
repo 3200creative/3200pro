@@ -36,7 +36,8 @@ const FooterSections = ({footerBG}) => {
       }}
     >
       {footer.footerSection.map(footerSections => (
-        <div sx={{
+        <div key={`fs-${footerSections.title}`} sx={{
+          
           mx: 4
         }}>
           <div sx={{
@@ -47,7 +48,7 @@ const FooterSections = ({footerBG}) => {
           {footerSections._rawText && <BlockText blocks={footerSections._rawText} />}
           <ul>
             {footerSections.menu.button.map(button => (
-              <li sx={{
+              <li key={`fsmb-${button.buttonTxt}`} sx={{
                 display: button.icon ? 'inline-block!important' : null,
                 paddingRight: button.icon ? '20px!important' : null,
                 lineHeight: button.icon ? '2!important' : null,

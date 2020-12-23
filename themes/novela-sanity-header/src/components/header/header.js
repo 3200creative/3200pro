@@ -14,7 +14,7 @@ const SiteHeader = () => {
       sx={{
         display: "grid",
         width: "100%",
-        color: isNavOpen ? "header.textOpen" : "header.text",
+        color: isNavOpen ? "header.textOpen" : "header.textClosed",
         paddingTop: '50px',
         gridArea: "header",
         mb: [0,1],

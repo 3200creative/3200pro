@@ -15,7 +15,7 @@ import ButtonBlock  from './ButtonBlock'
 function ImageCardBlock (props) {
     console.log(props);
   return (
-    <Grid container justify="space-between"  sx={{mt:'20px!important', width: '100%'}}>
+    <Grid container justify="space-between" >
         {props.imageCards && props.imageCards.map(card => (
             <Grid  item xs={12}  md={card.cardlayout === 'card' ? 6 : 12} sx={{my: card.verticalSpace ? card.verticalSpace : 4}}>
             <Grid container>

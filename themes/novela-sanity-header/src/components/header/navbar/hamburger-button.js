@@ -11,6 +11,7 @@ const Span = ({ open }) => (
       height: "1px",
       left: "calc(50% - 10px)",
       position: "absolute",
+      color: open && "header.textOpen",
       transformOrigin: "center",
       transitionDuration: "86ms",
       transitionProperty: "background-color, opacity, transform",
@@ -43,7 +44,6 @@ const SiteMobileButton = () => {
         gridColumn: "2 / 3",
         gridRow: "1 / 2",
         alignSelf: "center",
-        color: isNavOpen ? "header.textOpen" : "header.text",
         cursor: "pointer",
         display: ["block", null, "none", null, null],
         height: "3rem",
@@ -52,6 +52,7 @@ const SiteMobileButton = () => {
         marginLeft: "auto",
         backgroundColor: "transparent",
         border: "none",
+        variant: 'variants.header.hamburger'
       }}
     >
       <Span open={isNavOpen} />
