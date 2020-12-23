@@ -227,9 +227,11 @@ export default {
       pt: [1, 3],
       darkmodeicon: {
         backroundColor: 'background',
-        right: '2vw',
-        top: '96vh',
-        position: 'fixed',
+        right: ['10vw', null,'4vw', null],
+        margin: 0,
+        padding: 0,
+        top: ['3vh', null,'.5vh', null],
+        position: 'absolute',
         dispaly: 'block !important',
         '&:hover': {
           cursor: 'pointer'
