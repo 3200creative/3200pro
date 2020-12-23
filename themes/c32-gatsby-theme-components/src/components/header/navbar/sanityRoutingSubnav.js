@@ -10,8 +10,6 @@ import CTALink from "./CTALink";
 const Subnav = ({subNav}) => {
   const [isNavOpen, setIsNavOpen] = useContext(NavContext)
   const  subnav  = subNav
-  console.log(`Subnav2 ${subnav && (subnav.items, {showHidden: false, depth: null})}`)
-  console.log(`Subnav: ${subnav}`);
   return (
     <div
       role="navigation"

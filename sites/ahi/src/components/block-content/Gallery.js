@@ -17,8 +17,7 @@ function Gallery (props) {
   const [currentImage, changeImage] = useState('cat')
   const columns = props.column
   const galleryLayout = props.gallerySize
-  console.log('Read This:');
-  console.log(galleryLayout);
+
   
   return (
     <div className='gallery'

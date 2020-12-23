@@ -15,7 +15,7 @@ const FishingBoatTemplate = props => {
     const { data, errors } = props
     const page = data && data.page
     const image = page.featuredImage
-    console.log(`Featured Image: ${image}`);
+    
     return (
       <Layout>
         

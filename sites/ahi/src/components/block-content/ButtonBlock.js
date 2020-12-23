@@ -17,8 +17,7 @@ function ButtonBlock (props) {
     textAlign: 'center'
     }}
     >
-    {console.log('Buttons:')}
-    {console.log(props.buttons)}
+
     {props.buttons.map(btn => (
       <Link key={btn.key} to={btn.href}>
         <Button

@@ -14,8 +14,7 @@ import MailChimpForm from './MailChimpForm'
 const LifePageTemplate = props => {
     const { data, errors } = props
     const page = data && data.page
-    console.log('data:');
-    console.log(data);
+
     
     return (
       <Layout>

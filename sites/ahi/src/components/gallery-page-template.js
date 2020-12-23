@@ -8,8 +8,7 @@ import BlockContent from './block-content'
 const PageTemplate = props => {
     const { data, errors } = props
     const galleryPage = data && data.galleryPage
-    console.log('data:');
-    console.log(data);
+
     
     return (
       <Layout>

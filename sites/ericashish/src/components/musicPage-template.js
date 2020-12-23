@@ -19,9 +19,6 @@ const MusicPageTemplate = props => {
     const { data, errors } = props
     const page = data && data.page
     const showFeaturedImage = data.sanityGlobalOptions.musicFeaturedImageHero
-    console.log('data:');
-    console.log(data);
-    console.log('Show Featured Image:');
     return (
       <Layout>
         {errors && <SEO title='GraphQL Error' />}

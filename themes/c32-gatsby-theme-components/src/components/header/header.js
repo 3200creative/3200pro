@@ -15,7 +15,6 @@ const SiteHeader = ({navMenuItems}) => {
   const { useDarkMode } = useSiteMetadata()
   const { useSanityNav } = useSiteMetadata()
   const { useSanityRoutingNav } = useSiteMetadata()
-  console.log(`Routing: ${useSanityRoutingNav}`);
   return (
     <header
       sx={{

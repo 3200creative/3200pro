@@ -8,8 +8,8 @@ import BlockContent from './block-content'
 const ServiceTemplate = props => {
     // const { data, errors } = props
     // const service = data && data.service
-    // console.log('data:');
-    // console.log(data);
+    
+    
     
     return (
       <Layout>
