@@ -4,7 +4,7 @@ import { tailwind, baseColors } from "@theme-ui/preset-tailwind"
 import prism from "@theme-ui/prism/presets/oceanic-next"
 
 export default {
-  initialColorModeName: 'light',
+  initialColorModeName: 'default',
   useColorSchemeMediaQuery: true,
   ...tailwind,
   breakpoints: ["480px", "768px", "1024px", "1440px"],
@@ -54,8 +54,8 @@ export default {
     },
     modes: {
       dark: {
-        text: '#fff',
-        background: '#000',
+        text: '#ffffff',
+        background: '#000000',
         primary: '#8F2DF0',
         transition: 'color 0.25s ease-in-out-quad',
         footerShadow: 'footerShadowDark',
@@ -66,7 +66,7 @@ export default {
           },
         },
         p: {
-          color: '#fff'
+          color: '#ffffff'
         },
         shadow: {
           boxShadow: '0 30px 60px -10px rgba(255,255,255,0.3), 0 18px 36px -18px rgba(255,255,255,0.33) !important',
@@ -221,7 +221,11 @@ export default {
       boxShadow: 'footerShadow',
     },
     header: {
-      pt: [1, 3]
+      pt: [1, 3],
+      darkmodeicon: {
+        top: ['30px !important', null,'10px', null],
+        right: ['50px !important', null, '20px', null]
+      },
     },
     featuredImage: {
       boxShadow: 'rgba(0, 0, 0, 0.3) 0px 20px 40px -20px, rgba(0, 0, 0, 0.33) 0px 18px 36px -18px !important',
@@ -261,10 +265,6 @@ export default {
       width: '100%',
       clear: 'both',
       height: '2rem',
-    },
-    darkmodeicon: {
-      top: '10px',
-      right: '20px'
     },
     shadow: {
       boxShadow: 'rgba(0, 0, 0, 0.3) 0px 20px 40px -20px, rgba(0, 0, 0, 0.33) 0px 18px 36px -18px !important',
