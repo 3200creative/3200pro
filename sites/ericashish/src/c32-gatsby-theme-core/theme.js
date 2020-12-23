@@ -394,7 +394,7 @@ export default {
       color: 'lightTxt',
       title: {
         color: 'text',
-        textAlign: ['center', 'left', null, null],
+        textAlign: 'left',
         fontFamily: '"Merriweather",Georgia,Serif',
         fontSize: [1,1,2,3],
         width: '100%'
@@ -411,7 +411,7 @@ export default {
         li: {
           pb: 1,
           listStyleType: 'none',
-          display: ['inline-block', 'inline-block', 'block', null],
+          display: ['inline-block !important', 'inline-block !important', 'block !important', null],
           pr: [3,null,0, null],
           '&:first-of-type': {
             borderLeft: 'none',
