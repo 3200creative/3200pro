@@ -9,6 +9,11 @@ export default {
             type: 'string'
         },
         {
+            name: 'iconMenu',
+            title: 'Icon Menu',
+            type: 'boolean'
+        },
+        {
             type: 'array',
             title: 'Buttons',
             name: 'button',

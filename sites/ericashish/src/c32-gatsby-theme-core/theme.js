@@ -411,7 +411,7 @@ export default {
         li: {
           pb: 1,
           listStyleType: 'none',
-          display: ['inline-block !important', 'inline-block !important', 'block !important', null],
+          display: ['inline-block', 'inline-block', 'block', null],
           pr: [3,null,0, null],
           '&:first-of-type': {
             borderLeft: 'none',
@@ -429,7 +429,6 @@ export default {
       },
       icon: {
         paddingLeft: '0px !important',
-        display: 'inlineBlock !important',
       },
     },
     footer: {

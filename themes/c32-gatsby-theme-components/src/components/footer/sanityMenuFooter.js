@@ -49,9 +49,9 @@ const FooterSections = ({footerBG}) => {
           <ul>
             {footerSections.menu.button.map(button => (
               <li key={`fsmb-${button.buttonTxt}`} sx={{
-                display: button.icon ? 'inline-block!important' : null,
-                paddingRight: button.icon ? '20px!important' : null,
-                lineHeight: button.icon ? '2!important' : null,
+                display: button.icon && 'inline-block!important' || null,
+                paddingRight: button.icon && '20px!important' || null,
+                lineHeight: button.icon && '2!important' || null,
                 width: ['100%', 'max-content', null, null]
                 
               }}><Link to={button.href} sx={{width: '100%'}}>{button.icon ? (<div sx={{variant: 'variants.footerSections.icon'}}>{React.createElement(FontIcon[button.icon])}</div>): button.buttonTxt}</Link></li>
