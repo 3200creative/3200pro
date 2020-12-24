@@ -1,7 +1,7 @@
 export default {
-    name: 'music',
+    name: 'menu',
     type: 'document',
-    title: 'Music',
+    title: 'Menus',
     fields: [
         {
             name: 'title',
@@ -9,24 +9,15 @@ export default {
             type: 'string'
         },
         {
-            name: 'slug',
-            title: 'Slug',
-            type: 'slug',
-            options: {
-              source: 'title',
-              maxLength: 96
-            }
+            name: 'iconMenu',
+            title: 'Icon Menu',
+            type: 'boolean'
         },
         {
-            name: 'Menu Item',
             type: 'array',
-            title: 'Menu Items',
-            of: [
-                {
-                    title: 'Image',
-                    type: 'figure', 
-                },
-            ]
+            title: 'Buttons',
+            name: 'button',
+            of: [{ type: 'button' }]
         },
     ],
 }

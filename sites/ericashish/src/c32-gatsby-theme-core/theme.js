@@ -388,7 +388,8 @@ export default {
       borderBottom: '1px solid #eee',
       pt: 4,
       display: ['block',null, 'flex', null],
-      width: ['100vw',null,null,'maxContentWidth'],
+      width: '100vw',
+      maxWidth: 'maxContentWidth',
       gridArea: 'auto',
       margin: '0 auto',
       color: 'lightTxt',
@@ -411,8 +412,6 @@ export default {
         li: {
           pb: 1,
           listStyleType: 'none',
-          display: ['inline-block !important', 'inline-block !important', 'block', null],
-          pr: [3,null,0, null],
           '&:first-of-type': {
             borderLeft: 'none',
           },

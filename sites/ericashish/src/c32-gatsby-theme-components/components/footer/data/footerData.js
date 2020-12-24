@@ -11,6 +11,7 @@ export const FooterData = () => {
                 title
                 _rawText
                 menu {
+                  iconMenu
                   button {
                     buttonTxt
                     icon

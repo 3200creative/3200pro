@@ -46,10 +46,9 @@ const FooterSections = ({footerBG}) => {
           }}>{footerSections.title}</div>
           <div>
           {footerSections._rawText && <BlockText blocks={footerSections._rawText} />}
-          <ul>
+          <ul sx={{display: 'flex', flexDirection: footerSections.menu.iconMenu ? 'row' : 'column'}}>
             {footerSections.menu.button.map(button => (
               <li key={`fsmb-${button.buttonTxt}`} sx={{
-                display: ['inline-block!important', 'inline-block!important', button.icon && 'inline-block!important' || 'block', null],
                 paddingRight: button.icon && '20px!important' || null,
                 lineHeight: button.icon && '2!important' || null,
                 width: ['100%', 'max-content', null, null]
