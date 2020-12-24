@@ -37,7 +37,7 @@ const FooterSections = ({footerBG}) => {
     >
       {footer.footerSection.map(footerSections => (
         <div key={`fs-${footerSections.title}`} sx={{
-          
+          //width: [footerSections.menu.iconMenu ? '100%' : null,'auto'],
           mx: 4
         }}>
           <div sx={{

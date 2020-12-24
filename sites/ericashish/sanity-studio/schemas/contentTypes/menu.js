@@ -19,5 +19,5 @@ export default {
             name: 'button',
             of: [{ type: 'button' }]
         },
-    ],
+    ],  
 }

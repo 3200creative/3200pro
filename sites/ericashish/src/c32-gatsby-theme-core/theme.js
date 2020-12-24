@@ -387,10 +387,12 @@ export default {
       borderTop: '1px solid white',
       borderBottom: '1px solid #eee',
       pt: 4,
-      display: ['block',null, 'flex', null],
+      display: 'flex',
       width: '100vw',
+      flexWrap: 'wrap',
       maxWidth: 'maxContentWidth',
       gridArea: 'auto',
+      justifyContent: 'center',
       margin: '0 auto',
       color: 'lightTxt',
       title: {
