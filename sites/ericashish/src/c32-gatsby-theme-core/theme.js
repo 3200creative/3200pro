@@ -223,6 +223,9 @@ export default {
     root: {
       boxShadow: 'footerShadow',
     },
+    video: {
+      height: ['180px', '365px', null, null]
+    },
     header: {
       pt: [1, 3],
       hamburger: {
@@ -261,10 +264,6 @@ export default {
         width: '26px',
         verticalAlign: 'text-bottom'
       }
-    },
-    video: {
-      my: '10px',
-      border: '#ff0000 100px solid !important'
     },
     clearline: {
       borderBottom: '1px solid #ddd',

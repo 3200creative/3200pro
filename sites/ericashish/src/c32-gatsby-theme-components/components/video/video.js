@@ -9,7 +9,8 @@ const Video = ({ videoSrcURL, videoTitle, ...props }) => (
       my: 40,
       display: 'block',
       width: ['640px'],
-      height: ['360px'],
+      maxWidth: '100%',
+      variant: 'variants.video'
     }}
       
       src={videoSrcURL}
