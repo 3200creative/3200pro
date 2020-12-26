@@ -43,6 +43,7 @@ export default function Nav(props) {
         alignSelf: ["start", null, "center", null, null],
         alignItems: "center",
         mt: isNavOpen ? 2 : 0,
+        mr: [null,null,5, null],
         display: [isNavOpen ? "block" : "none", null, "flex", null, null],
         flexDirection: ["column", null, "row", null, null],
       }}

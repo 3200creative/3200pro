@@ -225,24 +225,19 @@ export default {
     },
     header: {
       pt: [1, 3],
-      darkmodeicon: {
-        backroundColor: 'background',
-        right: ['10vw', null,'4vw', null],
-        margin: 0,
-        padding: 0,
-        top: ['3vh', null,'.5vh', null],
-        position: 'absolute',
-        dispaly: 'block !important',
-        '&:hover': {
-          cursor: 'pointer'
-        }
-      },
       hamburger: {
         color: 'text',
         span: {
           color: 'text'
         }
       },
+    },
+    darkmodeicon: {
+      top: [null, null,'24px'],
+      right: ['20px', '40px'],
+      bottom: ['10px', 'none'],
+      position: ['fixed', null, 'absolute'],
+      cursor: 'pointer'
     },
     featuredImage: {
       boxShadow: 'rgba(0, 0, 0, 0.3) 0px 20px 40px -20px, rgba(0, 0, 0, 0.33) 0px 18px 36px -18px !important',

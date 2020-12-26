@@ -14,12 +14,10 @@ const DarkModeIcon = () => {
         fontsize: 1,
         border: 'none',
         position: 'absolute',
-        top: '10px',
-        right: '20px',
-        color: 'text',
-        variant: 'variants.darkmodeicon',
-        variant: 'variants.header.darkmodeicon',
-
+        top: '20px',
+        right: '30px',
+        color: colorMode == 'light' && 'text' || 'text',
+        variant: 'variants.darkmodeicon'
       }}
       onClick ={e => {
         setColorMode(newColorMode)        
