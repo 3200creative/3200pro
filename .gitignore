@@ -56,11 +56,10 @@ typings/
 # dotenv environment variables file
 .env
 
-# gatsby files
+# gatsby file
 .cache/
 public
 sites/10sec/
-sites/3200pro/
 sites/ahi/
 sites/customcars/
 sites/dagaz/
@@ -70,6 +69,7 @@ sites/gizmosmn/
 sites/hjl/
 sites/livgard/
 sites/paranet/
+sites/fynn/
 
 # Mac files
 .DS_Store
