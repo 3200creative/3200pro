@@ -30,6 +30,12 @@ import spacer from './objects/spacers'
 import heroBlock from './objects/heroBlock'
 import simpleBlockContent from './objects/simpleBlockContent'
 import illustration from './objects/illustration'
+import shuffleTextBlock from './objects/textShuffler/shuffleTextBlock'
+import shuffledTextSection from './objects/textShuffler/shuffledTextSection'
+import shuffledText from './objects/textShuffler/shuffledText'
+import standardText from './objects/textShuffler/standardText'
+import blockTitleTxtButtonBg from './objects/blockTitleTxtButtonBg'
+import simplePortableText from './objects/simplePortableText'
 // Content
 import review from './contentTypes/review'
 import service from './contentTypes/service'
@@ -72,6 +78,12 @@ export default createSchema({
         heroBlock,
         simpleBlockContent,
         illustration,
+        shuffleTextBlock,
+        shuffledTextSection,
+        shuffledText,
+        standardText,
+        blockTitleTxtButtonBg,
+        simplePortableText,
         
         // Content Types
         page,

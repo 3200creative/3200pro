@@ -9,6 +9,9 @@ import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error
 import ModularTextBlock from '../components/block-content/ModularTextBlock'
 import ButtonBlock from "../components/block-content/ButtonBlock";
 import HeroBlock from "../components/block-content/HeroBlock";
+import BlockTitleTxtButtonBg from "../components/block-content/BlockTitleTxtButtonBg"
+import ShuffleText from "../components/block-content/ShuffleText"
+import { useSiteMetadata } from "c32-gatsby-theme-core"
 
 export const query = graphql`
   query PageTemplateQuery($id: String!) {
@@ -36,7 +39,7 @@ export const query = graphql`
 
 const LandingPage = (props) => {
   const { data, errors } = props;
-
+  const { useSanityRoutingNav, useSanityRoutingContactNav, globalContactMenu, useDarkMode} = useSiteMetadata()
   if (errors) {
     return (
       <Layout>
@@ -69,6 +72,12 @@ const LandingPage = (props) => {
       case "heroBlock":
         el = <HeroBlock key={c._key} {...c} />;
         break;
+      case "blockTitleTxtButtonBg":
+        el = <BlockTitleTxtButtonBg key={c._key} {...c} />;
+        break;
+      case "shuffledText":
+      el = <ShuffleText key={c._key} {...c} />;
+      break;
       default:
         el = null;
     }
@@ -76,15 +85,16 @@ const LandingPage = (props) => {
   });
 
   const menuItems = page.navMenu && (page.navMenu.items || []);
+  const contactMenu = globalContactMenu;
   const pageTitle = data.route && !data.route.useSiteTitle && page.title;
 
   return (
-    <Layout navMenuItems={menuItems} textWhite={true}>
+    <Layout navMenuItems={menuItems}  contactMenuItems={contactMenu} textWhite={true}>
       <SEO 
        title={page.seo.metaTitle && page.seo.metaTitle} 
        description={page.seo.metaDesc && page.seo.metaDesc} 
        />
-      <div sx={{pt:22}}>{content}</div>
+      <div sx={{py:22, px:[4,6,100]}}>{content}</div>
     </Layout>
   );
 };

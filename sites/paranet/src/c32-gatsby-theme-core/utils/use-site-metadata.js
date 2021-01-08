@@ -38,6 +38,14 @@ export const useSiteMetadata = () => {
             }
           }
         }
+        sanityGlobalOptions {
+          globalNavMenu {
+            ...navMenu
+          }
+          globalContactMenu {
+            ...navMenu
+          }
+        }
         sanitySiteSettings {
           _id
           logo {
@@ -60,9 +68,12 @@ export const useSiteMetadata = () => {
   const LogoDark = data.sanitySiteSettings.logoDark.asset.url
   const [colorMode, setColorMode] = useColorMode()  
   const logo = (colorMode == 'light') ? Logo : LogoDark
+  const useSanityRoutingContactNav = true
   const useSanityRoutingNav = true
   const useTransitions = true
   const useDarkMode = true
+  const globalNavMenu = data.sanityGlobalOptions.globalNavMenu.items
+  const globalContactMenu = data.sanityGlobalOptions.globalContactMenu.items
   const lockMobileMenu = true
   const headerDisplayType = 'block'
   //Footer Information
@@ -90,7 +101,7 @@ export const useSiteMetadata = () => {
   
   
   // Local Business Schema
-  const allData = { ...metaData, HamburgerTxt, headerDisplayType, lockMobileMenu, useDarkMode, useSanityRoutingNav, additionalLinks, developer,developerLink, useTransitions, title, logo, seoImage, twitterUsername,
+  const allData = { ...metaData, globalNavMenu, globalContactMenu, useSanityRoutingContactNav, HamburgerTxt, headerDisplayType, lockMobileMenu, useDarkMode, useSanityRoutingNav, additionalLinks, developer,developerLink, useTransitions, title, logo, seoImage, twitterUsername,
     
     // Local Business Data:
     hasLocalBusinessSchema: true,

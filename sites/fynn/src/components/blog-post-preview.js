@@ -7,7 +7,8 @@ import { getBlogUrl } from '../lib/helpers'
 import BlockText from '../components/block-text'
 import { getFluidGatsbyImage } from "gatsby-source-sanity"
 import BackgroundImage from "gatsby-background-image"
-const sanityConfig = {projectId: 'p6aj32cv', dataset: 'production'}
+import clientConfig from "../../client-config";
+import serializers from "./block-content/serializers";
 
 function BlogPostPreview (props) {
   return (
@@ -26,7 +27,7 @@ function BlogPostPreview (props) {
     <Link to={getBlogUrl(props.publishedAt, props.slug.current)}
     >
     <Img
-      fluid={getFluidGatsbyImage(props.featuredImage,{ maxWidth: 800 }, sanityConfig)}
+      fluid={getFluidGatsbyImage(props.featuredImage,{ maxWidth: 800 }, {...clientConfig.sanity})}
       sx = {{
         width: '100%',
       }}
@@ -43,7 +44,7 @@ function BlogPostPreview (props) {
       <h2>{props.title}</h2>
       {props._rawExcerpt && (
         <span>
-          <BlockText blocks={props._rawExcerpt} />
+          <BlockText blocks={props._rawExcerpt} serializers={serializers} {...clientConfig.sanity}/>
         </span>
       )}
       </Link>
@@ -53,3 +54,4 @@ function BlogPostPreview (props) {
 }
 
 export default BlogPostPreview
+

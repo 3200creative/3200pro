@@ -3,7 +3,6 @@ import { jsx } from "theme-ui"
 import { Link } from "gatsby"
 import { useContext } from "react"
 import { NavContext } from "c32-gatsby-theme-core"
-import { useSiteMetadata } from "c32-gatsby-theme-core"
 import CTALink from "./CTALink";
 
 const SanityNav2 = ({navMenuItems}) => {
@@ -26,6 +25,7 @@ const SanityNav2 = ({navMenuItems}) => {
       aria-label="main-navigation"
     >
       <div className="flex">
+        
       {(navItems || []).map((c, i) => (
         <div>
           <CTALink key={`cta_${i}`} {...c} />

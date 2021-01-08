@@ -7,14 +7,15 @@ import { NavContext } from "c32-gatsby-theme-core"
 import { useSiteMetadata } from "c32-gatsby-theme-core"
 import CTALink from "./CTALink";
 
-const SanityRoutingNav = ({navMenuItems}) => {
+const SanityRoutingNav = ({navMenuItems, isContactMenu}) => {
   const [isNavOpen, setIsNavOpen] = useContext(NavContext)
   const  navItems  = navMenuItems
+  const contactMenu = isContactMenu
   const { lockMobileMenu } = useSiteMetadata()
   // There are two setups for Nav. One that that lock mobile, and one that toggles from header menu to desktop.
   return (
     <>
-    { lockMobileMenu ?
+    { lockMobileMenu && contactMenu !== true ?
     <nav
       sx={{
         gridColumn: ["1 / -1", null, "2 / 3", null, null],
@@ -25,7 +26,7 @@ const SanityRoutingNav = ({navMenuItems}) => {
         mt: isNavOpen ? 2 : 0,
         display: isNavOpen ? "flex" : "none",
         flexDirection: ["column", null, "row", null, null],
-        variant: 'variants.header.nav'
+        variant: 'variants.nav'
         // to customize make a child element of the header in theme.js
       }}
       role="navigation"
@@ -46,7 +47,7 @@ const SanityRoutingNav = ({navMenuItems}) => {
         mt: isNavOpen ? 2 : 0,
         display: [isNavOpen ? "flex" : "none", null, "flex", null, null],
         flexDirection: ["column", null, "row", null, null],
-        variant: 'variants.header.nav'
+        variant: 'variants.nav'
         // to customize make a child element of the header in theme.js
       }}
       role="navigation"
@@ -54,7 +55,7 @@ const SanityRoutingNav = ({navMenuItems}) => {
     >
 
       {(navItems || []).map((c, i) => (
-        <div>
+        <div sx={{variant: 'variants.nav.item'}}>
           <CTALink key={`cta_${i}`} {...c} />
         </div>
       ))}

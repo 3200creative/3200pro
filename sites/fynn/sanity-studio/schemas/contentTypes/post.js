@@ -9,11 +9,13 @@ export default {
       name: 'title',
       type: 'string',
       title: 'Title',
+      description: 'Titles should be catchy, descriptive, and not too long'
     },
     {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
+      description: 'Some frontends will require a slug to be set to be able to show the post',
       options: {
         source: 'title',
         maxLength: 96
@@ -23,6 +25,7 @@ export default {
       name: 'publishedAt',
       type: 'datetime',
       title: 'Published at',
+      description: 'This can be used to schedule post for publishing'
     },
     {
       name: 'categories',
@@ -39,11 +42,61 @@ export default {
       name: 'excerpt',
       type: 'excerptPortableText',
       title: 'Excerpt',
+      description:
+        'This ends up on summary pages, on Google, when people share your post in social media.'
     },
     {
       name: 'blockContent',
       type: 'blockContent',
       title: 'Body'
+    },
+    {
+      name: 'manualRelatedPosts',
+      type: 'array',
+      title: 'Manual Related Posts',
+      description: 'This will overwrite the automatic related posts',
+      of: [
+        {
+          type: 'reference',
+          to: {
+            type: 'post'
+          }
+        }
+      ],
+    },
+    {
+      name: 'relatedPostCount',
+      title: 'Related Product Count',
+      type: 'number'
+    },
+    {
+      title: 'Disable Related Posts',
+      name: 'disableRelatedPosts',
+      type: 'boolean'
+    },
+    {
+      name: 'manualRelatedProducts',
+      type: 'array',
+      title: 'Manual Related Products',
+      description: 'This will overwrite the automatic related posts',
+      of: [
+        {
+          type: 'reference',
+          to: {
+            type: 'product'
+          }
+        }
+      ],
+    },
+    {
+      name: 'relatedProductCount',
+      title: 'Related Product Count',
+      type: 'number'
+    },
+    {
+      title: 'Disable Related Products',
+      name: 'disableRelatedProducts',
+      type: 'boolean'
     },
     {
       name: 'seo',
@@ -70,7 +123,6 @@ export default {
           contentSelector: 'blockContent' // (OPTIONAL) option to finetune where Yoast will look for the content. (only applicable for scraping without content function)
       },
     }
-      
   ],
   orderings: [
     {
@@ -100,49 +152,6 @@ export default {
           direction: 'asc'
         }
       ]
-    },
-    {
-      name: 'publishingDateDesc',
-      title: 'Publishing date old->new',
-      by: [
-        {
-          field: 'publishedAt',
-          direction: 'desc'
-        },
-        {
-          field: 'title',
-          direction: 'asc'
-        }
-      ]
-    },
-    {
-      name: 'category',
-      title: 'Category',
-      by: [
-        {
-          field: 'category',
-          direction: 'asc'
-        },
-      ]
     }
   ],
-  preview: {
-    select: {
-      title: 'title',
-      cat: 'category.category.title',
-      publishedAt: 'publishedAt',
-      
-      slug: 'slug',
-      media: 'featuredImage',
-    },
-    prepare ({title = 'No title', publishedAt, slug = {}, media, cat}) {
-      const dateSegment = format(publishedAt, 'YYYY/MM')
-      const path = `/${dateSegment}/${slug.current}/`
-      return {
-        title,
-        media,
-        subtitle: cat
-      }
-    }
-  }
 }

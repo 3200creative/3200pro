@@ -32,7 +32,7 @@ function BlockTitleTxtButtonBg (props) {
               <BlockText blocks={props.text} />
             </div>
           )}
-          <div id='bb' sx={{float: 'left', width: 'max-content' }}><ButtonBlock parentProps={props.buttons}/></div>
+          <div id='bb' sx={{float: 'left', width: 'max-content', a:{button:{boxShadow:'shadowStyle2', transition: 'button','&:hover':{boxShadow: 'none', backgroundColor: 'text', transition: 'button'}}} }}><ButtonBlock parentProps={props.buttons}/></div>
         </div>  
     </div>
     <Xarrow start='arrowStart' end='bb' color='#ff8336' path='grid'/>

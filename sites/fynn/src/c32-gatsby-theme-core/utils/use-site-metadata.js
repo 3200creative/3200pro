@@ -1,15 +1,15 @@
 /** @jsx jsx */
 import { jsx, useColorMode } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby"
-import Logo from '../../../content/assets/placeholder.svg'
-import LogoDark from '../../../content/assets/placeholder.svg'
+import Logo from '../../../content/assets/maui-fishing.svg'
+import LogoDark from '../../../content/assets/maui-fishing.svg'
 
 export const useSiteMetadata = () => {
   const data = useStaticQuery(
     graphql`
       query SiteData{
         
-        seoImage: file(name: { eq: "placeholder" }) {
+        seoImage: file(name: { eq: "c32-site-social" }) {
           childImageSharp {
             resize(width: 1024) {
               src
@@ -38,48 +38,48 @@ export const useSiteMetadata = () => {
             }
           }
         }
-        sanityMenuLinks: sanityMenu(title: {eq: "Primary Menu"}) {
-          title
-          button {
-            buttonTxt
-            href
-            subMenu {
-              buttonTxt
-              href
-            }
+        sanityGlobalOptions {
+          globalNavMenu {
+            ...navMenu
+          }
+          singleProductMenu {
+            ...navMenu
           }
         }
-        secondaryMenuLinks: sanityMenu(title: {eq: "Secondary Menu"}) {
-          title
-          button {
-            buttonTxt
-            href
-            subMenu {
-              buttonTxt
-              href
+        sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
+          _id
+          logo {
+            image {
+              asset {
+                url
+              }
             }
           }
-        }
-        footerMenuLinks: sanityMenu(title: {eq: "Footer Menu"}) {
-          title
-          button {
-            buttonTxt
-            href
-            subMenu {
-              buttonTxt
-              href
+          logoDark {
+            image {
+              asset {
+                url
+              }
             }
+            alt
           }
         }
+        
       }
     `
   )
+  const Logo = data.sanitySiteSettings.logo.image.asset.url
+  const LogoDark = data.sanitySiteSettings.logoDark.image.asset.url
   const [colorMode, setColorMode] = useColorMode()  
   const logo = (colorMode == 'light') ? Logo : LogoDark
-
+  const useSanityRoutingNav = true
   const useTransitions = true
   const useDarkMode = true
-  const useSanityNav = true
+  const lockMobileMenu = false
+  const globalNavMenu = data.sanityGlobalOptions.globalNavMenu.items
+  const singleProductMenu = data.sanityGlobalOptions.singleProductMenu.items
+  const headerDisplayType = 'block'
+  //Footer Information
   const developer = '3200.pro'
   const developerLink = 'https://3200.pro'
   const additionalLinks = [
@@ -92,16 +92,19 @@ export const useSiteMetadata = () => {
       url: '/privacy-policy'
     },
   ]
-  const title = '3200.Pro'
+  
+  
+  
+  
+  const title = 'Fynn And Friends'
   const seoImage = data.seoImage.childImageSharp.resize
   const metaData = data.site.siteMetadata
   const twitterUsername = data.site.siteMetadata.social.twitter
-    // Sanity Menu Information
-    const navItems = data.sanityMenuLinks.button
-    const secondaryNavItems = data.secondaryMenuLinks.button
-    const footerNavItems = data.footerMenuLinks.button
+  const HamburgerTxt = null
+  
+  
   // Local Business Schema
-  const allData = { ...metaData, navItems, secondaryNavItems, footerNavItems, useSanityNav, useDarkMode, additionalLinks, developer,developerLink, useTransitions, title, logo, seoImage, twitterUsername,
+  const allData = { ...metaData, globalNavMenu,singleProductMenu, HamburgerTxt, headerDisplayType, lockMobileMenu, useDarkMode, useSanityRoutingNav, additionalLinks, developer,developerLink, useTransitions, title, logo, seoImage, twitterUsername,
     
     // Local Business Data:
     hasLocalBusinessSchema: true,

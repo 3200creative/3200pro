@@ -10,6 +10,7 @@ import ImgLeftTxtRight from './ImgLeftTxtRight'
 import DarkmodeImage from './DarkmodeImage'
 import ShuffleText from './ShuffleText'
 import BlockTitleTxtButtonBg from './BlockTitleTxtButtonBg'
+
 const serializers = {
   types: {
     block (props) {

@@ -17,8 +17,9 @@ export function getBlogUrl (publishedAt, slug) {
   return `/blog/${slug.current || slug}/`
 }
 
-export function getServiceUrl (publishedAt, slug) {
-  return `/services/${slug.current || slug}/`
+export function getBoatUrl (slug, boatType) {
+  let boatUrl = slug.current || slug
+  return boatUrl
 }
 
 export function buildImageObj (source) {

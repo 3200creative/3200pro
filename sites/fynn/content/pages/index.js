@@ -11,60 +11,67 @@ import { SEO, Layout } from "c32-gatsby-theme-core"
 import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error-lists'
 import Container from 'c32-gatsby-theme-core/src/components/container'
 import BlockContent from '../../src/components/block-content'
-const sanityConfig = {projectId: 'lur7q35c', dataset: 'production'}
-
+import LandingPage from "../../src/templates/LandingPage"
+import Errors from '../../src/components/errors'
 
 export const query = graphql`
-  query HomePageQuery {
-    page: sanityPage(title: {eq: "Homepage"}) {
-      title
-      _rawBlockContent
-      seo {
-          metaDesc
-          metaTitle
+  fragment SanityImage on SanityFeaturedImage {
+    alt
+    crop {
+      _key
+      _type
+      top
+      bottom
+      left
+      right
+    }
+    hotspot {
+      _key
+      _type
+      x
+      y
+      height
+      width
+    }
+    asset {
+      _id
+      metadata {
+        lqip
+        dimensions {
+          aspectRatio
+          width
+          height
         }
+      }
     }
   }
-`
 
-const Homepage = props => {
-   const { data, errors } = props
-   if (errors) {
-     return (
-       <Layout>
-         <GraphQLErrorList errors={errors} />
-       </Layout>
-     )
-   }
+  query FrontpageQuery {
+    landingPage: sanityLandingPage(_id: { regex: "/(drafts.|)homepage/" }) {
+      ...LandingPageInfo
+    }
 
-   const page = data && data.page
-   if (!page) {
-     throw new Error(
-       'Missing "Home" page data. Open the studio at http://localhost:3333 and add "Home" page data and restart the development server.'
-     )
-   }
+    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
+      title
+      openGraph {
+        title
+        description
+        image {
+          ...SanityImage
+        }
+      }
+    }
+  }
+`;
 
+const IndexPage = (props) => {
+  const { data, errors } = props;
 
-  
+  if (errors) {
+    return <Errors errors={errors} />;
+  }
 
-  return (
-    <SiteLayout>
-       <SEO 
-       title={page.seo.metaTitle} 
-       description={page.seo.metaDesc} 
-       />
-      <Container>
-        <div
-        sx= {{
-          variant: 'variants.homepage'
-        }}
-        >
-          <h1>{page.title}</h1>
-            <BlockContent blocks={page._rawBlockContent || []} />
-        </div>
-      </Container>
-    </SiteLayout>
-  )
-}
+  return <LandingPage data={data} />;
+};
 
-export default Homepage
+export default IndexPage

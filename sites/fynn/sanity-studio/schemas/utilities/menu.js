@@ -5,14 +5,29 @@ export default {
     fields: [
         {
             name: 'title',
-            title: 'Title',
+            type: 'string'
+        },
+        {
+            name: 'Admin Info',
+            name: 'adminInfo',
             type: 'string'
         },
         {
             type: 'array',
-            title: 'Buttons',
-            name: 'button',
-            of: [{ type: 'button' }]
+            name: 'items',
+            of: [{ type: 'navItem' }]
         },
     ],
+    preview: {
+        select: {
+          title: 'title',
+          subtitle: 'adminInfo',
+        },
+        prepare({ title, subtitle }) {
+          return {
+            title,
+            subtitle,
+          }
+        },
+      },
 }

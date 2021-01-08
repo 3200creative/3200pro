@@ -45,6 +45,14 @@ export default {
         validation: (Rule) => Rule.required(),
       },
       {
+        title: "Dark Logo",
+        name: "logoDark",
+        type: "figure",
+        description:
+          "Company or Site Logo",
+        validation: (Rule) => Rule.required(),
+      },
+      {
         title: "Default Social Sharing Image",
         name: "seoImage",
         type: "figure",
@@ -59,9 +67,10 @@ export default {
         validation: (Rule) => Rule.required(),
       },
       {
-        title: "Footer Background",
-        name: "footerBackground",
-        type: "figure",
+        title: 'Open graph',
+        name: 'openGraph',
+        description: 'These will be the default meta tags on all pages that have not set their own',
+        type: 'openGraph'
       },
     ],
   }

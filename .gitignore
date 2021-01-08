@@ -1,3 +1,17 @@
+* Ignore Other Client Sites
+sites/10sec
+sites/3200pro
+sites/ahi
+sites/customcars
+sites/dagaz
+sites/ericashish
+sites/fishmaui
+sites/fynn
+sites/gizmosmn
+sites/hjl
+sites/livgard
+sites/paranet
+
 # Logs
 logs
 *.log
@@ -67,3 +81,4 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+

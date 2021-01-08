@@ -9,6 +9,9 @@ import Gallery from './Gallery'
 import Highlight from './Highlight'
 import ModularTextBlock from './ModularTextBlock'
 import SimpleBlockContent from './SimpleBlockContent'
+import ShuffleText from './ShuffleText'
+import BlockTitleTxtButtonBg from './BlockTitleTxtButtonBg'
+
 const serializers = {
     types: {
       block (props) {
@@ -67,7 +70,14 @@ const serializers = {
       },
       simpleBlockContent (props) {
         return <SimpleBlockContent {...props.node} />
+      },
+      shuffledTextSection (props) {
+        return <ShuffleText {...props.node} />
+      },
+      blockTitleTxtButtonBg (props) {
+        return <BlockTitleTxtButtonBg {...props.node} />
       }
+
     },
     marks: {
       highlight (props) {

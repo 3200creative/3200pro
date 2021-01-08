@@ -13,5 +13,21 @@ export default {
         name: 'contactEmail',
         type: 'string'
       },
+      {
+        name: 'globalNavMenu',
+        type: 'reference',
+        title: 'Global Primary Navgation Menu',
+        // weak: true, // Uncomment if you want to be able to delete navigation even though pages refer to it
+        to: [{ type: 'menu' }],
+        description: 'Header menu will default to this menu unless a specific menu is selected on a page-by-page basis.',
+      },
+      {
+        name: 'globalContactMenu',
+        type: 'reference',
+        title: 'Global Primary Contact Menu',
+        // weak: true, // Uncomment if you want to be able to delete navigation even though pages refer to it
+        to: [{ type: 'menu' }],
+        description: 'Contact menu will default to this menu unless a specific menu is selected on a page-by-page basis.',
+      },
     ],
   }

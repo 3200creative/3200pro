@@ -8,7 +8,7 @@ import ContentContainer from "./content-container"
 import Footer from "./footer"
 import { motion, AnimatePresence, useViewportScroll,  useTransform, useMotionValue, useRef} from "framer-motion"
 
-const Layout = ({ children, navMenuItems}) => {
+const Layout = ({ children, navMenuItems, contactMenuItems}) => {
   const motionVariants = {
       initial: {
         opacity: 0,
@@ -25,7 +25,7 @@ const Layout = ({ children, navMenuItems}) => {
     <Styled.root sx={{variant: 'variants.root'}}>
       <Normalize />
       <SiteContainer>
-        <HeaderRoutingSanity navMenuItems={navMenuItems} />
+        <HeaderRoutingSanity navMenuItems={navMenuItems} contactMenuItems={contactMenuItems}  />
         <Main>
         <motion.path
           d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"

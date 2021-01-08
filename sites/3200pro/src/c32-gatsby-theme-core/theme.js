@@ -19,6 +19,12 @@ export default {
     shadowStyle1: '0 30px 60px -10px rgba(0,0,0,0.3), 0 18px 36px -18px rgba(0,0,0,0.33)',
     shadowStyle2: '0 15px 30px -10px rgba(0,0,0,0.3), 0 9px 18px -8px rgba(0,0,0,0.13)', //lighter, smaller shadow
   },
+  transition: {
+    boxShadow: 'box-shadow 0.25s ease-in-out',
+    color: 'color 0.25s ease-in-out',
+    backgroundColor: 'background-color .5s ease-in-out',
+    button: 'color 0.25s ease-in-out, background-color .25s ease-in-out'
+  },
   colors: {
     ...tailwind.colors,
     text: '#4a494e',

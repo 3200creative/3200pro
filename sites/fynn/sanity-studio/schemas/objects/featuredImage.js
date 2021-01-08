@@ -2,6 +2,9 @@ export default {
     name: 'featuredImage',
     title: 'Featured Image',
     type: 'image',
+    options: {
+      hotspot: true
+    },
     fields: [
       {
         name: 'alt',

@@ -8,7 +8,7 @@ import { Button } from 'theme-ui'
 
 function ButtonBlock (props) {
   return (
-    <div 
+    <nav 
     sx={{
     width: '100%',
     margin: '0 auto',
@@ -21,7 +21,7 @@ function ButtonBlock (props) {
         {btn.buttonTxt}
       </Link>
     ))}
-    </div>
+    </nav>
   )
 }
 

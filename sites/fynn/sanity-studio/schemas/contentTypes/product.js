@@ -28,6 +28,14 @@ export default {
       description: 'This can be used to schedule post for publishing'
     },
     {
+      title: 'Sold On',
+      name: 'soldOn',
+      type: 'reference',
+      to: {
+        type: 'vendor'
+      }
+    },
+    {
       name: 'categories',
       type: 'array',
       title: 'Categories',
@@ -80,6 +88,55 @@ export default {
       name: 'blockContent',
       type: 'blockContent',
       title: 'Body'
+    },
+    {
+      name: 'manualRelatedProducts',
+      type: 'array',
+      title: 'Manual Related Products',
+      description: 'This will overwrite the automatic related products',
+      of: [
+        {
+          type: 'reference',
+          to: {
+            type: 'product'
+          }
+        }
+      ],
+    },
+    {
+      name: 'relatedPostCount',
+      title: 'Related Product Count',
+      type: 'number'
+    },
+    {
+      title: 'Disable Related Products',
+      name: 'disableRelatedProducts',
+      type: 'boolean'
+    },
+    {
+      name: 'seo',
+      title: 'SEO',
+      type: 'seo-tools', // use seo-tools type
+      options: {
+          baseUrl: 'http://localhost:3333/', // (REQUIRED) This is the baseUrl for your site
+          slug(doc) { // (REQUIRED) a function to return the sug of the current page, which will be appended to the baseUrl
+              return doc.slug.current;
+          },
+          fetchRemote: true, // Can be set to false to disable fetching the remote source (you will need to pass the content helpers for analysis)
+          content(doc) {
+              return 'simple html representation of your doc'; // (OPTIONAL) If your site is generated after Sanity content updates you can use this for better real time feedback
+          },
+          title(doc) {
+              return 'page title'; // (OPTIONAL) return page title otherwise inferred from scrape
+          },
+          description(doc) {
+              return 'page description'; // (OPTIONAL) return page description otherwise inferred from scrape
+          },
+          locale(doc) {
+              return 'page locale'; // (OPTIONAL) return page locale otherwise inferred from scrape
+          },
+          contentSelector: 'blockContent' // (OPTIONAL) option to finetune where Yoast will look for the content. (only applicable for scraping without content function)
+      },
     }
   ],
   orderings: [
@@ -117,16 +174,7 @@ export default {
       title: 'title',
       publishedAt: 'publishedAt',
       slug: 'slug',
-      media: 'mainImage'
+      media: 'featuredImage'
     },
-    prepare ({title = 'No title', publishedAt, slug = {}, media}) {
-      const dateSegment = format(publishedAt, 'YYYY/MM')
-      const path = `/${dateSegment}/${slug.current}/`
-      return {
-        title,
-        media,
-        subtitle: publishedAt ? path : 'Missing publishing date'
-      }
-    }
   }
 }

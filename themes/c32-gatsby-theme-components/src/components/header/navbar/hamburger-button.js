@@ -40,7 +40,7 @@ const HamburgerButton = () => {
   const { lockMobileMenu } = useSiteMetadata();
   const { HamburgerTxt } = useSiteMetadata();
   return (
-    <button
+    <div
       aria-label="Toggle Menu"
       onClick={() => setIsNavOpen(!isNavOpen)}
       sx={{
@@ -62,8 +62,8 @@ const HamburgerButton = () => {
         <Span open={isNavOpen} />
         <Span open={isNavOpen} />
       </div>
-      {HamburgerTxt && (<div sx={{height: '60px', width: '100px', variant: 'variants.header.hamburger.txt'}}>{HamburgerTxt}</div>)}
-    </button>
+      {HamburgerTxt && (<div sx={{height: '60px', variant: 'variants.header.hamburger.txt'}}>{HamburgerTxt}</div>)}
+    </div>
   )
 }
 

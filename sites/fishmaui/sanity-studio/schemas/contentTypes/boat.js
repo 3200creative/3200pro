@@ -45,6 +45,11 @@ export default {
             ]
         },
         {
+          name: 'bookingCTA',
+          title: 'Jotform ID',
+          type: 'string'
+      },
+        {
             name: 'excerpt',
             type: 'excerptPortableText',
             title: 'Excerpt'

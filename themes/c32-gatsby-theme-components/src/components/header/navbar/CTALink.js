@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx, Styled} from "theme-ui"
 import React from "react";
 import { Link, navigate } from "gatsby";
 import Subnav from './sanityRoutingSubnav'
@@ -15,7 +17,7 @@ const doNavigate = target => {
 };
 
 const CTALink = props => {
-  let link = props.route || props.link || "#";
+  let link = props.route && `${props.route}` || props.link || "#";
   if (
     props.landingPageRoute &&
     props.landingPageRoute.slug &&
@@ -26,7 +28,7 @@ const CTALink = props => {
 
   if (props.kind === "button") {
     return (
-      <button id="navAction" onClick={() => doNavigate(link)}>
+      <button sx={{variant: 'variants.button'}} id="navAction" onClick={() => doNavigate(link)}>
         {props.title}
       </button>
     );
@@ -42,7 +44,7 @@ const CTALink = props => {
   }
 
   return (
-    <Link to={props.relativeNavItem && `${link}` || `/${link}`} sx={{'&hover':{div: {display: 'inline-block'}}}}>
+    <Link to={props.relativeNavItem == true ? `${link}` : `/${link}`} sx={{'&hover':{div: {display: 'inline-block'}}}}>
       {props.title}
       {props.subnav ? <Subnav subNav= {props.subnav} /> : null}
     </Link>

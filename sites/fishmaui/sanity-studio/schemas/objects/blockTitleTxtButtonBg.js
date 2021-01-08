@@ -6,13 +6,13 @@ export default{
         {
             title:'Title',
             name: 'title',
-            type: 'spring',
+            type: 'string',
         },
-        {
-            title:'Text',
-            name: 'text',
-            type: 'simplePortableText',
-        },
+        // {
+        //     title:'Text',
+        //     name: 'text',
+        //     type: 'simplePortableText',
+        // },
         {
             title: 'Button(s)',
             name: 'buttons',

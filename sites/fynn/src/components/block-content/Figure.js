@@ -4,10 +4,11 @@ import { getFluidGatsbyImage } from "gatsby-source-sanity"
 import Img from "gatsby-image"
 import { buildImageObj } from '../../lib/helpers'
 import { imageUrlFor } from '../../lib/image-url'
-const sanityConfig = {projectId: 'p6aj32cv', dataset: 'production'}
+import clientConfig from "../../../client-config";
 
 
 function Figure (props) {
+  if (!props || !props.image.asset || !props.image.asset._id) { return null }
   return (
     <figure  sx={{
       mx: 'auto',
@@ -21,7 +22,7 @@ function Figure (props) {
           float: 'none',
           display: 'block',
         }}
-        fluid={getFluidGatsbyImage(props.asset._ref,{ maxWidth: 800 }, sanityConfig)}
+        fluid={getFluidGatsbyImage(props.image.asset._id,{ maxWidth: 800 }, clientConfig.sanity)}
         alt={props.alt}
         loading='lazy'
         />

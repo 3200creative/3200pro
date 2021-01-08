@@ -8,6 +8,22 @@
  *    type: 'blockContent'
  *  }
  */
+import React from 'react'
+
+const highlightIcon = () => (
+  <span style={{fontWeight: 'bold'}}>H</span>
+)
+
+const brandColor = '#C7664F'
+const highlightRender = props => (
+  <span style={{ 
+    backgroundColor: brandColor,
+    padding: '5px',
+    color: 'white',  
+    borderRadius: '2px'
+  }}>{props.children}</span>
+)
+
 import {
   MdViewModule,
   MdVideocam,
@@ -19,8 +35,8 @@ import {
 } from 'react-icons/md'
 
 import {
-  WiMoonAltThirdQuarter
-} from 'react-icons/wi'
+  GoAlert
+} from 'react-icons/go'
 
 export default {
   title: 'Block Content',
@@ -52,7 +68,18 @@ export default {
         decorators: [
           { title: 'Strong', value: 'strong' },
           { title: 'Emphasis', value: 'em' },
+          { title: 'Underline', value: 'underline' },
           { title: 'Code', value: 'code' },
+          { "title": "Strike", "value": "strike-through" },
+          { 
+            title: 'Highlight',
+            value: 'highlight',
+            blockEditor: {
+              icon: highlightIcon,
+              render: highlightRender
+            }
+            
+          }
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
@@ -93,26 +120,10 @@ export default {
       icon: MdStorage,
     },
     {
-      type: 'script',
-      icon: MdCode,
-    },
-    {
-      type: 'darkmodeImage',
-      icon: WiMoonAltThirdQuarter,
+      type: 'videoEmbed',
     },
     {
       type: 'figure',
-    },
-    {
-      type: 'figureWide',
-    },
-    {
-      type: 'gallery',
-      icon: MdViewModule,
-    },
-    {
-      type: 'imgLeftTxtRight',
-      icon: MdChromeReaderMode,
     },
   ],
 }

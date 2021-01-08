@@ -194,42 +194,80 @@ export default {
       }, 
     },
   },
+  contactNav: {
+    nav: {
+      display: 'block',
+      background: 'transparent',
+      position: 'absolute',
+      top: '5px',
+      right: 1,
+      left: '70vw',
+      margin: 'none',
+      width: 'max-content',
+      p: 0,
+      a: {
+        color: 'text',
+        fontWeight: '400'
+      }
+    }
+  },
   variants: {
     header: {
+      background: 'transparent',
       wrapper: {
         height: 'auto !important'
       },
+      hamburger: {
+        display: 'flex',
+        justifyContent: 'flex-start',
+        backgroundColor: 'pOrange',
+        left: '40vw',
+        top: '10px',
+        position: 'fixed',
+        width: '300px',
+        height: '40px',
+        top: 0,
+        p: 1,
+        icon: {
+          display: 'relative',
+          width: '30px',
+          span: {
+            left: 'auto !important',
+            color: 'white',
+            height: '3px',
+
+          }
+        },
+        txt: {
+          display: 'relative',
+          clear: 'none',
+          textTransform: 'uppercase',
+          color: 'white',
+        }
+        
+      },
       nav: {
+        backgroundColor: 'pOrange',
         justifyContent: "space-between",
         position: 'fixed',
         zIndex: '99999',
-        left:'50vw',
-        alignItems: 'top',
+        left: '40vw',
+        alignItems: 'baseline',
+        top: '30px',
+        p: 4,
         a: {
-          mr: 4
-        }
+          mr: 4,
+          color: 'white',
+          fontWeight: '800',
+          div: {
+            a: {
+              fontWeight: '400'
+            }
+          }
+        },
       },
       subnav: {
         display: 'block'
-      },
-      wrapper: {
-
-      },
-      hamburger: {
-        backgroundColor: 'pOrange',
-        right: '60vw',
-        top: '10px',
-        minWidth: 'min-content',
-        position: 'fixed',
-        icon: {
-          width: '30px',
-          float: 'float'
-        },
-        txt: {
-          clear: 'none',
-          float: 'float'
-        }
-        
       },
     },
     siteContainer: {
@@ -286,14 +324,19 @@ export default {
       },
     },
     siteLogo: {
-      width: '70px',
+      width: '300px',
       height: 'auto',
     },
     shadow: {
       boxShadow: 'shadowStyle1',
     },
     heroBtns: {
-      display: 'block'
+      display: 'block',
+      nav: {
+        a: {
+          color: 'text'
+        }
+      }
     },
     ghostbutton: {
       backgroundColor: 'background',
@@ -360,16 +403,6 @@ export default {
           p: 2
         }
       }
-    },
-    buttonBlock: {
-      a: {
-        backgroundColor: 'fmOrange',
-        color: 'white',
-        px: 4,
-        py: 3,
-        borderRadius: 4,
-        textTransform: 'uppercase'
-      },
     },
     homepage: {
       width: '100%',

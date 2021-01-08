@@ -12,15 +12,13 @@ function ButtonBlock (props) {
     sx={{
     width: '100%',
     margin: '0 auto',
-    textAlign: 'center'
+    textAlign: 'center',
+    variant:  'variants.buttonBlock'
     }}
     >
-    {console.log('Buttons:')}
-    {console.log(props.buttons)}
     {props.buttons.map(btn => (
       <Link key={btn.key} to={btn.href}>
-        <Button
-        >{btn.buttonTxt}</Button>
+        {btn.buttonTxt}
       </Link>
     ))}
     </div>

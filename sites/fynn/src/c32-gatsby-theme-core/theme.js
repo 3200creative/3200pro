@@ -16,14 +16,21 @@ export default {
     alt: '"SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif', //An alternate font style if needed.
   },
   shadows: {
-    shadowStyle1: '0 30px 60px -10px rgba(0,0,0,0.3), 0 18px 36px -18px rgba(0,0,0,0.33)',
+    bs: '0 30px 60px -10px rgba(0,0,0,0.3), 0 18px 36px -18px rgba(0,0,0,0.33)',
+    ms: '0 15px 30px -10px rgba(0,0,0,0.3), 0 9px 18px -9px rgba(0,0,0,0.33)',
   },
   colors: {
     ...tailwind.colors,
-    text: '#4a494e',
+    text: '#000',
+    border: 'black',
     headline: '#000',
     darkbg2: 'white',
-    background: baseColors.white, //Try "#954264",
+    pOrange: '#FF8336',
+    fmBlue: '#517487',
+    tanD: '#D9C99D',
+    tanL: '#E6E4D0',
+    background: '#ffffff', //Try "#954264",
+    background2: '#ffffff', //Try "#954264",
     primary: '#FF00FF',
     light: '#999',
     secondary: baseColors.black,
@@ -39,7 +46,6 @@ export default {
       iconsHover: baseColors.blue[7],
       iconsOpen: baseColors.gray[8],
     },
-
     footer: {
       background: 'transparent',
       text: baseColors.gray[8],
@@ -48,6 +54,8 @@ export default {
     },
     modes: {
       dark: {
+        background2: '#222222',
+        border: 'white',
         text: '#fff',
         headline: '#fff',
         background: '#000',
@@ -67,16 +75,6 @@ export default {
   sizes: {
     ...tailwind.sizes,
     maxContentWidth: "900px", // Sets the container size on larger screens, e.g. tablets and laptops
-    // logoWidthXS: "50%", // Logo width on extra small screens, up to 480px
-    // logoWidthS: "30%", // Logo width on small screens, 480px - 768px
-    // logoWidthM: "30%", // Logo width on medium screens, 768px - 1024px
-    // logoWidthL: "30%", // Logo width on large screens, 1024px - 1440px
-    // logoWidthXL: "30%", // Logo width on extra large screens, above 1440px
-    logoHeightXS: "100vw", // Logo height on extra small screens, up to 480px
-    logoHeightS: "5vw", // Logo height on small screens, 480px - 768px
-    logoHeightM: "5vw", // Logo height on medium screens, 768px - 1024px
-    logoHeightL: "5vw", // Logo height on large screens, 1024px - 1440px
-    logoHeightXL: "5vw", // Logo height on extra large screens, above 1440px
   },
   styles: {
     ...tailwind.styles,
@@ -129,145 +127,172 @@ export default {
     },
     h1: {
       color: 'headline',
-      lineHeight: '1'
+      lineHeight: '1',
+      
     },
     h2: {
       color: 'headline',
-      lineHeight: '1'
+      lineHeight: '1',
+      fontSize: [3,3,5,5],
+      a: {
+        color: 'headline',
+      }
     },
     h3: {
       color: 'headline',
-      lineHeight: '1'
+      lineHeight: '1',
+      a: {
+        color: 'headline',
+      }
+    },
+    h4: {
+      fontSize: 3,
+      color: 'headline',
+      a: {
+        color: 'headline',
+      }
+    }
+
+  },
+  
+  reviews:  {
+    container: {
+      borderTop: '1px solid #ddd',
+    },
+    singleReview: {
+      border: '1px solid #ddd',
+      padding: 5,
+      my: 5,
+      titleBlock: {
+        display: 'flex',
+        mb: 3,
+      },
+      title: {
+        fontSize: 24,
+        my: 0,
+        mx: 2,
+      },
+      meta: {
+        display: 'flex',
+        fontSize: 16,
+        div: {
+          background: '#f5f5f5',
+          padding: 2,
+        },
+      },
+    },
+  },
+  archive: {
+    singleItem: {
+      padding: 2,
+      borderRadius: 4,
+      minHeight: '100%',
+      boxShadow: 'shadowStyle1',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'stretch',
+      media: {
+      },
+      body: {
+        flexGrow: '1',
+      },
+      footer: {
+        display: 'flex',
+        flex: '1 0 auto',
+        alignItems: 'flex-end',
+        justifyContent: 'center',
+        flexDirection: 'column',
+      }, 
     },
   },
   variants: {
-    siteLogo: {
-      width: ['100%', null,'400px', null],
-      height: 'auto',
-    },
-    shadow: {
-      boxShadow: 'shadowStyle1',
-    },
-    ghostbutton: {
-      backgroundColor: 'background',
-      color: 'headline',
-      borderWidth: '1px',
-      borderColor: 'headline',
-      boxShadow: 'none',
-      p: 2,
-      transition: 'background 0.25s ease-in-out, color 0.25s ease-in-out',
-      '&:hover': {
-        cursor: 'pointer',
-        backgroundColor: 'headline',
-        color: 'background',
-        transition: 'background 0.25s ease-in-out, color 0.25s ease-in-out',
-      }
-
-    },
-    clearline: {
-      width: '100%',
-      backgroundColor: 'light',
-      height: '1px',
-      my: 5
-    },
-    postPreview: {
-      my: [6],
+    pagination: {
+      mt: 5,
       a: {
         color: 'text'
+      }
+    },
+    clearline: {
+      borderBottom: '1px solid #ddd',
+      width: '100%',
+      clear: 'both',
+      height: '1px',
+      my: '10px'
+    },
+    clear: {
+      width: '100%',
+      clear: 'both',
+      height: '2rem',
+    },
+    button: {
+      backgroundColor: 'background',
+      borderWidth: '2px',
+      borderColor: 'text',
+      borderStyle: 'solid',
+      px: 3,
+      py: 2,
+      borderRadius: '4px',
+      transition: 'background 0.25s ease-in-out, color 0.25s ease-in-out',
+      color: 'text',
+      '&:hover':{
+        backgroundColor: 'text',
+        color: 'background',
+        transition: 'background 0.25s ease-in-out, color 0.25s ease-in-out',
       },
-      archiveImages: {
-        backgroundColor: 'darkbg2',
-        
-        boxShadow: 'shadowStyle1',
-      }
     },
-    navLinkStyles: {
-      fontWeight: '400',
-      textTransform: 'uppercase',
-      fontSize: '14px',
-      a: {
-        fontWeight: '400',
-        color: 'text',
-        mx: 3
-      }
-    },
-    darkmodeicon: {
-      top: [null, null,'10px'],
-      right: ['20px', '40px'],
-      bottom: ['10px', 'none'],
-      position: ['fixed', null, 'absolute']
-    },
-    navStyles: {
-      marginRight: '60px'
-    },
-    gist: {
-      iframe: {
+    header: {
+      position: 'fixed',
+      backgroundColor: 'background2',
+      boxShadow: 'ms',
+      wrapper: {
+        display: 'flex',
+        width: '100%'
+      },
+      hamburger: {
+        mt: 3,
+        marginRight: '40px'
+      },
+      nav: {
+        backgroundColor: ['#ff9900', 'transparent', null, null],
+        width: ['100vw', 'auto', null, null],
         a: {
-          display: 'none'
+          color: 'text',
+          mt: 4,
+          '&:hover': {
+            textDecoration: 'underline'
+          }
         }
+      },
+    },
+    nav: {
+      mx: 3,
+      item: {
+        display: 'block',
+        color: 'white',
+        mx: 2,
       }
+    },
+
+    siteLogo: {
+      width: '400px',
+      height: 'auto',
     },
     footer: {
-      fontSize: '12px',
-      color: 'light',
-      a: {
-        color: 'light'
-      },
+      fontSize: 1,
       ul: {
-        flexDirection: 'row',
         display: 'flex',
-        listStyleType: 'none',
-        alignItems: 'center',
         justifyContent: 'center',
-        p: 0,
         li: {
-          p: 2
+          listStyleType: 'none',
+          mx: 2,
         }
       }
     },
-    landingPage: {
-      marginTop: '10vw',
-      h1: {
-        textAlign: 'left',
-        width:  ['90%', null, '500px'],
-        my: 4,
-        color: 'headline',
-        lineHeight: '1'
-      },
-      h2: {
-        color: 'headline',
-        lineHeight: '1'
-      },
-      h3: {
-        color: 'headline',
-        lineHeight: '1'
-      },
-      h4: {
-        color: 'headline',
-        lineHeight: '1'
-      },
+    productFeed: {
+      my: [3,5], py: [3,5]
     },
-    standardPage: {
-      marginTop: '10vw',
-      h1: {
-        textAlign: 'left',
-        width:  ['90%', null, '900px'],
-        my: 4,
-        color: 'headline',
-        lineHeight: '1'
-      },
-      h2: {
-        color: 'headline',
-        lineHeight: '1'
-      },
-      h3: {
-        color: 'headline',
-        lineHeight: '1'
-      },
-      h4: {
-        color: 'headline',
-        lineHeight: '1'
-      },
-    },
+    postFeed: {
+      my: [3,null,5, null], py: [3,null,5, null]
+    }
   },
 }

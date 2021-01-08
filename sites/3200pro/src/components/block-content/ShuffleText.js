@@ -15,12 +15,12 @@ function ShuffleText (props) {
             {section.string ? section.string :
             <section.textStyle sx={{fontSize: section.textSize ? section.textSize : 1}}  key={section.key} >
             <TextScramble
-            texts={section.text}
-            letterSpeed={5}
-            nextLetterSpeed={100}
-            pauseTime={3000}
-            paused={pause}
-          />
+              texts={section.text}
+              letterSpeed={5}
+              nextLetterSpeed={100}
+              pauseTime={3000}
+              paused={pause}
+            />
           </section.textStyle> }
           </>
         )): null}

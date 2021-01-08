@@ -9,10 +9,9 @@ import { NavContext } from "c32-gatsby-theme-core"
 import DarkModeIcon from "c32-gatsby-theme-core/src/components/darkmode"
 import { useSiteMetadata } from "c32-gatsby-theme-core"
 
-const SiteHeader = ({navMenuItems}) => {
+const SiteHeader = ({navMenuItems, contactMenuItems}) => {
   const [isNavOpen] = useContext(NavContext)
-  const { useDarkMode } = useSiteMetadata()
-  const { useSanityRoutingNav } = useSiteMetadata()
+  const { useSanityRoutingNav, useSanityRoutingContactNav, useDarkMode} = useSiteMetadata()
   const { headerDisplayType } = useSiteMetadata()
   return (
     <header
@@ -29,6 +28,7 @@ const SiteHeader = ({navMenuItems}) => {
       }}
       id="header"
     >
+      <div sx={{variant: 'variants.contactNav'}}>{useSanityRoutingContactNav ? (<div sx={{variant: 'contactNav'}}><SanityRoutingNav navMenuItems={contactMenuItems} isContactMenu='true' /></div>) : undefined}</div>
       <div
         sx={{
           gridRow: "1 / -1",

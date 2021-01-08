@@ -10,6 +10,11 @@ export default {
       title: 'Heading'
     },
     {
+      name: 'shuffledTextSection',
+      type: 'Shuffled Text Section',
+      type: 'shuffledTextSection'
+    },
+    {
       name: 'tagline',
       type: 'simpleBlockContent'
     },
