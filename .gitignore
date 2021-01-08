@@ -1,16 +1,6 @@
 # Ignore Other Client Sites
 
-**/10sec/
-**/3200pro/
-**/ahi/
-**/customcars/
-**/dagaz/
-**/ericashish/
-**/fishmaui/
-**/gizmosmn/
-**/hjl/
-**/livgard/
-**/paranet/
+sites/
 
 # Logs
 logs
