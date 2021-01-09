@@ -60,6 +60,7 @@ typings/
 .cache/
 public
 sites/10sec/
+# sites/3200pro/
 sites/ahi/
 sites/customcars/
 sites/dagaz/
