@@ -6,6 +6,7 @@
   "author": "3200.pro<info@3200.pro>",
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
+    "@sanity/block-content-to-react": "^2.0.7",
     "c32-gatsby-theme-components": "*",
     "c32-gatsby-theme-core": "*",
     "gatsby": "^2.26.0",
