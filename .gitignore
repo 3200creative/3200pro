@@ -60,7 +60,7 @@ typings/
 .cache/
 public
 sites/10sec/
-# sites/3200pro/
+sites/3200pro/
 sites/ahi/
 sites/customcars/
 sites/dagaz/
@@ -70,7 +70,7 @@ sites/gizmosmn/
 sites/hjl/
 sites/livgard/
 sites/paranet/
-sites/fynn/
+#sites/fynn/
 
 # Mac files
 .DS_Store
