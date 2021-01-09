@@ -47,7 +47,7 @@ async function createLandingPages(pathPrefix = "/", graphql, actions, reporter) 
     reporter.info(`Creating landing page: ${path}`);
     createPage({
       path,
-      component: require.resolve("./src/templates/landingPage.js"),
+      component: require.resolve("./src/templates/LandingPage.js"),
       context: { id },
     });
   });
