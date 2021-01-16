@@ -47,7 +47,8 @@ const hiddenDocTypes = listItem =>
     'route',
     'product',
     'affiliate',
-    'vendor'
+    'vendor',
+    'newsletterSignup'
   ].includes(listItem.getId()) 
 
 export default () =>
@@ -91,6 +92,15 @@ S.list()
         .child(
           S.documentTypeList('route')
         ),
+        S.listItem()
+                .title("Newsletter Signup")
+                .icon(MdInfo)
+                .child(
+                  S.document()
+                    .title("Newsletter Signup")
+                    .schemaType("newsletterSignup")
+                    .documentId("newsletterSignup")
+                ),
       ])
     ),
     S.listItem()

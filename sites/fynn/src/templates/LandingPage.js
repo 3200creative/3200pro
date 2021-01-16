@@ -13,7 +13,7 @@ import RecentPostFeed from "../components/block-content/RecentPostFeed"
 import RecentProductFeed from "../components/block-content/RecentProductFeed"
 import Spacer from "../components/block-content/Spacer"
 import AmazonRelatedProducts from 'c32-gatsby-theme-components/src/components/affiliate/amazonRelatedProduct'
-
+import MailChimpForm from '../components/MailChimpForm'
 export const query = graphql`
   query PageTemplateQuery($id: String!) {
     route: sanityRoute(id: { eq: $id }) {
@@ -56,7 +56,6 @@ const LandingPage = (props) => {
       'Missing "Site settings". Open the studio at http://localhost:3333 and add some content to "Site settings" and restart the development server.'
     );
   }
-  console.log();
   const page = data.landingPage || data.route.landingPage;
 
   const content = (page._rawContent || [])
@@ -99,6 +98,7 @@ const LandingPage = (props) => {
        />
       <div sx={{pt:22}}>{content}</div>
       <AmazonRelatedProducts />
+      <MailChimpForm />
     </Layout>
   );
 };

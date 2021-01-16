@@ -42,6 +42,7 @@ import landingPage from './contentTypes/landingPage'
 import product from './contentTypes/product'
 import vendor from './contentTypes/vendor'
 import affiliate from './contentTypes/affiliate'
+import newsletterSignup from './utilities/newsletterSignup'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -59,6 +60,7 @@ export default createSchema({
         siteSettings,
         route,
         navItem,
+        newsletterSignup,
         // Object Types
         blockContent,
         link,
