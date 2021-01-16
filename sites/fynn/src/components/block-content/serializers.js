@@ -9,6 +9,8 @@ import Gallery from './Gallery'
 import Highlight from './Highlight'
 import ModularTextBlock from './ModularTextBlock'
 import SimpleBlockContent from './SimpleBlockContent'
+import Video from './Video'
+
 const serializers = {
     types: {
       block (props) {
@@ -67,6 +69,9 @@ const serializers = {
       },
       simpleBlockContent (props) {
         return <SimpleBlockContent {...props.node} />
+      },
+      videoEmbed (props) {
+        return <Video {...props.node} />
       }
     },
     marks: {
