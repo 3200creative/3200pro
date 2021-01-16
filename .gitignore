@@ -57,7 +57,8 @@ typings/
 .env
 
 # gatsby file
-# Make sure to clear cached files: git rm -r --cached .
+# Make sure to clear cached files:
+# git rm -r --cached .
 
 .cache/
 public
@@ -68,11 +69,11 @@ sites/customcars/
 sites/dagaz/
 sites/ericashish/
 sites/fishmaui/
-#sites/gizmosmn/
+sites/gizmosmn/
 sites/hjl/
 sites/livgard/
 sites/paranet/
-sites/fynn/
+#sites/fynn/
 
 # Mac files
 .DS_Store
@@ -84,3 +85,5 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
+# Kits
+kits/

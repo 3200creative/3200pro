@@ -161,8 +161,6 @@ const SEO = ({
         )
         .concat(meta)}     
     >
-      {console.log('Check Schema')}
-      {console.log(siteUrl)}
       
     {checkBusinessSchema ? <script type="application/ld+json">{JSON.stringify(schemaOrgLocalBusiness)}</script> : null}
     </Helmet>

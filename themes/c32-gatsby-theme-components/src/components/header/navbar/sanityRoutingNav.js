@@ -7,7 +7,7 @@ import { NavContext } from "c32-gatsby-theme-core"
 import { useSiteMetadata } from "c32-gatsby-theme-core"
 import CTALink from "./CTALink";
 
-const SanityRoutingNav = ({navMenuItems, isContactMenu}) => {
+const SanityRoutingNav = ({navMenuItems, isContactMenu, variant}) => {
   const [isNavOpen, setIsNavOpen] = useContext(NavContext)
   const  navItems  = navMenuItems
   const contactMenu = isContactMenu
@@ -26,7 +26,7 @@ const SanityRoutingNav = ({navMenuItems, isContactMenu}) => {
         mt: isNavOpen ? 2 : 0,
         display: isNavOpen ? "flex" : "none",
         flexDirection: ["column", null, "row", null, null],
-        variant: 'variants.nav'
+        variant: `variants.${variant && variant || 'nav'}`
         // to customize make a child element of the header in theme.js
       }}
       role="navigation"
@@ -47,7 +47,7 @@ const SanityRoutingNav = ({navMenuItems, isContactMenu}) => {
         mt: isNavOpen ? 2 : 0,
         display: [isNavOpen ? "flex" : "none", null, "flex", null, null],
         flexDirection: ["column", null, "row", null, null],
-        variant: 'variants.nav'
+        variant: `variants.${variant && variant || 'nav'}`
         // to customize make a child element of the header in theme.js
       }}
       role="navigation"

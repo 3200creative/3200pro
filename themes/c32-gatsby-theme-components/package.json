@@ -40,6 +40,7 @@
   "dependencies": {
     "react-gist": "^1.2.1",
     "react-icons": "^3.10.0",
+    "react-jotform-embed": "^1.1.1",
     "react-masonry-component": "^6.2.1",
     "react-modal": "^3.11.2"
   }
