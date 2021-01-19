@@ -8,5 +8,3 @@ const AmazonRelatedProducts = () => (
     </Fragment>
 )
 export default AmazonRelatedProducts
-
-
