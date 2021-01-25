@@ -54,7 +54,10 @@ const HamburgerButton = () => {
         marginLeft: "auto",
         backgroundColor: "transparent",
         border: "none",
-        variant: 'variants.header.hamburger'
+        variant: 'variants.header.hamburger',
+        height: '60px',
+        width: '60px',
+        overflow: 'hidden'
       }}
     >
       <div sx={{width: '60px',  variant: 'variants.header.hamburger.icon'}}>

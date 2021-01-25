@@ -224,6 +224,10 @@ export default {
         color: 'text'
       }
     },
+    darkmodeicon: {
+      top: '10px',
+      right: '10px'
+    },
     clearline: {
       borderBottom: '1px solid #ddd',
       width: '100%',
@@ -255,20 +259,26 @@ export default {
       },
     },
     header: {
-      position: 'fixed',
       backgroundColor: 'background2',
       boxShadow: 'ms',
       wrapper: {
-        display: 'flex',
+        display: ['block', 'flex', null, null],
         width: '100%'
       },
       hamburger: {
-        mt: 3,
-        marginRight: '40px'
+        right: ['50px', 'none', null, null],
+        top: ['0px', 'none', null, null],
+        position: ['absolute', 'none', null, null],
+        marginRight: ['0px','40px', null, null]
       },
       nav: {
-        backgroundColor: ['#ff9900', 'transparent', null, null],
-        width: ['100vw', 'auto', null, null],
+        backgroundColor: ['transparent', null, null, null],
+        wrapper: {
+          width: ['100vw', 'auto', null, null],
+        },
+        div: {
+          clear: ['both', 'none', null, null]
+        },
         a: {
           color: 'text',
           mt: 4,
