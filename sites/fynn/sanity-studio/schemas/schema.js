@@ -38,6 +38,8 @@ import videoEmbed from './objects/videoEmbed'
 import recentPostFeed from './objects/recentPostFeed'
 import html from './objects/html'
 import recentProductFeed from './objects/recentProductFeed'
+import randomPostList from './objects/randomPostList'
+import randomProductList from './objects/randomProductList'
 // Content
 import post from './contentTypes/post'
 import page from './contentTypes/page'
@@ -87,6 +89,8 @@ export default createSchema({
         illustration,
         videoEmbed,
         html,
+        randomPostList,
+        randomProductList,
         // Content Types
         page,
         post,

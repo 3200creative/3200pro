@@ -31,7 +31,7 @@ export default {
     tanL: '#E6E4D0',
     background: '#ffffff', //Try "#954264",
     background2: '#ffffff', //Try "#954264",
-    primary: '#FF00FF',
+    primary: '#d8101e',
     light: '#999',
     secondary: baseColors.black,
     accent: baseColors.orange[2],
@@ -86,12 +86,24 @@ export default {
       lineHeight: "body",
       fontSize: 2,
       transition: 'background 0.25s ease-in-out, color 0.25s ease-in-out',
+      p: {
+        a: {
+          color: 'primary',
+          span: {
+            color: 'white'
+          }
+        }
+        
+      }
     },
     blockquote: {
       bg: "muted",
       p: 3,
       borderLeft: "5px solid",
       borderColor: "primary",
+    },
+    a: {
+      color: 'primary'
     },
     inlineCode: {
       color: "text",
@@ -217,7 +229,9 @@ export default {
       width: '100%',
       clear: 'both',
       height: '1px',
-      my: '10px'
+      my: '10px',
+      clear: 'both',
+      float: 'left'
     },
     clear: {
       width: '100%',

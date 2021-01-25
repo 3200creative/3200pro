@@ -60,7 +60,7 @@ const PageTemplate = props => {
           <Styled.h2 sx={{mt:7}}>Related Products:</Styled.h2>
           <Grid container spacing={4}>
             
-            {page.manualRelatedProducts.map(relatedProducts =>(
+            {page.randomProductList.map(relatedProducts =>(
               <Grid item xs={6} md={4}>
               <CardActionArea sx={{ height: '100%'}}>
               <Card sx={{height: '100%'}}>
@@ -112,7 +112,7 @@ export const query = graphql`
             }
             alt
         }
-        manualRelatedProducts {
+        randomProductList {
           title
           slug {
             current

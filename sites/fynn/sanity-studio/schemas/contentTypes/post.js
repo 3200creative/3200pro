@@ -51,47 +51,19 @@ export default {
       title: 'Body'
     },
     {
-      name: 'manualRelatedPosts',
-      type: 'array',
-      title: 'Manual Related Posts',
-      description: 'This will overwrite the automatic related posts',
-      of: [
-        {
-          type: 'reference',
-          to: {
-            type: 'post'
-          }
-        }
-      ],
+      name: 'randomPostList',
+      type: 'randomPostList',
+      title: 'Random Post List'
     },
     {
-      name: 'relatedPostCount',
-      title: 'Related Product Count',
-      type: 'number'
+      name: 'randomProductList',
+      type: 'randomProductList',
+      title: 'Random Product List'
     },
     {
       title: 'Disable Related Posts',
       name: 'disableRelatedPosts',
       type: 'boolean'
-    },
-    {
-      name: 'manualRelatedProducts',
-      type: 'array',
-      title: 'Manual Related Products',
-      description: 'This will overwrite the automatic related posts',
-      of: [
-        {
-          type: 'reference',
-          to: {
-            type: 'product'
-          }
-        }
-      ],
-    },
-    {
-      name: 'relatedProductCount',
-      title: 'Related Product Count',
-      type: 'number'
     },
     {
       title: 'Disable Related Products',

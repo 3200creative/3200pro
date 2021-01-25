@@ -90,23 +90,14 @@ export default {
       title: 'Body'
     },
     {
-      name: 'manualRelatedProducts',
-      type: 'array',
-      title: 'Manual Related Products',
-      description: 'This will overwrite the automatic related products',
-      of: [
-        {
-          type: 'reference',
-          to: {
-            type: 'product'
-          }
-        }
-      ],
+      name: 'randomPostList',
+      type: 'randomPostList',
+      title: 'Random Post List'
     },
     {
-      name: 'relatedPostCount',
-      title: 'Related Product Count',
-      type: 'number'
+      name: 'randomProductList',
+      type: 'randomProductList',
+      title: 'Random Product List'
     },
     {
       title: 'Disable Related Products',

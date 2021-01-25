@@ -41,6 +41,10 @@
       "path": "./src/dashboardConfig.js"
     },
     {
+      "implements": "part:@sanity/form-builder/input-resolver",
+      "path": "./inputResolver.js"
+    },
+    {
       "implements": "part:@sanity/form-builder/input/image/asset-sources",
       "path": "./parts/assetSources.js"
     }
