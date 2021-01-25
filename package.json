@@ -51,6 +51,8 @@
     "32:build": "yarn workspace 3200pro build",
     "32:serve": "yarn workspace 3200pro serve",
     "32:clean": "yarn workspace 3200pro clean",
+    "32:lint": "yarn workspace 3200pro eslint .",
+    "32:fix": "yarn workspace 3200pro eslint . --fix",
     "10:dev": "yarn workspace 10sec develop",
     "10:build": "yarn workspace 10sec build",
     "10:serve": "yarn workspace 10sec serve",
@@ -68,6 +70,7 @@
     "p:dev": "yarn workspace paranet develop",
     "p:build": "yarn workspace paranet build",
     "p:serve": "yarn workspace paranet serve"
+
   },
   "dependencies": {
     "core-js": "^3.6.5"
