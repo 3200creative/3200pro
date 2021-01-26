@@ -19,31 +19,29 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 
-const ArchiveTemplate = props => {
+const ArchiveTemplate = ({ props, data, pageContext }) => {
     const { singleProductMenu } = useSiteMetadata()
-    const { data, errors } = props
+    const { numPages, limit, skip, currentPage } = pageContext
     const posts = data ? data.post.edges : null
     const archive = data && data.archive
     const category = archive.title.toLowerCase()
     const menuItems = archive.navMenu || singleProductMenu || [];
+    const isFirst = currentPage === 1
+    const isLast = currentPage === numPages
+    const prevPage = currentPage - 1 === 1 ? `/${category}/` : (`/${category}/` + (currentPage + 1)).toString()
+    const nextPage = (`/${category}/` + (currentPage + 1)).toString()
+
     return (
       <Layout navMenuItems={menuItems} >
         <Typography>
-        {errors && <SEO title='GraphQL Error' />}
         {archive && 
         <SEO 
         title='Title'
         description='Desc'
         />
         }
-        <Container>
-            {errors && (
-                <GraphQLErrorList errors={errors} />
-            )}
-        </Container>
         <h1 sx={{pt:4}}>Fynn And Friends: Boston Terrier {archive.title}</h1>
         <Grid container spacing={4}>
-            <Grid item xs={12}><Typography variant="h4">{props.title}</Typography></Grid>
             {posts.filter(posts => !!posts.node.categories.find(category=> category._id === archive._id)).map(post => (
               <Grid item xs={12} md={6} >
                 <CardActionArea sx={{ height: '100%'}}>
@@ -66,7 +64,43 @@ const ArchiveTemplate = props => {
               </CardActionArea>
               </Grid>
             ))}
+            
           </Grid>
+          {/* <div sx={{variant: 'variants.pagination'}}>
+        <Grid container justify="space-between" >
+          {!isFirst && (
+            <Button variant="contained" >
+              <Link
+              to={prevPage}
+              rel="prev"
+            >
+              {"<< Prev"}
+              </Link>
+            </Button>
+          )}
+          {Array.from({ length: numPages }, (_, i) => (
+            <Grid item
+              key={`pagination-number${i + 1}`}
+            >
+              <Link
+                to={`${i === 0 ? "" : i + 1}`}
+              >
+                <Button variant="contained" >{i + 1}</Button>
+              </Link>
+            </Grid>
+          ))}
+          {!isLast && (
+            <Button variant="contained" >
+              <Link
+                to={nextPage}
+                rel="next"
+              >
+                {"Next >>"}
+              </Link>
+            </Button>
+          )}
+        </Grid>
+      </div> */}
         </Typography>
         </Layout>
   )
