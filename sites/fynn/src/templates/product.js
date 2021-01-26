@@ -30,8 +30,8 @@ const PageTemplate = props => {
         {errors && <SEO title='GraphQL Error' />}
         {page && 
         <SEO 
-        title= {page.seo.seo_title ? page.seo.seo_title : page.title}
-        description= {page.seo.meta_description ? page.seo.meta_description : `Boston Terrier Article: ${page.title}` }
+        title= {page.seo.metaTitle ? page.seo.metaTitle : page.title}
+        description= {page.seo.metaDesc ? page.seo.metaDesc : `Boston Terrier Article: ${page.title}` }
         />
         }
         <Container>
