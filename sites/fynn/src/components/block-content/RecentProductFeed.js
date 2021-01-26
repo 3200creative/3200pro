@@ -89,7 +89,7 @@ function RecentProductFeed (props, location) {
       {products.filter(!props.allCategories ? products => !!products.node.categories.find(category=> category._id === props.contentType._id) : products => !!products.node.categories.find(category=> category === category)).slice(0, Math.min(props.productCount ? props.productCount : 100, maxCount)).map(product => (
         <Grid item xs={12} md={6} >
           <Card sx={{height: '100%'}}>
-        <Link to={'/shop'+`/`+product.node.slug.current}>
+        <a to={product.node.href} target='_blank' rel="noopener">
         <CardActionArea>
         <CardMedia>
         {product.node.featuredImage && <Img
@@ -101,7 +101,7 @@ function RecentProductFeed (props, location) {
     /> || null }
     </CardMedia>
     </CardActionArea>
-    </Link>
+    </a>
     <CardContent sx={{ backgroundColor: 'background2'}}>
     <Styled.h4 css={{width: '100%', textAlign:'center', minHeight: '60px'}}><a href={product.node.href}>{product.node.title}</a></Styled.h4>
     {product.node.soldOn ? <div css={{width: '100%', textAlign:'center', marginBottom:'20px'}}>Sold On: <a href={product.node.soldOn.href}>{product.node.soldOn.title}</a></div> : null}

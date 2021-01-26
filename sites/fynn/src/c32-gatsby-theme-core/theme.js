@@ -269,7 +269,8 @@ export default {
         right: ['50px', 'none', null, null],
         top: ['0px', 'none', null, null],
         position: ['absolute', 'none', null, null],
-        marginRight: ['0px','40px', null, null]
+        marginRight: ['0px','40px', null, null],
+        display: ['block',null, 'none', null]
       },
       nav: {
         backgroundColor: ['transparent', null, null, null],

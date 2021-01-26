@@ -32,6 +32,7 @@ const ArchiveTemplate = ({ props, data, pageContext }) => {
     return (
       <Layout navMenuItems={menuItems}>
       <Typography>
+      <h1 sx={{pt:4}}>Fynn & Friends Blog</h1>
       <div sx={{mt:'140px'}}></div>
       <Grid container spacing={4}> 
       {posts.map(post => (

@@ -13,6 +13,7 @@ export default {
         name: 'contactEmail',
         type: 'string'
       },
+
       {
         name: 'globalNavMenu',
         type: 'reference',
@@ -29,5 +30,11 @@ export default {
         to: [{ type: 'menu' }],
         description: 'Header menu will default to this menu unless a specific menu is selected on a page-by-page basis.',
       },
+      {
+        name: 'footerMessage',
+        type: 'text',
+        rows: 3,
+        title: 'Footer Message'
+      }
     ],
   }

@@ -39,6 +39,7 @@ export const useSiteMetadata = () => {
           }
         }
         sanityGlobalOptions {
+          footerMessage
           globalNavMenu {
             ...navMenu
           }
@@ -82,17 +83,8 @@ export const useSiteMetadata = () => {
   //Footer Information
   const developer = '3200.pro'
   const developerLink = 'https://3200.pro'
-  const additionalLinks = [
-    {
-      name: 'Terms Of Use',
-      url: '/terms'
-    },
-    {
-      name: 'Privacy Policy',
-      url: '/privacy-policy'
-    },
-  ]
-  
+  const additionalLinks = []
+  const footerMessage = data.sanityGlobalOptions.footerMessage
   
   
   
@@ -104,7 +96,7 @@ export const useSiteMetadata = () => {
   
   
   // Local Business Schema
-  const allData = { ...metaData, globalNavMenu,singleProductMenu, HamburgerTxt, headerDisplayType, lockMobileMenu, useDarkMode, useSanityRoutingNav, additionalLinks, developer,developerLink, useTransitions, title, logo, seoImage, twitterUsername,
+  const allData = { ...metaData, footerMessage, globalNavMenu,singleProductMenu, HamburgerTxt, headerDisplayType, lockMobileMenu, useDarkMode, useSanityRoutingNav, additionalLinks, developer,developerLink, useTransitions, title, logo, seoImage, twitterUsername,
     
     // Local Business Data:
     hasLocalBusinessSchema: true,

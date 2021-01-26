@@ -9,6 +9,7 @@ const SiteFooter = ({footerBG}) => {
   const { developerLink } = useSiteMetadata()
   const { additionalLinks } = useSiteMetadata()
   const { footerNavItems } = useSiteMetadata()
+  const { footerMessage } = useSiteMetadata()
   const bg = footerBG
   return (
     <footer
@@ -55,6 +56,7 @@ const SiteFooter = ({footerBG}) => {
     }
     </ul>
     </div>
+    {footerMessage && (<div css={{width: '1024px', maxWidth: '100%', margin: '0 auto'}}>{footerMessage}</div>)}
     </footer>
   )
 }
