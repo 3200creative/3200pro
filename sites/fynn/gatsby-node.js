@@ -53,7 +53,7 @@ async function createLandingPages(pathPrefix = "/", graphql, actions, reporter) 
   });
 }
 
-async function createBlogPostPages(pathPrefix = "/blog", graphql, actions, reporter) {
+async function createBlogPostPages(pathPrefix = "", graphql, actions, reporter) {
   const { createPage } = actions;
   const result = await graphql(`
     {
@@ -94,22 +94,22 @@ async function createBlogPostPages(pathPrefix = "/blog", graphql, actions, repor
       });
 
     });
-    const postsPerPage = 12
-    const numPages = Math.ceil(postEdges.length / postsPerPage)
+    // const postsPerPage = 12
+    // const numPages = Math.ceil(postEdges.length / postsPerPage)
 
-        Array.from({ length: numPages }).forEach((_, i) => {
-          reporter.info(`Creating Archive Page For Blog`);
-            createPage({
-                path: i === 0 ? `/blog` : `/blog/${i + 1}`,
-                component: require.resolve("./src/templates/blogArchive.js"),
-                context: {
-                    limit: postsPerPage,
-                    skip: i * postsPerPage,
-                    numPages,
-                    currentPage: i + 1
-                },
-            });
-        });
+    //     Array.from({ length: numPages }).forEach((_, i) => {
+    //       reporter.info(`Creating Archive Page For Blog`);
+    //         createPage({
+    //             path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+    //             component: require.resolve("./src/templates/blogArchive.js"),
+    //             context: {
+    //                 limit: postsPerPage,
+    //                 skip: i * postsPerPage,
+    //                 numPages,
+    //                 currentPage: i + 1
+    //             },
+    //         });
+    //     });
 
 }
 

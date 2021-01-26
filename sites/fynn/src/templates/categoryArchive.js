@@ -41,13 +41,14 @@ const ArchiveTemplate = props => {
                 <GraphQLErrorList errors={errors} />
             )}
         </Container>
+        <h1 sx={{pt:4}}>Fynn And Friends: Boston Terrier {archive.title}</h1>
         <Grid container spacing={4}>
             <Grid item xs={12}><Typography variant="h4">{props.title}</Typography></Grid>
             {posts.filter(posts => !!posts.node.categories.find(category=> category._id === archive._id)).map(post => (
               <Grid item xs={12} md={6} >
                 <CardActionArea sx={{ height: '100%'}}>
                 <Card sx={{height: '100%'}}>
-              <Link to={category+`/`+post.node.slug.current}>
+              <Link to={`/`+post.node.slug.current}>
               <CardMedia>
               {post.node.featuredImage && <Img
             fluid={getFluidGatsbyImage(post.node.featuredImage,{ maxWidth: 800 }, clientConfig.sanity)}
@@ -58,7 +59,7 @@ const ArchiveTemplate = props => {
           /> || null }
           </CardMedia>
           <CardContent>
-          <Typography variant="h4">{post.node.title}</Typography>
+          <Styled.h4 sx={{minHeight: '60px'}}>{post.node.title}</Styled.h4>
           </CardContent>
               </Link>
               </Card>

@@ -8,14 +8,10 @@ import Grid from '@material-ui/core/Grid'
 import { getFluidGatsbyImage } from "gatsby-source-sanity"
 import { useSiteMetadata } from "c32-gatsby-theme-core"
 import  Layout  from "c32-gatsby-theme-core/src/components/layoutV2"
-import GraphQLErrorList from 'c32-gatsby-theme-core/src/components/graphql-error-lists'
-import Container from 'c32-gatsby-theme-core/src/components/container'
-import BlockContent from '../components/block-content'
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button'
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 
@@ -76,7 +72,7 @@ const ArchiveTemplate = ({ props, data, pageContext }) => {
               key={`pagination-number${i + 1}`}
             >
               <Link
-                to={`/blog/${i === 0 ? "" : i + 1}`}
+                to={`${i === 0 ? "" : i + 1}`}
               >
                 <Button variant="contained" >{i + 1}</Button>
               </Link>
