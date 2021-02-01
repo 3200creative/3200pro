@@ -46,6 +46,31 @@ export const useSiteMetadata = () => {
           singleProductMenu {
             ...navMenu
           }
+          featuredImage {
+                asset {
+                  _id
+                  url
+                  fluid(maxWidth: 600) {
+                    ...GatsbySanityImageFluid
+                  }
+                  source {
+                    url
+                  }
+                }
+                crop {
+                  bottom
+                  left
+                  top
+                  right
+                }
+                hotspot {
+                  x
+                  y
+                  height
+                  width
+                }
+                alt
+            }
         }
         sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
           _id
@@ -76,6 +101,8 @@ export const useSiteMetadata = () => {
   const useSanityRoutingNav = true
   const useTransitions = true
   const useDarkMode = true
+  const fallBackFeaturedImage = data.sanityGlobalOptions.featuredImage && data.sanityGlobalOptions.featuredImage
+  const fallBackFeaturedImageAlt = data.sanityGlobalOptions.featuredImage.alt && data.sanityGlobalOptions.featuredImage.alt
   const lockMobileMenu = false
   const globalNavMenu = data.sanityGlobalOptions.globalNavMenu.items
   const singleProductMenu = data.sanityGlobalOptions.singleProductMenu.items
@@ -96,7 +123,7 @@ export const useSiteMetadata = () => {
   
   
   // Local Business Schema
-  const allData = { ...metaData, footerMessage, globalNavMenu,singleProductMenu, HamburgerTxt, headerDisplayType, lockMobileMenu, useDarkMode, useSanityRoutingNav, additionalLinks, developer,developerLink, useTransitions, title, logo, seoImage, twitterUsername,
+  const allData = { ...metaData,fallBackFeaturedImage, fallBackFeaturedImageAlt, footerMessage, globalNavMenu,singleProductMenu, HamburgerTxt, headerDisplayType, lockMobileMenu, useDarkMode, useSanityRoutingNav, additionalLinks, developer,developerLink, useTransitions, title, logo, seoImage, twitterUsername,
     
     // Local Business Data:
     hasLocalBusinessSchema: true,

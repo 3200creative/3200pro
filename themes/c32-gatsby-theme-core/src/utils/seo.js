@@ -9,7 +9,6 @@ const SEO = ({
   meta,
   keywords: propKeywords,
   title: propTitle,
-  image: propImage,
   isBlogPost,
 }) => {
   const {
@@ -26,7 +25,6 @@ const SEO = ({
     addressRegion,
     postalCode,
     streetAddress,
-    image,
     name,
     telephone,
     priceRange,

@@ -4,16 +4,16 @@ export default {
     title: "Global Options",
     fields: [
       {
-        title: 'Phone Number',
-        name: 'phoneNumber',
-        type: 'string'
-      },
-      {
         title: 'Contact Email',
         name: 'contactEmail',
         type: 'string'
       },
-
+      {
+        name: 'featuredImage',
+        type: 'featuredImage',
+        description: `In the event a featured image isn't selected, this image will be used.`,
+        title: 'Fallback Featured Image For Archives'
+      },
       {
         name: 'globalNavMenu',
         type: 'reference',

@@ -70,10 +70,10 @@
     "p:dev": "yarn workspace paranet develop",
     "p:build": "yarn workspace paranet build",
     "p:serve": "yarn workspace paranet serve"
-
   },
   "dependencies": {
-    "core-js": "^3.6.5"
+    "core-js": "^3.6.5",
+    "react-dom": "17.0.1"
   },
   "version": "1.7.0"
 }

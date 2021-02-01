@@ -6,20 +6,9 @@ import Header from "./header"
 import Main from "./main"
 import ContentContainer from "./content-container"
 import Footer from "./footer"
-import { motion, AnimatePresence, useViewportScroll,  useTransform, useMotionValue, useRef} from "framer-motion"
+import { motion, useViewportScroll} from "framer-motion"
 
 const SiteLayout = ({ children }) => {
-  const motionVariants = {
-      initial: {
-        opacity: 0,
-      },
-      in: {
-        opacity: 1,
-      },
-      out: {
-        opacity: 0,
-      },
-    }
     const { scrollYProgress } = useViewportScroll()
   return (
     <Styled.root sx={{variant: 'variants.root'}}>

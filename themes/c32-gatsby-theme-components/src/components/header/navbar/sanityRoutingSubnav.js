@@ -1,10 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import React from "react";
-import { Link } from "gatsby"
 import { useContext } from "react"
 import { NavContext } from "c32-gatsby-theme-core"
-import { useSiteMetadata } from "c32-gatsby-theme-core"
 import CTALink from "./CTALink";
 
 const Subnav = ({subNav}) => {

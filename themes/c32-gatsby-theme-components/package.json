@@ -6,14 +6,10 @@
   "author": "3200.Pro <info@3200.pro>",
   "devDependencies": {
     "gatsby": "^2.20.4",
-    "prettier": "^2.0.5",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "prettier": "^2.0.5"
   },
   "peerDependencies": {
-    "gatsby": "^2.19.19",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "gatsby": "^2.19.19"
   },
   "keywords": [
     "gatsby",
@@ -38,6 +34,11 @@
     "url": "https://github.com"
   },
   "dependencies": {
+    "core-js": "^3.8.3",
+    "cypress": "^6.3.0",
+    "gatsby-cypress": "^0.10.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-gist": "^1.2.1",
     "react-icons": "^3.10.0",
     "react-jotform-embed": "^1.1.1",

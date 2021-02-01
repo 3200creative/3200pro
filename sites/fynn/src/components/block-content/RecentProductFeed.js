@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
-import React, { useContext} from 'react'
 import { graphql, useStaticQuery, Link } from "gatsby"
 import clientConfig from "../../../client-config";
 import { getFluidGatsbyImage } from "gatsby-source-sanity"
@@ -8,10 +7,8 @@ import Img from "gatsby-image"
 import Grid from '@material-ui/core/Grid'
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { GrCircleInformation } from "@react-icons/all-files/gr/GrCircleInformation";
 
@@ -89,19 +86,19 @@ function RecentProductFeed (props, location) {
       {products.filter(!props.allCategories ? products => !!products.node.categories.find(category=> category._id === props.contentType._id) : products => !!products.node.categories.find(category=> category === category)).slice(0, Math.min(props.productCount ? props.productCount : 100, maxCount)).map(product => (
         <Grid item xs={12} md={6} >
           <Card sx={{height: '100%'}}>
-        <a to={product.node.href} target='_blank' rel="noopener">
         <CardActionArea>
         <CardMedia>
+        <a href={product.node.href} target='_blank' rel="noopener">
         {product.node.featuredImage && <Img
       fluid={getFluidGatsbyImage(product.node.featuredImage,{ maxWidth: 800 }, clientConfig.sanity)}
       sx = {{
         width: '100%', 
       }}
-      alt = {product.node.featuredImage.alt && product.node.featuredImage.alt || undefined}
+      alt = {(product.node.featuredImage.alt && product.node.featuredImage.alt) || undefined}
     /> || null }
+    </a>
     </CardMedia>
     </CardActionArea>
-    </a>
     <CardContent sx={{ backgroundColor: 'background2'}}>
     <Styled.h4 css={{width: '100%', textAlign:'center', minHeight: '60px'}}><a href={product.node.href}>{product.node.title}</a></Styled.h4>
     {product.node.soldOn ? <div css={{width: '100%', textAlign:'center', marginBottom:'20px'}}>Sold On: <a href={product.node.soldOn.href}>{product.node.soldOn.title}</a></div> : null}

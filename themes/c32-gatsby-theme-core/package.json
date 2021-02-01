@@ -5,7 +5,7 @@
   "private": true,
   "author": "3200.Pro <info@3200.pro>",
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
+    "@material-ui/core": "^4.11.3",
     "@material-ui/styles": "^4.10.0",
     "@mdx-js/mdx": "^1.5.7",
     "@mdx-js/react": "^1.5.7",
@@ -40,15 +40,15 @@
     "theme-ui": "^0.3.5"
   },
   "devDependencies": {
-    "gatsby": "^2.19.19",
+    "gatsby": "^2.31.1",
     "prettier": "^2.0.5",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "peerDependencies": {
-    "gatsby": "^2.19.19",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "gatsby": "^2.31.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "keywords": [
     "gatsby",

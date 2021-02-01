@@ -5,15 +5,15 @@
   "version": "0.0.1",
   "author": "3200.Pro <info@3200.pro>",
   "devDependencies": {
-    "gatsby": "^2.19.19",
+    "gatsby": "^2.31.1",
     "prettier": "^2.0.5",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "peerDependencies": {
-    "gatsby": "^2.19.19",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "gatsby": "^2.31.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "keywords": [
     "gatsby",
