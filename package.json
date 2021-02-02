@@ -5,12 +5,7 @@
     "themes/*"
   ],
   "name": "c32-gatsby",
-  "devDependencies": {
-    "@testing-library/cypress": "^7.0.1",
-    "cypress": "^6.4.0",
-    "gatsby-cypress": "^0.10.0",
-    "start-server-and-test": "^1.10.8"
-  },
+  "devDependencies": {},
   "scripts": {
     "develop:base": "yarn workspace c32-gatsby-site-base develop",
     "clean:base": "yarn workspace c32-gatsby-site-base clean",
