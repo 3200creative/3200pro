@@ -11,6 +11,7 @@
     "c32-gatsby-theme-core": "*",
     "framer-motion": "^2.9.4",
     "gatsby": "^2.31.1",
+    "gatsby-image": "^2.11.0",
     "gatsby-plugin-disqus": "^1.2.0",
     "gatsby-plugin-google-analytics": "^2.3.12",
     "gatsby-source-sanity": "^6.0.1",
@@ -18,7 +19,8 @@
     "react-dom": "^17.0.1",
     "react-modal": "^3.12.1",
     "react-spring": "^8.0.27",
-    "react-xarrows": "^1.5.2"
+    "react-xarrows": "^1.5.2",
+    "theme-ui": "^0.3.5"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
