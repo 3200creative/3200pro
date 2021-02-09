@@ -9,19 +9,15 @@
   "scripts": {
     "develop:base": "yarn workspace c32-gatsby-site-base develop",
     "clean:base": "yarn workspace c32-gatsby-site-base clean",
-    "test:base": "start-server-and-test develop:base http://localhost:8000 cy:open",
-    "cy:open": "cypress open",
     "eric:develop": "yarn workspace ericashish develop",
     "eric:dev": "yarn workspace ericashish develop",
     "eric:clean": "yarn workspace ericashish clean",
     "eric:build": "yarn workspace ericashish build",
     "eric:serve": "yarn workspace ericashish serve",
-    "ahi:test": "start-server-and-test develop:eric http://localhost:8000 cy:open",
     "ahi:dev": "yarn workspace affordablehomeimprovementz develop",
     "ahi:build": "yarn workspace affordablehomeimprovementz build",
     "ahi:serve": "yarngit remote remove origin workspace affordablehomeimprovementz serve",
     "ahi:clean": "yarn workspace affordablehomeimprovementz clean",
-    "g:test": "start-server-and-test develop:eric http://localhost:8000 cy:open",
     "g:dev": "yarn workspace gizmosmn develop",
     "g:build": "yarn workspace gizmosmn build",
     "g:serve": "yarn workspace gizmosmn serve",
@@ -64,7 +60,11 @@
     "p:clean": "yarn workspace paranet clean",
     "p:dev": "yarn workspace paranet develop",
     "p:build": "yarn workspace paranet build",
-    "p:serve": "yarn workspace paranet serve"
+    "p:serve": "yarn workspace paranet serve",
+    "tw:dev": "yarn workspace tailwindStarter develop",
+    "tw:build": "yarn workspace tailwindStarter build",
+    "tw:serve": "yarn workspace tailwindStarter serve",
+    "tw:clean": "yarn workspace tailwindStarter clean"
   },
   "dependencies": {
     "core-js": "^3.6.5",

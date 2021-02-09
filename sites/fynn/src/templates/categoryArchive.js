@@ -43,13 +43,13 @@ export default function Pagination(props) {
               <Link to={`/`+post.slug.current}>
               <CardMedia>
               {post.featuredImage ? <Img
-            fluid={getFluidGatsbyImage(post.featuredImage,{ maxWidth: 800 }, clientConfig.sanity)}
+            fluid={getFluidGatsbyImage(post.featuredImage,{ maxWidth: 420 }, clientConfig.sanity)}
             sx = {{
               width: '100%',
             }}
             alt = {post.featuredImage && post.featuredImage.alt || undefined}
           /> : <Img
-          fluid={getFluidGatsbyImage(fallBackFeaturedImage,{ maxWidth: 800 }, clientConfig.sanity)}
+          fluid={getFluidGatsbyImage(fallBackFeaturedImage,{ maxWidth: 420 }, clientConfig.sanity)}
           sx = {{
             width: '100%',
           }}

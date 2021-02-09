@@ -1,1 +1,1 @@
-export { default as Test } from "./src/components/tailwindStats"
+export { default as Test } from "./src/components/tailwindUI/tailwindStats"

@@ -61,35 +61,8 @@ const LandingPage = (props) => {
 
   const content = (page._rawContent || [])
   .filter((c) => !c.disabled)
-  .map((c, i) => {
-    let el = null;
-    switch (c._type) {
-      case "modularTextBlock":
-        el = <ModularTextBlock key={c._key} {...c} blocks={c.text}/>;
-        break;
-      case "buttonBlock":
-        el = <ButtonBlock key={c._key} {...c} />;
-        break;
-      case "heroBlock":
-        el = <HeroBlock key={c._key} {...c} />;
-        break;
-      case "recentPostFeed":
-        el = <RecentPostFeed key={c._key} {...c} />;
-        break;
-      case "recentProductFeed":
-        el = <RecentProductFeed key={c._key} {...c} />;
-        break;
-      case "spacer":
-        el = <Spacer key={c._key} {...c} />;
-        break;
-        case "html":
-          el = <Html key={c._key} {...c} />;
-          break;
-      default:
-        el = null;
-    }
-    return el;
-  });
+ 
+  
   
   const menuItems = page.navMenu && (page.navMenu.items || []);
   const pageTitle = data.route && !data.route.useSiteTitle && page.title;
