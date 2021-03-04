@@ -13,7 +13,7 @@ import BlockTitleTxtButtonBg from './BlockTitleTxtButtonBg'
 
 const serializers = {
   types: {
-    block (props) {
+    block(props) {
       switch (props.node.style) {
         case 'h1':
           return <h1>{props.children}</h1>
@@ -34,39 +34,45 @@ const serializers = {
           return <p>{props.children}</p>
       }
     },
-    figure (props) {
+    figure(props) {
       return <Figure {...props.node} />
     },
-    clear (props) {
+    clear(props) {
       return <Spacer {...props.node} />
     },
-    spacer (props) {
+    spacer(props) {
       return <Spacer {...props.node} />
     },
-    buttonBlock (props) {
+    buttonBlock(props) {
       return <ButtonBlock {...props.node} />
     },
-    gallery (props) {
+    gallery(props) {
       return <Gallery {...props.node} />
     },
-    imgLeftTxtRight (props) {
+    imgLeftTxtRight(props) {
       return <ImgLeftTxtRight {...props.node} />
     },
-    script (props) {
+    script(props) {
       return <SanityScript {...props.node} />
     },
-    darkmodeImage (props) {
+    darkmodeImage(props) {
       return <DarkmodeImage {...props.node} />
     },
-    shuffledTextSection (props) {
+    shuffledTextSection(props) {
       return <ShuffleText {...props.node} />
     },
-    blockTitleTxtButtonBg (props) {
+    blockTitleTxtButtonBg(props) {
       return <BlockTitleTxtButtonBg {...props.node} />
-    }
-  }
+    },
+  },
 }
 
-const BlockContent = ({ blocks }) => <BaseBlockContent blocks={blocks} serializers={serializers} {...clientConfig.sanity} />
+const BlockContent = ({ blocks }) => (
+  <BaseBlockContent
+    blocks={blocks}
+    serializers={serializers}
+    {...clientConfig.sanity}
+  />
+)
 
 export default BlockContent

@@ -51,6 +51,7 @@ module.exports = {
     `c32-gatsby-theme-core`,
     `c32-gatsby-theme-components`,
     `@twistezo/react-text-scramble`,
+    `gatsby-plugin-gatsby-cloud`,
     {
       resolve: 'gatsby-source-sanity',
       options: {

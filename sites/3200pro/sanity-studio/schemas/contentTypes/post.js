@@ -1,4 +1,4 @@
-import {format} from 'date-fns'
+import { format } from 'date-fns'
 
 export default {
   name: 'post',
@@ -9,56 +9,57 @@ export default {
       name: 'title',
       type: 'string',
       title: 'Title',
-      description: 'Titles should be catchy, descriptive, and not too long'
+      description: 'Titles should be catchy, descriptive, and not too long',
     },
     {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
-      description: 'Some frontends will require a slug to be set to be able to show the post',
+      description:
+        'Some frontends will require a slug to be set to be able to show the post',
       options: {
         source: 'title',
-        maxLength: 96
-      }
+        maxLength: 96,
+      },
     },
     {
       name: 'category',
       title: 'Category',
       type: 'reference',
-      to: [{type:'category'}]
+      to: [{ type: 'category' }],
     },
     {
       name: 'tags',
       title: 'Tags',
-      type: 'tags'
+      type: 'tags',
     },
     {
       name: 'publishedAt',
       type: 'datetime',
       title: 'Published at',
-      description: 'This can be used to schedule post for publishing'
+      description: 'This can be used to schedule post for publishing',
     },
     {
       name: 'featuredImage',
       type: 'featuredImage',
-      title: 'Featured Image'
+      title: 'Featured Image',
     },
     {
       name: 'excerpt',
       type: 'excerptPortableText',
       title: 'Excerpt',
       description:
-        'This ends up on summary pages, on Google, when people share your post in social media.'
+        'This ends up on summary pages, on Google, when people share your post in social media.',
     },
     {
       name: 'blockContent',
       type: 'blockContent',
-      title: 'Body'
+      title: 'Body',
     },
     {
       name: 'seo',
       title: 'SEO Title And Description',
-      type: 'meta',            
+      type: 'meta',
     },
   ],
   orderings: [
@@ -68,13 +69,13 @@ export default {
       by: [
         {
           field: 'publishedAt',
-          direction: 'asc'
+          direction: 'asc',
         },
         {
           field: 'title',
-          direction: 'asc'
-        }
-      ]
+          direction: 'asc',
+        },
+      ],
     },
     {
       name: 'publishingDateDesc',
@@ -82,13 +83,13 @@ export default {
       by: [
         {
           field: 'publishedAt',
-          direction: 'desc'
+          direction: 'desc',
         },
         {
           field: 'title',
-          direction: 'asc'
-        }
-      ]
-    }
+          direction: 'asc',
+        },
+      ],
+    },
   ],
 }
