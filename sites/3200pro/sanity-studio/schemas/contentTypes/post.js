@@ -12,6 +12,11 @@ export default {
       description: 'Titles should be catchy, descriptive, and not too long',
     },
     {
+      title: 'Hidden',
+      name: 'hidden',
+      type: 'boolean',
+    },
+    {
       name: 'slug',
       type: 'slug',
       title: 'Slug',

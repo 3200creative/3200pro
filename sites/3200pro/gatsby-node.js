@@ -7,7 +7,9 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       query loadPagesQuery {
-        allSanityPost(filter: { slug: { current: { ne: null } } }) {
+        allSanityPost(
+          filter: { slug: { current: { ne: null } }, hidden: { ne: true } }
+        ) {
           edges {
             node {
               hidden
