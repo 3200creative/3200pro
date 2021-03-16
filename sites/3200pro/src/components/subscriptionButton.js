@@ -121,7 +121,7 @@ const Checkout = () => {
       break
     case 'amyp':
       product = monthly5hours
-      simpleName = 'Monthly payment of $625.'
+      simpleName = 'Monthly payment of $625 (5hrs. @ $125/hr.).'
       client = 'Amy'
       welcome = `Hi ${client},`
       message = `Please click checkout to make the payment. Please let me know if you have any questions.`
