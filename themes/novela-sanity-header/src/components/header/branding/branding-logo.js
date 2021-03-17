@@ -17,7 +17,7 @@ const SiteLogo = () => {
           }}
           fluid={logo}
           alt={title}
-          imgStyle={{ objectFit: "contain" }}
+          
         />
         : <p>No Logo In Sanity</p>
       )}

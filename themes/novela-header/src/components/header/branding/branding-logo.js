@@ -29,7 +29,7 @@ const SiteLogo = () => {
         }}
         fluid={logo}
         alt={title}
-        imgStyle={{ objectFit: "contain" }}
+        
       />
     </Link>
   )

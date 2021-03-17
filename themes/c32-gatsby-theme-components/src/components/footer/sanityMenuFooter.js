@@ -1,11 +1,11 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
-import React from "react"
-import { Link } from "gatsby"
 import { useSiteMetadata } from "c32-gatsby-theme-core"
-import { FooterData } from "./data/footerData"
+import { Link } from "gatsby"
+import React from "react"
 import * as FontIcon from "react-icons/fa"
+import { jsx } from "theme-ui"
 import BlockText from '../block-text'
+import { FooterData } from "./data/footerData"
 
 
 const FooterSections = ({footerBG}) => {

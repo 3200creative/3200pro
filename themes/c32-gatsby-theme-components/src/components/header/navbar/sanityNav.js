@@ -1,9 +1,8 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { NavContext, useSiteMetadata } from "c32-gatsby-theme-core"
 import { Link } from "gatsby"
 import { useContext } from "react"
-import { NavContext } from "c32-gatsby-theme-core"
-import { useSiteMetadata } from "c32-gatsby-theme-core"
+import { jsx } from "theme-ui"
 
 const SanityNav = () => {
   const [isNavOpen, setIsNavOpen] = useContext(NavContext)

@@ -16,7 +16,7 @@ const SiteLogo = () => {
         }}
         src={logo}
         alt={title}
-        imgStyle={{ objectFit: "contain" }}
+        
       />
     </Link>
   )

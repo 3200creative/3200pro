@@ -1,13 +1,12 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { NavContext, useSiteMetadata } from "c32-gatsby-theme-core"
+import DarkModeIcon from "c32-gatsby-theme-core/src/components/darkmode"
 import { useContext } from "react"
+import { jsx } from "theme-ui"
 import Branding from "./branding/sanity/branding"
+import HamburgerButton from "./navbar/hamburger-button"
 import Nav from "./navbar/nav"
 import SanityRoutingNav from "./navbar/sanityRoutingNav"
-import HamburgerButton from "./navbar/hamburger-button"
-import { NavContext } from "c32-gatsby-theme-core"
-import DarkModeIcon from "c32-gatsby-theme-core/src/components/darkmode"
-import { useSiteMetadata } from "c32-gatsby-theme-core"
 
 const SiteHeader = ({navMenuItems, contactMenuItems}) => {
   const [isNavOpen] = useContext(NavContext)

@@ -7,7 +7,7 @@ const SiteLogo = () => {
 
   return (
     <Link to="/">
-      <img src={logo} alt={title} imgStyle={{ objectFit: 'contain' }} />
+      <img src={logo} alt={title} />
     </Link>
   )
 }

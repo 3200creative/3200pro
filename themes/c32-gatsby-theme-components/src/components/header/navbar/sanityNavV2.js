@@ -1,8 +1,7 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import { Link } from "gatsby"
-import { useContext } from "react"
-import { NavContext } from "c32-gatsby-theme-core"
+import { NavContext } from "c32-gatsby-theme-core";
+import { useContext } from "react";
+import { jsx } from "theme-ui";
 import CTALink from "./CTALink";
 
 const SanityNav2 = ({navMenuItems}) => {

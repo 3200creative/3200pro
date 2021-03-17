@@ -1,6 +1,4 @@
 /** @jsx jsx */
-import { jsx, useColorMode } from "theme-ui"
-import { useStaticQuery, graphql } from "gatsby"
 export const SanityFooterData = () => {
     // const data = useStaticQuery(
     //     graphql`
