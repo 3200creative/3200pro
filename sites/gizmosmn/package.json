@@ -1,0 +1,41 @@
+{
+  "name": "gizmosmn",
+  "description": "site for core theme",
+  "version": "0.0.1",
+  "private": true,
+  "author": "3200.Pro <info@3200.pro>",
+  "dependencies": {
+    "c32-gatsby-theme-components": "*",
+    "c32-gatsby-theme-core": "*",
+    "cypress": "^6.4.0",
+    "gatsby": "^2.31.1",
+    "gatsby-source-sanity": "^6.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-site",
+    "gatsby-plugin"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "clean": "gatsby clean",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/"
+  }
+}
