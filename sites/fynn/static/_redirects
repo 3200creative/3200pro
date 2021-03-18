@@ -1,4 +1,4 @@
-/blog/ /:splat
+/blog/* /:splat
 
 /boston-terrier-food/* /:splat 301!
 
