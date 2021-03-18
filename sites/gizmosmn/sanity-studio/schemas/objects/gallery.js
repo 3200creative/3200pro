@@ -15,6 +15,11 @@ export default {
             ]
         },
         {
+            name: 'disableLightbox',
+            title: 'Disable Lightbox',
+            type: 'boolean',
+        },
+        {
             name: 'column',
             title: 'Gallery Columns',
             type: 'string',

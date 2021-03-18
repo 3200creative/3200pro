@@ -44,7 +44,7 @@ module.exports = {
         dataset: 'production',
         watchMode: true,
         overlayDrafts: true,
-        token: 'skd4pqxAgC30xbpOEMgGsznWIRNPkardVMWWod6LHuJBT9Dk0xQIgTDy92idS0cqXm4pzAlaPDxRy7Ll7TQszj1fFI3lrm7grLvVln36wF95EnaQJVKlQUXvCEChAVEjKYv9AlmBL7hpQc6EvyQZ9gyy05lMXKuN0ACzrvkklDFnttpyXVAc',
+        token: 'skTkR5rGkiZ57ADOW6lm8IMrNbmRhP5Olb9n0YxD97nt5QemorSRD5jCwk9tm0IDXNPGb8CtDr9QpucLBmiUVJesNSZAEq8PQ3Lt5PERrn16TlSfw97vStvOBsPzhlWI9li5mim8G4Mt25BcS3mfoOTXyPiXzYKP9qUyTtVAaBAIcWN0XJ3H',
         // If the Sanity GraphQLs API was deployed using `--tag <name>`,
         // use `graphqlTag` to specify the tag name. Defaults to `default`.
         graphqlTag: 'default',

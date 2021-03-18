@@ -108,19 +108,20 @@ function Gallery (props) {
         margin: ['20px', '40px'],
         variant: 'variants.globalFigure'
       }}
-      onClick={() => { 
+    
+      onClick={ props.disableLightbox != true ? (() => { 
         changeImage(imageUrlFor(buildPageImageObj(image))
         .width(1200)
         .auto('format')
         .url())
         setOpen(true)
-      }}
+      }
+      ):null}
       >
         {image.asset && (
           <img sx={{
             variant: 'variants.shadow',
-            maxWidth: '100%',
-            minHeight: [null ,columns === '33%' ? 'auto' : '260px'],
+            maxWidth: '100%'
           }}
           src={imageUrlFor(buildPageImageObj(image))
             .width(1200)
