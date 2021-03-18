@@ -68,11 +68,11 @@ sites/ahi/
 
 
 #Gizmos Properties Need Both Pushed.
-#sites/customcars/
-#sites/gizmosmn/
+sites/customcars/
+sites/gizmosmn/
 
 
-sites/dagaz/
+#sites/dagaz/
 sites/ericashish/
 sites/fishmaui/
 
