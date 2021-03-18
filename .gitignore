@@ -65,11 +65,17 @@ public
 sites/10sec/
 sites/3200pro/
 sites/ahi/
+
+
+#Gizmos Properties Need Both Pushed.
 #sites/customcars/
+#sites/gizmosmn/
+
+
 sites/dagaz/
 sites/ericashish/
 sites/fishmaui/
-sites/gizmosmn/
+
 sites/hjl/
 sites/livgard/
 sites/paranet/
