@@ -6860,6 +6860,16 @@ gatsby-plugin-mdx@^1.0.73:
     unist-util-remove "^1.0.3"
     unist-util-visit "^1.4.1"
 
+gatsby-plugin-netlify@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-3.1.0.tgz#2e6e2d89ffab2031b3f54adc69e449ee5312f146"
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    fs-extra "^8.1.0"
+    kebab-hash "^0.1.2"
+    lodash "^4.17.21"
+    webpack-assets-manifest "^3.1.1"
+
 gatsby-plugin-offline@^3.0.35:
   version "3.10.2"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-3.10.2.tgz#f17605ba567434908cc5ff33e702e26bf4a610fc"
