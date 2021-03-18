@@ -1,29 +1,29 @@
 [[redirects]]
 from = "/blog/*"
-to = "/*"
+to = "/"
 status = 302
 
 [[redirects]]
 from = "/boston-terrier-food/*"
-to = "/*"
+to = "/"
 status = 302
 
 [[redirects]]
 from = "/boston-terrier-health/*"
-to = "/*"
+to = "/"
 status = 302
 
 [[redirects]]
 from = "/boston-terrier-puppies/*"
-to = "/*"
+to = "/"
 status = 302
 
 [[redirects]]
 from = "/boston-terrier-toys-clothes/*"
-to = "/*"
+to = "/"
 status = 302
 
 [[redirects]]
 from = "/boston-terrier-training/*"
-to = "/*"
+to = "/"
 status = 302
