@@ -63,7 +63,7 @@ typings/
 .cache/
 public
 sites/10sec/
-sites/3200pro/
+#sites/3200pro/
 sites/ahi/
 
 
@@ -72,7 +72,7 @@ sites/customcars/
 sites/gizmosmn/
 
 
-#sites/dagaz/
+sites/dagaz/
 sites/ericashish/
 sites/fishmaui/
 
