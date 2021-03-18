@@ -1,12 +1,12 @@
-/blog/* /*
+/blog/ /
 
-/boston-terrier-food/* /* 301!
+/boston-terrier-food/* / 301!
 
-/boston-terrier-health/* /* 301!
+/boston-terrier-health/* / 301!
 
-/boston-terrier-puppies/* /* 301!
+/boston-terrier-puppies/* / 301!
 
-/boston-terrier-toys-clothes/* /* 301!
+/boston-terrier-toys-clothes/*/ / 301!
 
-/boston-terrier-training/* /* 301!
+/boston-terrier-training/* / 301!
 
