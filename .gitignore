@@ -63,7 +63,7 @@ typings/
 .cache/
 public
 sites/10sec/
-#sites/3200pro/
+sites/3200pro/
 sites/ahi/
 
 
@@ -79,7 +79,7 @@ sites/fishmaui/
 sites/hjl/
 sites/livgard/
 sites/paranet/
-sites/fynn/
+#sites/fynn/
 
 sites/fynn.zip
 # Mac files
