@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import { getFluidGatsbyImage } from "gatsby-source-sanity"
+import { getFixedGatsbyImage } from "gatsby-source-sanity"
 import Img from "gatsby-image"
 import { buildImageObj } from '../../lib/helpers'
 import { imageUrlFor } from '../../lib/image-url'
@@ -15,16 +15,11 @@ function Figure (props) {
       my: '80px',
     }}>
       {props.disableGatsbyImage != true ? (
-        <Img sx={{
-          variant: 'variants.shadow',
-          maxWidth: '900px',
-          margin: '0 auto',
-          float: 'none',
-          display: 'block',
-        }}
-        fluid={getFluidGatsbyImage(props.image.asset._id,{ maxWidth: 800 }, clientConfig.sanity)}
+        <Img 
+        fixed={getFixedGatsbyImage(props.image.asset._id,{ maxWidth: 800 }, clientConfig.sanity)}
         alt={props.alt}
         loading='lazy'
+        style={{ display: 'block', margin: '0 auto' }}
         />
       ):
       (
@@ -32,14 +27,6 @@ function Figure (props) {
           src={imageUrlFor(buildImageObj(props))
             .url()}
           alt={props.alt}
-          sx={{
-            variant: 'variants.shadow',
-            maxWidth: '900px',
-            margin: '0 auto',
-            float: 'none',
-            display: 'block',
-            width: '100%'
-          }}
         />
       )
       }

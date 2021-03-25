@@ -20,6 +20,8 @@ const PageTemplate = props => {
     const { globalNavMenu } = useSiteMetadata()
     const { data, errors } = props
     const page = data && data.page
+    console.log('This is a product')
+  console.log(page.randomProductList)
     const menuItems = page.navMenu || globalNavMenu || [];
     return (
       <Layout navMenuItems={menuItems} >
@@ -35,11 +37,11 @@ const PageTemplate = props => {
                 <GraphQLErrorList errors={errors} />
             )}
         </Container>
-        <div sx={{marginTop: '140px'}}> 
+        <div sx={{marginTop: '140px'}} css={{maxWidth: '100%', width: '700px', marginLeft: 'auto', marginRight: 'auto'}}> 
             {page && <Styled.h1>{page.title}</Styled.h1>}
         {page._rawBlockContent && <BlockContent blocks={page._rawBlockContent}/>}
         <div sx={{variant: 'variants.clearline'}}></div>
-        { !page.disableRelatedProducts && 
+        { !page.disableRelatedProducts && page.randomProductList != 0 ? (
           <Grid item xs={12}>
             {page.randomProductList && <Styled.h4 sx={{mt:5}}>Related Boston Terrier Products:</Styled.h4>}
             <Grid container spacing={4}>
@@ -67,7 +69,8 @@ const PageTemplate = props => {
                     </Grid>
               ))}
             </Grid>
-          </Grid>
+          </Grid>):null
+    
         }
         <div sx={{variant: 'variants.clearline', my: 4}}></div>
         { !page.disableRelatedPosts && 

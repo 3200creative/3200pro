@@ -218,6 +218,24 @@ export default {
     },
   },
   variants: {
+    content: {
+      H1: {
+        textAlign: 'center',
+        width: '100%'
+      },
+      h2: {
+        textAlign: 'center',
+        width: '100%'
+      },
+      h3: {
+        textAlign: 'center',
+        width: '100%'
+      },
+      h4: {
+        textAlign: 'center',
+        width: '100%'
+      }
+    },
     pagination: {
       mt: 5,
       a: {
