@@ -219,7 +219,7 @@ export default {
   },
   variants: {
     content: {
-      H1: {
+      h1: {
         textAlign: 'center',
         width: '100%'
       },

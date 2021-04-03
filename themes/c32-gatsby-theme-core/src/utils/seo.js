@@ -9,6 +9,8 @@ const SEO = ({
   meta,
   keywords: propKeywords,
   title: propTitle,
+  socialImage: propSocialImage,
+  image: propImage,
   isBlogPost,
 }) => {
   const {
@@ -18,65 +20,12 @@ const SEO = ({
     twitterUsername,
     siteUrl,
     seoImage,
-    // Local Business Schema:
-    hasLocalBusinessSchema,
-    businessType,
-    addressLocality,
-    addressRegion,
-    postalCode,
-    streetAddress,
-    name,
-    telephone,
-    priceRange,
-    url,
-    bestRating,
-    ratingCount,
-    ratingValue,
-    latitude,
-    longitude,
-    geoRadius,
   } = useSiteMetadata()
   const seoTitle = propTitle || title
   const seoDescription = propDescription || description
   const seoKeywords = propKeywords || keywords
-  const seoImg =  seoImage
+  const seoImg = propSocialImage || seoImage
   const seoImgSrc = `${siteUrl}${seoImg.src}`
-  const checkBusinessSchema = hasLocalBusinessSchema
-
-  const schemaOrgLocalBusiness = {
-    '@context': 'http://schema.org',
-    '@type': businessType,
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: addressLocality,
-      addressRegion: addressRegion,
-      postalCode: postalCode,
-      streetAddress: streetAddress,
-    },
-    image: seoImage,
-    name: name,
-    telephone: telephone,
-    priceRange: priceRange,
-    url: url,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      bestRating: bestRating,
-      ratingCount: ratingCount,
-      ratingValue: ratingValue,
-    },
-    location: {
-      '@type': 'Place',
-      geo: {
-        '@type': 'GeoCircle',
-        geoMidpoint: {
-          '@type': 'GeoCoordinates',
-          latitude: latitude,
-          longitude: longitude,
-        },
-        geoRadius: geoRadius,
-      },
-    },
-  };
 
   return (
     <Helmet
@@ -84,7 +33,7 @@ const SEO = ({
         lang,
       }}
       title={seoTitle}
-      titleTemplate={`%s`}
+      titleTemplate={`%s | ${title}`}
       meta={[
         {
           name: `description`,
@@ -157,11 +106,8 @@ const SEO = ({
               }
             : []
         )
-        .concat(meta)}     
-    >
-      
-    {checkBusinessSchema ? <script type="application/ld+json">{JSON.stringify(schemaOrgLocalBusiness)}</script> : null}
-    </Helmet>
+        .concat(meta)}
+    />
   )
 }
 
@@ -176,6 +122,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
+  socialImage: PropTypes.string,
   title: PropTypes.string.isRequired,
   isBlogPost: PropTypes.bool,
 }
