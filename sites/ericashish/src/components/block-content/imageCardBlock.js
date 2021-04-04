@@ -1,0 +1,84 @@
+/** @jsx jsx */
+import BaseBlockContent from '@sanity/block-content-to-react'
+import { jsx, Styled } from 'theme-ui'
+import React from 'react'
+
+import { Link } from 'gatsby'
+import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography'
+import { GridLayoutContext } from '../articleFeedLayout'
+import clientConfig from '../../../client-config'
+
+import { buildImageObjMap } from '../../lib/helpers'
+import { imageUrlFor } from '../../lib/image-url'
+import ButtonBlock from './ButtonBlock'
+
+function ImageCardBlock(props) {
+  return (
+    <Grid container justify="space-between" sx={{ marginTop: 4 }}>
+      {props.imageCards &&
+        props.imageCards.map((card) => (
+          <Grid
+            item
+            xs={12}
+            md={card.cardlayout === 'card' ? 6 : 12}
+            sx={{ my: card.verticalSpace ? card.verticalSpace : 4 }}
+          >
+            <Grid container>
+              <Grid
+                item
+                xs={12}
+                md={card.cardlayout === 'card' ? 12 : 6}
+                sx={{ height: 'max-content' }}
+              >
+                <img
+                  src={imageUrlFor(buildImageObjMap(card.blockImage))
+                    .auto('format')
+                    .url()}
+                  alt="test"
+                  sx={{
+                    margin: '0 auto',
+                    mb: card.cardlayout === 'card' ? 4 : 0,
+                    width: '96%',
+                    maxHeight: [null, null, null, '340px'],
+                    variant: 'variants.shadow',
+                  }}
+                />
+              </Grid>
+              <Grid
+                items
+                md={card.cardlayout === 'card' ? 12 : 6}
+                sx={{
+                  display: 'flex',
+                  paddingRight: card.cardlayout === 'card' ? 4 : 0,
+                  flexDirection: 'column',
+                }}
+              >
+                <h4
+                  sx={{
+                    m: 0,
+                    color: 'text',
+                    fontFamily: 'header',
+                    width: ['100%', null, null, '92%'],
+                  }}
+                >
+                  {card.title}
+                </h4>
+                <p>
+                  <BaseBlockContent
+                    blocks={card.text}
+                    {...clientConfig.sanity}
+                  />
+                </p>
+                {card.cardButtons && (
+                  <ButtonBlock parentProps={card.cardButtons} />
+                )}
+              </Grid>
+            </Grid>
+          </Grid>
+        ))}
+    </Grid>
+  )
+}
+
+export default ImageCardBlock

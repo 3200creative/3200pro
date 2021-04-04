@@ -1,0 +1,95 @@
+{
+  "_createdAt": "2020-06-16T22:32:31Z",
+  "_id": "d0358e8d-7dce-40ad-acb7-1441ba606cd7",
+  "_rev": "g7EGM8JcdqnH3NJSMd21Wz",
+  "_type": "business",
+  "_updatedAt": "2020-06-24T19:02:24Z",
+  "blockContent": [
+    {
+      "_key": "cab3a2d0eee3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cab3a2d0eee30",
+          "_type": "span",
+          "marks": [],
+          "text": "Our special guest on today's episode of the podcast is Matt Barnett of Bonjoro. Tune in to learn how you can quickly boost engagement & build customer trust."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "946855dee6ab",
+      "_type": "figure",
+      "alt": "Matt Barnett",
+      "asset": {
+        "_ref": "image-d46304ccd0d5ec6679d0191957f5317b011b765b-535x183-png",
+        "_type": "reference"x
+      }
+    },
+    {
+      "_key": "d6f96256efd2",
+      "_type": "soundcloud",
+      "title": "How To Quickly Boost Engagement ",
+      "track": "829438942"
+    },
+    {
+      "_key": "ea0f8d0805e8",
+      "_type": "quote",
+      "author": "Matt Barnett - Bonjoro",
+      "authorURL": "https://www.bonjoro.com",
+      "text": "If you're starting from day one, the one thing you can do that no one else can do is to put all your time and effort into your customers. Your customers love to know that you will go the extra mile for them and that they can trust you."
+    },
+    {
+      "_key": "5b63ad391197",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5b63ad3911970",
+          "_type": "span",
+          "marks": [],
+          "text": "View full podcast writeup including show notes, transcript and resources mentioned at "
+        },
+        {
+          "_key": "5b63ad3911971",
+          "_type": "span",
+          "marks": [
+            "101189eb6d07"
+          ],
+          "text": "SubscriptionEntrepreneur.com/149"
+        },
+        {
+          "_key": "5b63ad3911972",
+          "_type": "span",
+          "marks": [],
+          "text": ""
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "101189eb6d07",
+          "_type": "link",
+          "blank": true,
+          "href": "http://subscriptionentrepreneur.com/149"
+        }
+      ],
+      "style": "normal"
+    }
+  ],
+  "excerpt": "Our special guest on today's episode of the podcast is Matt Barnett of Bonjoro. Tune in to learn how you can quickly boost engagement & build customer trust.",
+  "featuredImage": {
+    "_type": "featuredImage",
+    "alt": "Alt Text",
+    "asset": {
+      "_ref": "image-b3fd1413222717c034da1372f19c1116726e5758-1024x576-png",
+      "_type": "reference"
+    }
+  },
+  "publishedAt": "2020-05-28T05:00:00.000Z",
+  "slug": {
+    "_type": "slug",
+    "current": "how-to-quickly-boost-engagement-and-build-customer-trust-with-matt-barnett-of-bonjoro"
+  },
+  "title": "How To Quickly Boost Engagement & Build Customer Trust with Matt Barnett of Bonjoro"
+}

@@ -1,0 +1,14 @@
+.block {
+  display: flex;
+  align-items: center;
+
+  margin-top: 10px;
+}
+
+.buttonBlock {
+  margin-left: 10px;
+}
+
+.countBlock {
+  width: 80px;
+}
