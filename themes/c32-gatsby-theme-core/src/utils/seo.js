@@ -24,9 +24,10 @@ const SEO = ({
   const seoTitle = propTitle || title
   const seoDescription = propDescription || description
   const seoKeywords = propKeywords || keywords
-  const seoImg = propSocialImage || seoImage
-  const seoImgSrc = `${siteUrl}${seoImg.src}`
+  const seoImg = seoImage
+  const seoImgSrc = propSocialImage || `${siteUrl}${seoImg.src}`
 
+  console.log('GraphQL Social Image:',propSocialImage);
   return (
     <Helmet
       htmlAttributes={{

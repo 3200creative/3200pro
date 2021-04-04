@@ -24,7 +24,7 @@ const TeaPageTemplate = (props) => {
         {errors && <SEO title="GraphQL Error" />}
         {page && (
           <SEO
-            socialImage={page.featuredImage?.asset._id}
+            socialImage={page.featuredImage?.asset.url}
             title={page.seo?.metaTitle || page.title}
             description={page.seo?.metaDesc || page.excerpt}
           />
@@ -71,6 +71,7 @@ export const query = graphql`
       featuredImage {
         asset {
           _id
+          url
         }
         alt
       }

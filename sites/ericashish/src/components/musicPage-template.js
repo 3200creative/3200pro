@@ -22,7 +22,7 @@ const MusicPageTemplate = (props) => {
       {errors && <SEO title="GraphQL Error" />}
       {page && (
         <SEO
-          socialImage={page.featuredImage?.asset._id}
+          socialImage={page.featuredImage?.asset.url}
           title={page.seo?.metaTitle || page.title}
           description={page.seo?.metaDesc || page.excerpt}
         />
