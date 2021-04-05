@@ -49,16 +49,11 @@ module.exports = {
         reportOnly: false,
         mergeScriptHashes: false,
         mergeStyleHashes: false,
-        mergeDefaultDirectives: true,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-netlify`,
-      options: {
-        mergeSecurityHeaders: true,
-        mergeLinkHeaders: true,
-        mergeCachingHeaders: true,
-        generateMatchPathRewrites: true,
+        directives: {
+          'script-src': `'self' 'unsafe-inline' data: www.google-analytics.com  www.typeform.com`,
+          'style-src': `'self' 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com`,
+          'img-src': `'self' data: www.google-analytics.com`,
+        },
       },
     },
     {
