@@ -47,8 +47,8 @@ module.exports = {
       options: {
         disableOnDev: false,
         reportOnly: false,
-        mergeScriptHashes: true,
-        mergeStyleHashes: true,
+        mergeScriptHashes: false,
+        mergeStyleHashes: false,
         mergeDefaultDirectives: true,
       },
     },
