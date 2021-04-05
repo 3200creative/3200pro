@@ -48,6 +48,7 @@ module.exports = {
         shortname: `3200pro`,
       },
     },
+    `gatsby-plugin-netlify`,
     `c32-gatsby-theme-core`,
     `c32-gatsby-theme-components`,
     `@twistezo/react-text-scramble`,
