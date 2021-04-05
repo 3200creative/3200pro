@@ -2,19 +2,7 @@
   for = "/*"
   [headers.values]
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
-    Content-Security-Policy = "block-all-mixed-content;
-base-uri 'none';
-default-src 'self';
-object-src 'none';
-frame-ancestors 'self';form-action https://company-name.us9.list-manage.com;img-src data: https: android-webview-video-poster: android-webview:;font-src data: 'self' https://cdn.embedly.com https://fonts.gstatic.com;style-src 'unsafe-inline' 'self' https://translate.googleapis.com https://cdn.embedly.com;
-
-frame-src https://runkit.com https://third-party-iframe.example.com https://www.youtube.com https://cdn.embedly.com;
-
-connect-src 'self' https://company-api.example.com https://sentry.io https://third-party-api.example.com https://admin.typeform.com https://translate.googleapis.com https://www.google-analytics.com;
-
-script-src 'self' 'unsafe-eval' 'unsafe-inline' 'data' https://embed.runkit.com https://www.google-analytics.com https://company-name.us9.list-manage.com https://translate.googleapis.com https://translate.google.com https://api.microsofttranslator.com cdn.embedly.com;
-
-report-uri https://sentry.io/api/id/security/?sentry_key=key;"
+    Content-Security-Policy = "default-src"
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "no-referrer"
