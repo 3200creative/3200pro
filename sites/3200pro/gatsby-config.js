@@ -50,9 +50,9 @@ module.exports = {
         mergeScriptHashes: false,
         mergeStyleHashes: false,
         directives: {
-          'script-src': `'self' 'unsafe-inline' data: www.google-analytics.com  www.typeform.com`,
-          'style-src': `'self' 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com`,
-          'img-src': `'self' data: www.google-analytics.com`,
+          'script-src': "'self' www.google-analytics.com typeform.com",
+          'style-src': "'self' 'unsafe-inline'",
+          'img-src': "'self' data: www.google-analytics.com",
         },
       },
     },
