@@ -46,16 +46,37 @@ module.exports = {
       resolve: `gatsby-plugin-csp`,
       options: {
         disableOnDev: false,
-        reportOnly: false, // Changes header to Content-Security-Policy-Report-Only for csp testing purposes
-        mergeScriptHashes: false, // you can disable scripts sha256 hashes
-        mergeStyleHashes: false, // you can disable styles sha256 hashes
+        reportOnly: false,
+        mergeScriptHashes: true,
+        mergeStyleHashes: true,
         mergeDefaultDirectives: true,
-        directives: {
-          'script-src': "'self' www.google-analytics.com typeform.com",
-          'style-src': "'self' 'unsafe-inline'",
-          'img-src': "'self' data: www.google-analytics.com",
-          // you can add your directives or override defaults
+      },
+    },
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        transformHeaders: (headers, path) => {
+          if (path.endsWith('/')) {
+            const filePath = `./public${path}index.html`
+            const rawHtml = readFileSync(filePath).toString()
+            const csp = /<meta http-equiv="Content-Security-Policy" content="(.*?)"\/>/
+              .exec(rawHtml)[1]
+              .replace(/&#x27;/g, `'`)
+            headers.push(`Content-Security-Policy: ${csp}`)
+            writeFileSync(
+              filePath,
+              rawHtml.replace(
+                /<meta http-equiv="Content-Security-Policy" content=".*?"\/>/g,
+                ''
+              )
+            )
+          }
+          return headers
         },
+        mergeSecurityHeaders: true,
+        mergeLinkHeaders: true,
+        mergeCachingHeaders: true,
+        generateMatchPathRewrites: true,
       },
     },
     {
