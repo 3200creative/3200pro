@@ -51,10 +51,6 @@ const ContactPage = (props) => {
         >
           <h1>{page.displayedTitle}</h1>
           <BlockContent blocks={page._rawBlockContent || []} />
-          <Typeform
-            url="https://get-started.typeform.com/to/ubSb8Qjn"
-            buttonText="Click Here To Contact By Email"
-          />
         </div>
       </Container>
     </SiteLayout>
