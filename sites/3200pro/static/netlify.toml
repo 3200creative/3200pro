@@ -2,7 +2,7 @@
   for = "/*"
   [headers.values]
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
-    Content-Security-Policy = "default-src data: 'unsafe-inline' https:; script-src 'self' http://* https://*.typeform.com script-src-elem blob:; style-src data: 'self' 'unsafe-inline' https: http://*; img-src data: https: blob:; font-src data: https:; connect-src https: wss: blob:; media-src https://*.typeform.com blob:; object-src https://*.typeform.com; child-src https: data: blob:; form-action https:; block-all-mixed-content"
+    Content-Security-Policy = "default-src data: 'unsafe-inline' https:; script-src 'self' http://* https://*.typeform.com blob:; unsafe-inline; style-src data: 'self' 'unsafe-inline' https: http://*; img-src data: https: blob:; font-src data: https:; connect-src https: wss: blob:; media-src https://*.typeform.com blob:; object-src https://*.typeform.com; child-src https: data: blob:; form-action https:; block-all-mixed-content"
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "no-referrer"
