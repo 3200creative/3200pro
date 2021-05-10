@@ -192,7 +192,7 @@ const Checkout = () => {
         <div>
           {client == 'Jon' ? (
             <>
-              <h2>Monthly Website Maintenance: {simpleName} </h2>
+              <h2>{simpleName} </h2>
               <p>{welcome}</p>
               <p>{message}</p>
               <p>{signature}</p>
