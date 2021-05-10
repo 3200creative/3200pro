@@ -15,6 +15,7 @@ const hourly40 = 'price_1Ha7XAIZVy7BW60BitkeQFb0'
 const monthlyHosting100 = 'price_1H4cNeIZVy7BW60BTuqHWnaF'
 const fiveHourSingular625 = 'price_1H87USIZVy7BW60BYRawg1gv'
 const forkandBeansHosting = 'price_1H8AvEIZVy7BW60BL7h3jLto'
+const pgHosting = 'price_1IpaeoIZVy7BW60ByxMG8AtE'
 
 const clientEmail = ''
 const useInput = (initialValue) => {
@@ -38,6 +39,20 @@ const monthly10hours = async (event) => {
   const stripe = await stripePromise
   const { error } = await stripe.redirectToCheckout({
     lineItems: [{ price: hourly10, quantity: 1 }],
+    mode,
+    successUrl,
+    cancelUrl,
+  })
+  if (error) {
+    console.warn('Error:', error)
+  }
+}
+
+const pgMonthlyHosting = async (event) => {
+  event.preventDefault()
+  const stripe = await stripePromise
+  const { error } = await stripe.redirectToCheckout({
+    lineItems: [{ price: pgHosting, quantity: 1 }],
     mode,
     successUrl,
     cancelUrl,
@@ -126,8 +141,9 @@ const Checkout = () => {
       welcome = `Hi ${client},`
       message = `Please click checkout to make the payment. Please let me know if you have any questions.`
       break
-    case 'prohosting':
-      product = hosting100
+    case 'js21':
+      product = pgMonthlyHosting
+      client = 'Jon'
       simpleName = 'Monthly hosting with 3200 Creative'
       greeting = `Hello!`
       welcome = `Hi ${client},`
@@ -174,7 +190,7 @@ const Checkout = () => {
       <div>
         {/* Test Login Setup */}
         <div>
-          {client == 'Amy' ? (
+          {client == 'Jon' ? (
             <>
               <h2>Monthly Website Maintenance: {simpleName} </h2>
               <p>{welcome}</p>
