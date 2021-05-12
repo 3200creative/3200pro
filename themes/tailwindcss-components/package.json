@@ -17,12 +17,12 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "gatsby": "^2.31.1",
-    "postcss": "^8.0.0",
+    "postcss": "^8.2.10",
     "prettier": "^2.2.1"
   },
   "peerDependencies": {
     "gatsby": "^2.31.1",
-    "postcss": "^8.0.0",
+    "postcss": "^8.2.10",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
