@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 import { buildImageObj } from '../../lib/helpers'
 import { imageUrlFor } from '../../lib/image-url'
 
-import clientConfig from '../../../client-config'
+const sanityConfig = { projectId: 'p6aj32cv', dataset: 'production' }
 
 function Figure(props) {
   const data = props
@@ -38,7 +38,7 @@ function Figure(props) {
               ? getFluidGatsbyImage(
                   data.asset._ref,
                   { maxWidth: 800 },
-                  clientConfig.sanity
+                  sanityConfig
                 )
               : null
           }
